@@ -49,7 +49,7 @@ Carbon trading and financing.
 
 
 ## Installation
-`git clone https://github.com/furkanmeraloglu/Laravel-inertiajs-jetstream-template.git`
+`git clone https://github.com/katoj65/CFIS.git`
 
 `composer install`
 
