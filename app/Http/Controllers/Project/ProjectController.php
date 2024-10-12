@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Project;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use App\Models\ProjectModel;
 
 class ProjectController extends Controller
 {
@@ -15,6 +17,11 @@ class ProjectController extends Controller
     public function index()
     {
         //
+    $data['title']='Projects';
+    $data['response']=[
+    'projects'=>ProjectModel::get(),
+    ];
+    return Inertia::render('ProjectsPage',$data);
     }
 
     /**

@@ -18,6 +18,7 @@ use App\Http\Controllers\Sponsor\SponsorshipController;
 use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\Services\ServicesController;
 use App\Http\Controllers\KnowledgeCenter\KnowledgeCenterController;
+use App\Http\Controllers\Project\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +68,7 @@ Route::get('about/project-verification-certification',[AboutController::class,'v
 Route::get('about/carbon-credit-trading', [AboutController::class, 'carbonCreditTrading'])->name('about.carbon-redit-trading');
 Route::get('about/capacity-building-training', [AboutController::class, 'capacityBuildingTraining'])->name('about.capacity-building-training');
 Route::get('knowledge/hub', [KnowledgeCenterController::class, 'index'])->name('knowledge.welcome');
-
+Route::get('projects',[ProjectController::class,'index'])->name('projects.welcome');
 
 
 

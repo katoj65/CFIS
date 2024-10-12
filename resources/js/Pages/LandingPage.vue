@@ -158,7 +158,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
       <div class="card border-0 bg-primary bg-opacity-10">
         <div class="card-body">
 
-          <b-icon icon="bell-fill" class="p-2 d-block mb-4" scale="2"></b-icon>
+          <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Emission Tracking</h3>
           <p class="fs-sm">
             Take control of your impact! Managing your carbon emissions helps protect the environment and builds a sustainable future.
@@ -169,7 +169,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
       <div class="card border-0 bg-info bg-opacity-10 mt-4">
         <div class="card-body">
 
-          <b-icon icon="bell-fill" class="p-2 d-block mb-4" scale="2"></b-icon>
+          <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">
           Project Development
           </h3>
@@ -181,7 +181,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
       <div class="card border-0 bg-warning bg-opacity-10 mt-4 mt-sm-0 mt-lg-4">
         <div class="card-body">
 
-          <b-icon icon="bell-fill" class="p-2 d-block mb-4" scale="2"></b-icon>
+          <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Carbon Markets</h3>
           <p class="fs-sm">Be part of the climate solution! By investing in carbon credits, you can offset your carbon footprint and support projects that reduce emissions and protect the environment.</p>
         </div>
@@ -189,7 +189,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
       <div class="card border-0 bg-danger bg-opacity-10 mt-4">
         <div class="card-body">
 
-          <b-icon icon="bell-fill" class="p-2 d-block mb-4" scale="2"></b-icon>
+          <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Microfinance Services</h3>
           <p class="fs-sm">Save, borrow, and fund for a sustainable future! Your actions can power eco-friendly projects, reduce emissions, and uplift communities.</p>
         </div>
@@ -251,9 +251,9 @@ By investing in projects that generate carbon credits, Uganda can tap into a gro
         <span class="icon-shape icon-xs rounded-circle bg-light-success text-center me-2">
           <b-icon icon="circle-fill" scale="0.3" color="white"></b-icon>
         </span>
-        <a href="#" class="align-middle">
+        <Inertia-link :href="route(t.url)" class="align-middle">
           {{ t.title }}
-        </a>
+        </Inertia-link>
     </li>
   </ul>
 </div>
@@ -485,19 +485,19 @@ list:[],
 //menu
 menuOptions:[
 {title:'Emission Calculator',
- url:'calculate-emission'
+ url:'projects.welcome'
 },
 {title:'Carbon Market',
-url:'carbon-credit/buy'
+url:'projects.welcome'
 },
 {title:'Microfinance Services',
-url:'microfinance'
+url:'projects.welcome'
 },
 {title:'Develop a Project',
-url:'carbon/projects'
+url:'projects.welcome'
 },
 {title:'Learn More',
-url:'knowledge-hub'
+url:'projects.welcome'
 },
 // {title:'Donate to Us',
 // url:'donate'

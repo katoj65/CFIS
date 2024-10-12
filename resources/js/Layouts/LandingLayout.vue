@@ -1,56 +1,5 @@
 <template>
 <body style="padding-top:65px;">
-<!-- <nav id="heading" class="navbar navbar-expand-lg" style="color:white;padding:5px;position:fixed;width:100%;top:0;border:none;border-bottom:solid 5px #145A32;">
-            <div class="container" style="padding:0;">
-            <inertia-link :href="route('home')" class="navbar-brand">
-
-            <span>
-            <div style="color:white;font-weight:bold;font-size:20px;">Uganda Carbon Registry</div>
-            <small style="padding:0px;color:white;font-size:13px;text-transform:capitalize;">Empowering sustainability through data</small>
-            </span>
-             <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3">
-            </inertia-link>
-
-
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-
-            <inertia-link class="link" :href="route('home')">Home</inertia-link>
-            </li>
-
-            <li class="nav-item" >
-
-            <inertia-link class="link" :href="route('about')">About</inertia-link>
-            </li>
-
-            <li class="nav-item">
-
-            <inertia-link class="link">Contact Us</inertia-link>
-            </li>
-
-            <li class="nav-item" >
-
-            <inertia-link class="link" :href="route('login')">Sign In</inertia-link>
-            </li>
-
-            </ul>
-            </div>
-            </div>
-            </nav> -->
-
-
-
-
-
 
             <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 bg-dark" style="border-bottom:none;position:fixed;width:100%;border-radius:0;">
                 <a :href="route('home')" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
