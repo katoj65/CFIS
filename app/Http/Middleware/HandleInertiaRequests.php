@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Profile;
+use App\Models\CarbonFootprintParameter;
 
 
 class HandleInertiaRequests extends Middleware
@@ -36,16 +38,35 @@ return parent::version($request);
  * @param  \Illuminate\Http\Request  $request
  * @return array
  */
+
+static function getUserPofile($user){
+return Profile::where('user_id',$user->id)->first();
+}
+
+
+
+
+
+
 public function share(Request $request)
 {
 return array_merge(parent::share($request), [
 //authenticated user information.
-
 'auth'=> function() use($request){
+$user=$request->user() ? $request->user() : null;
+$profile=$request->user() ? HandleInertiaRequests::getUserPofile(Auth::user()) : null;
 return [
-'user'=>$request->user() ? $request->user() : null];
-
+'user'=>$user,'profile'=>$profile];
 },
+
+//system details
+'system'=>function() use($request){
+return[
+'url'=>'http://localhost/carbon/',
+'carbon_footprint_parameters'=>CarbonFootprintParameter::all(),
+];
+},
+
 
 
 

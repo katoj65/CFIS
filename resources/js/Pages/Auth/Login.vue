@@ -1,65 +1,87 @@
 <template>
-    <jet-authentication-card>
-        <template #logo>
-            <jet-authentication-card-logo />
-        </template>
+  <landing-layout>
+<div class="row p-4 m-4">
+    <div class="col-12 col-md-4"></div>
+<div class="col-12 col-md-4">
+    <div>
 
-        <jet-validation-errors class="mb-4" />
+        <div class="card card-bordered mt-5 shadow1">
+            <div class="card-inner card-inner-lg">
+                <div class="nk-block-head">
+                    <div class="nk-block-head-content">
+                        <h4 class="nk-block-title">Sign In</h4>
+                        <div class="nk-block-des">
+                            <p>Access the CryptoLite panel using your email and passcode.</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
+
+
+
+
+<error-component :form="form"/>
+<form @submit.prevent="submit">
+<div class="form-group">
+<div class="form-label-group">
+<label class="form-label" for="default-01">Email </label>
+</div>
+<input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username" v-model="form.email">
+</div>
+<div class="form-group">
+<div class="form-label-group">
+<label class="form-label" for="password">Password</label>
+</div>
+<div class="form-control-wrap">
+<input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your password" v-model="form.password">
+</div>
+</div>
+<div class="form-group">
+<button class="btn btn-lg btn-primary btn-block" v-if="isLoading==false">Login</button>
+<button class="btn btn-primary btn-block btn-lg" type="button" disabled v-else>
+<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+<span> Loading... </span>
+</button>
+</div>
+</form>
+
+
+
+
+
+
+
+                <div class="form-note-s2 text-center pt-4"> New on our platform? <inertia-link :href="route('register')">Create an account</inertia-link>
+                </div>
+                <div class="text-center pt-4 pb-3">
+                    <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
+                </div>
+                <ul class="nav justify-center gx-4">
+                    <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
+                </ul>
+            </div>
         </div>
+       </div>
 
-        <form @submit.prevent="submit">
-            <div>
-                <jet-label for="email" value="Email" />
-                <jet-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus />
-            </div>
 
-            <div class="mt-4">
-                <jet-label for="password" value="Password" />
-                <jet-input id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="current-password" />
-            </div>
+</div>
 
-            <div class="block mt-4">
-                <label class="flex items-center">
-                    <jet-checkbox name="remember" v-model="form.remember" />
-                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
-                </label>
-            </div>
+<div class="col-12 col-md-4"></div>
 
-            <div class="flex items-center justify-end mt-4">
-                <inertia-link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
-                    Forgot your password?
-                </inertia-link>
-
-                <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Login
-                </jet-button>
-            </div>
-        </form>
-    </jet-authentication-card>
+</div>
+  </landing-layout>
 </template>
 
 <script>
-    import JetAuthenticationCard from '@/Jetstream/AuthenticationCard'
-    import JetAuthenticationCardLogo from '@/Jetstream/AuthenticationCardLogo'
-    import JetButton from '@/Jetstream/Button'
-    import JetInput from '@/Jetstream/Input'
-    import JetCheckbox from '@/Jetstream/Checkbox'
-    import JetLabel from '@/Jetstream/Label'
-    import JetValidationErrors from '@/Jetstream/ValidationErrors'
+import LandingLayout from '../../Layouts/LandingLayout.vue';
+import ErrorComponent from '../../components/ErrorComponent.vue';
+export default {
+components: {
+LandingLayout,
+ErrorComponent,
 
-    export default {
-        components: {
-            JetAuthenticationCard,
-            JetAuthenticationCardLogo,
-            JetButton,
-            JetInput,
-            JetCheckbox,
-            JetLabel,
-            JetValidationErrors
-        },
+},
 
         props: {
             canResetPassword: Boolean,
@@ -68,25 +90,31 @@
 
         data() {
             return {
-                form: this.$inertia.form({
-                    email: '',
-                    password: '',
-                    remember: false
-                })
-            }
-        },
+isLoading:false,
+form: this.$inertia.form({
+email: 'katoj65@gmail.com',
+password: '1234567890',
+remember: false
+})
+}
+},
 
-        methods: {
-            submit() {
-                this.form
-                    .transform(data => ({
-                        ... data,
-                        remember: this.form.remember ? 'on' : ''
-                    }))
-                    .post(this.route('login'), {
-                        onFinish: () => this.form.reset('password'),
-                    })
-            }
-        }
-    }
+methods: {
+submit() {
+this.isLoading=true;
+this.form.post(this.route('login'), {
+onFinish: () => {
+this.form.reset('password');
+this.isLoading=false;
+},
+})
+}
+}
+}
 </script>
+<style scoped>
+input{
+font-size:16px;
+}
+
+</style>
