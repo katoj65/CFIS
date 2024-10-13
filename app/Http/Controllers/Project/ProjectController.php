@@ -41,10 +41,16 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+public function show(Request $request){
+//
+$data['title']='Product Details';
+$data['response']=[
+'projects'=>ProjectModel::where('id',$request->id)->first(),
+
+];
+return Inertia::render('ProjectDetailsPage',$data);
+
+}
 
     /**
      * Update the specified resource in storage.
