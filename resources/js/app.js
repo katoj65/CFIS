@@ -19,8 +19,6 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 
 
-
-
 InertiaProgress.init({
     // The delay after which the progress bar will
     // appear during navigation, in milliseconds.
@@ -33,6 +31,23 @@ InertiaProgress.init({
     // Whether the NProgress spinner will be shown.
     //showSpinner: false,
   });
+
+
+//   InertiaProgress.init({
+//     // Configuration options for NProgress
+//     delay: 250, // Delay in ms before progress bar starts
+//     // showSpinner: true,
+//     color: '#29d',
+//   });
+
+import { Inertia } from '@inertiajs/inertia';
+// Scroll to the top after each navigation
+Inertia.on('finish', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+
 
 
 
@@ -62,10 +77,3 @@ new Vue({
 
 }).$mount(app);
 
-
-InertiaProgress.init({
-    // Configuration options for NProgress
-    delay: 250, // Delay in ms before progress bar starts
-    showSpinner: true,
-    color: '#29d',
-  });

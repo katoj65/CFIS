@@ -151,20 +151,17 @@ Sustainable agriculture. Supporting practices that reduce emissions, enhance soi
 
 <div class="bg-secondary p-5 mt-5 border-radius">
 <h4 class="text-white">
-    Get Started Today!
-    </h4>
-    <p class="mt-3 text-white">
-        Need help developing your carbon mitigation project? Partner with us for the guidance, resources, and expertise necessary to create a project that makes a difference. Together, we can take climate action and help Uganda lead the way in sustainable development.
-    </p>
+Get Started Today!
+</h4>
+<p class="mt-3 text-white">
+Need help developing your carbon mitigation project? Partner with us for the guidance, resources, and expertise necessary to create a project that makes a difference.
+</p>
 
 <p class="mt-4 text-white">
-    Contact Us Today to Start Your Carbon Mitigation Journey! Let us be your trusted partner in transforming ideas into impactful carbon mitigation projects that benefit the environment, communities, and the economy. Reach out now to learn how we can help you make a lasting change!
+Contact Us Today to Start Your Carbon Mitigation Journey! Let us be your trusted partner in transforming ideas into impactful carbon mitigation projects that benefit the environment, communities, and the economy. Reach out now to learn how we can help you make a lasting change!
 </p>
 
 <contact-component/>
-<!-- <Inertia-link :href="route('login')" class="btn btn-danger btn-block p-3 mt-4">
-Get Started
-</Inertia-link> -->
 </div>
 
 

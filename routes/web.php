@@ -19,6 +19,7 @@ use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\Services\ServicesController;
 use App\Http\Controllers\KnowledgeCenter\KnowledgeCenterController;
 use App\Http\Controllers\Project\ProjectController;
+use App\Http\Controllers\Emission\EmissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +74,9 @@ Route::get('project/details/{id}',[ProjectController::class,'show'])->name('proj
 Route::get('project/developer',[ProjectController::class,'developProject'])->name('project.developer');
 Route::get('project/support',[ProjectController::class,'supportProject'])->name('project.support');
 Route::get('project/help',[ProjectController::class,'helpProject'])->name('project.help');
+Route::get('emission/calculate',[EmissionController::class,'emissionCalculator'])->name('emission.calculate');
+
+
 
 
 

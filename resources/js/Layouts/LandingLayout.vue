@@ -148,6 +148,7 @@ Partners
 </body>
 </template>
 <script>
+
 export default {
 components:{},
 data(){return{
@@ -162,11 +163,12 @@ return this.$page.props.system.url+'public/images/';
 
 logo(){
 return this.$page.props.system.url+'public/images/logos/logo-with-red.png';
-}
+},
 
 
 
-}
+},
+
 
 
 

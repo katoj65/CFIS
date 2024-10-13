@@ -485,7 +485,7 @@ list:[],
 //menu
 menuOptions:[
 {title:'Emission Calculator',
- url:'projects.welcome'
+url:'emission.calculate'
 },
 {title:'Carbon Market',
 url:'projects.welcome'
