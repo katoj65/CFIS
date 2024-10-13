@@ -74,4 +74,39 @@ return Inertia::render('ProjectDetailsPage',$data);
     {
         //
     }
+
+
+
+    public function developProject()
+    {
+    $data['title']='Develop a Project';
+    $data['response']=[];
+    return Inertia::render('DevelopProjectPage',$data);
+    }
+
+
+
+
+    public function supportProject()
+    {
+    $data['title']='Support a Project';
+    $data['response']=[];
+    return Inertia::render('SupportProjectPage',$data);
+    }
+
+
+
+    public function helpProject()
+    {
+    $data['title']='Need Help';
+    $data['response']=[];
+    return Inertia::render('NeedHelpPage',$data);
+    }
+
+
+
+
+
+
+
 }

@@ -133,7 +133,9 @@ text-transform: capitalize;
 .title-font{
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
+.border-radius{
+border-radius: 10px;
+}
 
 
 

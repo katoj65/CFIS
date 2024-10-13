@@ -69,7 +69,12 @@ Route::get('about/carbon-credit-trading', [AboutController::class, 'carbonCredit
 Route::get('about/capacity-building-training', [AboutController::class, 'capacityBuildingTraining'])->name('about.capacity-building-training');
 Route::get('knowledge/hub', [KnowledgeCenterController::class, 'index'])->name('knowledge.welcome');
 Route::get('projects',[ProjectController::class,'index'])->name('projects.welcome');
-Route::get('project/{id}',[ProjectController::class,'show'])->name('project.show');
+Route::get('project/details/{id}',[ProjectController::class,'show'])->name('project.show');
+Route::get('project/developer',[ProjectController::class,'developProject'])->name('project.developer');
+Route::get('project/support',[ProjectController::class,'supportProject'])->name('project.support');
+Route::get('project/help',[ProjectController::class,'helpProject'])->name('project.help');
+
+
 
 
 

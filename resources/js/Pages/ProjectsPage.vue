@@ -23,13 +23,13 @@
 <div class="col-sm-12">
 <div class="form-group">
 <div class="form-control-wrap">
-<input type="text" class="form-control bg-light border-0" id="default-01" placeholder="Search..." style="border-radius:10px;height:50px;">
+<input type="text" class="form-control bg-light border-0" id="default-01" placeholder="Search..." style="height:50px;">
 </div>
 </div>
 <div>
-<a href="" class="text-gray mr-5"> <b-icon-cloud-drizzle-fill></b-icon-cloud-drizzle-fill> Develop a Project</a>
-<a href="" class="text-gray mr-5"> <b-icon-heart-fill></b-icon-heart-fill> Support a Project</a>
-<a href="" class="text-gray mr-5"> <b-icon-exclamation-triangle-fill></b-icon-exclamation-triangle-fill> Need Help</a>
+<Inertia-link :href="route('project.developer')" class="text-gray mr-5"> <b-icon-cloud-drizzle-fill></b-icon-cloud-drizzle-fill> Develop a Project</Inertia-link>
+<Inertia-link :href="route('project.support')" class="text-gray mr-5"> <b-icon-heart-fill></b-icon-heart-fill> Support a Project</Inertia-link>
+<Inertia-link :href="route('project.help')" class="text-gray mr-5"> <b-icon-exclamation-triangle-fill></b-icon-exclamation-triangle-fill> Need Help</Inertia-link>
 
 </div>
 </div>
@@ -56,7 +56,7 @@
 
 
 
-<section class="bg-light">
+<section class="bg-light py-3">
 <div class="container">
 <div class="row">
 <div class="col-12 col-md-1"></div>
@@ -66,7 +66,7 @@
         <div class="col-12 col-md-3" v-for="(n,key) in 24" :key="key">
 
             <div class="card card-hover mb-3 border-0 shadow" style="border-radius:0;">
-                <Inertia-link :href="route('project.show',[1])">
+                <Inertia-link :href="route('project.show',{id:1})">
                 <img src="http://localhost/carbon/public/images/deforestation.jpeg" alt="course" class="card-img-top"></Inertia-link>
                 <!-- Card Body -->
                 <div class="card-body">
