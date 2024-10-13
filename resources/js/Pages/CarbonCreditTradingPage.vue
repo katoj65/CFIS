@@ -109,9 +109,9 @@ Uganda is uniquely positioned to play a key role in the global carbon market. Wi
 <div class="p-5">
 <div class=" p-4">
 
-<h1 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">
+<h3 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">
     Join the Climate Economy
-</h1>
+</h3>
 <div class="mt-3 text-white">
 <p class="text-white mb-0">
     Don’t miss out on the chance to be part of Uganda’s carbon trading movement! Whether you’re a business owner, farmer, or community leader, your participation can make a difference. Together, we can create a sustainable, resilient future for Uganda and beyond.

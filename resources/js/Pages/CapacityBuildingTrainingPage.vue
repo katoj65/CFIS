@@ -108,9 +108,9 @@ Training and capacity building are at the heart of Uganda’s efforts to become 
 <div class="p-5">
 <div class=" p-4">
 
-<h1 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">
+<h2 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">
     Transform Knowledge into Action
-</h1>
+</h2>
 <div class="mt-3 text-white">
 <p class="text-white mb-2">
 Transforming knowledge into action is essential for combating climate change and fostering sustainable development in Uganda. By taking proactive steps in carbon trading and sustainability practices, you can be a catalyst for change.

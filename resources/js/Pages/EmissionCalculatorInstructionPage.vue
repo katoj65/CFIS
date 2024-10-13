@@ -169,7 +169,7 @@ Real-Time tracking. Monitor your emissions over time and track the success of yo
     </p>
 
     <contact-component/>
-    <Inertia-link href="#" class="btn btn-danger btn-block p-2">Carbon Calcular </Inertia-link>
+    <Inertia-link href="#" class="btn btn-danger btn-block p-2">Carbon Calculator </Inertia-link>
     </div>
 
 

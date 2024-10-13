@@ -130,7 +130,7 @@ Transparent process. We ensure full transparency in the registration process, fr
 <div class="p-5">
 <div class=" p-4">
 
-<h1 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">Turn Emissions into Solutions</h1>
+<h2 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">Turn Emissions into Solutions</h2>
 <div class="mt-3 text-white">
 <p class="text-white mb-0">
     By turning emissions into solutions, Uganda is not only contributing to global climate action but also ensuring a resilient and prosperous future for its people.

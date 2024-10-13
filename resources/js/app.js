@@ -24,7 +24,7 @@ InertiaProgress.init({
     // appear during navigation, in milliseconds.
     delay: 20,
     // The color of the progress bar.
-    color: '#37BEA7',
+    color: '#ba4a00',
     // color:'#F7DC6F',
     // Whether to include the default NProgress styles.
     //includeCSS: true,
@@ -33,17 +33,12 @@ InertiaProgress.init({
   });
 
 
-//   InertiaProgress.init({
-//     // Configuration options for NProgress
-//     delay: 250, // Delay in ms before progress bar starts
-//     // showSpinner: true,
-//     color: '#29d',
-//   });
+
 
 import { Inertia } from '@inertiajs/inertia';
 // Scroll to the top after each navigation
 Inertia.on('finish', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0});
 });
 
 

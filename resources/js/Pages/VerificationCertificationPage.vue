@@ -95,7 +95,7 @@ Verification and certification instill confidence in investors, who are increasi
 <div class="p-5">
 <div class=" p-4">
 
-<h1 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">Build Trust in Your Climate Impact</h1>
+<h2 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">Build Trust in Your Climate Impact</h2>
 <div class="mt-3 text-white">
 <p class="text-white mb-0">
     Work with the Uganda Carbon Registry to verify and certify your projects, and be part of the solution to climate change while driving sustainable development in Uganda.

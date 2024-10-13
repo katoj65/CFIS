@@ -156,8 +156,8 @@ Individuals. Track your personal carbon footprint, whether it's from household e
 <div class="p-5">
 <div class=" p-4">
 
-<h1 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">
-    Understand Your Footprint</h1>
+<h3 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">
+    Understand Your Footprint</h3>
 <div class="mt-3 text-white">
 <p class="text-white mb-0">
 At the heart of today’s climate action lies the power of data. Data that drives informed decisions, tracks progress, and supports the transition to a sustainable future.
