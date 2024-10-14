@@ -17,7 +17,6 @@ public function index()
 {
 //
 $data['title']='Carbon Credit';
-
 return Inertia::render('CarbonCreditPage',$data);
 
 }
@@ -69,30 +68,53 @@ public function destroy($id)
 
 
 //project development function
-public function projectDevelopment(){
+public function projectDevelopment()
+{
 $data['title']='Project Development';
 return Inertia::render('ProjectDevelopmentPage',$data);
 }
 
 
 //purchase carbon credit function
-public function purchaseCarbonCredit(){
+public function purchaseCarbonCredit()
+{
 $data['title']='Buy Carbon Credit';
 return Inertia::render('PurchaseCarbonCreditPage',$data);
 }
 
 //emission offsetting function
-public function emissionOffsetting(){
+public function emissionOffsetting()
+{
 $data['title']='Emission Offsetting';
 return Inertia::render('EmissionOffsettingPage',$data);
 }
 
 
 //carbon financing
-public function carbonFinancing(){
+public function carbonFinancing()
+{
 $data['title']='Carbon Financing';
 return Inertia::render('CarbonFinancingPage',$data);
 }
+
+
+
+
+//carbon market
+public function carbonMarket(){
+$data['title']='Carbon Market';
+$data['response']=[];
+return Inertia::render('CarbonMarketPage',$data);
+}
+
+
+
+
+
+
+
+
+
 
 
 

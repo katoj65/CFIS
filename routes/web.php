@@ -21,6 +21,7 @@ use App\Http\Controllers\KnowledgeCenter\KnowledgeCenterController;
 use App\Http\Controllers\Project\ProjectController;
 use App\Http\Controllers\Emission\EmissionController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,6 +76,9 @@ Route::get('project/developer',[ProjectController::class,'developProject'])->nam
 Route::get('project/support',[ProjectController::class,'supportProject'])->name('project.support');
 Route::get('project/help',[ProjectController::class,'helpProject'])->name('project.help');
 Route::get('emission/calculate',[EmissionController::class,'emissionCalculator'])->name('emission.calculate');
+Route::get('carbon/market',[CarbonCreditController::class,'carbonMarket'])->name('carbon.market');
+
+
 
 
 

@@ -30,7 +30,8 @@ $data=[
 'title'=>'welcome',
 'emission_report'=>ReportSectorEmission::limit(4)->get(),
 'emission_source'=>EmissionSource::limit(8)->orderby('order_by')->get(),
-'project'=>ProjectModel::get(),
+'project'=>ProjectModel::count(),
+
 
 
 

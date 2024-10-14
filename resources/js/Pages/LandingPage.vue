@@ -8,10 +8,7 @@
 <h1 class="display-3 text-center text-lg-start title-font" style="font-size:50px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
 <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">CONTRIBUTE TO A SUSTAINABLE</span> <br/><span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> FUTURE</span> <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">NOW!</span>
 </h1>
-<!-- <h1 style="font-size:45px;line-height:55px;word-spacing:12px;letter-spacing:0px;font-weight:bolder;">
-CONTRIBUTE <br/>TO A SUSTAINABLE<br/>
-<span>FUTURE</span> <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;">Now!</span>
-</h1> -->
+
 </div>
 <div class="col-lg-5 offset-xxl-1 pt-sm-3">
 
@@ -488,13 +485,13 @@ menuOptions:[
 url:'emission.calculate'
 },
 {title:'Carbon Market',
-url:'projects.welcome'
+url:'carbon.market'
 },
 {title:'Microfinance Services',
-url:'projects.welcome'
+url:'microfinance.introduction'
 },
 {title:'Develop a Project',
-url:'projects.welcome'
+url:'project.developer'
 },
 {title:'Learn More',
 url:'projects.welcome'
