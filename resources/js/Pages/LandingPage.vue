@@ -349,27 +349,27 @@ Climate change is one of the greatest challenges of our time, but together, we c
 <div class="position-absolute top-50 end-0 translate-middle-y border-end" style="height: 60px;"></div>
 <div class="p-3 px-sm-0 py-sm-4">
 <div class="h2 display-5 text-white mb-0">540+</div>
-<span class="text-white">Happy clients</span>
+<span class="text-white">Projects</span>
 </div>
 </div>
 <div class="col d-md-flex justify-content-center text-center text-md-start position-relative">
 <div class="position-absolute top-50 end-0 translate-middle-y border-end d-none d-md-block" style="height: 60px;"></div>
 <div class="p-3 px-sm-0 py-sm-4">
 <div class="h2 display-5 text-white mb-0">1070</div>
-<span class="text-white">Projects completed</span>
+<span class="text-white">Developers</span>
 </div>
 </div>
 <div class="col d-md-flex justify-content-center text-center text-md-start position-relative">
 <div class="position-absolute top-50 end-0 translate-middle-y border-end" style="height: 60px;"></div>
 <div class="p-3 px-sm-0 py-sm-4">
 <div class="h2 display-5 text-white mb-0">30+</div>
-<span class="text-white">Full time specialists</span>
+<span class="text-white">Clients</span>
 </div>
 </div>
 <div class="col d-md-flex justify-content-center text-center text-md-start position-relative">
 <div class="p-3 px-sm-0 py-sm-4">
 <div class="h2 display-5 text-white mb-0">15</div>
-<span class="text-white">Awards won</span>
+<span class="text-white">Funded</span>
 </div>
 </div>
 </div>

@@ -31,6 +31,7 @@ $data=[
 'emission_report'=>ReportSectorEmission::limit(4)->get(),
 'emission_source'=>EmissionSource::limit(8)->orderby('order_by')->get(),
 'project'=>ProjectModel::count(),
+'developers'=>ProjectModel::select('developer_id')->distinct()->count(),
 
 
 
