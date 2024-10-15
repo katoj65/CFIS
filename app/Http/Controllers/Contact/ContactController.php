@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Contact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\ContactModel;
 
 class ContactController extends Controller
 {
@@ -32,16 +33,15 @@ return Inertia::render('ContactPage',$data);
     public function store(Request $request)
     {
         //
-
 $request->validate(
-['names'=>'required','email'=>'required'],
-
-);
-
-
-return false;
-
-    }
+['names'=>'required','email'=>'required','message'=>'required','subject'=>'required']);
+ContactModel::create(
+['names'=>$request->names,
+'email'=>$request->email,
+'subject'=>$request->subject,
+'message'=>$request->message]);
+return redirect('/contact')->with('success','Thank you for contacting us');
+}
 
     /**
      * Display the specified resource.

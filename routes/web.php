@@ -44,8 +44,9 @@ Route::get('/', function () {
 });
 
 
-
-
+//test page
+Route::get('test', function () {return Inertia::render('TestPage');});
+//routes
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
@@ -77,8 +78,6 @@ Route::get('project/support',[ProjectController::class,'supportProject'])->name(
 Route::get('project/help',[ProjectController::class,'helpProject'])->name('project.help');
 Route::get('emission/calculate',[EmissionController::class,'emissionCalculator'])->name('emission.calculate');
 Route::get('carbon/market',[CarbonCreditController::class,'carbonMarket'])->name('carbon.market');
-
-
 
 
 

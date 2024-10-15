@@ -25,18 +25,14 @@ if($request->user()){
 return redirect('/dashboard');
 }
 
-
-$data=[
-'title'=>'welcome',
+$data['title']='Welcome';
+$data['response']=[
 'emission_report'=>ReportSectorEmission::limit(4)->get(),
 'emission_source'=>EmissionSource::limit(8)->orderby('order_by')->get(),
 'project'=>ProjectModel::count(),
 'developers'=>ProjectModel::select('developer_id')->distinct()->count(),
-
-
-
-
 ];
+
 return Inertia::render('LandingPage',$data);
 }
 

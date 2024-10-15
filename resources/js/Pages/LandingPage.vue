@@ -94,10 +94,12 @@ Carbon emissions are a major driver of climate change. By reducing carbon emissi
 
 
 <section class="container py-5">
-<h2 class="h1 text-center text-dark">About Us</h2>
+<h2 class="h1 text-center text-dark">About Us </h2>
 <p class="text-center pb-4 mb-2 mb-lg-3" style="padding-left:20%;padding-right:20%;">Uganda Carbon Registry is committed to empowering individuals, businesses,
 and communities to reduce their carbon footprints and offset greenhouse gas emissions through accessible tools
-and microfinance solutions.</p>
+and microfinance solutions.
+
+</p>
 </section>
 
 
@@ -348,27 +350,27 @@ Climate change is one of the greatest challenges of our time, but together, we c
 <div class="col d-md-flex justify-content-center text-center text-md-start position-relative">
 <div class="position-absolute top-50 end-0 translate-middle-y border-end" style="height: 60px;"></div>
 <div class="p-3 px-sm-0 py-sm-4">
-<div class="h2 display-5 text-white mb-0">540+</div>
+<div class="h2 display-5 text-white mb-0 text-center">{{ response.project }}</div>
 <span class="text-white">Projects</span>
 </div>
 </div>
 <div class="col d-md-flex justify-content-center text-center text-md-start position-relative">
 <div class="position-absolute top-50 end-0 translate-middle-y border-end d-none d-md-block" style="height: 60px;"></div>
 <div class="p-3 px-sm-0 py-sm-4">
-<div class="h2 display-5 text-white mb-0">1070</div>
-<span class="text-white">Developers</span>
+<div class="h2 display-5 text-white mb-0 text-center">{{ response.developers }} </div>
+<span class="text-white">Project Developers</span>
 </div>
 </div>
 <div class="col d-md-flex justify-content-center text-center text-md-start position-relative">
 <div class="position-absolute top-50 end-0 translate-middle-y border-end" style="height: 60px;"></div>
 <div class="p-3 px-sm-0 py-sm-4">
-<div class="h2 display-5 text-white mb-0">30+</div>
+<div class="h2 display-5 text-white mb-0 text-center">30+</div>
 <span class="text-white">Clients</span>
 </div>
 </div>
 <div class="col d-md-flex justify-content-center text-center text-md-start position-relative">
 <div class="p-3 px-sm-0 py-sm-4">
-<div class="h2 display-5 text-white mb-0">15</div>
+<div class="h2 display-5 text-white mb-0 text-center">15</div>
 <span class="text-white">Funded</span>
 </div>
 </div>
@@ -400,9 +402,7 @@ components:{
 LandingLayout
 },
 props:{
-emission_report:[],
-emission_source:[],
-
+response:{},
 },
 
 
