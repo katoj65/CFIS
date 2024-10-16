@@ -5,7 +5,7 @@
 <div class="container-fluid feature py-0">
 <div class="container mt-5">
 <div class="mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-<subtitle-component :title="'Join the fight against climate change by sponsoring innovative carbon reduction solutions'"/>
+
 <p>
     We believe that partnerships are key to building a sustainable future. By sponsoring a Carbon Mitigation Project in Uganda, you’ll play a crucial role in reducing greenhouse gas emissions, promoting environmental sustainability, and empowering local communities. Whether you're a business, NGO, or an individual passionate about climate action, your sponsorship can have a lasting impact.
 </p>
