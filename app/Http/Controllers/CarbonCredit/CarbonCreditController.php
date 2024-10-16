@@ -109,6 +109,14 @@ return Inertia::render('CarbonMarketPage',$data);
 
 
 
+//emission offset
+public function offsetEmissions(){
+$data['title']='Offset Your Emissions';
+$data['response']=[];
+return Inertia::render('OffsetEmissionsPage',$data);
+}
+
+
 
 
 

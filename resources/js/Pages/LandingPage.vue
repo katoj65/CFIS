@@ -155,7 +155,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
   <div class="row row-cols-1 row-cols-sm-2">
     <div class="col">
       <div class="card border-0 bg-primary bg-opacity-10">
-        <div class="card-body border-radius" style="border:solid 5px silver; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Emission Tracking</h3>
@@ -166,7 +166,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
         </div>
       </div>
       <div class="card border-0 bg-info bg-opacity-10 mt-4">
-        <div class="card-body border-radius" style="border:solid 5px silver; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">
@@ -178,7 +178,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
     </div>
     <div class="col pt-lg-3">
       <div class="card border-0 bg-warning bg-opacity-10 mt-4 mt-sm-0 mt-lg-4">
-        <div class="card-body border-radius" style="border:solid 5px silver; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Carbon Markets</h3>
@@ -186,7 +186,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
         </div>
       </div>
       <div class="card border-0 bg-danger bg-opacity-10 mt-4">
-        <div class="card-body border-radius" style="border:solid 5px silver; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Microfinance Services</h3>
@@ -494,7 +494,7 @@ url:'microfinance.introduction'
 url:'project.developer'
 },
 {title:'Learn More',
-url:'projects.welcome'
+url:'hub.welcome'
 },
 // {title:'Donate to Us',
 // url:'donate'

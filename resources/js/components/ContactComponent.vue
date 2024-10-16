@@ -7,6 +7,8 @@
 <p class="text-white">
 <b-icon icon="envelope-fill" aria-hidden="true" scale="1" class="mr-1"></b-icon> ugandacarbonregistry@gmail.com
 </p>
+<slot name="contacts"></slot>
+<slot name="button"/>
 </div>
 </template>
 <script>

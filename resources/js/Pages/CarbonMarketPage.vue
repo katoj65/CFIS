@@ -31,7 +31,7 @@
 
 
 
-<template>
+<section>
 <div class="container-fluid feature py-3">
 <div class="container py-0">
 <div class="row g-0 p-0">
@@ -160,7 +160,11 @@ Get Started Today!
 <p class="text-white">For guidance on how to develop a project or join the carbon market, reach out to the us.
 Together, we can drive meaningful change toward a low-carbon, sustainable future.
 </p>
-<contact-component/>
+<contact-component>
+<template #button>
+    <Inertia-link :href="route('carbon.offset-emissions')" class="p-2 btn btn-danger btn-block">Offset Your Emissions</Inertia-link>
+</template>
+</contact-component>
 </div>
 
 
@@ -181,7 +185,7 @@ Together, we can drive meaningful change toward a low-carbon, sustainable future
 
 
 
-</template>
+    </section>
 
 
 

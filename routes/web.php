@@ -32,7 +32,11 @@ use App\Http\Controllers\Emission\EmissionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//include apps
+include('hub.php');
 
+
+//
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -47,6 +51,7 @@ Route::get('/', function () {
 //test page
 Route::get('test', function () {return Inertia::render('TestPage');});
 //routes
+
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
@@ -70,7 +75,7 @@ Route::get('about/carbon-credit-registration', [AboutController::class, 'carbonC
 Route::get('about/project-verification-certification',[AboutController::class,'verificationCertification'])->name('about.verification-certification');
 Route::get('about/carbon-credit-trading', [AboutController::class, 'carbonCreditTrading'])->name('about.carbon-redit-trading');
 Route::get('about/capacity-building-training', [AboutController::class, 'capacityBuildingTraining'])->name('about.capacity-building-training');
-Route::get('knowledge/hub', [KnowledgeCenterController::class, 'index'])->name('knowledge.welcome');
+Route::get('hub/welcome', [KnowledgeCenterController::class, 'index'])->name('hub.welcome');
 Route::get('projects',[ProjectController::class,'index'])->name('projects.welcome');
 Route::get('project/details/{id}',[ProjectController::class,'show'])->name('project.show');
 Route::get('project/developer',[ProjectController::class,'developProject'])->name('project.developer');
@@ -78,7 +83,7 @@ Route::get('project/support',[ProjectController::class,'supportProject'])->name(
 Route::get('project/help',[ProjectController::class,'helpProject'])->name('project.help');
 Route::get('emission/calculate',[EmissionController::class,'emissionCalculator'])->name('emission.calculate');
 Route::get('carbon/market',[CarbonCreditController::class,'carbonMarket'])->name('carbon.market');
-
+Route::get('carbon/offset-emissions',[CarbonCreditController::class,'offsetEmissions'])->name('carbon.offset-emissions');
 
 
 

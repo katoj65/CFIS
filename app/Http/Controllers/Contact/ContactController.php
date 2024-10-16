@@ -34,7 +34,7 @@ return Inertia::render('ContactPage',$data);
     {
         //
 $request->validate(
-['names'=>'required','email'=>'required','message'=>'required','subject'=>'required']);
+['names'=>'required','email'=>'required|email','message'=>'required','subject'=>'required']);
 ContactModel::create(
 ['names'=>$request->names,
 'email'=>$request->email,

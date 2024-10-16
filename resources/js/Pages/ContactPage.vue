@@ -7,7 +7,7 @@
 
 
 <!--Hire jamstack start-->
-<section class="pattern-square bg-secondary bg-opacity-10">
+<section class="pattern-square bg-light">
     <div class="container position-relative z-1 py-3">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 col-md-12">
@@ -101,7 +101,7 @@
             <div class="col-sm-12">
             <div class="form-group">
             <div class="form-control-wrap">
-            <input type="text" class="form-control" id="default-05" placeholder="Enter your email address" v-model="form.email">
+            <input type="email" class="form-control" id="default-05" placeholder="Enter your email address" v-model="form.email">
             <error-inline :error="form.errors.email"></error-inline>
             </div>
             </div>
@@ -163,8 +163,8 @@
 
 
 
-
-<div class="swal2-container swal2-center swal2-backdrop-show" v-if="status==true">
+<template  v-if="status==true">
+<div class="swal2-container swal2-center swal2-backdrop-show">
 <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-icon-success swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex;">
 <div class="swal2-header">
 <ul class="swal2-progress-steps" style="display: none;">
@@ -198,7 +198,7 @@ Successful!
 </h2>
 </div>
 <div class="swal2-content">
-<div id="swal2-content" class="swal2-html-container mt-5" style="display: block;font-size:19px;">
+<div id="swal2-content" class="swal2-html-container mt-4" style="display: block;font-size:19px;">
 {{ $page.props.flash.success }}
 </div>
 
@@ -210,19 +210,7 @@ Successful!
 </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</template>
 
 
 
