@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid bg-dark p-5" style="margin-top:-30px;">
+<div class="container-fluid bg-dark p-5" style="margin-top:-30px;border-bottom:solid 3px #ec7063 ;">
     <div class="row">
     <div class="col-12 text-center">
     <h1 class="text-white" style="font-size:30px;">{{ title }}</h1>

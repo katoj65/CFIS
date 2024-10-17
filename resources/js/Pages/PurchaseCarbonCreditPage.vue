@@ -25,8 +25,8 @@ Offset your carbon footprint and contribute to climate action by purchasing carb
 
 
 
-<div class="container-fluid feature bg-white py-0">
-<div class="container py-3">
+<div class="container-fluid feature bg-light mb-5">
+<div class="container py-0">
 <div class="row g-0 p-0">
 <div class="col-md-6 bg-light d-flex align-items-center">
 <div class="p-5">

@@ -11,7 +11,7 @@
 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
     <!-- <h5 class="text-danger mb-3">Empowering sustainability through data</h5> -->
 <p class="mb-0 text-left">
-The Uganda Carbon Registry is a national initiative designed to facilitate the transparent tracking and management of carbon credits generated through climate mitigation projects across Uganda. As Uganda takes bold steps to address climate change, the registry serves as a vital platform for certifying, verifying, and trading carbon credits in alignment with global standards.
+The Uganda Carbon Registry is a pioneering platform designed to track, verify, and facilitate carbon reduction and offset projects across Uganda. The registry offers a robust, transparent, and accessible system for managing carbon credits and supporting national and international climate goals.
 </p>
 <p class="mb-0 text-left">
 Our platform is committed to providing accessible carbon footprint management and carbon credit microfinance, empowering you to make a significant impact while driving sustainable growth.
@@ -22,7 +22,16 @@ Our platform is committed to providing accessible carbon footprint management an
 
 
 
-<div class="container-fluid feature bg-white py-0">
+
+
+
+
+
+
+
+
+
+<div class="container-fluid feature bg-light py-0">
     <div class="container py-3">
         <div class="row g-0 p-0">
             <div class="col-md-6 col-12 bg-light d-flex align-items-center">

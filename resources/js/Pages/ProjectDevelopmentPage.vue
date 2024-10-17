@@ -6,14 +6,12 @@
     <div class="container py-5">
     <div class="text-center mx-auto wow fadeInUp" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
 
-       <h4 class="mb-3 text-danger">Start your carbon credit project today</h4>
+
 
     <p class="mb-0 text-left">
-        Uganda is uniquely positioned to benefit from the development of carbon credit projects, thanks to its rich natural resources, renewable energy potential, and increasing commitment to sustainable development.
+        Unlock new opportunities and fight climate change by developing carbon mitigation projects in Uganda. Support sustainable development, reduce emissions, and generate revenue through certified carbon credits.
     </p>
-<p class="mb-0 text-left">
-    Carbon credit projects in Uganda not only help mitigate climate change but also contribute to socio-economic development by generating jobs, preserving ecosystems, and providing communities with access to clean energy.
-</p>
+
     </div>
     </div>
     </div>
@@ -22,7 +20,7 @@
 
 
 
-<section id="more-features" class="more-features section py-0 bg-light">
+<section id="more-features" class="more-features section py-3 bg-light">
 
         <div class="container">
 
@@ -55,15 +53,35 @@ Agriculture. Uganda’s agricultural sector can benefit from carbon credit proje
 </ol>
 
 
+<h3 class="mt-4">Opportunities for investors and developers</h3>
+<p class="mb-3">
+Invest in Uganda’s future by supporting carbon mitigation projects! Developers and investors can capitalize on growing carbon markets, generate revenue from carbon credits, and contribute to sustainable development. From reforestation to renewable energy, Uganda offers a wealth of opportunities for impactful, high-return investments that drive both environmental and economic growth
+</p>
+
+
 </div>
 <div>
 </div>
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="col-lg-5 d-flex flex-column justify-content-center order-2 order-lg-1 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
 <div class="bg-dark p-5" style="margin-bottom:-1px;z-index:1;">
-<h4 class="text-white">Key Steps in developing carbon credit projects</h4>
+<h2 class="text-white title-border-left p-2">Key Steps in Developing Carbon Credit Projects</h2>
 <p class="mt-4 text-white">
     The development of a carbon credit project follows a structured process to ensure that emissions reductions are measurable, verifiable, and tradable in carbon markets. Below is an outline of the key steps involved in creating successful carbon credit projects in Uganda.
 
@@ -126,6 +144,19 @@ Validation by a Third Party
 
 
 
+
+<form class="p-5 bg-secondary rounded">
+    <h4 class="text-white mb-4">Start Your Carbon Credit Project Today</h4>
+   <p class="text-white" style=""> If you're ready to develop a carbon credit project in Uganda, contact us to learn more about how we can help you make a positive impact on the environment while contributing to local communities. </p>
+<div class="pt-3">
+<button class="btn btn-danger btn-block border-0 py-3" type="submit">Get Started</button>
+</div>
+</form>
+
+
+
+
+
 </div>
 </div>
 </div>
@@ -138,46 +169,6 @@ Validation by a Third Party
 
 
 
-
-
-<section class="bg-dark">
-    <div class="container-fluid bg-dark my-0">
-        <div class="container">
-        <div class="row align-items-center">
-        <div class="col-lg-7 py-5 py-lg-0 pr-5">
-        <!-- <h6 class="text-primary text-uppercase font-weight-bold text-danger">Offset Your Carbon Footprint</h6> -->
-        <h4 class="mb-4 text-white">Opportunities for investors and developers</h4>
-        <p class="mb-2 text-white">
-
-            Uganda’s carbon credit market offers numerous opportunities for investors and developers interested in climate finance. The country’s potential for renewable energy development, combined with the global demand for carbon offsets, makes Uganda an attractive destination for sustainable investment.
-
-
-        </p>
-
-
-<p class="text-white">
-    At Uganda Carbon Registry, we support the development of carbon credit projects across Uganda, offering expertise in project design, certification, and carbon credit sales. Whether you’re a project developer looking to register your initiative or an investor seeking impact-driven returns, we can guide you through the process.
-</p>
-
-
-
-
-        </div>
-        <div class="col-lg-5">
-        <div class="bg-dark py-5 px-4 px-sm-5 borders-dark">
-        <form class="py-5">
-            <h4 class="text-white mb-4">Start Your Carbon Credit Project Today</h4>
-           <p class="text-white" style=""> If you're ready to develop a carbon credit project in Uganda, contact us to learn more about how we can help you make a positive impact on the environment while contributing to local communities. </p>
-        <div class="pt-3">
-        <button class="btn btn-success btn-block border-0 py-3" type="submit">Contact Us</button>
-        </div>
-        </form>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-</section>
 
 
 

@@ -3,10 +3,9 @@
 <banner-component/>
 
 
-<div class="container-fluid feature bg-light py-2">
-<div class="container mt-5">
+<div class="container-fluid feature py-4">
+<div class="container">
 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-<h5 class="text-danger">A Greener future awaits</h5>
 <p class="mb-0 text-left">
 
     Uganda is at a critical point in its fight against climate change. With increasing pressures on natural resources, rising emissions, and the need for sustainable development, now is the time to invest in carbon mitigation efforts that will not only protect the environment but also empower communities.
@@ -26,7 +25,7 @@
 
 
 
-<div class="container-fluid feature bg-white py-0">
+<div class="container-fluid feature bg-light py-0">
     <div class="container py-5">
         <div class="row g-0 p-0">
             <div class="col-md-6 bg-light d-flex align-items-center">

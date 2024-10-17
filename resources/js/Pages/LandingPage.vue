@@ -35,13 +35,15 @@
 
 
 <!-- Contact form -->
-<div class="card border-0 bg-dark py-2 px-xxl-4" style="border-radius:10px;">
-<form class="card-body p-5" data-bs-theme="dark">
-<h1 class="pl-2 title-border-left h2 card-title text-white pb-xxl-3">
-URGENT CALL FOR ACTION
-</h1>
+<div class="card bg-dark" style="border:none;border-radius:10px;">
+<div class="card-header" style="background:#ec7063;border:none;border-left:solid 10px #ec7063;">
+  <h1 class="pl-2 h2 card-title text-white pb-xxl-3 pt-2">
+    URGENT CALL FOR ACTION
+    </h1>
+</div>
+<form class="card-body p-5 pt-3" data-bs-theme="dark">
 
-<p class="text-white mt-2">
+<p class="text-white">
 As climate change continues to impact Uganda, the need for proactive, sustainable solutions is clear. Whether through climate-smart farming, clean energy development, or community-based conservation efforts, every action counts.
 
 </p>
@@ -105,10 +107,10 @@ and microfinance solutions.
 
 
 
-<div class="container-fluid feature bg-dark py-0" style="border-bottom:solid 3px red;">
+<div class="container-fluid feature bg-dark py-0" style="border-bottom:solid 3px #ec7063;">
 <div class="container">
 <div class="row g-0 p-0">
-<div class="col-md-2 bg-danger d-flex align-items-center">
+<div class="col-md-2 bg-light-red d-flex align-items-center">
 <h2 class="p-4 text-white text-center" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
 <span class="title-font">OUR MISSION</span>
 </h2>
@@ -155,7 +157,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
   <div class="row row-cols-1 row-cols-sm-2">
     <div class="col">
       <div class="card border-0 bg-primary bg-opacity-10">
-        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px #abb2b9; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Emission Tracking</h3>
@@ -166,7 +168,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
         </div>
       </div>
       <div class="card border-0 bg-info bg-opacity-10 mt-4">
-        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px #abb2b9; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">
@@ -178,7 +180,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
     </div>
     <div class="col pt-lg-3">
       <div class="card border-0 bg-warning bg-opacity-10 mt-4 mt-sm-0 mt-lg-4">
-        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px #abb2b9; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Carbon Markets</h3>
@@ -186,7 +188,7 @@ To turn carbon emissions into economic opportunities that benefit both the envir
         </div>
       </div>
       <div class="card border-0 bg-danger bg-opacity-10 mt-4">
-        <div class="card-body border-radius" style="border:solid 5px black; border-bottom:none; border-left:none;">
+        <div class="card-body border-radius" style="border:solid 5px #abb2b9; border-bottom:none; border-left:none;">
 
           <b-icon icon="back" class="p-2 d-block mb-4" scale="2"></b-icon>
           <h3 class="h4 text-dark">Microfinance Services</h3>
@@ -203,22 +205,26 @@ To turn carbon emissions into economic opportunities that benefit both the envir
 
 </div>
 <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1">
-<p class=" fs-xl pb-4 mb-2 mb-lg-3">
+<p class=" fs-xl pb-2 mb-2 mb-lg-3">
 
   In the fight against climate change, choosing the right partner to guide your carbon reduction journey is crucial. At the Uganda Carbon Registry, we provide businesses, communities, and project developers with a comprehensive and transparent platform for emission tracking, carbon credit certification and trading, and microfinance services.
 
 
 </p>
 
-<p class=" fs-xl pb-4 mb-2 mb-lg-3 mt-3" >As Uganda strives to combat climate change and transition to a sustainable economy, carbon credits emerge as a powerful tool for both environmental preservation and economic growth.
+<p class=" fs-xl pb-2 mb-lg-3 mt-3" >As Uganda strives to combat climate change and transition to a sustainable economy, carbon credits emerge as a powerful tool for both environmental preservation and economic growth.
 <br/>
 By investing in projects that generate carbon credits, Uganda can tap into a growing global market, turning emissions into economic opportunities.
 </p>
-<ul>
-<li><a href="" class="btn text-danger border border-outline border-danger p-2" style="mar">Buy Carbon Credit</a> </li>
-<li> </li>
-</ul>
 
+
+<div class=links>
+<ul style="padding:0;">
+<li v-for="(l,key) in links" :key="key">
+<a href=""> <b-icon icon="arrow-right-circle" aria-hidden="true"  class="mr-2"></b-icon> {{ l.name }} </a> </li>
+
+</ul>
+</div>
 
 </div>
 </div>
@@ -236,7 +242,7 @@ By investing in projects that generate carbon credits, Uganda can tap into a gro
 
 
 
-<section class="bg-danger">
+<section class="bg-light-red">
 <div class="container">
 <div class="row">
 <div class="col-12 col-md-3 bg-dark p-3 text-center text-white">
@@ -502,8 +508,20 @@ url:'hub.welcome'
 // {title:'Get Help',
 // url:'help'
 // },
-]
+],
 
+//second list
+links:[
+{name:'Carbon Emissions in Uganda',url:'community'},
+{name:'Buy or Sell Carbon Credit',url:'market/buy-sell'},
+{name:'Become a project developer',url:'project/developer'},
+{name:'News and Updates',url:'news'},
+{name:'Community Connections',url:'community'},
+{name:'See Our Partners',url:'partners'},
+
+
+
+],
 
 
 
@@ -608,5 +626,17 @@ color:black;
 font-size: 18px;
 color:white;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.links ul li{
+margin-bottom:5px;
+padding:2px;
+}
+.links ul li a {
+color:black;
+text-decoration: none;
+}
+.links ul li a:hover{
+
+  text-decoration: underline;
 }
 </style>

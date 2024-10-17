@@ -140,7 +140,7 @@ We are committed to fostering the skills and knowledge necessary for driving sus
 Whether you’re a business leader looking to reduce your carbon footprint, a community group seeking to launch a carbon offset project, or a policymaker developing climate strategies, the Uganda Carbon Registry offers the support and resources you need to succeed. Together, we can build a future where Uganda not only mitigates its emissions but also thrives in a low-carbon economy.
 </p>
 <p>
-<Inertia-link :href="route('knowledge.welcome')" class="btn btn-danger btn-block border-0 p-3" style="font-size:17px;">Visit our Knowledge Hub</Inertia-link>
+<Inertia-link :href="route('hub')" class="btn btn-danger btn-block border-0 p-3" style="font-size:17px;">Visit our Knowledge Hub</Inertia-link>
 </p>
 </div>
 

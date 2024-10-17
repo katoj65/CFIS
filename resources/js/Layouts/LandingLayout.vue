@@ -40,7 +40,7 @@ Sponsor a Project
 
 
                     </div>
-                    <inertia-link :href="route('login')" class="btn btn-warning py-4 px-lg-5 d-none d-lg-block" style="border-radius:0;font-size:15px;">Login</inertia-link>
+                    <inertia-link :href="route('login')" class="btn  py-4 px-lg-5 d-none d-lg-block text-white" style="border-radius:0;font-size:15px;background:#ec7063;font-weight:bold;">Login</inertia-link>
                 </div>
             </nav>
 

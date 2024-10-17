@@ -6,7 +6,7 @@
 <div class="container-fluid feature py-2">
 <div class="container mt-5">
 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-<h5 class="text-danger">Carbon Credit Microfinance</h5>
+
 <h3 class="display-7 mb-4">Empower, Invest and Reduce Carbon Emissions</h3>
 
 
@@ -27,7 +27,7 @@ Carbon credit microfinance presents a unique opportunity to drive climate action
 
 
 
-<div class="container-fluid feature bg-white py-0">
+<div class="container-fluid feature bg-light py-0">
     <div class="container py-3">
         <div class="row g-0 p-0">
             <div class="col-md-6 bg-light d-flex align-items-center">
@@ -35,7 +35,7 @@ Carbon credit microfinance presents a unique opportunity to drive climate action
 
 
 
-                    <h5 class="text-danger">Emission Reduction</h5>
+
                     <h4 class="display-7 mb-4">What is Carbon Credit Microfinance?</h4>
 
                     <p>

@@ -2,10 +2,9 @@
 <landing-layout>
 <banner-component/>
 
-<div class="container-fluid feature py-0">
-<div class="container mt-5">
+<div class="container-fluid feature py-5">
+<div class="container">
 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-<subtitle-component :title="'Democratising access to climate finance'"/>
 <p>
     We’re excited to help you take the next step in financing your carbon reduction project! Our Carbon Credit Microfinance Loans are designed to empower individuals, businesses, and communities to implement sustainable projects that reduce carbon emissions while generating revenue through carbon credits.
 </p>
@@ -26,8 +25,8 @@
 
 
 
-<div class="container-fluid feature bg-white py-0">
-<div class="container py-3">
+<div class="container-fluid feature bg-light py-0">
+<div class="container py-0">
 <div class="row g-0 p-0">
 <div class="col-md-6 bg-light d-flex align-items-center">
 <div class="p-5">

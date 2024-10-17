@@ -137,6 +137,9 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 border-radius: 10px;
 }
 
+.bg-light-red{
+background: #ec7063;
+}
 
 
 </style>

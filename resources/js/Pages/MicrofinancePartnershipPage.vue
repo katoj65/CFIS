@@ -2,10 +2,10 @@
 <landing-layout>
 <banner-component/>
 
-<div class="container-fluid feature py-0">
-<div class="container mt-5 mb-4">
+<div class="container-fluid feature py-5">
+<div class="container mb-4">
 <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-<subtitle-component :title="'Enhance your corporate social responsibility'"/>
+
 <p>
 As a local carbon registry dedicated to facilitating carbon credit generation and sustainable development, we invite businesses, organizations, and institutions to collaborate with us in our mission to mitigate climate change and promote environmental stewardship in Uganda.
 </p>
@@ -25,7 +25,7 @@ As a local carbon registry dedicated to facilitating carbon credit generation an
 
 
 
-<div class="container-fluid feature bg-white py-0">
+<div class="container-fluid feature bg-light py-0">
 <div class="container py-5">
 <div class="row g-0 p-0">
 <div class="col-md-6 bg-light d-flex align-items-center">

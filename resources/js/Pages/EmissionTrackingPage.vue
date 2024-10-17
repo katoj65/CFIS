@@ -25,7 +25,7 @@ We provide robust tools and services to help organisations, businesses, and indi
 
 
 
-<div class="container-fluid feature bg-white py-0">
+<div class="container-fluid feature bg-light py-0">
     <div class="container py-3">
         <div class="row g-0 p-0">
             <div class="col-md-6 col-12 bg-light d-flex align-items-center">
