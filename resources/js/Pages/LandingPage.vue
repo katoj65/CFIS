@@ -12,8 +12,8 @@
 </div>
 <div class="col-lg-5 offset-xxl-1 pt-sm-3">
 
-<div class="row">
-<div class="col-12 col-md-4">
+<div class="row mt-5">
+<div class="col-12 col-md-4 mt-5">
 <img src="http://localhost/carbon/public/images/antonio_guterres.png">
 </div>
 <div class="col-12 col-md-4">
@@ -24,7 +24,7 @@
 </div>
 </div>
 <div class="col-12">
-<p class="fs-lg text-left text-lg-start pb-3 pb-sm-0 pb-md-2 mb-4 mb-sm-5 text-danger" style="font-size:20px;line-height:30px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+<p class="fs-lg text-left text-lg-start pb-3 pb-sm-0 pb-md-2 mb-4 mb-sm-5 text-danger" style="font-size:18px;line-height:30px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
 "The Era of Global Warming has Ended: The Era of Global Boiling Has Arrived."
 </p>
 </div>
@@ -37,9 +37,9 @@
 <!-- Contact form -->
 <div class="card bg-dark" style="border:none;border-radius:10px;">
 <div class="card-header" style="background:#ec7063;border:none;border-left:solid 10px #ec7063;">
-  <h1 class="pl-2 h2 card-title text-white pb-xxl-3 pt-2">
+  <h3 class="h4 card-title text-white pb-xxl-3 pt-2 text-center" style="word-spacing:5px;">
     URGENT CALL FOR ACTION
-    </h1>
+    </h3>
 </div>
 <form class="card-body p-5 pt-3" data-bs-theme="dark">
 

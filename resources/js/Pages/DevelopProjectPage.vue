@@ -21,8 +21,8 @@
 
 
 <section>
-<div class="container-fluid feature bg-white py-0">
-<div class="container py-3">
+<div class="container-fluid feature bg-light py-0">
+<div class="container">
 <div class="row g-0 p-0">
 <div class="col-md-6 bg-light d-flex align-items-center">
 <div class="p-5">
