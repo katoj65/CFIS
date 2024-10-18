@@ -221,7 +221,7 @@ By investing in projects that generate carbon credits, Uganda can tap into a gro
 <div class=links>
 <ul style="padding:0;">
 <li v-for="(l,key) in links" :key="key">
-<a href=""> <b-icon icon="arrow-right-circle" aria-hidden="true"  class="mr-2"></b-icon> {{ l.name }} </a> </li>
+<Inertia-link :href="route(l.url)"> <b-icon icon="arrow-right-circle" aria-hidden="true"  class="mr-2"></b-icon> {{ l.name }} </Inertia-link> </li>
 
 </ul>
 </div>
@@ -512,12 +512,12 @@ url:'hub.welcome'
 
 //second list
 links:[
-{name:'Carbon Emissions in Uganda',url:'community'},
-{name:'Buy or Sell Carbon Credit',url:'market/buy-sell'},
-{name:'Become a project developer',url:'project/developer'},
-{name:'News and Updates',url:'news'},
-{name:'Community Connections',url:'community'},
-{name:'See Our Partners',url:'partners'},
+{name:'Carbon Emissions in Uganda',url:'emissions.uganda'},
+{name:'Buy or Sell Carbon Credit',url:'emissions.uganda'},
+{name:'Become a project developer',url:'emissions.uganda'},
+{name:'News and Updates',url:'emissions.uganda'},
+{name:'Community Connections',url:'emissions.uganda'},
+{name:'See Our Partners',url:'emissions.uganda'},
 
 
 

@@ -84,7 +84,7 @@ Route::get('project/help',[ProjectController::class,'helpProject'])->name('proje
 Route::get('emission/calculate',[EmissionController::class,'emissionCalculator'])->name('emission.calculate');
 Route::get('carbon/market',[CarbonCreditController::class,'carbonMarket'])->name('carbon.market');
 Route::get('carbon/offset-emissions',[CarbonCreditController::class,'offsetEmissions'])->name('carbon.offset-emissions');
-
+Route::get('emissions/', [EmissionController::class,'carbonEmissionsInUganda'])->name('emissions.uganda');
 
 
 

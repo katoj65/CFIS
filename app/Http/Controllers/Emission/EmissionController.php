@@ -72,5 +72,15 @@ return Inertia::render('EmissionCalculatorInstructionPage',$data);
 
 
 
+public function carbonEmissionsInUganda(){
+$data['title']='Carbon Emissions in Uganda';
+$data['response']=[];
+return Inertia::render('UgandaEmissionsPage',$data);
+}
+
+
+
+
+
 
 }
