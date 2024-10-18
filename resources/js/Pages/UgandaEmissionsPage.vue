@@ -29,12 +29,12 @@ Uganda, similar to many other developing nations, is encountering the simultaneo
 
 
 <!--community resource-->
-<section class="py-lg-10 py-5 bg-light">
+<section class="py-lg-10 py-5 bg-light ">
     <div class="container">
         <div class="row g-xl-7">
 
             <div class="col-md-4 col-12">
-                <div class="text-center text-md-start p-4 p-md-0">
+                <div class="text-center text-md-start p-5 p-md-0">
                     <div class="mb-5 pl-3">
                         <b-icon icon="tree-fill" aria-hidden="true" scale="3"></b-icon>
                     </div>
@@ -47,7 +47,7 @@ Uganda, similar to many other developing nations, is encountering the simultaneo
                     </div>
 
                     <a href="#!" class="icon-link icon-link-hover text-danger">
-                        Impacts on bio diversity
+                        Environmental Impacts
                         <svg xmlns="http://www.w3.org/2000/svg" width="14"
                             height="14" fill="currentColor"
                             class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -59,7 +59,7 @@ Uganda, similar to many other developing nations, is encountering the simultaneo
                 </div>
             </div>
             <div class="col-md-4 col-12">
-                <div class="text-center text-md-start p-4 p-md-0">
+                <div class="text-center text-md-start p-5 p-md-0">
                     <div class="mb-5 pl-3">
                         <b-icon icon="graph-up" aria-hidden="true" scale="3"></b-icon>
                     </div>
@@ -71,7 +71,7 @@ Uganda, similar to many other developing nations, is encountering the simultaneo
                     </div>
 
                     <a href="#!" class="icon-link icon-link-hover text-danger">
-                    Impacts on the economy
+                    Economic Impacts
                         <svg xmlns="http://www.w3.org/2000/svg" width="14"
                             height="14" fill="currentColor"
                             class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -83,7 +83,7 @@ Uganda, similar to many other developing nations, is encountering the simultaneo
                 </div>
             </div>
             <div class="col-md-4 col-12">
-                <div class="text-center text-md-start p-4 p-md-0">
+                <div class="text-center text-md-start p-5 p-md-0">
                     <div class="mb-5 pl-3">
                         <b-icon icon="people-fill" aria-hidden="true" scale="3"></b-icon>
                     </div>
@@ -95,7 +95,7 @@ Uganda, similar to many other developing nations, is encountering the simultaneo
                     </div>
 
                     <a href="#!" class="icon-link icon-link-hover text-danger">
-                        Impacts on living standards
+                        Social Impacts
                         <svg xmlns="http://www.w3.org/2000/svg" width="14"
                             height="14" fill="currentColor"
                             class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -188,7 +188,7 @@ Ban Ki-moon</span><br>
                 <div class="row">
                     <div class="col-md-6">
                         <div
-                            class="card bg-danger bg-opacity-10 border-0 mb-5"  style="border-radius:30px;">
+                            class="card bg-danger bg-opacity-10 border-0 mb-5 shadow-sm"  style="border-radius:10px;">
                             <div class="card-body p-4">
 
                                 <div class="mb-4">
@@ -202,7 +202,7 @@ Ban Ki-moon</span><br>
                             </div>
                         </div>
                         <div
-                            class="card bg-warning bg-opacity-10 border-0 mb-5 mb-lg-0"  style="border-radius:30px;">
+                            class="card bg-warning bg-opacity-10 border-0 mb-5 mb-lg-0 shadow-sm"  style="border-radius:10px;">
                             <div class="card-body p-4">
 
                                 <div class="mb-4">
@@ -216,7 +216,7 @@ Ban Ki-moon</span><br>
                     </div>
                     <div class="col-md-6 mt-md-5">
                         <div
-                            class="card bg-info bg-opacity-10 border-0 mb-5"  style="border-radius:30px;">
+                            class="card bg-info bg-opacity-10 border-0 mb-5 shadow-sm"  style="border-radius:10px;">
                             <div class="card-body p-4">
 
                                 <div class="mb-4">
@@ -228,7 +228,7 @@ Ban Ki-moon</span><br>
                             </div>
                         </div>
                         <div
-                            class="card bg-success bg-opacity-10 border-0 mb-5 mb-lg-0" style="border-radius:30px;">
+                            class="card bg-success bg-opacity-10 border-0 mb-5 mb-lg-0 shadow-sm" style="border-radius:10px;">
                             <div class="card-body p-4">
 
                                 <div class="mb-4">
@@ -270,7 +270,7 @@ Ban Ki-moon</span><br>
 
 
 <div class="col-xl-5 col-lg-5 pb-5">
-<div style="margin-right:50px;border-radius:20px; border-right:solid 5px #ec7063" class="bg-dark p-5">
+<div style="margin-right:50px;border-radius:20px; border-right:solid 5px #ec7063" class="bg-dark p-5 shadow-sm">
 <!-- <img src="http://localhost/carbon/public/images/deforestation.jpeg" alt="" class="img-fluid rounded-3" /> -->
 
 <h3 class="text-white title-border-left pl-2">
@@ -293,7 +293,7 @@ Why Reducing Carbon Emissions Matters
 
 <div class="col-xl-7 col-lg-7">
 
-<div class="bg-white p-4 mb-5" style="border-radius:30px;">
+<div class="bg-white p-4 mb-5 shadow-sm" style="border-radius:10px;">
 <div class="pe-lg-8 me-lg-8">
 <h4 class="mb-0 me-lg-8">
 How the Uganda Carbon Registry Supports Emission Reductions
