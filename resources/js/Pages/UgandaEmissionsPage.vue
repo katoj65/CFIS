@@ -292,13 +292,15 @@ Why Reducing Carbon Emissions Matters
 
 
 <div class="col-xl-7 col-lg-7">
-<div class="pe-lg-8 me-lg-8 mb-4">
+
+<div class="bg-white p-4 mb-5" style="border-radius:30px;">
+<div class="pe-lg-8 me-lg-8">
 <h4 class="mb-0 me-lg-8">
 How the Uganda Carbon Registry Supports Emission Reductions
 
 </h4>
 </div>
-<div class="row mb-7 gy-1">
+<div class="row gy-1">
 <div class="col-lg-12">
 <div>
 <p class="mb-0">The Uganda Carbon Registry plays a crucial role in monitoring, verifying, and facilitating carbon reduction projects in Uganda. It allows project developers, businesses, and communities to register carbon reduction and removal projects, generate carbon credits, promote transparency, and provide access to microfinance services.</p>
@@ -336,11 +338,12 @@ How the Uganda Carbon Registry Supports Emission Reductions
         </div>
         </div>
 </div> -->
+</div>
+
 
 
 
 </div>
-
 </div>
 
 </div>
