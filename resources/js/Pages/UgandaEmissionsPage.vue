@@ -29,7 +29,7 @@ Uganda, similar to many other developing nations, is encountering the simultaneo
 
 
 <!--community resource-->
-<section class="py-lg-10 py-5 bg-light ">
+<section class="py-lg-10 py-5">
     <div class="container">
         <div class="row g-xl-7">
 
@@ -293,7 +293,7 @@ Why Reducing Carbon Emissions Matters
 
 <div class="col-xl-7 col-lg-7">
 
-<div class="bg-white p-4 mb-5 shadow-sm" style="border-radius:10px;">
+<div class="bg-white p-4 mb-5" style="border-radius:10px;">
 <div class="pe-lg-8 me-lg-8">
 <h4 class="mb-0 me-lg-8">
 How the Uganda Carbon Registry Supports Emission Reductions

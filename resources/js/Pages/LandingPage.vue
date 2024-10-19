@@ -118,12 +118,16 @@ and microfinance solutions.
 <div class="col-md-10 bg-dark">
 <p class="p-4 text-white" style="font-family:fantasy;font-size:25px;">
 To turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. <br/>
-
 </p>
 </div>
 </div>
 </div>
 </div>
+
+
+
+
+
 
 
 

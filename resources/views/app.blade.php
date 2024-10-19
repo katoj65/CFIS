@@ -21,11 +21,7 @@ Carbon Footprint Information System
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 
-
-
-
-
- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
 <!-- Styles -->
@@ -38,10 +34,11 @@ Carbon Footprint Information System
 <link rel="stylesheet" href="{{ asset('/public/css/bootstrap-icons.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/templatemo-kind-heart-charity.css') }}">
 <!----LANDING PAGE------>
-<link rel="stylesheet" href="{{ asset('/public/css/animate.css') }}">
+{{-- <link rel="stylesheet" href="{{ asset('/public/css/animate.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/lineicons.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/ud-styles.css') }}">
-<link rel="stylesheet" href="{{ asset('/public/css/default.css') }}">
+<link rel="stylesheet" href="{{ asset('/public/css/default.css') }}"> --}}
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -139,6 +136,9 @@ border-radius: 10px;
 
 .bg-light-red{
 background: #ec7063;
+}
+.border-light-red{
+border:solid 1px #ec7063;
 }
 
 
