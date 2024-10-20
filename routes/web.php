@@ -20,7 +20,7 @@ use App\Http\Controllers\Services\ServicesController;
 use App\Http\Controllers\KnowledgeCenter\KnowledgeCenterController;
 use App\Http\Controllers\Project\ProjectController;
 use App\Http\Controllers\Emission\EmissionController;
-
+use App\Http\Controllers\News\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,8 +84,8 @@ Route::get('project/help',[ProjectController::class,'helpProject'])->name('proje
 Route::get('emission/calculate',[EmissionController::class,'emissionCalculator'])->name('emission.calculate');
 Route::get('carbon/market',[CarbonCreditController::class,'carbonMarket'])->name('carbon.market');
 Route::get('carbon/offset-emissions',[CarbonCreditController::class,'offsetEmissions'])->name('carbon.offset-emissions');
-Route::get('emissions/', [EmissionController::class,'carbonEmissionsInUganda'])->name('emissions.uganda');
-
+Route::get('emissions', [EmissionController::class,'carbonEmissionsInUganda'])->name('emissions.uganda');
+Route::get('news', [NewsController::class, 'index'])->name('news.index');
 
 
 

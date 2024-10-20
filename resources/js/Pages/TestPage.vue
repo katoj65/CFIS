@@ -66,7 +66,7 @@ We’re on an ambitious mission to turn carbon emissions into economic opportuni
 <div class="container">
     <!-- Heading -->
     <div class="w-lg-65 text-center mx-lg-auto mb-3">
-      <h3 class="display-6">Urgent Call for Action</h3>
+      <h3 class="display-6 mb-3">Urgent Call for Action</h3>
       <p class="fs-6">
 
         It's time to unite and reduce emissions, protect ecosystems, and invest in sustainable solutions.
@@ -115,9 +115,9 @@ We’re on an ambitious mission to turn carbon emissions into economic opportuni
     <div class="container pb-0">
       <div class="row justify-content-center text-center mb-6">
         <div class="col-xl-8 col-lg-9">
-          <h2 class="display-6 mx-xl-6">A Pathway to Carbon Neutrality</h2>
+          <h2 class="display-6 mx-xl-6 mb-3">A Pathway to Carbon Neutrality</h2>
           <p>
-            Uganda Carbon Registry is committed to empowering individuals, businesses, and communities to reduce their carbon footprints and offset greenhouse gas emissions through accessible tools and microfinance solutions.
+            The Uganda Carbon Registry is at the heart of Uganda’s transition to a low-carbon economy. As a platform for carbon mitigation, the registry facilitates measuring and tracking carbon emissions, generating, verifying, and trading carbon credits, providing access to carbon microfinance services, and supporting the country’s National Determination Contributions (NDCs).
           </p>
         </div>
       </div>
@@ -145,6 +145,13 @@ We’re on an ambitious mission to turn carbon emissions into economic opportuni
 
 
 
+  <el-steps  :active="1" simple>
+    <el-step title="Measure and Assess Emissions"></el-step>
+    <el-step title="Set Emission Reduction Target"></el-step>
+    <el-step title="Implement Reduction Strategies"></el-step>
+    <el-step title="Offset Your Emissions"></el-step>
+    <el-step title="Monitor and Report Progress"></el-step>
+  </el-steps>
 
 
 
@@ -163,57 +170,75 @@ We’re on an ambitious mission to turn carbon emissions into economic opportuni
         </div>
       </div> -->
       <div class="row mt-4">
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="100">
           <div class="ml-3">
             <h5> Measure Your Carbon Footprint</h5>
             <p>
                 Start your carbon mitigation journey by accurately measuring your carbon emissions. With real-time monitoring, track and reduce your environmental impact efficiently.
             </p>
+            <div>
+            <Inertia-link href="" class="btn btn-clear text-danger p-0">Calculate your  emissions <i class="bi bi-arrow-right"></i></Inertia-link>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="200">
 
           <div class="ml-3">
             <h5>Carbon Management for Sustainability</h5>
             <p>
                 Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.
             </p>
+            <div>
+                <Inertia-link href="" class="btn btn-clear text-danger p-0">Create your Carbon reduction strategy <i class="bi bi-arrow-right"></i></Inertia-link>
+                </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="300">
 
           <div class="ml-3">
             <h5>Offset Your Carbon Emissions</h5>
             <p>
                 Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.
             </p>
+            <div>
+                <Inertia-link href="" class="btn btn-clear text-danger p-0">Investiment in carbon reduction <i class="bi bi-arrow-right"></i></Inertia-link>
+                </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="400">
 
           <div class="ml-3">
             <h5>Buy and Sell Carbon Credits</h5>
             <p>
                 Tap into carbon markets by buying and selling carbon credits, turning emission reductions into financial value and supporting global climate initiatives.
             </p>
+            <div>
+                <Inertia-link href="" class="btn btn-clear text-danger p-0">Get Access to Carbon Markets <i class="bi bi-arrow-right"></i></Inertia-link>
+                </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="500">
 
           <div class="ml-3">
             <h5>Microfinance for Climate Action</h5>
             <p>
                 Access microfinance services tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
             </p>
+            <div>
+                <Inertia-link href="" class="btn btn-clear text-danger p-0">Finance Your Emission Reduction Plan <i class="bi bi-arrow-right"></i></Inertia-link>
+                </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="600">
 
           <div class="ml-3">
             <h5>Environmental Education Hub</h5>
             <p>
                 Equip yourself and your community with the knowledge needed to tackle climate challenges through an accessible environmental education hub focused on carbon mitigation and sustainability.
             </p>
+            <div>
+                <Inertia-link :href="route('news.index')" class="btn btn-clear text-danger p-0">Empower yourself with knowledge <i class="bi bi-arrow-right"></i></Inertia-link>
+                </div>
           </div>
         </div>
       </div>
@@ -221,6 +246,72 @@ We’re on an ambitious mission to turn carbon emissions into economic opportuni
   </section>
 
 
+
+
+<section class="section bg-light py-5" >
+<div class="section-content container">
+<div class="row">
+<div class="col-12 col-md-5 p-4">
+<h2 class="display-6">Stay Ahead of the Curve </h2>
+<p>
+The climate crisis has never been more urgent, and with every new headline, the impacts on our planet and our future become clearer.
+</p>
+
+
+
+
+
+
+
+<ul class="nk-activity p-0">
+
+<li class="nk-activity-item border-0 p-0" v-for="(s,key) in 4" :key="key">
+<div class="nk-activity-media user-avatar bg-warning">
+   <b-icon icon="list-ul"></b-icon>
+</div>
+<div class="nk-activity-data">
+<div class="label text-dark" style="font-size:14px;">
+<b>Climate Crisis  <b-icon icon="play-fill"></b-icon></b>
+    2024 is set to be one of the hottest years on record, with rising temperatures the hottest...</div>
+<span class="time">2 hours ago</span>
+</div>
+</li>
+<li class="text-center">
+<Inertia-link class="btn p-0 btn-clear text-danger">More news and updates <i class="bi bi-arrow-right"></i> </Inertia-link>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="col-12 col-md-7">
+<div class="row">
+<div class="col-12 col-md-6 p-2 mb-3" v-for="(n,key) in 2" :key="key">
+    <div class="card border-0 shadow-sm p-2" href="#" data-aos="fade-up" style="border-bottom:50px;">
+        <img class="card-img" src="http://localhost/carbon/public/images/deforestation.jpeg
+" alt="Image Description" style="border-radius:0;">
+        <div class="card-body">
+          <span class="card-subtitle text-body text-muted">Read the blog</span>
+          <h4 class="card-title text-inherit">Have a meaningful impact</h4>
+          <p class="card-text text-body">Opportunities to Front who have proven to be good at executing on them.</p>
+        </div>
+        <div class="card-footer pt-0 border-0 bg-white">
+            <a class="card-link" href="./page-customer-story.html">Read story <i class="bi-chevron-right small ms-1"></i></a>
+          </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
 
 

@@ -141,7 +141,13 @@ background: #ec7063;
 border:solid 1px #ec7063;
 }
 
+.font-times{
+    font-family:'Times New Roman', Times, serif;
 
+}
+.display-8{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
 </style>
 
 <!-- Scripts -->
