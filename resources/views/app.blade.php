@@ -142,7 +142,7 @@ border:solid 1px #ec7063;
 }
 
 .font-times{
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
 }
 .display-8{

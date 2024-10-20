@@ -69,7 +69,7 @@
         <h3 class="display-8 mb-3">URGENT CALL FOR ACTION</h3>
         <p  style="font-size:17px;" class="text-dark">
 
-          It's time to unite and reduce emissions, protect ecosystems, and invest in sustainable solutions.
+         <i> It's time to unite and reduce emissions, protect ecosystems, and invest in sustainable solutions.</i>
 
       </p>
       </div>
@@ -79,7 +79,7 @@
 
   <div class="col-sm-6 col-lg-3" v-for="(t,key) in tab" :key="key">
   <!-- Card -->
-  <div class="card card-lg h-100 border-0 p-4">
+  <div class="card card-lg h-100 border-0 p-4" style="border-radius:25px;">
   <div class="card-header bg-white position-relative overflow-hidden border-0">
 
   <h5 class="card-title m-0">
@@ -246,116 +246,44 @@
 
 
 
-
-<section class="py-0 bg-white">
-    <div class="p-0 p-sm-5 rounded-3">
-      <div class="row justify-content-center position-relative bg-white">
-        <!-- Svg decoration START -->
-        <!-- <figure class="fill-white opacity-1 position-absolute top-50 start-0 translate-middle-y">
-          <svg width="141px" height="141px">
-            <path d="M140.520,70.258 C140.520,109.064 109.062,140.519 70.258,140.519 C31.454,140.519 -0.004,109.064 -0.004,70.258 C-0.004,31.455 31.454,-0.003 70.258,-0.003 C109.062,-0.003 140.520,31.455 140.520,70.258 Z"></path>
-          </svg>
-        </figure> -->
-        <!-- SVG decoration END -->
-
-        <!-- Action box -->
-        <div class="col-11 position-relative">
-          <div class="row align-items-center">
-            <!-- Title -->
-            <div class="col-lg-12">
-              <h3 class=" mb-0 display-8" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-                OUR APPROACH </h3>
-              <p class="mt-3">
-                Our strategy for reducing carbon emissions involves five key steps for all
-                sectors of the economy. It also offers actionable solutions for organisations,
-                businesses, and individuals
-                to play a critical role in driving this transformation.
-
-              </p>
-              <!-- List -->
-              <!-- <div class="mt-4">
-                <el-steps :active="5" align-left>
-                  <el-step>
-                    <span slot="title" class="text-dark bold">Step 1</span>
-                    <p slot="description" class="p-stepper bg-light h-100 text-left">Measure and Assess Carbon Emissions.</p>
-                  </el-step>
-                  <el-step>
-                    <span slot="title" class="text-dark bold"> Step 2</span>
-                    <p slot="description" class="p-stepper bg-light h-100 text-left">Set Your Carbon Emission Reduction Target.</p>
-                  </el-step>
-                  <el-step>
-                    <span slot="title" class="text-dark bold">Step 3</span>
-                    <p slot="description" class="p-stepper bg-light h-100 text-left">Implement Carbon Reduction Strategies.</p>
-                  </el-step>
-                  <el-step>
-                    <span slot="title" class="text-dark bold">Step 4</span>
-                    <p slot="description" class="p-stepper bg-light h-100 text-left">Offset Your Carbon Emissions.</p>
-                  </el-step>
-                  <el-step>
-                    <span slot="title" class="text-dark bold">Step 5</span>
-                    <p slot="description" class="p-stepper bg-light h-100 text-left">Monitor and Report Your Progress.</p>
-                  </el-step>
-                </el-steps>
-              </div> -->
-
-
-<!-- <div class="row mt-5">
-<div class="col-12 col-md-3" v-for="(s,key) in stepper" :key="key">
-<div class="card border-0 bg-light h-100 shadow-sm">
-
-<div class="card-body" >
-<p>{{ s.description }}</p>
-</div>
-</div>
-</div>
-</div> -->
-
-
-
-
-
-<el-collapse accordion>
-  <el-collapse-item :name="key" v-for="(s,key) in stepper" :key="key">
-    <template slot="title">
-      <p class="pt-3"><span class="text-dark bold">Step {{ 1+key }}: </span>{{ s.title }} </p>
-    </template>
-    <div>
-
-      Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;
-
-
-    </div>
-
-  </el-collapse-item>
-</el-collapse>
-
-
-
-
-
-
-<!-- <div class="pt-3">
-<Inertia-link href="#" class="btn btn-clear text-danger">Read More <i class="bi bi-arrow-right"></i></Inertia-link>
-</div> -->
-
-
+    <section class=" py-5 shadow-sm">
+      <div class="container ">
+         <div class="col-xxl-9 offset-xxl-2 col-md-12">
+            <div class="row align-items-center">
+               <!-- <div class="col-md-4">
+                  <div class="mb-5 mb-lg-0">
+                     <img src="http://localhost/carbon/public/images/deforestation.jpeg
+  " alt="textmonial" class="img-fluid rounded-3">
+                  </div>
+               </div> -->
+               <div class="col-md-10">
+                  <div class="mb-4">
+                     <p class="lead me-xl-6" style="font-weight:20px;color:#922b21 ;"><i>
+                    “The strongest governments on earth cannot clean up pollution by themselves. They must rely on
+                    each ordinary person, like you and me, on our choices, and on our will.”</i> </p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                     <div>
+                        <h5 class="mb-0">Chai Jing</h5>
+                        <small>Journalist and author</small>
+                     </div>
+                     <div>
+                        <!-- <figure>
+                           <img src="" alt="brand">
+                        </figure> -->
+                     </div>
+                  </div>
+               </div>
             </div>
-            <!-- Content and input -->
-            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-              <!-- <a href="#" class="btn btn-warning mb-0">Sign Up for Free</a> -->
-            </div>
-          </div> <!-- Row END -->
-        </div>
+         </div>
       </div>
-    </div>
-</section>
+   </section>
 
 
 
 
 
-
-
+<!-- 
   <section class="section bg-light py-5" >
   <div class="section-content container p-sm-5">
   <div class="row">
@@ -416,7 +344,7 @@
   </div>
   </div>
   </section>
-
+ -->
 
 
 

@@ -144,14 +144,37 @@ We’re on an ambitious mission to turn carbon emissions into economic opportuni
 
 
 
+  <section class="bg-light py-5">
+    <div class="container py-5">
+       <div class="col-xxl-8 offset-xxl-2 col-md-12">
+          <div class="row align-items-center">
+             <div class="col-md-4">
+                <div class="mb-5 mb-lg-0">
+                   <img src="http://localhost/carbon/public/images/deforestation.jpeg
+" alt="textmonial" class="img-fluid rounded-3">
+                </div>
+             </div>
+             <div class="col-md-8">
+                <div class="mb-4">
+                   <p class="lead text-dark me-xl-6">“The strongest governments on earth cannot clean up pollution by themselves. They must rely on each ordinary person, like you and me, on our choices, and on our will.”</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                   <div>
+                      <h5 class="mb-0">Chai Jing</h5>
+                      <small>Journalist and author</small>
+                   </div>
+                   <div>
+                      <!-- <figure>
+                         <img src="" alt="brand">
+                      </figure> -->
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
 
-  <el-steps  :active="1" simple>
-    <el-step title="Measure and Assess Emissions"></el-step>
-    <el-step title="Set Emission Reduction Target"></el-step>
-    <el-step title="Implement Reduction Strategies"></el-step>
-    <el-step title="Offset Your Emissions"></el-step>
-    <el-step title="Monitor and Report Progress"></el-step>
-  </el-steps>
 
 
 
@@ -162,14 +185,25 @@ We’re on an ambitious mission to turn carbon emissions into economic opportuni
 
 
 
-  <section class="bg-light text-light py-5">
+
+
+
+
+
+
+  <section class="bg-light text-light py-3">
     <div class="container pb-md-6">
-      <!-- <div class="row mb-4">
-        <div class="col">
-          <h2 class="h1">Premium Features</h2>
-        </div>
-      </div> -->
+
+
       <div class="row mt-4">
+        <div class="col-12 pl-5 pr-5 mb-4">
+            <el-breadcrumb separator-class="el-icon-arrow-right">
+                <el-breadcrumb-item :to="{ path: '/' }" style="font-size:20px;">homepage</el-breadcrumb-item>
+                <el-breadcrumb-item style="font-size:20px;">promotion management</el-breadcrumb-item>
+                <el-breadcrumb-item style="font-size:20px;">promotion list</el-breadcrumb-item>
+                <el-breadcrumb-item style="font-size:20px;">promotion detail</el-breadcrumb-item>
+              </el-breadcrumb>
+        </div>
         <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="100">
           <div class="ml-3">
             <h5> Measure Your Carbon Footprint</h5>
