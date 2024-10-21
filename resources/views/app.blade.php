@@ -70,12 +70,12 @@ p{
 font-size: 15px; */
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 letter-spacing:0.8px;
-font-size: 16px;
+font-size: 15px;
 line-height: 1.8em;
 }
 h1,h2,h3,h4,h5,h6{
 letter-spacing: 0;
-color:black;
+color:#0a314d;
 }
 
 .border-dark-bottom{
@@ -148,6 +148,20 @@ border:solid 1px #ec7063;
 .display-8{
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
+.bg-light2{
+background-color: rgb(241 245 249) !important;
+}
+
+.bg-dark2{
+  background:#0a314d;
+}
+
+.bg-khaki{
+background: #C1A783;
+}
+
+
 </style>
 
 <!-- Scripts -->

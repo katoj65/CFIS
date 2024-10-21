@@ -1,7 +1,7 @@
 <template>
 <body style="padding-top:65px;">
 
-            <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 bg-dark" style="border-bottom:none;position:fixed;width:100%;border-radius:0;">
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 " style="border-bottom:none;position:fixed;width:100%;border-radius:0;background:#0a314d;">
                 <a :href="route('home')" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
                     <h5 class="m-0 text-white" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Uganda Carbon Registry
                         <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3" style="position:absolute;margin-top:8px;">
@@ -61,20 +61,8 @@ Sponsor a Project
 
 
  <!-- Footer Start -->
-<div class="container-fluid footer bg-dark " style="margin:0;">
+<div class="container-fluid footer bg-dark2 " style="margin:0;">
 <div class="container py-5">
-<div >
-<h3 class="mb-4 text-white" >
-Partners
-</h3>
-</div>
-<div class="row text-white mb-5 pb-4" style="border-bottom:solid thin #283747;">
-<div class="col-4 col-md-2 m-2">
-<img :src="image_url+'logo.png'" style="width:50px;">
-</div>
-</div>
-
-
 
 <div class="row footer-inner">
 <div class="col-md-6 col-lg-6 col-xl-3">

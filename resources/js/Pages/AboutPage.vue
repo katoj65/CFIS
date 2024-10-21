@@ -175,7 +175,7 @@ Buy Carbon Credit
 
 
 
-<div class="col-md-6 col-12 bg-dark">
+<div class="col-md-6 col-12 bg-dark2">
 <div class="p-5">
 <div class=" p-4">
 
@@ -257,7 +257,7 @@ Boosting local investment. As carbon credits are sold and revenues are reinveste
 </ul>
 
 
-<div class="bg-secondary pl-5 pr-5 py-4 mt-5">
+<div class="pl-5 pr-5 py-4 mt-5">
 <h3 class="text-white mb-3">Get Involved</h3>
 <p class="text-white mb-4">
 Whether you are an individual, business, farmer, or community organization, you can be part of the solution. Join us in our mission to fight climate change, improve livelihoods, and build a sustainable future for Uganda.

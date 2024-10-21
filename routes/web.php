@@ -49,7 +49,7 @@ Route::get('/', function () {
 
 
 //test page
-Route::get('test', function () {return Inertia::render('TestPage');});
+Route::get('test', function () {return Inertia::render('TestPage',['title'=>'The testing page']);});
 //routes
 
 Route::get('/',[HomeController::class,'index'])->name('home');
