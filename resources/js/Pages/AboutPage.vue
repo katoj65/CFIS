@@ -1,6 +1,6 @@
 <template>
 <landing-layout>
-<banner-component/>
+<!-- <banner-component/> -->
 
 
 
@@ -9,7 +9,7 @@
 <div class="container-fluid feature py-0">
 <div class="container mt-5">
 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-    <!-- <h5 class="text-danger mb-3">Empowering sustainability through data</h5> -->
+<h3 class="display-7 mb-4">About Us</h3>
 <p class="mb-0 text-left">
 The Uganda Carbon Registry is a pioneering platform designed to track, verify, and facilitate carbon reduction and offset projects across Uganda. The registry offers a robust, transparent, and accessible system for managing carbon credits and supporting national and international climate goals.
 </p>
