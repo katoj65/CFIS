@@ -1,6 +1,6 @@
 <template>
 <landing-layout>
-<!-- <banner-component/> -->
+<banner-component/>
 
 
 
@@ -9,7 +9,7 @@
 <div class="container-fluid feature py-0">
 <div class="container mt-5">
 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-<h3 class="display-7 mb-4">About Us</h3>
+
 <p class="mb-0 text-left">
 The Uganda Carbon Registry is a pioneering platform designed to track, verify, and facilitate carbon reduction and offset projects across Uganda. The registry offers a robust, transparent, and accessible system for managing carbon credits and supporting national and international climate goals.
 </p>
@@ -175,13 +175,13 @@ Buy Carbon Credit
 
 
 
-<div class="col-md-6 col-12 bg-dark2">
+<div class="col-md-6 col-12 bg-light2">
 <div class="p-5">
 <div class=" p-4">
 
-<h2 class="mb-0 text-white text-uppercase pl-2" style="border-left:solid 5px white;">Empowering Sustainability through data</h2>
-<div class="mt-3 text-white">
-<p class="text-white mb-0">
+<h2 class="mb-0 text-uppercase pl-2" style="border-left:solid 5px white;">Empowering Sustainability through data</h2>
+<div class="mt-3">
+<p class="mb-0">
 At the heart of today’s climate action lies the power of data. Data that drives informed decisions, tracks progress, and supports the transition to a sustainable future.
 </p>
 
@@ -196,12 +196,12 @@ At the heart of today’s climate action lies the power of data. Data that drive
 
 
                     <div class="counter-item  rounded p-4">
-                    <h4 class="mb-0 text-white">  Why Uganda Needs a Carbon Registry</h4>
-                    <div class="mt-3 text-white">
-                    <p class="text-white">
+                    <h4 class="mb-0">  Why Uganda Needs a Carbon Registry</h4>
+                    <div class="mt-3">
+                    <p class="">
                     Uganda is highly vulnerable to the impacts of climate change, with erratic weather patterns, prolonged droughts, and extreme rainfall affecting key sectors such as agriculture, water resources, and energy. At the same time, Uganda holds enormous potential to mitigate climate change through reforestation, renewable energy, and sustainable agriculture.
                     </p>
-                    <p class="text-white">
+                    <p class="">
                     The Uganda Carbon Registry plays a critical role in harnessing this potential by creating a credible, transparent, and accessible market for carbon credits. By doing so, we help Uganda meet its climate goals while providing economic opportunities for local communities.
                     </p>
                     </div>
@@ -212,30 +212,30 @@ At the heart of today’s climate action lies the power of data. Data that drive
 
 
 <div class="counter-item  rounded p-4">
-<h4 class="mb-0 text-white">Our Impact</h4>
+<h4 class="mb-0">Our Impact</h4>
 <div class="mt-3">
 <ul>
 <li>
-<p class="text-white">
+<p class="">
 Enabling access to carbon finance for local communities and businesses through carbon credit generation, trading and microfinance services.
 </p>
 </li>
 <li>
-<p class="text-white">
+<p class="">
 Supporting sustainable land use and protecting Uganda’s forests, wetlands, and other natural resources by promoting carbon offset projects like reforestation and land restoration.
 </p></li>
 <li>
-<p class="text-white">
+<p class="">
 Empowering communities to adopt climate-smart practices, from clean energy solutions to sustainable agriculture, that not only reduce emissions but also improve livelihoods.
 </p></li>
 <li>
-<p class="text-white">
+<p class="">
 Enhancing transparency in Uganda’s carbon market by ensuring that emissions reductions are tracked, verified, and reported with integrity.
 </p>
 </li>
 
 <li>
-<p class="text-white">
+<p class="">
 Strengthens Uganda’s carbon economy, making it a more attractive destination for international carbon finance and helping to position the country as a leader in climate action on the African continent.
 </p>
 </li>
@@ -243,14 +243,14 @@ Strengthens Uganda’s carbon economy, making it a more attractive destination f
 
 
 <li>
-<p class="text-white">
+<p class="">
 Creating green jobs. Projects funded through microfinance, such as clean energy installations or forest restoration, create employment opportunities, particularly in rural areas where jobs are often scarce.
 </p>
 </li>
 
 
 <li>
-<p class="text-white">
+<p class="">
 Boosting local investment. As carbon credits are sold and revenues are reinvested, local economies benefit from the multiplier effect, as income generated from climate projects is spent within communities, stimulating economic growth.
 </p>
 </li>
@@ -258,8 +258,8 @@ Boosting local investment. As carbon credits are sold and revenues are reinveste
 
 
 <div class="pl-5 pr-5 py-4 mt-5">
-<h3 class="text-white mb-3">Get Involved</h3>
-<p class="text-white mb-4">
+<h3 class="mb-3">Get Involved</h3>
+<p class=" mb-4">
 Whether you are an individual, business, farmer, or community organization, you can be part of the solution. Join us in our mission to fight climate change, improve livelihoods, and build a sustainable future for Uganda.
 </p>
 <p>

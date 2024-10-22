@@ -22,7 +22,7 @@ class CreateSettingsTable extends Migration
             $table->string('contact');
             $table->string('email');
             $table->string('website');
-            $table->string('imate_route');
+            $table->string('image_route');
             $table->string('icon_route');
             $table->timestamps();
         });
