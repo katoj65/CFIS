@@ -3,13 +3,14 @@
 
 
 
-    <div class="container-fluid feature bg-dark2 py-0" style="margin-top:-30px;border-bottom:solid 1px black;">
-        <div class="container py-5">
+    <div class="container-fluid feature bg-white py-0" style="margin-top:-30px;">
+        <div class="container py-5 mb-3">
         <div class="text-center mx-auto wow fadeInUp" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-            <h1 class="text-white pt-5" style="font-size:30px;">{{ title }}</h1>
-        <p class="mb-0 text-left text-white mt-3" style="font-size:15px;">
+            <h1 class="text-dark pt-5" style="font-size:30px;">{{ title }}</h1>
+        <p class="mb-0 text-left  mt-3">
             {{ subtitle }}
         </p>
+        <slot/>
 
 
         </div>
@@ -28,7 +29,7 @@
 <script>
 export default {
 props:{
-subtitle:{}
+subtitle:{},
 },
 data(){return{
 title:this.$page.props.title,

@@ -1,12 +1,12 @@
 <template>
 <landing-layout>
-<banner-component/>
+<banner-component :subtitle="'The Uganda Carbon Registry is a pioneering platform designed to track, verify, and facilitate carbon reduction and offset projects across Uganda. The registry offers a robust, transparent, and accessible system for managing carbon credits and supporting national and international climate goals.'"/>
 
 
 
 
 
-<div class="container-fluid feature py-0">
+<!-- <div class="container-fluid feature py-0">
 <div class="container mt-5">
 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
 
@@ -18,7 +18,7 @@ Our platform is committed to providing accessible carbon footprint management an
 </p>
 </div>
 </div>
-</div>
+</div> -->
 
 
 
