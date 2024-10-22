@@ -3,7 +3,7 @@
 
 
 
-    <div class="container-fluid feature bg-dark2 py-0" style="margin-top:-30px;border-bottom:solid 3px #ec7063;">
+    <div class="container-fluid feature bg-dark2 py-0" style="margin-top:-30px;border-bottom:solid 1px black;">
         <div class="container py-5">
         <div class="text-center mx-auto wow fadeInUp" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <h1 class="text-white pt-5" style="font-size:30px;">{{ title }}</h1>
