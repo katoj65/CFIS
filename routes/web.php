@@ -21,6 +21,7 @@ use App\Http\Controllers\KnowledgeCenter\KnowledgeCenterController;
 use App\Http\Controllers\Project\ProjectController;
 use App\Http\Controllers\Emission\EmissionController;
 use App\Http\Controllers\News\NewsController;
+use App\Http\Controllers\Subscription\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,6 +88,7 @@ Route::get('carbon/offset-emissions',[CarbonCreditController::class,'offsetEmiss
 Route::get('emissions', [EmissionController::class,'carbonEmissionsInUganda'])->name('emissions.uganda');
 Route::get('news', [NewsController::class, 'index'])->name('news.index');
 
+Route::post('subscription/email',[SubscriptionController::class,'store'])->name('subscription.email');
 
 
 

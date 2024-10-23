@@ -92,6 +92,9 @@ usage:[
 //select
 select:[],
 isLoading:false,
+
+
+
 //form
 form:this.$inertia.form({
 dob:'',

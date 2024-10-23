@@ -504,7 +504,7 @@
 
                   <form
                   class="row d-flex justify-content-center mb-6 needs-validation"
-                  novalidate>
+                  novalidate @submit.prevent="email_subscription">
                   <div class="col-lg-6">
                       <label for="subscribeEmail"
                           class="visually-hidden">Email</label>
@@ -514,7 +514,7 @@
                               placeholder="Enter your business email"
                               aria-label="Enter your business email"
                               aria-describedby="basic-addon2"
-                              required />
+                              required v-model="form.email" />
                           <button class="btn btn-danger"
                               type="submit" id="basic-addon2">Join
                               Now</button>
@@ -523,13 +523,6 @@
                       </div>
                   </div>
               </form>
-
-
-
-
-
-
-
 
 
 
@@ -551,6 +544,31 @@
 
 
 
+<div class="swal2-container swal2-center swal2-backdrop-show" v-if="success==true" >
+<div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-icon-success swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex;">
+<div class="swal2-header"><ul class="swal2-progress-steps" style="display: none;"></ul><div class="swal2-icon swal2-error" style="display: none;"></div><div class="swal2-icon swal2-question" style="display: none;"></div><div class="swal2-icon swal2-warning" style="display: none;"></div><div class="swal2-icon swal2-info" style="display: none;"></div><div class="swal2-icon swal2-success swal2-icon-show" style="display: flex;"><div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+<span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>
+<div class="swal2-success-ring"></div> <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+<div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);">
+
+</div>
+</div>
+<img class="swal2-image" style="display: none;">
+<h2 class="swal2-title" id="swal2-title" style="display: flex;">Successful!</h2>
+<button type="button" class="swal2-close" aria-label="Close this dialog" style="display: none;">×</button>
+</div>
+<div class="swal2-content">
+<div id="swal2-content" class="swal2-html-container" style="display: block;">
+{{ $page.props.flash.success }}
+</div>
+
+</div>
+<div class="swal2-actions">
+<button type="button" class="swal2-confirm swal2-styled" aria-label="" style="display: inline-block; border-left-color: rgb(30, 224, 172); border-right-color: rgb(30, 224, 172);" @click="success=false">OK</button>
+
+</div>
+</div>
+</div>
 
 
 
@@ -560,6 +578,7 @@
   <script>
   import LandingLayout from '../Layouts/LandingLayout.vue';
   import BannerComponent from '../components/BannerComponent.vue';
+  import { Inertia } from '@inertiajs/inertia'
 
   export default {
   components: {
@@ -569,6 +588,9 @@
   },
 
   data(){return{
+
+success:false,
+
   tab:[
   {title:'Emission Tracking',description:'Managing your carbon emissions helps protect the environment and builds a sustainable future.'},
   {title:'Carbon Markets',description:'investing in carbon credits can offset your carbon footprint and support projects that reduce emissions and protect the environment.'},
@@ -600,8 +622,48 @@
 
 
 
+//form
+form:this.$inertia.form({
+email:''
+}),
+
 
   }},
+
+
+
+
+methods:{
+//email subscription
+email_subscription(){
+this.success=false;
+this.form.post(route('subscription.email'),{
+onSuccess:()=>{
+this.success=true;
+this.form.reset();
+}
+});
+
+
+
+
+
+
+}
+
+
+
+
+},
+
+
+
+
+
+
+
+
+
 
 
   computed:{
