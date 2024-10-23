@@ -299,7 +299,7 @@
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="400">
 
             <div class="ml-3">
-              <h5>Buy and Sell Carbon Credits</h5>
+              <h5>Carbon Markets</h5>
               <p>
                   Tap into carbon markets by buying and selling carbon credits, turning emission reductions into financial value and supporting global climate initiatives.
               </p>
@@ -311,7 +311,7 @@
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="500">
 
             <div class="ml-3">
-              <h5>Carbon Financing</h5>
+              <h5>Microfinance Services</h5>
               <p>
                   Access microfinance services tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
               </p>
@@ -323,7 +323,7 @@
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="600">
 
             <div class="ml-3">
-              <h5>Environmental Education Hub</h5>
+              <h5>Education Hub</h5>
               <p>
                   Equip yourself and your community with the knowledge needed to tackle climate challenges through an accessible environmental education hub focused on carbon mitigation and sustainability.
               </p>
