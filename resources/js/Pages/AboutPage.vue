@@ -1,130 +1,71 @@
 <template>
 <landing-layout>
-<banner-component :subtitle="'The Uganda Carbon Registry is a pioneering platform designed to track, verify, and facilitate carbon reduction and offset projects across Uganda. The registry offers a robust, transparent, and accessible system for managing carbon credits and supporting national and international climate goals.'"/>
+<banner-component :subtitle="subtitle"/>
 
+<div class="container-fluid feature bg-light py-0">
+<div class="container py-3">
+<div class="row g-0 p-0">
+<div class="col-md-6 col-12 bg-light d-flex align-items-center">
+<div class="p-5 h-100">
+<h5 class=" mb-2">Who We Are</h5>
 
-
-
-
-<!-- <div class="container-fluid feature py-0">
-<div class="container mt-5">
-<div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-
-<p class="mb-0 text-left">
-The Uganda Carbon Registry is a pioneering platform designed to track, verify, and facilitate carbon reduction and offset projects across Uganda. The registry offers a robust, transparent, and accessible system for managing carbon credits and supporting national and international climate goals.
+<p class="mb-0">
+The Uganda Carbon Registry was establish to tackle the increasing impact of climate change on Uganda's economy and environment. As climate change effects worsen, Uganda requires a robust system to measure, report, and reduce greenhouse gas emissions while also encouraging the generation of carbon credits and financing solutions for climate action.
 </p>
-<p class="mb-0 text-left">
-Our platform is committed to providing accessible carbon footprint management and carbon credit microfinance, empowering you to make a significant impact while driving sustainable growth.
+
+
+
+
+
+
+
+
+<!-- <h5 class="mb-0 mt-3">Our Approach</h5>
+<div class="mt-3 mb-3">
+<p>
+We are dedicated to supporting Uganda’s transition to a low-carbon economy by providing a platform that facilitates the registration, verification, trading of carbon credits and microfinance services. Our goal is to empower businesses, organisations, and communities to reduce their carbon footprint, access carbon finance, and contribute to global climate action.
 </p>
-</div>
-</div>
 </div> -->
 
 
 
-
-
-
-
-
-
-
-
-
-<div class="container-fluid feature bg-light py-0">
-    <div class="container py-3">
-        <div class="row g-0 p-0">
-            <div class="col-md-6 col-12 bg-light d-flex align-items-center">
-                <div class="p-5">
-
-                    <h6 class="section-title text-start text-danger text-uppercase mb-3">Emission Reduction</h6>
-                    <h4 class=" mb-4">Who We Are</h4>
-
-                    <p class="mb-0">Uganda Carbon Registry was established by dedicated environmentalists and advocates for climate change committed to reducing greenhouse gas emissions at all levels. Our team comprises experts in sustainability, finance, technology, and policy who all share a common vision: creating a world where climate action is integrated into everyday life and business.
-                    </p>
-
-                    <p>
-                        With our streamlined carbon management and innovative microfinance solutions for sustainability, we are poised to drive the rapid transition to a low-carbon economy.
-                        </p>
-
-
-
-
-
-
-
-<h4 class="mb-0 mt-5">Our Approach</h4>
-<div class="mt-3 mb-5">
-<p>
-We are dedicated to supporting Uganda’s transition to a low-carbon economy by providing a platform that facilitates the registration, verification, trading of carbon credits and microfinance services. Our goal is to empower businesses, organisations, and communities to reduce their carbon footprint, access carbon finance, and contribute to global climate action.
-</p>
-</div>
-
-
-
-<h4 class="mb-3">
-Our Core Services
-</h4>
-<ol style="padding:0;">
+<h5 class="mb-3 mt-4">
+Why Uganda Needs a Carbon Registry
+</h5>
+<ol>
 <li>
 <p>
-<Inertia-link :href="route('about.emission-tracking')">Tracking and reporting green house gas (GHG) emissions.</Inertia-link>
+Accurately measure carbon emissions.
 </p>
 </li>
 <li>
 <p>
-<Inertia-link :href="route('about.carbon-credit-registration')">Carbon credit registration.</Inertia-link>
+Facilitate participation in global carbon markets.
 </p>
 </li>
 <li>
 <p>
-<Inertia-link :href="route('about.verification-certification')">Verification and certification.</Inertia-link>
+Enable small-scale carbon mitigation projects to access funding.
 </p>
 </li>
 <li>
 <p>
-<Inertia-link :href="route('about.carbon-redit-trading')">Carbon credit trading.</Inertia-link>
-</p>
-</li>
-<li>
-<p>
-<Inertia-link :href="route('about.capacity-building-training')">
-Capacity building and training.
-</Inertia-link>
-</p>
-</li>
-<li>
-<p>
-Support for sustainable development.
-</p>
-</li>
-<li>
-<p>
-Technical support and advisory services.
-</p>
-</li>
-
-<li>
-<p>
-Loans for carbon mitigation projects.
-</p>
-</li>
-<li>
-<p>
-Partnerships and collaborations.
+Support the country’s efforts to meet its Nationally Determined Contributions (NDCs) under the Paris Agreement.
 </p>
 </li>
 </ol>
 
 
-<h4 class="mb-0 mt-5">Looking to Offset Your Emissions?</h4>
-<p class="mt-3 mb-5">
-We offer tailored solutions to help businesses, organisations, and individuals offset their greenhouse gas (GHG) emissions while contributing to impactful climate action. Whether you are looking to meet sustainability goals, reduce your carbon footprint, or contribute to global efforts to combat climate change, we can guide you through the process. <Inertia-link :href="route('about.carbon-offset-guide')" class="ml-2 text-danger">Read more</Inertia-link>
+<h5 class="mb-0 mt-4">The Cost of Climate Change on Uganda’s Economy</h5>
+<p class="mt-3 mb-3">
+Climate change is projected to cause Uganda to incur losses of over $3.2 billion annually by 2030 if no action is taken. Vulnerable sectors such as agriculture, energy, and water resources are expected to be significantly affected, leading to reduced agricultural productivity, infrastructure damage, and increased healthcare costs from climate-related diseases. The Uganda Carbon Registry is actively working to mitigate these impacts by driving emission reductions and creating financial opportunities through carbon credits.
+
+<Inertia-link :href="route('about.carbon-offset-guide')" class="ml-2 text-danger">Read more</Inertia-link>
 </p>
 
 
 
-<h4 class="mb-0 mt-5">Take Meaningful Climate Action</h4>
+<h5 class="mb-0 mt-4">Our Intervention</h5>
 <p class="mt-3 mb-2">
 Are you ready to take meaningful action against climate change? Purchasing carbon credits is a powerful way to offset your greenhouse gas emissions and support sustainable projects that benefit both the environment and local communities.
 </p>
@@ -142,11 +83,11 @@ Buy Carbon Credit
 
 
 <div class="mt-4">
-<h4 class="mb-0 mt-5">Unlock Financial Resources for Eco-friendly Projects</h4>
+<h5 class="mb-0 mt-5">Unlock Financial Resources for Eco-friendly Projects</h5>
 <p class="mt-3 mb-2">
-    Carbon credit microfinance is an innovative approach that combines microfinance with carbon credit generation to promote sustainability at the grassroots level. This model provides small loans to individuals and communities to invest in eco-friendly projects that reduce greenhouse gas emissions, allowing them to generate carbon credits.<br/>
+Carbon credit microfinance is an innovative approach that combines microfinance with carbon credit generation to promote sustainability at the grassroots level. This model provides small loans to individuals and communities to invest in eco-friendly projects that reduce greenhouse gas emissions, allowing them to generate carbon credits.<br/>
 <Inertia-link :href="route('microfinance.introduction')" class="text-danger">
-    Credit Microfinance page
+Credit Microfinance page
 </Inertia-link>
 </p>
 </div>
@@ -168,13 +109,6 @@ Buy Carbon Credit
 
 
 
-
-
-
-
-
-
-
 <div class="col-md-6 col-12 bg-light2">
 <div class="p-5">
 <div class=" p-4">
@@ -182,37 +116,33 @@ Buy Carbon Credit
 <h2 class="mb-0 text-uppercase pl-2" style="border-left:solid 5px white;">Empowering Sustainability through data</h2>
 <div class="mt-3">
 <p class="mb-0">
-At the heart of today’s climate action lies the power of data. Data that drives informed decisions, tracks progress, and supports the transition to a sustainable future.
+Accurate data is the foundation of effective climate action. We empower organizations, businesses, and individuals to make informed decisions on emission reduction strategies and track their progress toward carbon neutrality by providing a robust Carbon Footprint Information System.
 </p>
 
 </div>
-
-
-
-
 </div>
-
-
-
-
-                    <div class="counter-item  rounded p-4">
-                    <h4 class="mb-0">  Why Uganda Needs a Carbon Registry</h4>
-                    <div class="mt-3">
-                    <p class="">
-                    Uganda is highly vulnerable to the impacts of climate change, with erratic weather patterns, prolonged droughts, and extreme rainfall affecting key sectors such as agriculture, water resources, and energy. At the same time, Uganda holds enormous potential to mitigate climate change through reforestation, renewable energy, and sustainable agriculture.
-                    </p>
-                    <p class="">
-                    The Uganda Carbon Registry plays a critical role in harnessing this potential by creating a credible, transparent, and accessible market for carbon credits. By doing so, we help Uganda meet its climate goals while providing economic opportunities for local communities.
-                    </p>
-                    </div>
-
-                    </div>
 
 
 
 
 <div class="counter-item  rounded p-4">
-<h4 class="mb-0">Our Impact</h4>
+<h5 class="mb-0">  Why Uganda Needs a Carbon Registry</h5>
+<div class="mt-3">
+<p class="">
+Uganda is highly vulnerable to the impacts of climate change, with erratic weather patterns, prolonged droughts, and extreme rainfall affecting key sectors such as agriculture, water resources, and energy. At the same time, Uganda holds enormous potential to mitigate climate change through reforestation, renewable energy, and sustainable agriculture.
+</p>
+<p class="">
+The Uganda Carbon Registry plays a critical role in harnessing this potential by creating a credible, transparent, and accessible market for carbon credits. By doing so, we help Uganda meet its climate goals while providing economic opportunities for local communities.
+</p>
+</div>
+
+</div>
+
+
+
+
+<div class="counter-item  rounded p-4">
+<h5 class="mb-0">Our Impact</h5>
 <div class="mt-3">
 <ul>
 <li>
@@ -275,11 +205,11 @@ Whether you are an individual, business, farmer, or community organization, you 
 
 
 
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 
@@ -306,8 +236,11 @@ export default {
 components: {
 LandingLayout,
 BannerComponent
- },
+},
 data(){return{
+subtitle:"The Uganda Carbon Registry was established to address the need for effective climate action in Uganda. It supports the country's transition to a low-carbon, sustainable economy by providing a platform for individuals, businesses, and organisations to reduce their carbon footprints.",
+
+
 
 }},
 
@@ -328,10 +261,10 @@ return this.$page.props.system.url;
 </script>
 <style scoped>
 ul li, ol li{
-list-style-type:circle;
 margin-bottom: 10px;
+list-style:lower-roman;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h5,h5,h6{
 letter-spacing: 0.3px;
 }
 

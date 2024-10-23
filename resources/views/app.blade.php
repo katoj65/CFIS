@@ -70,12 +70,12 @@ p{
 font-size: 15px; */
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 letter-spacing:0.8px;
-font-size: 15px;
+font-size: 14px;
 line-height: 1.8em;
 }
 h1,h2,h3,h4,h5,h6{
 letter-spacing: 0;
-color:#0a314d;
+color:#1A374D;
 }
 
 .border-dark-bottom{
@@ -130,6 +130,9 @@ text-transform: capitalize;
 .title-font{
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.title-font2{
+font-family:'Times New Roman', Times, serif;
+}
 .border-radius{
 border-radius: 10px;
 }
@@ -154,7 +157,7 @@ background-color: rgb(241 245 249) !important;
 }
 
 .bg-dark2{
-  background:#0a314d;
+  background:#1A374D;
 }
 
 .bg-khaki{

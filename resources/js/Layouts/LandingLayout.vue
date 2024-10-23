@@ -1,7 +1,7 @@
 <template>
 <body style="padding-top:65px;">
 
-            <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 " style="border-bottom:none;position:fixed;width:100%;border-radius:0;background:#0a314d;">
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 " style="border-bottom:none;position:fixed;width:100%;border-radius:0;background:#1A374D;">
                 <a :href="route('home')" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
                     <h5 class="m-0 text-white" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Uganda Carbon Registry
                         <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3" style="position:absolute;margin-top:8px;">
