@@ -215,7 +215,6 @@
     </div>
     </div>
 
-
     </div>
     </div>
     </div>
@@ -333,12 +332,45 @@
           </div>
         </div>
 
-
-
-
-
   <div class="col-12">
-
+<div class="col-12">
+ <!--Stats start-->
+ <section class="py-2">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                    <small
+                        class="text-uppercase  ls-md fw-semibold text-muted">Active Clients</small>
+                    <h2 class="mb-0 mt-2">50+</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                    <small
+                        class="text-uppercase  ls-md fw-semibold text-muted">Projects</small>
+                    <h2 class="mb-0 mt-2">200+</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                    <small
+                        class="text-uppercase ls-md fw-semibold text-muted">Project Developers
+                        </small>
+                    <h2 class="mb-0 mt-2">96</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                    <small
+                        class="text-uppercase ls-md fw-semibold text-muted">Impact Created</small>
+                    <h2 class="mb-0 mt-2">30%</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
 
   </div>
 
@@ -444,6 +476,18 @@
     </div>
   </section>
   <!--location-->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

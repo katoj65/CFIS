@@ -263,7 +263,7 @@
 
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="100">
             <div class="ml-3">
-              <h5> Measure Your Carbon Footprint </h5>
+              <h5> Measure Carbon Footprint </h5>
               <p>
                   Start your carbon mitigation journey by accurately measuring your carbon emissions. With real-time monitoring, track and reduce your environmental impact efficiently.
               </p>
@@ -275,7 +275,7 @@
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="200">
 
             <div class="ml-3">
-              <h5>Carbon Management for Sustainability</h5>
+              <h5>Manage Carbon Emissions</h5>
               <p>
                   Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.
               </p>
@@ -287,7 +287,7 @@
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="300">
 
             <div class="ml-3">
-              <h5>Offset Your Carbon Emissions</h5>
+              <h5>Offset Carbon Emissions</h5>
               <p>
                   Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.
               </p>
@@ -311,7 +311,7 @@
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="500">
 
             <div class="ml-3">
-              <h5>Microfinance for Climate Action</h5>
+              <h5>Carbon Financing</h5>
               <p>
                   Access microfinance services tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
               </p>
