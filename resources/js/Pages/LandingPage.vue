@@ -63,7 +63,7 @@
                               We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. It's time to unite and reduce emissions, protect ecosystems, and invest in sustainable solutions.
                           </p>
                           <div class="p-3">
-                              <Inertia-link class="btn btn-outline-light" style="border:solid 2px white;border-radius:20px;font-weight:bold;"> Get To Know Us <i class="bi bi-arrow-right"></i></Inertia-link>
+                              <Inertia-link  :href="route('about')" class="btn btn-outline-light" style="border:solid 2px white;border-radius:20px;font-weight:bold;"> Get To Know Us <i class="bi bi-arrow-right"></i></Inertia-link>
                           </div>
                       </div>
                   </div>
@@ -152,7 +152,7 @@
       <b-icon icon="tree-fill" scale="2"></b-icon>
       </div>
       <div class="mb-4">
-      <h5>Access to the Carbon Market</h5>
+      <h5>Carbon Markets</h5>
       <p class="mb-0">
       Entities can use the registry to participate in carbon markets, buying and selling carbon credits to offset their emissions and support greenhouse gas reduction projects, assisting Uganda in meeting its climate commitments.
       </p>
