@@ -15,11 +15,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
-                        <inertia-link :href="route('home')" class="nav-item nav-link text-white" style="font-size:15px;">Home</inertia-link>
-                        <inertia-link :href="route('about')" class="nav-item nav-link text-white" style="font-size:15px;">About</inertia-link>
-                        <inertia-link :href="route('carbon-credit')" class="nav-item nav-link text-white" style="font-size:15px;">Carbon Credit</inertia-link>
+                        <inertia-link :href="route('home')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Home</inertia-link>
+                        <inertia-link :href="route('about')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">About</inertia-link>
+                        <inertia-link :href="route('carbon-credit')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Carbon Credit</inertia-link>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" style="font-size:15px;">Microfinance</a>
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" style="font-size:15px;font-weight:normal;">Microfinance</a>
                             <div class="dropdown-menu fade-up m-0">
                                 <Inertia-link :href="route('microfinance.introduction')" class="dropdown-item" style="font-size:15px;padding:10px;">
                                     Introduction</Inertia-link>
@@ -36,11 +36,11 @@ Sponsor a Project
 
                             </div>
                         </div>
-                        <inertia-link :href="route('contact')" class="nav-item nav-link text-white" style="margin-right:15px;margin-left:-25px;font-size:15px;">Contact</inertia-link>
+                        <inertia-link :href="route('contact')" class="nav-item nav-link text-white" style="margin-right:15px;margin-left:-25px;font-size:15px;font-weight:normal;">Contact</inertia-link>
 
 
                     </div>
-                    <inertia-link :href="route('login')" class="btn  py-4 px-lg-5 d-none d-lg-block text-white" style="border-radius:0;font-size:15px;background:#ec7063;font-weight:bold;">Login</inertia-link>
+                    <inertia-link :href="route('login')" class="btn  py-4 px-lg-5 d-none d-lg-block text-white" style="border-radius:0;font-size:15px;background:#ec7063;font-weight:bold;font-weight:normal;">Login</inertia-link>
                 </div>
             </nav>
 
