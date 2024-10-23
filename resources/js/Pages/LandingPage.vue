@@ -337,10 +337,44 @@
 
 
 
-    <div class="col-12">
-
-
-    </div>
+          <div class="col-12">
+            <!--Stats start-->
+            <section class="py-2">
+               <div class="container pt-5">
+                   <div class="row">
+                       <div class="col-lg-3 col-6">
+                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                               <small
+                                   class="text-uppercase  ls-md fw-semibold text-muted">Active Clients</small>
+                               <h2 class="mb-0 mt-2">50+</h2>
+                           </div>
+                       </div>
+                       <div class="col-lg-3 col-6">
+                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                               <small
+                                   class="text-uppercase  ls-md fw-semibold text-muted">Projects</small>
+                               <h2 class="mb-0 mt-2">200+</h2>
+                           </div>
+                       </div>
+                       <div class="col-lg-3 col-6">
+                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                               <small
+                                   class="text-uppercase ls-md fw-semibold text-muted">Project Developers
+                                   </small>
+                               <h2 class="mb-0 mt-2">96</h2>
+                           </div>
+                       </div>
+                       <div class="col-lg-3 col-6">
+                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
+                               <small
+                                   class="text-uppercase ls-md fw-semibold text-muted">Impact Created</small>
+                               <h2 class="mb-0 mt-2">30%</h2>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+           </div>
 
 
 
@@ -444,6 +478,75 @@
       </div>
     </section>
     <!--location-->
+
+
+
+
+
+
+<!--Call to action start-->
+<section class="my-lg-7 py-2 bg-light2">
+  <div class="container">
+      <div class="row bg-pattern rounded-3 py-lg-7 py-5 g-0">
+          <div class="col-md-8 offset-md-2">
+              <div class="text-center position-relative z-1 px-5"
+                  >
+                  <div class="mb-5">
+                      <h3 class="h2 text-white-stable mb-3">
+                       <span class="title-font2 text-uppercase"> Ready to Take Action?</span>
+                        </h3>
+                      <p class="mb-0 text-white-stable">
+                        Take action today: Measure your carbon footprint, set ambitious goals, and be part of Uganda's climate solution. Together, we can build a sustainable, climate-resilient future for all.
+                      </p>
+                  </div>
+
+
+
+                  <form
+                  class="row d-flex justify-content-center mb-6 needs-validation"
+                  novalidate>
+                  <div class="col-lg-6">
+                      <label for="subscribeEmail"
+                          class="visually-hidden">Email</label>
+                      <div class="input-group has-validation">
+                          <input type="text" id="subscribeEmail"
+                              class="form-control border-danger"
+                              placeholder="Enter your business email"
+                              aria-label="Enter your business email"
+                              aria-describedby="basic-addon2"
+                              required />
+                          <button class="btn btn-danger"
+                              type="submit" id="basic-addon2">Join
+                              Now</button>
+                          <div class="invalid-feedback text-start">
+                              Please choose a email.</div>
+                      </div>
+                  </div>
+              </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--Call to action end-->
+
+
+
+
 
 
 
