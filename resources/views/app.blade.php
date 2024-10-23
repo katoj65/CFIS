@@ -132,6 +132,7 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .title-font2{
 font-family:'Times New Roman', Times, serif;
+word-spacing: 3px
 }
 .border-radius{
 border-radius: 10px;

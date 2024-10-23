@@ -15,20 +15,6 @@ The Uganda Carbon Registry was establish to tackle the increasing impact of clim
 
 
 
-
-
-
-
-
-<!-- <h5 class="mb-0 mt-3">Our Approach</h5>
-<div class="mt-3 mb-3">
-<p>
-We are dedicated to supporting Uganda’s transition to a low-carbon economy by providing a platform that facilitates the registration, verification, trading of carbon credits and microfinance services. Our goal is to empower businesses, organisations, and communities to reduce their carbon footprint, access carbon finance, and contribute to global climate action.
-</p>
-</div> -->
-
-
-
 <h5 class="mb-3 mt-4">
 Why Uganda Needs a Carbon Registry
 </h5>
@@ -57,40 +43,50 @@ Support the country’s efforts to meet its Nationally Determined Contributions 
 
 
 <h5 class="mb-0 mt-4">The Cost of Climate Change on Uganda’s Economy</h5>
-<p class="mt-3 mb-3">
-Climate change is projected to cause Uganda to incur losses of over $3.2 billion annually by 2030 if no action is taken. Vulnerable sectors such as agriculture, energy, and water resources are expected to be significantly affected, leading to reduced agricultural productivity, infrastructure damage, and increased healthcare costs from climate-related diseases. The Uganda Carbon Registry is actively working to mitigate these impacts by driving emission reductions and creating financial opportunities through carbon credits.
+<p class="my-3">
+    Climate change is having a significant impact on Uganda, costing the economy an estimated $3.2 billion annually. This has led to a humanitarian crisis marked by extreme weather events such as droughts, floods, and heatwaves, which are threatening people's livelihoods and causing displacement. Vulnerable populations are facing increased risks of food insecurity and loss of homes. The degradation of Uganda’s natural resources and biodiversity is worsening the crisis, endangering essential ecosystems for the economy and the community. Without intervention, Uganda could face future economic losses amounting to 5-10% of GDP each year. However, there are opportunities for improvement if immediate action is taken, such as investing in sustainable practices, renewable energy, and carbon mitigation projects. This could help Uganda build a more resilient economy. The Uganda Carbon Registry is at the forefront of these efforts, providing tools to monitor emissions, create carbon credits, and align with international climate goals to protect Uganda’s future.
 
-<Inertia-link :href="route('about.carbon-offset-guide')" class="ml-2 text-danger">Read more</Inertia-link>
+
+
+
+<Inertia-link :href="route('about.carbon-offset-guide')" class="ml-2 text-danger">Read more <b-icon icon="arrow-right"></b-icon></Inertia-link>
 </p>
 
 
 
-<h5 class="mb-0 mt-4">Our Intervention</h5>
-<p class="mt-3 mb-2">
-Are you ready to take meaningful action against climate change? Purchasing carbon credits is a powerful way to offset your greenhouse gas emissions and support sustainable projects that benefit both the environment and local communities.
+<h5 class="my-3">Our Intervention</h5>
+<p class="mb-2">
+ We focus on tracking carbon footprints to provide accurate emissions data and help create carbon credits. We also support carbon offsetting initiatives and integrate financial services with carbon markets through innovative microfinance. This gives more people access to climate financing and helps grassroots carbon mitigation projects. By supporting Uganda’s climate goals, we help projects create carbon credits and prioritize interventions based on the impacts of climate change. Our goal is to build climate resilience and move Uganda towards producing zero net emissions, creating a sustainable future for everyone.
 </p>
 <div>
-<Inertia-link :href="route('carbon.purchase-carboncredit')" class="btn btn-danger btn-long" style="border-radius:0;padding:20px;">
-Buy Carbon Credit
-</Inertia-link>
 </div>
 
 
 
-
-
-
-
-
-<div class="mt-4">
-<h5 class="mb-0 mt-5">Unlock Financial Resources for Eco-friendly Projects</h5>
+<div class="my-4">
+<h5 class="mb-0 ">Steering Financial Inclusion</h5>
 <p class="mt-3 mb-2">
-Carbon credit microfinance is an innovative approach that combines microfinance with carbon credit generation to promote sustainability at the grassroots level. This model provides small loans to individuals and communities to invest in eco-friendly projects that reduce greenhouse gas emissions, allowing them to generate carbon credits.<br/>
-<Inertia-link :href="route('microfinance.introduction')" class="text-danger">
-Credit Microfinance page
-</Inertia-link>
+The Uganda Carbon Registry is helping small and medium-sized enterprises (SMEs) access funding for projects that reduce carbon emissions through its carbon credit microfinance services. By creating carbon credits, SMEs can access new financial opportunities and invest in initiatives that reduce and remove carbon. The registry offers guidance for making informed investment decisions and supporting projects that align with Uganda's Nationally Determined Contributions (NDCs) and its goal of reaching net zero emissions. Through these efforts, we aim to build a more inclusive, sustainable economy and empower businesses to contribute significantly to climate action.
 </p>
 </div>
+
+
+
+<div class="my-4">
+<h5 class="mb-0 ">Carbon Market Growth</h5>
+<p class="mt-3 mb-2">
+The global carbon credit market boasts a value exceeding $300 billion and exhibits significant growth potential, particularly within the African context. Uganda stands to enhance its standing in the carbon market by safeguarding its natural resources, fostering its capacity for carbon credit generation, and integrating the carbon market with financial services through innovative carbon credit microfinance. This strategic approach will fortify Uganda's position within the burgeoning African carbon market, presently estimated at approximately $6 billion. The Uganda Carbon Registry is actively engaged in integrating carbon credit microfinance with financial services, advocating for the preservation of natural resources, and augmenting Uganda's carbon market valuation.
+
+<Inertia-link :href="route('about.carbon-offset-guide')" class="ml-2 text-danger">Read more   <b-icon icon="arrow-right"></b-icon></Inertia-link>
+</p>
+</div>
+
+
+
+
+
+
+
 
 
 

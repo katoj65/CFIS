@@ -45,7 +45,7 @@
 
 
 
-
+<section>
   <div class="container-fluid py-5 p-0 bg-dark2">
   <div class="row g-0">
   <div class="col-12 col-md-12">
@@ -76,7 +76,7 @@
   </div>
   </div>
 
-
+</section>
 
 
 
@@ -101,23 +101,22 @@
       <h2 class="my-3 text-uppercase">
       <span style="font-family:'Times New Roman', Times, serif;"> Leading the Way in Climate Action</span>
       </h2>
-      <p class="mb-4">
+      <p class="mb-3">
           The Uganda Carbon Registry leads efforts to combat climate change by promoting a shift to a sustainable, low-carbon economy. We offer carbon financing, emissions tracking, biodiversity protection, and community resilience support, aiming to create a future where economic growth and environmental protection go hand in hand. Our goal is to reduce carbon emissions, promote green innovation, and make climate financing accessible to all, helping Uganda achieve its climate goals while building a sustainable economy for all.
-      <br/>
 
   </p>
   <p class="mb-2">
       Uganda aims to reduce greenhouse gas emissions by 22% by 2030, focusing on renewable energy, climate-resilient agriculture, and sustainable land management. The Uganda Carbon Registry tracks carbon credits and supports climate projects, contributing to accurate emissions accounting and sustainable development. </p>
 
-
-      <a href="#!" class="icon-link icon-link-hover link-danger">
+<div class="mb-4">
+      <a href="#!" class="icon-link icon-link-hover link-danger mt-2">
       Learn more about our services and activities
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
       </path>
       </svg>
       </a>
-  </p>
+</div>
 
 
       </div>
