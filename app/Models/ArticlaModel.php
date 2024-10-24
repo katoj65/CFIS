@@ -9,5 +9,5 @@ class ArticlaModel extends Model
 {
     use HasFactory;
     protected $table='article';
-    protected $fillable=['title','content','topic','tag','status'];
+    protected $fillable=['title','content','image','topic','tag','status'];
 }
