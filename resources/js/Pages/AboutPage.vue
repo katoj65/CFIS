@@ -10,7 +10,7 @@
 <h5 class=" mb-2">Who We Are</h5>
 
 <p class="mb-0">
-The Uganda Carbon Registry was establish to tackle the increasing impact of climate change on Uganda's economy and environment. As climate change effects worsen, Uganda requires a robust system to measure, report, and reduce greenhouse gas emissions while also encouraging the generation of carbon credits and financing solutions for climate action.
+    The Uganda Carbon Registry is an innovative initiative designed to monitor carbon emissions across the country. Its goal is to accurately track and report emissions to support Uganda's climate objectives. The registry provides access to carbon markets, allowing businesses and organisations to participate in carbon offsetting efforts, which can help reduce overall emissions and contribute to Uganda’s Nationally Determined Contributions (NDCs). Additionally, the registry includes carbon microfinance, offering local communities financial tools to adopt zero-emission technologies and promote biodiversity preservation. In this way, the Uganda Carbon Registry plays a crucial role in guiding the nation towards sustainable development and building resilience in the face of climate change.
 </p>
 
 
@@ -42,7 +42,7 @@ Support the country’s efforts to meet its Nationally Determined Contributions 
 </ol>
 
 
-<h5 class="mb-0 mt-4">The Cost of Climate Change on Uganda’s Economy</h5>
+<h5 class="mb-0 mt-5">The Cost of Climate Change on Uganda’s Economy</h5>
 <p class="my-3">
     Climate change is having a significant impact on Uganda, costing the economy an estimated $3.2 billion annually. This has led to a humanitarian crisis marked by extreme weather events such as droughts, floods, and heatwaves, which are threatening people's livelihoods and causing displacement. Vulnerable populations are facing increased risks of food insecurity and loss of homes. The degradation of Uganda’s natural resources and biodiversity is worsening the crisis, endangering essential ecosystems for the economy and the community. Without intervention, Uganda could face future economic losses amounting to 5-10% of GDP each year. However, there are opportunities for improvement if immediate action is taken, such as investing in sustainable practices, renewable energy, and carbon mitigation projects. This could help Uganda build a more resilient economy. The Uganda Carbon Registry is at the forefront of these efforts, providing tools to monitor emissions, create carbon credits, and align with international climate goals to protect Uganda’s future.
 
@@ -54,9 +54,9 @@ Support the country’s efforts to meet its Nationally Determined Contributions 
 
 
 
-<h5 class="my-3">Our Intervention</h5>
-<p class="mb-2">
- We focus on tracking carbon footprints to provide accurate emissions data and help create carbon credits. We also support carbon offsetting initiatives and integrate financial services with carbon markets through innovative microfinance. This gives more people access to climate financing and helps grassroots carbon mitigation projects. By supporting Uganda’s climate goals, we help projects create carbon credits and prioritize interventions based on the impacts of climate change. Our goal is to build climate resilience and move Uganda towards producing zero net emissions, creating a sustainable future for everyone.
+<h5 class="mt-5">Our Objectives</h5>
+<p class="py-3">
+    The Uganda Carbon Registry has several main goals to advance the country’s efforts to address climate change. First, it helps to monitor emissions, ensuring accurate reporting and transparency in carbon accounting. It also gives access to carbon markets, allowing local businesses and projects to trade carbon credits and access carbon financing through innovative methods like carbon microfinance. The registry supports mapping areas most affected by climate change, enabling targeted interventions in vulnerable regions while safeguarding the country's biodiversity. Additionally, it provides early warning systems for climate-related risks, influencing data-driven decisions and guiding investment in sustainable solutions. Lastly, the registry helps with emission reporting, aligning Uganda with its international climate obligations, and supporting informed decision-making at both the national and global levels.
 </p>
 <div>
 </div>
@@ -107,12 +107,12 @@ The global carbon credit market boasts a value exceeding $300 billion and exhibi
 
 <div class="col-md-6 col-12 bg-light2">
 <div class="p-5">
-<div class=" p-4">
+<div class=" p-3">
 
 <h2 class="mb-0 text-uppercase pl-2" style="border-left:solid 5px white;">Empowering Sustainability through data</h2>
 <div class="mt-3">
 <p class="mb-0">
-Accurate data is the foundation of effective climate action. We empower organizations, businesses, and individuals to make informed decisions on emission reduction strategies and track their progress toward carbon neutrality by providing a robust Carbon Footprint Information System.
+Accurate data is the foundation of effective climate action. We empower organisations, businesses, and individuals to make informed decisions on emission reduction strategies and track their progress toward carbon neutrality by providing a robust Carbon Footprint Information System. <Inertia-link href="#" class="ml-2 text-danger">Read more   <b-icon icon="arrow-right"></b-icon></Inertia-link>
 </p>
 
 </div>
@@ -121,11 +121,11 @@ Accurate data is the foundation of effective climate action. We empower organiza
 
 
 
-<div class="counter-item  rounded p-4">
-<h5 class="mb-0">  Why Uganda Needs a Carbon Registry</h5>
+<div class="p-3">
+<h5 class="mb-0"> A Growing Crisis</h5>
 <div class="mt-3">
 <p class="">
-Uganda is highly vulnerable to the impacts of climate change, with erratic weather patterns, prolonged droughts, and extreme rainfall affecting key sectors such as agriculture, water resources, and energy. At the same time, Uganda holds enormous potential to mitigate climate change through reforestation, renewable energy, and sustainable agriculture.
+    The Ugandan economy is increasingly being impacted by climate change, which has far-reaching consequences for various sectors and the livelihoods of its people. The major causes of climate change in Uganda are carbon emissions, primarily from deforestation, agriculture, energy production, and transport. Uganda's carbon emissions result from activities such as burning fossil fuels, land-use change, and unsustainable agricultural practices. Each sector contributes to emissions, with agriculture accounting for about 25%, transport 12%, energy production 16%, and deforestation around 20%, making it a significant driver of Uganda's overall greenhouse gas emissions.
 </p>
 <p class="">
 The Uganda Carbon Registry plays a critical role in harnessing this potential by creating a credible, transparent, and accessible market for carbon credits. By doing so, we help Uganda meet its climate goals while providing economic opportunities for local communities.
@@ -137,7 +137,7 @@ The Uganda Carbon Registry plays a critical role in harnessing this potential by
 
 
 
-<div class="counter-item  rounded p-4">
+<div class="p-3">
 <h5 class="mb-0">Our Impact</h5>
 <div class="mt-3">
 <ul>

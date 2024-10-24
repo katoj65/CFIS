@@ -66,12 +66,11 @@ body{
 overflow-x:hidden;
 }
 p{
-/* font-family: 'Franklin Gothic Medium',  Arial, sans-serif;
-font-size: 15px; */
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 letter-spacing:0.8px;
-font-size: 14px;
+font-size: 14.5px;
 line-height: 1.8em;
+
 }
 h1,h2,h3,h4,h5,h6{
 letter-spacing: 0;
