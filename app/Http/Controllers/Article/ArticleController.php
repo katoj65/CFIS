@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Http\Models\ArticleModel;
 
-class ArticleControlelr extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -40,6 +40,9 @@ class ArticleControlelr extends Controller
     public function show($id)
     {
         //
+
+
+
     }
 
     /**
@@ -64,4 +67,23 @@ class ArticleControlelr extends Controller
     {
         //
     }
+
+//
+
+
+public function climateChange(){
+
+
+
+return Helper::showArticle();
+
+}
+
+
+
+
+
+
+
+
 }
