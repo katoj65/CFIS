@@ -89,7 +89,8 @@ Route::get('carbon/offset-emissions',[CarbonCreditController::class,'offsetEmiss
 Route::get('emissions', [EmissionController::class,'carbonEmissionsInUganda'])->name('emissions.uganda');
 Route::get('news', [NewsController::class, 'index'])->name('news.index');
 Route::post('subscription/email',[SubscriptionController::class,'store'])->name('subscription.email');
-Route::get('climate-change',[ArticleController::class,'climateChange'])->name('climate-change');
+Route::get('climate-change/overview',[ArticleController::class,'climateChange'])->name('climate_change.articles');
+Route::get('carbon-markets/overview',[ArticleController::class,'carbonMarkets'])->name('carbon-markets');
 
 
 

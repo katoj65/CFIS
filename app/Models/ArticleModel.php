@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ArticlaModel extends Model
+class ArticleModel extends Model
 {
     use HasFactory;
     protected $table='article';

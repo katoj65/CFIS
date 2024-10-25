@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Article;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-use App\Http\Models\ArticleModel;
+use App\Models\ArticleModel;
 
 class ArticleController extends Controller
 {
@@ -14,6 +14,28 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+//get articles
+static function showArticle($title='',$topic='',$tag=''){
+    $query=ArticleModel::first();
+    if($title!='' and $topic!='' and $tag!=''){
+    $query=ArticleModel::where(['title'=>$title,'topic'=>$topic,'tag'=>$tag])->first();
+    }elseif($title!='' and $topic=='' and $tag==''){
+    $query=ArticleModel::where('topic',$topic)->first();
+    }elseif($title!='' and $topic!='' and $tag==''){
+    $query=ArticleModel::where(['title'=>$title,'topic'=>$topic])->first();
+    }elseif($title!='' and $tag!='' and $topic==''){
+    $query=ArticleModel::where(['title'=>$title,'tag'=>$tag])->first();
+    }
+    return $query;
+    }
+
+
+
+
+
+
+
     public function index()
     {
         //
@@ -71,13 +93,28 @@ class ArticleController extends Controller
 //
 
 
+
+
+
+//climate change
 public function climateChange(){
-
-
-
-return Helper::showArticle();
-
+$data['title']="Climate Change";
+$data['response']=[
+'crisis'=>ArticleController::showArticle('A growing crisis','climate change'),
+];
+return Inertia::render('ArticlePage',$data);
 }
+
+
+
+//carbon markets
+public function carbonMarkets(){
+$data['title']='Carbon Markets';
+$data['response']=[];
+return Inertia::render('CarbonMarketsPage',$data);
+}
+
+
 
 
 

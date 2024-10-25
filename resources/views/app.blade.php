@@ -69,7 +69,7 @@ p{
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 letter-spacing:0.8px;
 font-size: 14.5px;
-line-height: 1.8em;
+line-height: 2em;
 
 }
 h1,h2,h3,h4,h5,h6{
