@@ -2,7 +2,7 @@
 <landing-layout>
 <banner-component :subtitle="subtitle"/>
 
-<section class="py-3 bg-light">
+<section class="py-3 bg-light2">
 <div class="container pb-5">
 <div class="row pb-5">
 <div class="col-12 col-md-8 offset-lg-2">
@@ -69,7 +69,7 @@ If current trends continue unchecked, Uganda could face catastrophic outcomes, i
     </h5>
     <p>
 To mitigate the impacts, Uganda must adopt climate-smart agriculture, expand its use of renewable energy, enforce policies that curb deforestation, and invest in resilient infrastructure. On the financial side, carbon markets and mechanisms like carbon pricing can provide incentives for emission reductions. The Uganda Carbon Registry can play a pivotal role by tracking emissions, providing access to carbon markets, and facilitating carbon financing through innovative models such as carbon microfinance.<br/>
-Additionally, the Uganda Carbon Registry can also help with data collection and reporting, enabling more informed policy decisions and promoting sustainable investment. By integrating climate action across sectors, Uganda can protect its economy and secure a more resilient future. 
+Additionally, the Uganda Carbon Registry can also help with data collection and reporting, enabling more informed policy decisions and promoting sustainable investment. By integrating climate action across sectors, Uganda can protect its economy and secure a more resilient future.
 
 </p>
     </div>

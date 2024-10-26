@@ -36,9 +36,13 @@ use App\Http\Controllers\Article\ArticleController;
 */
 //include apps
 include('hub.php');
-
+include('cfis.php');
 
 //
+
+
+
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),

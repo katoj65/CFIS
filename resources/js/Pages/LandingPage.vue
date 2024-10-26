@@ -109,13 +109,7 @@
       Uganda aims to reduce greenhouse gas emissions by 22% by 2030, focusing on renewable energy, climate-resilient agriculture, and sustainable land management. The Uganda Carbon Registry tracks carbon credits and supports climate projects, contributing to accurate emissions accounting and sustainable development. </p>
 
 <div class="mb-4">
-      <a href="#!" class="icon-link icon-link-hover link-danger mt-2">
-      Learn more about our services and activities
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-      </path>
-      </svg>
-      </a>
+<link-pointer-component :title="' Learn more about our services'" :url="'services'"/>
 </div>
 
 
@@ -136,13 +130,13 @@
       </p>
       </div>
 
-      <a href="#!" class="icon-link icon-link-hover link-danger">
+      <Inertia-link :href="route('cfis.overview')" class="icon-link icon-link-hover link-danger">
       Read more
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
       </path>
       </svg>
-      </a>
+      </Inertia-link>
       </div>
       </div>
       <div class="card bg-warning bg-opacity-10 border-0 mb-5 mb-lg-0" data-cue="fadeIn" data-delay="1000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1000ms; animation-direction: normal; animation-fill-mode: both;">
@@ -577,12 +571,14 @@
   <script>
   import LandingLayout from '../Layouts/LandingLayout.vue';
   import BannerComponent from '../components/BannerComponent.vue';
-  import { Inertia } from '@inertiajs/inertia'
+  import { Inertia } from '@inertiajs/inertia';
+  import LinkPointerComponent from '../components/LinkPointerComponent.vue';
 
   export default {
   components: {
   LandingLayout,
   BannerComponent,
+  LinkPointerComponent
 
   },
 

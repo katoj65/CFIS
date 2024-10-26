@@ -1,30 +1,26 @@
 <template>
-
-
-
-
-    <div class="container-fluid feature bg-white py-0" style="margin-top:-30px;">
-        <div class="container py-5 ">
-        <div class="row">
+<div class="container-fluid feature bg-white py-0" style="margin-top:-30px;">
+<div class="container py-5 ">
+<div class="row">
 
 
 <div class="col-12 col-md-8 offset-lg-2">
 
-    <h1 class="text-dark2 pt-5 text-center" style="font-size:30px;">
-        <span class="title-font2" style="font-family:'Times New Roman', Times, serif;"> {{ title }}
-         </span>
-        </h1>
- <p class="mb-0 text-left  mt-3">
-     {{ subtitle }}
- </p>
- <slot/>
+<h1 class="text-dark2 pt-5 text-center" style="font-size:30px;">
+<span class="title-font2"> {{ title }}
+</span>
+</h1>
+<p class="mb-0 text-left  mt-3">
+{{ subtitle }}
+</p>
+<slot/>
 </div>
 
 
 
-        </div>
-        </div>
-        </div>
+</div>
+</div>
+</div>
 
 
 

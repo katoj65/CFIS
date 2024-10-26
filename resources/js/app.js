@@ -33,12 +33,10 @@ InertiaProgress.init({
   });
 
 
-
-
 import { Inertia } from '@inertiajs/inertia';
 // Scroll to the top after each navigation
 Inertia.on('finish', () => {
-    window.scrollTo({ top: 0});
+window.scrollTo({ top: 0});
 });
 
 

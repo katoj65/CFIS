@@ -39,6 +39,8 @@ Carbon Footprint Information System
 <link rel="stylesheet" href="{{ asset('/public/css/ud-styles.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/default.css') }}"> --}}
 
+<!---GOOGLE CSS---->
+<!------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">

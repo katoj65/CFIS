@@ -307,6 +307,7 @@ EOF;
         (new Filesystem)->ensureDirectoryExists(resource_path('js/Pages/Profile'));
         (new Filesystem)->ensureDirectoryExists(resource_path('views'));
         (new Filesystem)->ensureDirectoryExists(resource_path('markdown'));
+    
 
         (new Filesystem)->deleteDirectory(resource_path('sass'));
 
