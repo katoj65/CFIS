@@ -18,7 +18,7 @@ class MicrofinanceController extends Controller
         //
 $data['title']='Carbon Credit Microfinance';
 
-return Inertia::render('MicrofinancePage',$data);
+return Inertia::render('Microfinance/OverviewPage',$data);
 
     }
 

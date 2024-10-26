@@ -6,7 +6,7 @@
 
 
 
-<div class="container-fluid feature bg-light2 py-0">
+<div class="container-fluid feature bg-white py-0">
 <div class="container py-3">
 <div class="row g-0 pb-5">
 <div class="col-12 col-md-8 offset-lg-2 pb-5">

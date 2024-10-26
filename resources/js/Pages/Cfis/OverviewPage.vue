@@ -3,8 +3,8 @@
 <banner-component :subtitle="subtitle"/>
 
 
-<section class="bg-light2">
-<div class="container py-5">
+<section class="bg-white py-5">
+<div class="container">
 <div class="row pb-5">
 <div class="col-12 col-md-7 offset-lg-2">
 <div class="">
