@@ -38,6 +38,7 @@ use App\Http\Controllers\Article\ArticleController;
 include('hub.php');
 include('cfis.php');
 include('microfinance.php');
+include('market.php');
 
 //
 
