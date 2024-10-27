@@ -5,7 +5,7 @@ use App\Http\Controllers\Microfinance\MicrofinanceController;
 
 
 
-Route::get('microfinance',[MicrofinanceController::class,'index'])->name('microfinance.overview');
+Route::get('fund',[MicrofinanceController::class,'index'])->name('microfinance.overview');
 
 
 

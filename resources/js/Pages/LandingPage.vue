@@ -126,7 +126,7 @@
       <div class="mb-4">
       <h5>Carbon Footprint Management</h5>
       <p class="mb-0">
-      Providing tools to help businesses, organizations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.
+      Tools to help businesses, organizations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.
       </p>
       </div>
 
@@ -168,18 +168,19 @@
       <b-icon icon="tree-fill" scale="2"></b-icon>
       </div>
       <div class="mb-4">
-      <h5>Carbon Microfinace</h5>
-      <p class="mb-0">Offering financial support to small-scale green projects, such as renewable energy, reforestation, and climate-smart agriculture, to reduce emissions and foster sustainable economic development
+      <h5>Carbon Fund</h5>
+      <p class="mb-0">
+      Get access to financial resources to invest in projects aimed at reducing greenhouse gas emissions, generating carbon credits that can be sold in carbon markets.
       </p>
       </div>
 
-      <a href="#!" class="icon-link icon-link-hover link-info">
+      <Inertia-link :href="route('microfinance.overview')" class="icon-link icon-link-hover link-info">
       Read more
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
       </path>
       </svg>
-      </a>
+      </Inertia-link>
       </div>
       </div>
       <div class="card bg-success bg-opacity-10 border-0 mb-5 mb-lg-0" data-cue="fadeIn" data-delay="2000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 2000ms; animation-direction: normal; animation-fill-mode: both;">
