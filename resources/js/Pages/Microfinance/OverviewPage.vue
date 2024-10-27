@@ -12,7 +12,7 @@
 How Carbon Fund Works
 </h5>
 <p>
-Carbon Fund offers financial assistance in the form of loans and borrowing options for eligible projects focused on carbon reduction. Organizations and individuals can apply for funding to implement various initiatives, such as renewable energy projects, reforestation efforts, and waste management systems.<br/>
+Carbon Fund offers financial assistance in the form of loans and borrowing options for eligible projects focused on carbon reduction. Organisations and individuals can apply for funding to implement various initiatives, such as renewable energy projects, reforestation efforts, and waste management systems.<br/>
 These projects not only help reduce carbon emissions but also generate carbon credits that can be sold in local and international carbon markets, creating a sustainable revenue stream.
 
 </p>
@@ -50,6 +50,12 @@ Our aim is to lower financial barriers, making it easier for communities and bus
 </p>
 <p>
 Our loans offer low-interest rates and flexible terms to suit the varying needs of climate-conscious initiatives and we ensure that projects receive the financial support needed to create a lasting impact, while helping Uganda move closer to its climate and economic development goals.
+</p>
+<p>
+<span class="bold text-dark">Repaying Loans Using Carbon Credit-Generated Funds:</span> Our loan repayment model provides a unique opportunity for project owners to repay their loans using the revenue generated from carbon credit sales. <br/>
+This model allows for a self-sustaining cycle of green investment, where project success fuels further growth, benefiting both the project owners and the community as a whole.
+<br/>
+In addition to loan repayment, this model also ensures that the benefits of carbon finance flow directly to local projects, empowering them to expand and innovate.
 
 </p>
 </div>
@@ -57,12 +63,22 @@ Our loans offer low-interest rates and flexible terms to suit the varying needs 
 
 
 <div class="mb-4">
-    <h5>Transforming Actions into Credits</h5>
-    <p>
-    We provide a comprehensive framework that facilitates project development, certification, and participation in carbon markets to effectively translate your climate actions(emission reduction project) into carbon credits, fostering a culture of sustainability while enhancing access to financial resources and promoting environmental resilience in Uganda. <br/>
+<h5>Transforming Actions into Credits</h5>
+<p>
+We provide a comprehensive framework that facilitates project development, certification, and participation in carbon markets to effectively translate your climate actions(emission reduction project) into carbon credits, fostering a culture of sustainability while enhancing access to financial resources and promoting environmental resilience in Uganda.
 
-    </p>
-    </div>
+</p>
+</div>
+
+
+<div class="mb-4">
+<h5>Make an Impact with Us</h5>
+<p>
+Join us in creating a cleaner, more resilient future. Through innovative carbon credit investments, accessible financing solutions, and supportive loan structures, UCR is driving real progress in Uganda’s climate landscape.
+<br/>
+<LinkPointerComponent :title="'Join the Carbon Fund Initiative'" :url="'login'"></LinkPointerComponent>
+</p>
+</div>
 
 
 

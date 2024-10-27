@@ -16,7 +16,7 @@
 Who We Are
 </h5>
 <p>
-    The Uganda Carbon Registry is an innovative initiative designed to monitor carbon emissions across the country. Its goal is to accurately track and report emissions to support Uganda's climate objectives. The registry provides access to carbon markets, allowing businesses and organisations to participate in carbon offsetting efforts, which can help reduce overall emissions and contribute to Uganda’s Nationally Determined Contributions (NDCs). Additionally, the registry includes carbon microfinance, offering local communities financial tools to adopt zero-emission technologies and promote biodiversity preservation. In this way, the Uganda Carbon Registry plays a crucial role in guiding the nation towards sustainable development and building resilience in the face of climate change.
+    The Uganda Carbon Registry is an innovative initiative designed to monitor carbon emissions across the country. Its goal is to accurately track and report emissions to support Uganda's climate objectives. The registry provides access to carbon markets, allowing businesses and organisations to participate in carbon offsetting efforts, which can help reduce overall emissions and contribute to Uganda’s Nationally Determined Contributions (NDCs). Additionally, the registry includes carbon fund, offering local communities financial tools to adopt zero-emission technologies and promote biodiversity preservation. In this way, the Uganda Carbon Registry plays a crucial role in guiding the nation towards sustainable development and building resilience in the face of climate change.
 </p>
 </div>
 
@@ -75,7 +75,7 @@ Who We Are
 </h5>
 <p>
 The Uganda Carbon Registry has several main goals to advance the country’s efforts to address climate change. First, it helps to monitor emissions, ensuring accurate reporting and transparency in carbon accounting.<br/>
-It also gives access to carbon markets, allowing local businesses and projects to trade carbon credits and access carbon financing through innovative methods like carbon microfinance.<br/> The registry supports mapping areas most affected by climate change, enabling targeted interventions in vulnerable regions while safeguarding the country's biodiversity.
+It also gives access to carbon markets, allowing local businesses and projects to trade carbon credits and access carbon financing through innovative methods like carbon fund.<br/> The registry supports mapping areas most affected by climate change, enabling targeted interventions in vulnerable regions while safeguarding the country's biodiversity.
 Additionally, it provides early warning systems for climate-related risks, influencing data-driven decisions and guiding investment in sustainable solutions. Lastly, the registry helps with emission reporting, aligning Uganda with its international climate obligations, and supporting informed decision-making at both the national and global levels.
 
 </p>
@@ -155,7 +155,7 @@ This strategic approach will fortify Uganda's position within the burgeoning Afr
     <br/>
     In Africa, the carbon market is estimated to reach approximately $2 billion by 2030, highlighting the continent's emerging role in the climate finance landscape.
     <br/>
-    Carbon credits play a crucial role in this framework, allowing countries and businesses to offset their greenhouse gas emissions by investing in projects that reduce emissions elsewhere. Uganda can capitalize on this by developing smart carbon microfinance services that provide accessible financing options for smallholder farmers and businesses aiming to implement sustainable practices.<br/>
+    Carbon credits play a crucial role in this framework, allowing countries and businesses to offset their greenhouse gas emissions by investing in projects that reduce emissions elsewhere. Uganda can capitalize on this by developing smart carbon fund services that provide accessible financing options for smallholder farmers and businesses aiming to implement sustainable practices.<br/>
     The Uganda Carbon Registry is determined to take a lead in this sector, establishing a transparent platform for tracking carbon credits and fostering market participation. Key sectors that may benefit from these initiatives include agriculture, renewable energy, forestry, and waste management, all of which are essential for reducing emissions while enhancing economic resilience.
 
 
