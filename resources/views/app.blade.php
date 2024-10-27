@@ -167,6 +167,12 @@ background-color: rgb(241 245 249) !important;
 background: #C1A783;
 }
 
+.bg-light3{
+background:#f8f9f9;
+}
+
+
+
 
 </style>
 

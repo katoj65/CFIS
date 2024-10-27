@@ -1,12 +1,11 @@
 <template>
-<div class="container-fluid feature bg-light2 py-0" style="margin-top:-30px;">
+<div class="container-fluid feature bg-light3 py-0" style="margin-top:-35px;">
 <div class="container py-5 ">
 <div class="row">
 
-
 <div class="col-12 col-md-8 offset-lg-2">
 
-<h1 class="text-dark2 pt-5 text-center" style="font-size:30px;">
+<h1 class="text-dark2 pt-4 text-center" style="font-size:25px;">
 <span class="title-font2"> {{ title }}
 </span>
 </h1>
