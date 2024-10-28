@@ -2,7 +2,7 @@
 <landing-layout>
 <banner-component :subtitle="subtitle"/>
 
-<section class="py-3 bg-light2">
+<section class="py-3">
 <div class="container pb-5">
 <div class="row pb-5">
 <div class="col-12 col-md-8 offset-lg-2">
@@ -11,7 +11,7 @@
 
 <div class="py-2">
 <h5 class="py-2">
-The Most Affected Sectors
+The Mostly Affected Sectors
 </h5>
 <p>
 The most impacted sectors include agriculture, water resources, energy, and tourism. With over 70% of Uganda’s population reliant on subsistence farming, erratic weather patterns prolonged droughts, floods, and rising temperatures have drastically reduced crop yields, impacting food security and income.

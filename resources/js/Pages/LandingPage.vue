@@ -102,11 +102,15 @@
       <span style="font-family:'Times New Roman', Times, serif;"> Leading the Way in Climate Action</span>
       </h2>
       <p class="mb-3">
-          The Uganda Carbon Registry leads efforts to combat climate change by promoting a shift to a sustainable, low-carbon economy. We offer carbon financing, emissions tracking, biodiversity protection, and community resilience support, aiming to create a future where economic growth and environmental protection go hand in hand. Our goal is to reduce carbon emissions, promote green innovation, and make climate financing accessible to all, helping Uganda achieve its climate goals while building a sustainable economy for all.
+        The Uganda Carbon Registry is at the forefront of climate action, providing a comprehensive system for tracking, reducing, and offsetting greenhouse gas emissions.<br/>
+        By enabling individuals, businesses, and organizations to measure their carbon footprints and generate carbon credits, the registry creates a transparent and structured approach to carbon management.<br/>
+        Additionally, the registry integrates carbon credits with financial services hence promoting financial inclusion, allowing even small businesses and rural communities to access funds for climate action.
 
   </p>
   <p class="mb-2">
-      Uganda aims to reduce greenhouse gas emissions by 22% by 2030, focusing on renewable energy, climate-resilient agriculture, and sustainable land management. The Uganda Carbon Registry tracks carbon credits and supports climate projects, contributing to accurate emissions accounting and sustainable development. </p>
+    As a signatory to the Paris Agreement, Uganda has set ambitious targets through its Nationally Determined Contributions (NDCs), aiming to reduce emissions by 22% by 2030 and transition to a low-carbon, climate-resilient economy. <br/>
+    Ultimately, the Uganda Carbon Registry is committed to aligning with the country’s climate ambitions, supporting the achievement of its Nationally Determined Contributions (NDCs), and promoting sustainable development for future generations.
+    </p>
 
 <div class="mb-4">
 <link-pointer-component :title="' Learn more about our services'" :url="'services'"/>
@@ -118,7 +122,7 @@
       <div class="col-lg-7 offset-lg-1 col-12">
       <div class="row">
       <div class="col-md-6">
-      <div class="card bg-danger bg-opacity-10 border-0 mb-5" data-cue="fadeIn" data-delay="500" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 700ms; animation-direction: normal; animation-fill-mode: both;">
+      <div class="card bg-danger bg-opacity-10 border-0 mb-5 shadow-sm" data-cue="fadeIn" data-delay="500" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 700ms; animation-direction: normal; animation-fill-mode: both;">
       <div class="card-body">
       <div class="mb-4">
       <b-icon icon="tree-fill" scale="2"></b-icon>
@@ -139,7 +143,7 @@
       </Inertia-link>
       </div>
       </div>
-      <div class="card bg-warning bg-opacity-10 border-0 mb-5 mb-lg-0" data-cue="fadeIn" data-delay="1000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1000ms; animation-direction: normal; animation-fill-mode: both;">
+      <div class="card bg-warning bg-opacity-10 border-0 mb-5 mb-lg-0 shadow-sm" data-cue="fadeIn" data-delay="1000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1000ms; animation-direction: normal; animation-fill-mode: both;">
       <div class="card-body">
       <div class="mb-4">
       <b-icon icon="tree-fill" scale="2"></b-icon>
@@ -162,7 +166,7 @@
       </div>
       </div>
       <div class="col-md-6 mt-md-5">
-      <div class="card bg-info bg-opacity-10 border-0 mb-5" data-cue="fadeIn" data-delay="1500" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;">
+      <div class="card bg-info bg-opacity-10 border-0 mb-5 shadow-sm" data-cue="fadeIn" data-delay="1500" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;">
       <div class="card-body">
       <div class="mb-4">
       <b-icon icon="tree-fill" scale="2"></b-icon>
@@ -183,7 +187,7 @@
       </Inertia-link>
       </div>
       </div>
-      <div class="card bg-success bg-opacity-10 border-0 mb-5 mb-lg-0" data-cue="fadeIn" data-delay="2000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 2000ms; animation-direction: normal; animation-fill-mode: both;">
+      <div class="card bg-success bg-opacity-10 border-0 mb-5 mb-lg-0 shadow-sm" data-cue="fadeIn" data-delay="2000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 2000ms; animation-direction: normal; animation-fill-mode: both;">
       <div class="card-body">
       <div class="mb-4">
       <b-icon icon="tree-fill" scale="2"></b-icon>
@@ -340,14 +344,14 @@
                            <div class="text-center px-lg-5 mb-5 mb-lg-0">
                                <small
                                    class="text-uppercase  ls-md fw-semibold text-muted">Active Clients</small>
-                               <h2 class="mb-0 mt-2">50+</h2>
+                               <h2 class="mb-0 mt-2">{{ response.clients }} </h2>
                            </div>
                        </div>
                        <div class="col-lg-3 col-6">
                            <div class="text-center px-lg-5 mb-5 mb-lg-0">
                                <small
                                    class="text-uppercase  ls-md fw-semibold text-muted">Projects</small>
-                               <h2 class="mb-0 mt-2">200+</h2>
+                               <h2 class="mb-0 mt-2">{{ response.projects }} </h2>
                            </div>
                        </div>
                        <div class="col-lg-3 col-6">
@@ -355,7 +359,7 @@
                                <small
                                    class="text-uppercase ls-md fw-semibold text-muted">Project Developers
                                    </small>
-                               <h2 class="mb-0 mt-2">96</h2>
+                               <h2 class="mb-0 mt-2">{{ response.developers }} </h2>
                            </div>
                        </div>
                        <div class="col-lg-3 col-6">
@@ -568,7 +572,6 @@
   <script>
   import LandingLayout from '../Layouts/LandingLayout.vue';
   import BannerComponent from '../components/BannerComponent.vue';
-  import { Inertia } from '@inertiajs/inertia';
   import LinkPointerComponent from '../components/LinkPointerComponent.vue';
 
   export default {
@@ -579,10 +582,15 @@
 
   },
 
-  data(){return{
+props:{
+response:{}
+},
 
+
+
+
+data(){return{
 success:false,
-
   tab:[
   {title:'Emission Tracking',description:'Managing your carbon emissions helps protect the environment and builds a sustainable future.'},
   {title:'Carbon Markets',description:'investing in carbon credits can offset your carbon footprint and support projects that reduce emissions and protect the environment.'},
@@ -647,13 +655,6 @@ this.form.reset();
 
 
 },
-
-
-
-
-
-
-
 
 
 

@@ -8,6 +8,7 @@ use Inertia\Inertia;
 use App\Models\ReportSectorEmission;
 use App\Models\EmissionSource;
 use App\Models\ProjectModel;
+use App\Models\User;
 
 
 
@@ -27,10 +28,11 @@ return redirect('/dashboard');
 
 $data['title']='Welcome';
 $data['response']=[
-'emission_report'=>ReportSectorEmission::limit(4)->get(),
-'emission_source'=>EmissionSource::limit(8)->orderby('order_by')->get(),
-'project'=>ProjectModel::count(),
+'projects'=>ProjectModel::count(),
 'developers'=>ProjectModel::select('developer_id')->distinct()->count(),
+'clients'=>User::select('id')->where(['user_status'=>'active'])->where(['role'=>'organisation'])->orWhere(['role'=>'user'])
+->orWhere(['role'=>'business'])->orWhere(['role'=>'government'])->count(),
+
 ];
 
 return Inertia::render('LandingPage',$data);
