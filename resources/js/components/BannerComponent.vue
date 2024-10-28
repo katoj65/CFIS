@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid feature bg-light3 py-0" style="margin-top:-35px;">
+<div class="container-fluid feature bg-light2 py-0" style="margin-top:-35px;border-bottom:solid 1px #f2f3f4;">
 <div class="container py-5 ">
 <div class="row">
 

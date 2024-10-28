@@ -151,13 +151,13 @@
       </p>
       </div>
 
-      <a href="#!" class="icon-link icon-link-hover link-warning">
+      <Inertia-link :href="route('market.overview')" class="icon-link icon-link-hover link-warning">
       Read more
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
       </path>
       </svg>
-      </a>
+      </Inertia-link>
       </div>
       </div>
       </div>
@@ -195,13 +195,13 @@
       </p>
       </div>
 
-      <a href="#!" class="icon-link icon-link-hover link-success">
+      <Inertia-link :href="route('projects.overview')" class="icon-link icon-link-hover link-success">
       Read more
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
       </path>
       </svg>
-      </a>
+      </Inertia-link>
       </div>
       </div>
       </div>
@@ -305,9 +305,9 @@
           <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="500">
 
             <div class="ml-3">
-              <h5>Microfinance Services</h5>
+              <h5>Carbon Fund</h5>
               <p>
-                  Access microfinance services tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
+                  Access funding tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
               </p>
               <div>
                   <Inertia-link href="" class="btn btn-clear text-danger p-0">Finance Your Emission Reduction Plan <i class="bi bi-arrow-right"></i></Inertia-link>
@@ -438,10 +438,6 @@
 
 
         <div class="row g-4">
-          <!-- <div class="col-lg-12 col-md-12 col-12">
-              <h2 class="mb-lg-7">Our offices around the world</h2>
-          </div> -->
-
 
 
 
@@ -449,7 +445,7 @@
 
     <div class="col-md-3 col-12" v-for="(n,key) in 4" :key="key">
     <div class="bg-white card border-0 p-3">
-    <!-- <h3 class="mb-3">India</h3> -->
+
     <figure class="mb-3 card-lift">
         <img src="http://localhost/carbon/public/images/deforestation.jpeg" class="img-fluid" />
     </figure>
@@ -591,7 +587,7 @@ success:false,
   {title:'Emission Tracking',description:'Managing your carbon emissions helps protect the environment and builds a sustainable future.'},
   {title:'Carbon Markets',description:'investing in carbon credits can offset your carbon footprint and support projects that reduce emissions and protect the environment.'},
   {title:'Project Development',description:'Partner with us to develop projects that reduce emissions, benefit communities, and create a greener future.'},
-  {title:'Microfinance Services',description:'Save, borrow, and fund for a sustainable future! Your actions can power eco-friendly projects, reduce emissions, and uplift communities.'},
+  {title:'Carbon Fund',description:'Save, borrow, and fund for a sustainable future! Your actions can power eco-friendly projects, reduce emissions, and uplift communities.'},
   ],
 
   //links

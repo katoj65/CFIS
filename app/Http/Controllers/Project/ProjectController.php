@@ -17,9 +17,10 @@ class ProjectController extends Controller
     public function index()
     {
         //
-    $data['title']='Projects';
+    $data['title']='Carbon Offset Projects';
     $data['response']=[
     'projects'=>ProjectModel::get(),
+    
     ];
     return Inertia::render('ProjectsPage',$data);
     }

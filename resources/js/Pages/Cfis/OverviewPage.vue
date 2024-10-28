@@ -1,8 +1,6 @@
 <template>
 <landing-layout>
 <banner-component :subtitle="subtitle"/>
-
-
 <section class="bg-white py-5">
 <div class="container">
 <div class="row pb-5">
@@ -57,53 +55,58 @@ Meeting Compliance and national regulations. Measuring emissions can ensure youâ
 
 <div class="mt-4">
 <h5>
-Functions of the Carbon Footprint Information System (CFIS)
+The Carbon Footprint Information System (CFIS)
 </h5>
-
+<p>
+Our Carbon Footprint Information System (CFIS) is a powerful tool designed to track, analyse, and manage your carbon emissions accurately and effectively. <br/>CFIS provides users with real-time insights, allowing them to understand their emissions profile and set meaningful reduction targets.
+</p>
+<p>
+By using CFIS, participants can take measurable steps toward reducing their environmental impact while also aligning with Ugandaâ€™s Nationally Determined Contributions (NDCs) and other global climate goals. Key functions of the CFIS include;
+</p>
 <ol>
 <li>
 <p>
-To collection and integrate data from various sources, such as energy consumption, transportation, waste, agriculture, and industrial processes.
+Collection and integration of data from various sources, such as energy consumption, transportation, waste, agriculture, and industrial processes.
 </p>
 </li>
 <li>
 <p>
-To tracks emissions data in real-time to provide up-to-date insights on carbon output across sectors and activities
+Tracking emissions data in real-time to provide up-to-date insights on carbon output across sectors and activities
 </p>
 </li>
 <li>
 <p>
-To calculates total carbon emissions based on collected data and generates detailed reports for transparency and compliance.
+Calculating the total carbon emissions based on collected data and generates detailed reports for transparency and compliance.
 </p>
 </li>
 <li>
 <p>
-To allows users to set carbon reduction targets and benchmark performance against industry standards or regulatory requirements.
+Setting emission reduction targers and benchmarking performance against industry standards or regulatory requirements.
 </p>
 </li>
 <li>
 <p>
-To simulate various emission reduction strategies and predicts future carbon footprints based on potential interventions.
+Simulating various emission reduction strategies and predicts future carbon footprints based on potential interventions.
 </p>
 </li>
 <li>
 <p>
-To provide graphical displays and dashboards to help users understand trends and identify high-emission activities.
+Providing graphical displays and dashboards to help users understand trends and identify high-emission activities.
 </p>
 </li>
 <li>
 <p>
-To tracks verified emissions reductions that can be converted into carbon credits for participation in carbon markets.
+Tracking verified emissions reductions that can be converted into carbon credits for participation in carbon markets.
 </p>
 </li>
 <li>
 <p>
-To support organisations in meeting regulatory requirements and reporting standards, aligning with frameworks like the Paris Agreement.
+Supporting organisations in meeting regulatory requirements and reporting standards, aligning with frameworks like the Paris Agreement.
 </p>
 </li>
 <li>
 <p>
-To provide secure access for multiple user roles (such as administrators, analysts, and external auditors) with customisable permissions.
+Providing secure access for multiple user roles (such as administrators, analysts, and external auditors) with customisable permissions.
 </p>
 </li>
 <li>
@@ -118,13 +121,13 @@ Analysing historical data to track emissions trends over time and assess the eff
 </li>
 <li>
 <p>
-To evaluate the environmental impact of various activities and practices, identifying areas for improvement.
+Evaluating the environmental impact of various activities and practices, identifying areas for improvement.
 </p>
 </li>
 
 <li>
 <p>
-To support third party verification and auditing processes to ensure data accuracy and integrity in carbon reduction reporting.
+Supporting third party verification and auditing processes to ensure data accuracy and integrity in carbon reduction reporting.
 </p>
 </li>
 
@@ -183,7 +186,7 @@ import LinkPointerComponent from '../../components/LinkPointerComponent.vue';
 export default {
 components: {  LandingLayout,BannerComponent,LinkPointerComponent },
 data(){return{
-subtitle:'A platform designed to measure, track, and manage carbon emissions across various sectors, supporting organisations, businesses, and individuals in their sustainability efforts. The platform facilitates data collection, real-time monitoring, and emission reporting to accurately assess carbon footprints, offering insights into emission sources and helping users set reduction targets. ',
+subtitle:'We provide a dedicated platform for monitoring, managing, and reducing your carbon emissions. Our goal is to empower businesses, organisations, individuals, and communities across Uganda to understand their environmental impact, set meaningful reduction goals, and contribute to a sustainable future for all.',
 
 
 

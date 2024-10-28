@@ -16,7 +16,7 @@ class CFISController extends Controller
     public function index()
     {
         //
-    $data['title']='Carbon Footprint Information System';
+    $data['title']='Carbon Footprint Management';
     $data['response']=[];
     return Inertia::render('Cfis/OverviewPage',$data);
     }

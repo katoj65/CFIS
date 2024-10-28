@@ -1,13 +1,26 @@
 <template>
 <landing-layout>
-<banner-component/>
+<banner-component :subtitle="subtitle">
+<div class="row">
+<div class="col-12 col-md-6 offset-lg-3 text-center pt-3">
+
+<ul>
+<li><Inertia-link :href="route('project.developer')"><b-icon icon="tree-fill"></b-icon> Become a developer</Inertia-link></li>
+<li>
+<Inertia-link> <b-icon icon="search"></b-icon> Search</Inertia-link></li>
+</ul>
+
+
+</div>
+</div>
+</banner-component>
 
 
 
 
 
 
-
+<!--
 <section style="" class="py-0 pt-3">
 <div class="container">
 <div class="row">
@@ -47,6 +60,7 @@
 </div>
 </div>
 </section>
+ -->
 
 
 
@@ -55,17 +69,16 @@
 
 
 
-
-<section class="bg-light py-3">
+<section class="bg-white py-3">
 <div class="container">
 <div class="row">
-<div class="col-12 col-md-1"></div>
-<div class="col-12 col-md-10 mb-5">
 
-    <div class="row bg-light py-3" style="border-radius:15px;">
+<div class="col-12 col-md-10 mb-5 offset-lg-1 ">
+
+    <div class="row py-3" style="border-radius:15px;">
         <div class="col-12 col-md-3" v-for="(n,key) in 24" :key="key">
 
-            <div class="card card-hover mb-3 border-0 shadow" style="border-radius:0;">
+            <div class="card card-hover mb-3 border-0 shadow-sm" style="border-radius:0;">
                 <Inertia-link :href="route('project.show',{id:1})">
                 <img src="http://localhost/carbon/public/images/deforestation.jpeg" alt="course" class="card-img-top"></Inertia-link>
                 <!-- Card Body -->
@@ -116,7 +129,7 @@
                     </div>
                 </div>
                 <!-- Card Footer -->
-                <div class="card-footer">
+                <div class="card-footer border-0">
                     <div class="row align-items-center g-0">
                         <div class="col-auto">
 
@@ -136,7 +149,7 @@
         </div>
 
 </div>
-<div class="col-12 col-md-1"></div>
+
 </div>
 </div>
 </section>
@@ -158,7 +171,7 @@ BannerComponent
 response:{},
  },
 data(){return{
-
+subtitle:"Our registry supports carbon offset projects that provide verifiable, measurable, and permanent reductions in greenhouse gas emissions. These projects include initiatives like reforestation, renewable energy installation, and improved agricultural practices that are critical to offsetting emissions and achieving Uganda’s climate objectives.",
 
 
 
@@ -180,22 +193,9 @@ return this.$page.props.system.url;
 }
 </script>
 <style scoped>
-ul, ol{
-padding:0;
+ul li{
+float:left;
+margin-right:20px;
 }
-ul li, ol li{
-list-style-type:upper-roman;
-margin-bottom: 10px;
-}
-h1,h2,h3,h4,h5,h6{
-letter-spacing: 0.3px;
-}
-.cover{
-    background-image: url('http://localhost/carbon/public/images/deforestation.jpeg');
-    height: 400px;
-    background-size: cover;
-    background-position: 100% 40%;
-    margin:0;
-
-    }
+ul li a {color:darkred}
 </style>
