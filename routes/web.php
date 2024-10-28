@@ -64,7 +64,7 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::get('/carbon/credit',[CarbonCreditController::class,'index'])->name('carbon-credit');
-Route::get('microfinance/introduction', [MicrofinanceController::class, 'index'])->name('microfinance.introduction');
+Route::get('fund/overview', [MicrofinanceController::class, 'index'])->name('microfinance.introduction');
 Route::get('microfinance/membership',[MicrofinanceController::class,'membership'])->name('microfinance.membership');
 Route::get('calculator/guest',[CalculatorController::class,'guest_emission_calculator'])->name('calculator.guest');
 Route::get('microfinance/loan-application',[MicrofinanceController::class,'loanApplication'])->name('microfinance.loan-application-page');
