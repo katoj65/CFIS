@@ -2,19 +2,48 @@
 <landing-layout>
 
 
-<section class="bg-dark pl-5 pr-5 pt-5" style="margin-top:-25px;border-bottom:solid 3px #ec7063;">
-<div class="row">
-<div class="col-12 col-md-4">
-<h3 class="text-white bg-dark" style="font-size:20px;">
- <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">   CLIMATE EDUCATION</span>
-<span style="padding:10px;background:#ec7063;text-shadow:none;padding-left:25px;padding-right:25px;" class="text-white">HUB</span></h3>
-</div>
-<div class="col-12 col-md-8">
-<p class="text-white" style="font-family:fantasy;font-size:18px;">
-    Your gateway to understanding, engaging with, and leading in the global carbon market.
-</p>
-</div>
-</div>
+   <section class="py-5">
+      <div class="container position-relative z-2 mt-3 mt-sm-4 mt-md-1">
+      <div class="row pt-xl-3 pt-xxl-4">
+      <div class="col-lg-7 col-xxl-6">
+      <h1 class="display-3 text-center text-lg-start title-font" style="font-size:50px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+      <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">WELCOME TO <br/>CARBON</span>
+      <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></span> <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">HUB</span>
+      </h1>
+
+      </div>
+      <div class="col-lg-5 offset-xxl-1 pt-sm-3">
+
+      <div class="row mt-5">
+      <div class="col-12 col-md-4 mt-5">
+      <img src="http://localhost/carbon/public/images/antonio_guterres.png">
+      </div>
+      <div class="col-12 col-md-6">
+
+      <div style="position:absolute;bottom:10px;background:white;">
+
+      <p class="text-secondary" style="padding:0;margin:0;line-height:20px;">Dalai Lama</p>
+      </div>
+      </div>
+      <div class="col-12">
+      <p class="fs-lg text-left text-lg-start pb-3 pb-sm-0 pb-md-2 mb-4 mb-sm-5 text-danger" style="font-size:18px;line-height:30px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+      "It is our collective and individual responsibility to preserve and tend to the environment in which we all live."
+      </p>
+      </div>
+      </div>
+
+
+
+
+
+      <!-- Contact form -->
+
+      </div>
+      </div>
+      </div>
+
+      <!-- Parallax image -->
+
 </section>
 
 
@@ -25,42 +54,40 @@
 
 
 
-<!--Hero start-->
-<section class="bg-primary-dark right-slant-shape py-5 cover2" style="margin-top:0px;">
-<div class="container pt-5">
-<div class="row align-items-center pt-5">
-<div class="col-lg-5 col-12">
-    <div class="text-center text-lg-start mb-7 mb-lg-0" data-cues="slideInDown">
-    <div class="mb-4">
-    <h1 class="mb-5 display-5 text-white-stable text-white">
-     <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">   Empowering Climate Action Through Knowledge</span>
-
-    </h1>
-    </div>
-
-    <div data-cues="slideInDown">
-
-    <a href="#" class="btn btn-danger me-2">Log in</a>
-    <a href="#" class="btn btn-warning">Sign up</a>
-    </div>
-    </div>
-</div>
-<div class="offset-lg-1 col-lg-6 col-12 ">
-<div class="position-relative z-1" data-cue="slideInRight">
-<div class="position-relative" style="float:right;">
 
 
+<section>
+   <div class="container-fluid py-5 p-0 bg-dark2">
+   <div class="row g-0">
+   <div class="col-12 col-md-12">
 
+       <section>
+           <div class="container">
+               <div class="row">
+                   <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                       <div class="text-center mb-8">
 
-
-                            </div>
+                           <h2 class="mb-3 mt-3 text-white">
+                              <span style="font-family:'Times New Roman', Times, serif;">CARBON HUB</span>
+                           </h2>
+                           <p class="mb-0 px-lg-6 text-white" style="font-size:16px;">
+                               We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. It's time to unite and reduce emissions, protect ecosystems, and invest in sustainable solutions.
+                           </p>
+                           <div class="p-3">
+                               <Inertia-link  :href="route('about')" class="btn btn-outline-light" style="border:solid 2px white;border-radius:20px;font-weight:bold;"> Get To Know Us <i class="bi bi-arrow-right"></i></Inertia-link>
+                           </div>
                        </div>
-                </div>
+                   </div>
+               </div>
+
            </div>
-    </div>
-</section>
-<!--Hero start-->
+       </section>
+   </div>
+   <div class="col-12 col-md-4"></div>
+   </div>
+   </div>
 
+ </section>
 
 
 
@@ -79,63 +106,7 @@
 
 
 
-<section class="pt-xl-6 pb-xl-10 py-lg-7 py-5">
-    <!--Logo section start-->
-<div class="container">
 
-<div class="row g-4">
-<div class="col-lg-3 col-md-6">
-<div class="card bg-primary bg-opacity-10 p-4 border-0 h-100 card-lift">
-<div class="mb-4">
-<i class="bi bi-card-text" style="font-size:30px;"></i>
-</div>
-<div>
-<h3>Curriculum</h3>
-<p class="mb-0 text-primary-emphasis">
-    Our comprehensive curriculum empowers learners with the knowledge and tools to drive sustainable solutions and protect our planet. </p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="card bg-success bg-opacity-10 p-4 border-0 h-100 card-lift">
-<div class="mb-4">
-<b-icon icon="folder-fill" aria-hidden="true" scale="2"></b-icon>
-</div>
-<div>
-<h3>Resource</h3>
-<p class="mb-0 text-success-emphasis">
-Our climate change resources provide actionable insights and strategies to help you make a real impact.
-</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="card bg-info bg-opacity-10 p-4 border-0 h-100 card-lift">
-<div class="mb-4">
-    <b-icon icon="cloud-fog2-fill" aria-hidden="true" scale="2"></b-icon>
-</div>
-<div>
-<h3>Carbon Credit</h3>
-<p class="mb-0 text-info-emphasis">
-    Invest in carbon credits to offset your footprint and support projects that reduce greenhouse gases.
-</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="card bg-danger bg-opacity-10 p-4 border-0 h-100 card-lift">
-<div class="mb-4">
-<b-icon icon="cash" aria-hidden="true" scale="2"></b-icon>
-</div>
-<div>
-<h3>Financing</h3>
-<p class="mb-0 text-danger-emphasis">Support projects that reduce emissions and drive green innovation while making a positive impact on the environment.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
 
 
@@ -149,85 +120,6 @@ Our climate change resources provide actionable insights and strategies to help 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Have question start-->
-<section class="py-xl-9 py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-6">
-                <div class="mb-7 mb-md-0 me-lg-7">
-                    <div class="mb-4">
-                        <h2 class="mb-3">Still have questions?</h2>
-                        <p class="mb-0">We've answered a few FAQs to get you
-                            started. But please don't hesitate to reach out
-                            with more.</p>
-
-
-
-
-
-
-
-                    </div>
-
-
-
-
-
-<div class="pr-5 pt-5 pb-5">
-<img :src="images.background" class="rounded"/>
-</div>
-
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-            <div class="col-lg-7 col-md-6">
-                <div class="pb-4 border-bottom">
-                    <h4 class="mb-3">About the Climate Education <span class="bg-danger text-white p-2">Hub</span> </h4>
-                    <p class="mb-0">
-                        The Climate Education Hub is your one-stop resource for understanding the science, policies, and solutions behind climate change. Designed for individuals, students, educators, businesses, and policymakers, the hub provides essential information and interactive tools to inspire climate action and promote sustainable practices.
-                    </p>
-                </div>
-                <div class="py-4">
-                    <h4 class="mb-3">Climate Education</h4>
-                    <p class="mb-0">
-                        Climate change education helps people understand and address the impacts of the climate crisis, empowering them with the knowledge, skills, values and attitudes needed to act as agents of change.
-                    </p>
-                    <p class="mt-2">
-                        The international community recognizes the importance of education and training to address climate change. The UN Framework Convention on Climate Change, the Paris Agreement and the associated Action for Climate Empowerment (ACE) agenda call on governments to educate, empower and engage all stakeholders and major groups on policies and actions relating to climate change.
-                    </p>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</section>
-<!--Have question end-->
 
 
 
