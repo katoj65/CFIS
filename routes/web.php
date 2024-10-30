@@ -23,6 +23,7 @@ use App\Http\Controllers\Emission\EmissionController;
 use App\Http\Controllers\News\NewsController;
 use App\Http\Controllers\Subscription\SubscriptionController;
 use App\Http\Controllers\Article\ArticleController;
+use App\Http\Controllers\Test\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,7 +84,7 @@ Route::get('about/carbon-credit-registration', [AboutController::class, 'carbonC
 Route::get('about/project-verification-certification',[AboutController::class,'verificationCertification'])->name('about.verification-certification');
 Route::get('about/carbon-credit-trading', [AboutController::class, 'carbonCreditTrading'])->name('about.carbon-redit-trading');
 Route::get('about/capacity-building-training', [AboutController::class, 'capacityBuildingTraining'])->name('about.capacity-building-training');
-Route::get('hub/welcome', [KnowledgeCenterController::class, 'index'])->name('hub.welcome');
+Route::get('hub/overview', [KnowledgeCenterController::class, 'index'])->name('hub.welcome');
 Route::get('projects',[ProjectController::class,'index'])->name('projects.overview');
 Route::get('project/details/{id}',[ProjectController::class,'show'])->name('project.show');
 Route::get('project/developer',[ProjectController::class,'developProject'])->name('project.developer');
@@ -101,7 +102,8 @@ Route::get('carbon-markets/overview',[ArticleController::class,'carbonMarkets'])
 
 
 
-
+// testing purpose
+Route::get('user/test', [TestController::class, 'index'])->name('user.test');
 
 
 

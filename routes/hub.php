@@ -1,14 +1,7 @@
 <?php
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KnowledgeCenter\KnowledgeCenterController;
-
-
-
-
-
-
-
+use App\Http\Controllers\Hub\HubController;
 
 
 
@@ -17,7 +10,7 @@ use App\Http\Controllers\KnowledgeCenter\KnowledgeCenterController;
 
 
 //routes
-Route::get('hub', [KnowledgeCenterController::class, 'index'])->name('hub');
+Route::get('hub', [HubController::class, 'index'])->name('hub');
 
 
 

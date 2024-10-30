@@ -1,35 +1,29 @@
 <?php
 
-namespace App\Http\Controllers\Hub;
+namespace App\Http\Controllers\Test;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
+use Illuminate\Support\Facades\Gate;
 
-
-
-class HubController extends Controller
+class TestController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-
-
-
-
-
-
-
     public function index()
     {
+        //
 
-       //
-$data['title']='Carbon Hub';
-return Inertia::render('KnowlegeCenterPage',$data);
+dd(Gate::allows('has_role','admin'));
+
+return 'some information';
+
+
+
+
 
     }
 
