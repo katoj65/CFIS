@@ -253,14 +253,16 @@
 
 
 
-  <section class="text-light row bg-light2 py-5">
+  <section class="text-light row bg-light2 py-2">
       <div class="container pb-md-6">
     <div class="">
     <div class="offset-lg-1 col-10">
         <div class="row mt-4">
 
-          <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="100">
+
             <div class="ml-3">
+                <div> <img :src="icon_directory+'factory_icon.png'" style="width:30px;"></div>
               <h5> Measure Carbon Footprint </h5>
               <p>
                   Start your carbon mitigation journey by accurately measuring your carbon emissions. With real-time monitoring, track and reduce your environmental impact efficiently.
@@ -270,9 +272,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="200">
 
             <div class="ml-3">
+                <div> <img :src="icon_directory+'global_warming.png'" style="width:30px;"></div>
               <h5>Manage Carbon Emissions</h5>
               <p>
                   Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.
@@ -282,9 +285,10 @@
                   </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="300">
 
             <div class="ml-3">
+                <div> <img :src="icon_directory+'ecosystem.png'" style="width:30px;"></div>
               <h5>Offset Carbon Emissions</h5>
               <p>
                   Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.
@@ -294,9 +298,10 @@
                   </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="400">
 
             <div class="ml-3">
+                <div> <img :src="icon_directory+'trading.png'" style="width:30px;"></div>
               <h5>Carbon Markets</h5>
               <p>
                   Tap into carbon markets by buying and selling carbon credits, turning emission reductions into financial value and supporting global climate initiatives.
@@ -306,9 +311,10 @@
                   </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="500">
 
             <div class="ml-3">
+                <div> <img :src="icon_directory+'funding.png'" style="width:30px;"></div>
               <h5>Carbon Fund</h5>
               <p>
                   Access funding tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
@@ -318,9 +324,10 @@
                   </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="600">
 
             <div class="ml-3">
+                <div> <img :src="icon_directory+'ecology.png'" style="width:30px;"></div>
               <h5>Education Hub</h5>
               <p>
                   Equip yourself and your community with the knowledge needed to tackle climate challenges through an accessible environmental education hub focused on carbon mitigation and sustainability.
@@ -590,6 +597,7 @@ response:{}
 
 
 data(){return{
+icon_directory:this.$page.props.system.icon_directory,
 success:false,
   tab:[
   {title:'Emission Tracking',description:'Managing your carbon emissions helps protect the environment and builds a sustainable future.'},

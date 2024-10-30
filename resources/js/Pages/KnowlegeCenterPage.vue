@@ -1,14 +1,11 @@
 <template>
 <landing-layout>
-
-
    <section class="py-5">
       <div class="container position-relative z-2 mt-3 mt-sm-4 mt-md-1">
       <div class="row pt-xl-3 pt-xxl-4">
       <div class="col-lg-7 col-xxl-6">
       <h1 class="display-3 text-center text-lg-start title-font" style="font-size:50px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-      <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">WELCOME TO <br/>CARBON</span>
-      <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></span> <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">HUB</span>
+      <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">WELCOME TO<br/>CARBON</span> <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></span> <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">HUB</span>
       </h1>
 
       </div>
@@ -21,13 +18,13 @@
       <div class="col-12 col-md-6">
 
       <div style="position:absolute;bottom:10px;background:white;">
-
-      <p class="text-secondary" style="padding:0;margin:0;line-height:20px;">Dalai Lama</p>
+      <h6 class="p-0 m-0" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Antonio Guterres</h6>
+      <p class="text-secondary" style="padding:0;margin:0;line-height:20px;">UN Secretary General</p>
       </div>
       </div>
       <div class="col-12">
       <p class="fs-lg text-left text-lg-start pb-3 pb-sm-0 pb-md-2 mb-4 mb-sm-5 text-danger" style="font-size:18px;line-height:30px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-      "It is our collective and individual responsibility to preserve and tend to the environment in which we all live."
+      "By polluting the oceans, not mitigating CO2 emissions and destroying our biodiversity, we are killing our planet. Let us face it, there is no planet B."
       </p>
       </div>
       </div>
@@ -55,7 +52,6 @@
 
 
 
-
 <section>
    <div class="container-fluid py-5 p-0 bg-dark2">
    <div class="row g-0">
@@ -71,7 +67,7 @@
                               <span style="font-family:'Times New Roman', Times, serif;">CARBON HUB</span>
                            </h2>
                            <p class="mb-0 px-lg-6 text-white" style="font-size:16px;">
-                               We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. It's time to unite and reduce emissions, protect ecosystems, and invest in sustainable solutions.
+                              Carbon Hub is a one-stop resource for tools, educational materials, and funding opportunities that empower organizations, businesses, and individuals to actively reduce their carbon footprint. Whether you’re a sustainability expert or just starting out, the Carbon Hub is your gateway to understanding and participating in Uganda’s low-carbon future.
                            </p>
                            <div class="p-3">
                                <Inertia-link  :href="route('about')" class="btn btn-outline-light" style="border:solid 2px white;border-radius:20px;font-weight:bold;"> Get To Know Us <i class="bi bi-arrow-right"></i></Inertia-link>
@@ -104,25 +100,138 @@
 
 
 
+<!--Event tickets start-->
+<section class="py-xl-9 py-5 bg-gray-100">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-8 offset-md-2">
+               <div class="text-center mb-xl-9 mb-5">
+                   <h2 class="mb-3">Event tickets</h2>
+                   <p class="mb-0 lead px-xl-7">The price will increase as
+                       the conference approaches. Grab your ticket today.
+                       Number of tickets is limited.</p>
+               </div>
+           </div>
+       </div>
+       <!-- Pricing Style 3 -->
+       <div class="table-responsive-lg">
+           <div class="row flex-nowrap me-5 me-lg-0">
+               <div class="col-lg-4 col-md-6 col-12">
+                   <!--card-->
+                   <div class="card bg-gray-200 border-0 p-2 mb-5 mb-xl-0">
+                       <div class="card-body bg-white shadow-sm rounded-2">
+                           <div class="mb-5">
+                               <h3 class="h6 mb-3">All Access</h3>
+                               <h2 class="d-flex align-items-center">
+                                   <span class="text-dark">$9.00*</span>
+                                   <del
+                                       class="text-body-tertiary ms-1">$29</del>
+                               </h2>
+                           </div>
+                           <div class="mb-5">
+                               <span class="small">200 Seats
+                                   Remaining</span>
+                               <div class="progress mt-2"
+                                   role="progressbar"
+                                   aria-label="Event Ticket"
+                                   aria-valuenow="75" aria-valuemin="0"
+                                   aria-valuemax="100" style="height: 8px">
+                                   <div class="progress-bar bg-primary bg-opacity-50"
+                                       style="width: 70%"></div>
+                               </div>
+                           </div>
 
 
+                           <div class="d-grid mt-5">
+                               <a href="#"
+                                   class="btn btn-outline-primary">Register
+                                   Now</a>
+                           </div>
+                       </div>
+                   </div>
+                   <!--card-->
+               </div>
+               <div class="col-lg-4 col-md-6 col-12">
+                   <!--card-->
+                   <div class="card bg-primary-subtle border-0 p-2 mb-5 mb-xl-0">
+                       <div class="card-body bg-white shadow rounded-2">
+                           <div class="mb-5">
+                               <h3 class="h6 mb-3">VIP</h3>
+                               <h2 class="d-flex align-items-center">
+                                   <span class="text-dark">$49.00*</span>
+                                   <del
+                                       class="text-body-tertiary ms-1">$129</del>
+                               </h2>
+                           </div>
+                           <div class="mb-5">
+                               <span class="small">67 Seats
+                                   Remaining</span>
+                               <div class="progress mt-2"
+                                   role="progressbar"
+                                   aria-label="Basic example"
+                                   aria-valuenow="75" aria-valuemin="0"
+                                   aria-valuemax="100" style="height: 8px">
+                                   <div class="progress-bar bg-primary bg-opacity-50"
+                                       style="width: 90%"></div>
+                               </div>
+                           </div>
 
+                           <div class="d-grid mt-5">
+                               <a href="#"
+                                   class="btn btn-primary">Register</a>
+                           </div>
+                       </div>
+                   </div>
+                   <!--card-->
+               </div>
+               <div class="col-lg-4 col-md-6 col-12">
+                   <!--card-->
+                   <div class="card bg-gray-200 border-0 p-2 mb-xl-0">
+                       <div class="card-body bg-white shadow rounded-2">
+                           <div class="mb-5">
+                               <h3 class="h6 mb-3">VIP + VIP Plus</h3>
+                               <h2 class="d-flex align-items-center">
+                                   <span class="text-dark">$89.00*</span>
+                                   <del
+                                       class="text-body-tertiary ms-1">$199</del>
+                               </h2>
+                           </div>
+                           <div class="mb-5">
+                               <span class="small">234 Seats
+                                   Remaining</span>
+                               <div class="progress mt-2"
+                                   role="progressbar"
+                                   aria-label="Basic example"
+                                   aria-valuenow="75" aria-valuemin="0"
+                                   aria-valuemax="100" style="height: 8px">
+                                   <div class="progress-bar bg-primary bg-opacity-50"
+                                       style="width: 70%"></div>
+                               </div>
+                           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                           <div class="d-grid mt-5">
+                               <a href="#"
+                                   class="btn btn-outline-primary">Get the
+                                   VIP plus tickets</a>
+                           </div>
+                       </div>
+                   </div>
+                   <!--card-->
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-md-12">
+               <div class="text-center mt-5">
+                   <small>* Additional 5% VAT charge applies to
+                       individuals, companies VAT non-payers, and companies
+                       in the country.</small>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+<!--Event tickets end-->
 
 
 

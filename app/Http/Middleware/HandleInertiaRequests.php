@@ -64,6 +64,8 @@ return [
 return[
 'url'=>'http://localhost/carbon/',
 'carbon_footprint_parameters'=>CarbonFootprintParameter::all(),
+'icon_directory'=>'http://localhost/carbon/public/icons/',
+'image_directory'=>'http://localhost/carbon/public/images/'
 ];
 },
 
