@@ -52,8 +52,14 @@ Gate::define('has_role',function(User $user,$role){
 return $user->role==$role;
 });
 
+//user activity status
+Gate::define('is_active',function(User $user){
+return $user->user_status=='active';
+});
 
-
+Gate::define('user_status',function(User $user,$status){
+return $user->user_status==$status;
+});
 
 
 

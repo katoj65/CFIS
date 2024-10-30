@@ -17,7 +17,7 @@ class TestController extends Controller
     {
         //
 
-dd(Gate::allows('has_role','admin'));
+dd(Gate::allows('user_status','blocked'));
 
 return 'some information';
 
