@@ -47,6 +47,9 @@ Carbon Footprint Information System
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
 
+
+<link href='https://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet'>
+<style>
 <style type="text/css">
 a{
 text-decoration: none;
@@ -171,7 +174,9 @@ background: #C1A783;
 background:#f8f9f9;
 }
 .text-darkred{color:darkred}
-
+.section_title1{
+    font-family: 'Doppio One';
+}
 
 
 </style>

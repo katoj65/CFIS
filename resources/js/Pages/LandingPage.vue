@@ -128,7 +128,7 @@
       <b-icon icon="tree-fill" scale="2"></b-icon>
       </div>
       <div class="mb-4">
-      <h5>Carbon Footprint Management</h5>
+      <h5><span class="section_title1">Carbon Footprint Management</span> </h5>
       <p class="mb-0">
       Tools to help businesses, organizations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.
       </p>
@@ -149,7 +149,7 @@
       <b-icon icon="tree-fill" scale="2"></b-icon>
       </div>
       <div class="mb-4">
-      <h5>Carbon Markets</h5>
+      <h5><span class="section_title1">Carbon Markets</span> </h5>
       <p class="mb-0">
       Entities can use the registry to participate in carbon markets, buying and selling carbon credits to offset their emissions and support greenhouse gas reduction projects, assisting Uganda in meeting its climate commitments.
       </p>
@@ -172,7 +172,7 @@
       <b-icon icon="tree-fill" scale="2"></b-icon>
       </div>
       <div class="mb-4">
-      <h5>Carbon Fund</h5>
+      <h5><span class="section_title1">Carbon Fund</span> </h5>
       <p class="mb-0">
       Get access to financial resources to invest in projects aimed at reducing greenhouse gas emissions, generating carbon credits that can be sold in carbon markets.
       </p>
@@ -193,7 +193,7 @@
       <b-icon icon="tree-fill" scale="2"></b-icon>
       </div>
       <div class="mb-4">
-      <h5>Carbon Offset Projects</h5>
+      <h5><span class="section_title1">Carbon Offset Projects</span> </h5>
       <p class="mb-0">
       Facilitating the development of carbon offset projects that decrease or eliminate emissions, such as reforestation and clean energy initiatives. These projects produce carbon credits, promoting sustainable practices and contributing to Uganda’s low-carbon growth path.
       </p>
@@ -240,6 +240,75 @@
 
 
 
+<section class="text-light row bg-light2 py-2">
+<div class="container pb-md-6 pt-2">
+<div>
+<div class="offset-lg-1 col-10">
+<div class="row mt-4">
+
+<div class="col-12 col-md-4" v-for="(s,key) in botton_section" :key="key">
+<div class="card border-0 bg-light2">
+<div class="card-body p-4">
+
+<div class="mb-2">
+<h5 class="card-title">
+<span class="section_title1">{{ s.title }}</span>
+</h5>
+<p class="mb-0 card-text">
+{{ s.description }}
+</p>
+</div>
+<Inertia-link :href="route(s.url)" class="btn btn-clear text-danger p-0">
+ {{ s.link}}<i class="bi bi-arrow-right"></i></Inertia-link>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<el-divider></el-divider>
+<div class="col-12">
+<!--Stats start-->
+<section class="py-2">
+<div class="container pb-4">
+<div class="row">
+<div class="col-lg-3 col-6">
+<div class="text-center px-lg-5 mb-5 mb-lg-0">
+<small
+class="text-uppercase  ls-md fw-semibold text-muted">Active Clients</small>
+<h2 class="mb-0 mt-2">{{ response.clients }} </h2>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="text-center px-lg-5 mb-5 mb-lg-0">
+<small
+class="text-uppercase  ls-md fw-semibold text-muted">Projects</small>
+<h2 class="mb-0 mt-2">{{ response.projects }} </h2>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="text-center px-lg-5 mb-5 mb-lg-0">
+<small
+class="text-uppercase ls-md fw-semibold text-muted">Project Developers
+</small>
+<h2 class="mb-0 mt-2">{{ response.developers }} </h2>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="text-center px-lg-5 mb-5 mb-lg-0">
+<small
+class="text-uppercase ls-md fw-semibold text-muted">Impact Created</small>
+<h2 class="mb-0 mt-2">30%</h2>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
 
 
 
@@ -248,148 +317,13 @@
 
 
 
+</div>
 
+</div>
+</div>
 
-
-
-
-  <section class="text-light row bg-light2 py-2">
-      <div class="container pb-md-6">
-    <div class="">
-    <div class="offset-lg-1 col-10">
-        <div class="row mt-4">
-
-          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="ml-3">
-                <div> <img :src="icon_directory+'factory_icon.png'" style="width:30px;"></div>
-              <h5> Measure Carbon Footprint </h5>
-              <p>
-                  Start your carbon mitigation journey by accurately measuring your carbon emissions. With real-time monitoring, track and reduce your environmental impact efficiently.
-              </p>
-              <div>
-              <Inertia-link href="" class="btn btn-clear text-danger p-0">Calculate your  emissions <i class="bi bi-arrow-right"></i></Inertia-link>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="ml-3">
-                <div> <img :src="icon_directory+'global_warming.png'" style="width:30px;"></div>
-              <h5>Manage Carbon Emissions</h5>
-              <p>
-                  Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.
-              </p>
-              <div>
-                  <Inertia-link href="" class="btn btn-clear text-danger p-0">Create your Carbon reduction strategy <i class="bi bi-arrow-right"></i></Inertia-link>
-                  </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="ml-3">
-                <div> <img :src="icon_directory+'ecosystem.png'" style="width:30px;"></div>
-              <h5>Offset Carbon Emissions</h5>
-              <p>
-                  Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.
-              </p>
-              <div>
-                  <Inertia-link href="" class="btn btn-clear text-danger p-0">Investiment in carbon reduction <i class="bi bi-arrow-right"></i></Inertia-link>
-                  </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="400">
-
-            <div class="ml-3">
-                <div> <img :src="icon_directory+'trading.png'" style="width:30px;"></div>
-              <h5>Carbon Markets</h5>
-              <p>
-                  Tap into carbon markets by buying and selling carbon credits, turning emission reductions into financial value and supporting global climate initiatives.
-              </p>
-              <div>
-                  <Inertia-link href="" class="btn btn-clear text-danger p-0">Get Access to Carbon Markets <i class="bi bi-arrow-right"></i></Inertia-link>
-                  </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="500">
-
-            <div class="ml-3">
-                <div> <img :src="icon_directory+'funding.png'" style="width:30px;"></div>
-              <h5>Carbon Fund</h5>
-              <p>
-                  Access funding tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
-              </p>
-              <div>
-                  <Inertia-link href="" class="btn btn-clear text-danger p-0">Finance Your Emission Reduction Plan <i class="bi bi-arrow-right"></i></Inertia-link>
-                  </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex mb-2 aos-init aos-animate p-2" data-aos="fade-up" data-aos-delay="600">
-
-            <div class="ml-3">
-                <div> <img :src="icon_directory+'ecology.png'" style="width:30px;"></div>
-              <h5>Education Hub</h5>
-              <p>
-                  Equip yourself and your community with the knowledge needed to tackle climate challenges through an accessible environmental education hub focused on carbon mitigation and sustainability.
-              </p>
-              <div>
-                  <Inertia-link :href="route('hub')" class="btn btn-clear text-danger p-0">Empower yourself with knowledge <i class="bi bi-arrow-right"></i></Inertia-link>
-                  </div>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="col-12">
-            <!--Stats start-->
-            <section class="py-2">
-               <div class="container pt-5">
-                   <div class="row">
-                       <div class="col-lg-3 col-6">
-                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                               <small
-                                   class="text-uppercase  ls-md fw-semibold text-muted">Active Clients</small>
-                               <h2 class="mb-0 mt-2">{{ response.clients }} </h2>
-                           </div>
-                       </div>
-                       <div class="col-lg-3 col-6">
-                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                               <small
-                                   class="text-uppercase  ls-md fw-semibold text-muted">Projects</small>
-                               <h2 class="mb-0 mt-2">{{ response.projects }} </h2>
-                           </div>
-                       </div>
-                       <div class="col-lg-3 col-6">
-                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                               <small
-                                   class="text-uppercase ls-md fw-semibold text-muted">Project Developers
-                                   </small>
-                               <h2 class="mb-0 mt-2">{{ response.developers }} </h2>
-                           </div>
-                       </div>
-                       <div class="col-lg-3 col-6">
-                           <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                               <small
-                                   class="text-uppercase ls-md fw-semibold text-muted">Impact Created</small>
-                               <h2 class="mb-0 mt-2">30%</h2>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </section>
-           </div>
-
-
-
-        </div>
-
-    </div>
-    </div>
-
-      </div>
-    </section>
+</div>
+</section>
 
 
 
@@ -615,8 +549,6 @@ success:false,
   {name:'Community Connections',url:'emissions.uganda'},
   {name:'See Our Partners',url:'emissions.uganda'},
 
-
-
   ],
 
   stepper:[
@@ -670,7 +602,42 @@ this.form.reset();
   computed:{
   url(){
   return this.$page.props.system.url;
-  }
+  },
+
+//
+botton_section(){
+return[
+{title:'Measure Carbon Footprint',
+description:'Start your carbon mitigation journey by accurately measuring your carbon emissions. With real-time monitoring, track and reduce your environmental impact efficiently.',
+link:'Calculate Your Emissions',url:'home'},
+
+{title:'Manage Carbon Emissions',
+description:'Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.',
+link:'Create Your Carbon reductionstrategy',url:'home'},
+
+{title:'Offset Carbon Emissions',
+description:'Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.',
+ link:'Invest in Carbon Reduction',url:'home'},
+
+{title:'Carbon Markets',
+description:'Tap into carbon markets by buying and selling carbon credits, turning emission reductions into financial value and supporting global climate initiatives.',
+ link:'Get Access to Carbon Markets',url:'home'},
+
+{title:'Carbon Fund',
+description:'Access funding tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.',
+link:'Finance Your Emission Reduction Plan',url:'home'},
+
+{title:'Education Hub',
+description:'Equip yourself and your community with the knowledge needed to tackle climate challenges through an accessible environmental education hub focused on carbon mitigation and sustainability.',
+link:'Empower Yourself with Knowledge',url:'hub.welcome'},
+
+];
+
+},
+
+
+
+
   },
 
 
