@@ -85,6 +85,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
 <div class="container-xxl py-5">
 <div class="container">
 <div class="row">
@@ -147,6 +169,7 @@ Read more<i class="bi bi-arrow-right ml-1"></i></Inertia-link>
 </div>
 </div>
 </div>
+</section>
 
 
 
@@ -162,8 +185,7 @@ Read more<i class="bi bi-arrow-right ml-1"></i></Inertia-link>
 
 
 
-
-<section class="text-light row bg-light2 py-2">
+<section class="text-light row bg-light2 py-2" style="border-top:solid 1px  #e9edf0;">
 <div class="container pb-md-6 pt-2">
 <div>
 <div class="offset-lg-1 col-10">
@@ -250,7 +272,7 @@ Read more<i class="bi bi-arrow-right ml-1"></i></Inertia-link>
 
 
 <!--testmonial start-->
-<section class="bg-white py-5">
+<section class="bg-white py-5" style="border-top:solid 1px  #e9edf0;">
 <div class="container">
 <div class="col-xxl-8 offset-xxl-2 col-md-12">
 <div class="row align-items-center">
@@ -289,7 +311,7 @@ Read more<i class="bi bi-arrow-right ml-1"></i></Inertia-link>
 
 
 <!--location-->
-<section class="mb-xl-9 py-5 bg-light2">
+<section class="mb-xl-9 py-5 bg-light2" style="border-top:solid 1px  #e9edf0;">
 <div class="container">
 
 <div class="text-center mb-xl-7 mb-5">
