@@ -6,7 +6,7 @@
 <div class="col-12 col-md-8 offset-lg-2">
 
 <h1 class="text-dark2 pt-4 text-center" style="font-size:25px;">
-<span class="title-font2"> {{ title }}
+<span class="section_title1"> {{ title }}
 </span>
 </h1>
 <p class="mb-0 text-left  mt-3">

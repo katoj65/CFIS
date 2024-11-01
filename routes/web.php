@@ -98,12 +98,12 @@ Route::get('news', [NewsController::class, 'index'])->name('news.index');
 Route::post('subscription/email',[SubscriptionController::class,'store'])->name('subscription.email');
 Route::get('climate-change/overview',[ArticleController::class,'climateChange'])->name('climate_change.articles');
 Route::get('carbon-markets/overview',[ArticleController::class,'carbonMarkets'])->name('carbon-markets');
-
+Route::get('footprint',[AboutController::class,'carbonFootprint'])->name('carbon.footprint');
 
 
 
 // testing purpose
-Route::get('user/test', [TestController::class, 'index'])->name('user.test');
+Route::get('user/test', [UserController::class, 'index'])->name('user.index');
 
 
 

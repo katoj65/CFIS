@@ -97,6 +97,16 @@ return Inertia::render('CapacityBuildingTrainingPage',$data);
 
 
 
+public function carbonFootprint(){
+$data['title']='Carbon Footprint';
+$data['response']=[];
+return Inertia::render('CarbonFootprintPage',$data);
+}
+
+
+
+
+
 
 
 }

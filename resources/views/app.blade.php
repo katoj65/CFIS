@@ -166,6 +166,11 @@ background-color: rgb(241 245 249) !important;
   background:#1A374D;
 }
 
+.text-dark2{
+color:#1A374D;
+}
+
+
 .bg-khaki{
 background: #C1A783;
 }
