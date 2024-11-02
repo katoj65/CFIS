@@ -124,8 +124,7 @@
 </h1>
 </div>
 <p class="mb-5">
-The Uganda Carbon Registry is at the forefront of climate action, providing a comprehensive system for tracking, reducing, and offsetting greenhouse gas emissions.
-By enabling individuals, businesses, and organizations to measure their carbon footprints and generate carbon credits, the registry creates a transparent and structured approach to carbon management.
+We are proud to lead Uganda’s response to climate change by empowering organisations, businesses, and communities to take action toward a sustainable future. Our comprehensive approach combines advanced carbon tracking, targeted emission reduction strategies, and accessible carbon financing to accelerate Uganda’s progress toward national climate goals and net-zero emissions.
 </p>
 
 <el-collapse accordion style="margin-top:-20px;">
