@@ -571,7 +571,7 @@ link:'Empower Yourself with Knowledge',url:'hub.welcome'},
 services(){
 return[
 {title:'Carbon Footprint Management',
-description:'Tools to help businesses, organizations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.',
+description:'Tools to help businesses, organisations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.',
 url:'cfis.overview'
 },
 {title:'Carbon Fund',
