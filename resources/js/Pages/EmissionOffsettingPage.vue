@@ -79,7 +79,7 @@ Contribution to Uganda’s NDC Goals. Support Uganda’s Nationally Determined C
 Ready to make a difference?
 </h5>
 <p>
-Invest in Uganda Carbon Registry’s certified carbon offset projects and join us in building a more sustainable future. Whether you’re a company seeking to meet carbon reduction goals or an individual committed to environmental stewardship, your investment can drive real, lasting change.
+Invest in Uganda Carbon Registry’s certified carbon offset projects and join us in building a more sustainable future. Whether you’re a company seeking to meet carbon reduction goals or an individual committed to environmental stewardship, your investment can drive real, lasting change. <link-pointer-component :title="'Get involved'" :url="'login'" />
 </p>
 </div>
 
@@ -96,10 +96,12 @@ Invest in Uganda Carbon Registry’s certified carbon offset projects and join u
 <script>
 import LandingLayout from '../Layouts/LandingLayout.vue';
 import BannerComponent from '../components/BannerComponent.vue';
+import LinkPointerComponent from '../components/LinkPointerComponent.vue';
 export default {
 components:{
 LandingLayout,
 BannerComponent,
+LinkPointerComponent
 },
 
 data(){return{

@@ -1,15 +1,15 @@
 <template>
-<div class="container-fluid feature bg-light2 py-0" style="margin-top:-35px;border-bottom:solid 1px  #e9edf0;">
+<div class="container-fluid feature bg-dark2 py-0" style="margin-top:-35px;border-bottom:solid 3px #b03a2e;">
 <div class="container py-5 ">
-<div class="row">
+<div class="row mt-3">
 
 <div class="col-12 col-md-8 offset-lg-2">
 
 <h1 class="text-dark2 pt-4 text-center" style="font-size:25px;">
-<span class="section_title1"> {{ title }}
+<span class="section_title1 text-white"> {{ title }}
 </span>
 </h1>
-<p class="mb-0 text-left  mt-3">
+<p class="mb-0 text-left  mt-3 text-white">
 {{ subtitle }}
 </p>
 <slot/>

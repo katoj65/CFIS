@@ -1,48 +1,48 @@
 <template>
 <body style="padding-top:65px;">
 
-            <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 " style="border-bottom:none;position:fixed;width:100%;border-radius:0;background:#1A374D;">
-                <a :href="route('home')" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-                    <h5 class="m-0 text-white"> Uganda Carbon Registry
-                        <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3" style="position:absolute;margin-top:8px;">
-                        <div style="font-weight:normal;font-size:12px;padding-top:4px;">
-                            Empowering sustainability through data
-                        </div>
-                    </h5>
-                </a>
-                <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto p-4 p-lg-0">
-                        <inertia-link :href="route('home')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Home</inertia-link>
-                        <inertia-link :href="route('about')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">About</inertia-link>
-                        <!-- <inertia-link :href="route('carbon-credit')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Carbon Credit</inertia-link> -->
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" style="font-size:15px;font-weight:normal;">Carbon Fund</a>
-                            <div class="dropdown-menu fade-up m-0">
-                                <Inertia-link :href="route('microfinance.introduction')" class="dropdown-item" style="font-size:15px;padding:10px;">
-                                    Overview </Inertia-link>
-                                <Inertia-link :href="route('microfinance.overview')" class="dropdown-item" style="font-size:15px;padding:10px;">Apply for a Loan</Inertia-link>
-                                <Inertia-link :href="route('sponsor.project')" class="dropdown-item" style="font-size:15px;padding:10px;">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 shadow-sm " style="border-bottom:none;position:fixed;width:100%;border-radius:0;background:#1A374D;">
+<a :href="route('home')" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+<h5 class="m-0 text-white"> Uganda Carbon Registry
+    <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3" style="position:absolute;margin-top:8px;">
+    <div style="font-weight:normal;font-size:12px;padding-top:4px;">
+        Empowering sustainability through data
+    </div>
+</h5>
+</a>
+<button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<div class="navbar-nav ms-auto p-4 p-lg-0">
+    <inertia-link :href="route('home')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Home</inertia-link>
+    <inertia-link :href="route('about')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">About</inertia-link>
+    <!-- <inertia-link :href="route('carbon-credit')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Carbon Credit</inertia-link> -->
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" style="font-size:15px;font-weight:normal;">Carbon Fund</a>
+        <div class="dropdown-menu fade-up m-0">
+            <Inertia-link :href="route('microfinance.introduction')" class="dropdown-item" style="font-size:15px;padding:10px;">
+                Overview </Inertia-link>
+            <Inertia-link :href="route('microfinance.overview')" class="dropdown-item" style="font-size:15px;padding:10px;">Apply for a Loan</Inertia-link>
+            <Inertia-link :href="route('sponsor.project')" class="dropdown-item" style="font-size:15px;padding:10px;">
 Sponsor a Project
-                                </Inertia-link>
-                                <Inertia-link :href="route('partner.microfinance-partnership')" class="dropdown-item" style="font-size:15px;padding:10px;">
-                                Partnerships
-                                </Inertia-link>
-                                <Inertia-link :href="route('microfinance.fundraising')"  class="dropdown-item" style="font-size:15px;padding:10px;">
-                                    Start a Fundraiser
-                                </Inertia-link>
+            </Inertia-link>
+            <Inertia-link :href="route('partner.microfinance-partnership')" class="dropdown-item" style="font-size:15px;padding:10px;">
+            Partnerships
+            </Inertia-link>
+            <Inertia-link :href="route('microfinance.fundraising')"  class="dropdown-item" style="font-size:15px;padding:10px;">
+                Start a Fundraiser
+            </Inertia-link>
 
-                            </div>
-                        </div>
-                        <inertia-link :href="route('contact')" class="nav-item nav-link text-white" style="margin-right:15px;margin-left:-25px;font-size:15px;font-weight:normal;">Contact</inertia-link>
+        </div>
+    </div>
+    <inertia-link :href="route('contact')" class="nav-item nav-link text-white" style="margin-right:15px;margin-left:-25px;font-size:15px;font-weight:normal;">Contact</inertia-link>
 
 
-                    </div>
-                    <inertia-link :href="route('login')" class="btn  py-4 px-lg-5 d-none d-lg-block text-white" style="border-radius:0;font-size:15px;background:#ec7063;font-weight:bold;font-weight:normal;">Login</inertia-link>
-                </div>
-            </nav>
+</div>
+<inertia-link :href="route('login')" class="btn  py-4 px-lg-5 d-none d-lg-block text-white" style="border-radius:0;font-size:15px;background:#ec7063;font-weight:bold;font-weight:normal;">Login</inertia-link>
+</div>
+</nav>
 
 
 
