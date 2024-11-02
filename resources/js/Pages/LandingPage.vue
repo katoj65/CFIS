@@ -151,13 +151,13 @@ Read more<i class="bi bi-arrow-right ml-1"></i></Inertia-link>
 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
 <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 300px">
 <img class="position-absolute w-100" src="http://localhost/carbon/public/images/deforestation.jpeg" alt="" style="object-fit: cover;height:500px;">
-<div class="position-absolute top-0 start-0 bg-white pe-3 pb-3" style="width: 200px; height: 200px;border-radius:20px;">
+<div class="position-absolute top-0 start-0 bg-white pe-3 pb-3" style="width: 200px; height: 230px;border-radius:20px;">
 
 
 <div class="d-flex flex-column justify-content-center text-center bg-dark2 h-100 p-3" style="border-radius:20px;">
 <h1 class="text-white">22%</h1>
-<h2 class="text-white">Emission</h2>
-<h5 class="text-white mb-0">Reduction By 2030</h5>
+<h2 class="text-white">By 2030</h2>
+<p class="text-white pb-2">Emission Reduction Target</p>
 </div>
 
 
@@ -322,16 +322,10 @@ The climate crisis has never been more urgent, and with every new headline, the 
 </div>
 
 
-
 <div class="row g-4">
 
-
-
-
-
 <div class="col-md-3 col-12" v-for="(n,key) in 4" :key="key">
-<div class="bg-white card border-0 p-3">
-
+<div class="bg-white card   p-3" style="border:solid 1px  #e9edf0;">
 <figure class="mb-3 card-lift">
 <img src="http://localhost/carbon/public/images/deforestation.jpeg" class="img-fluid" />
 </figure>
@@ -378,9 +372,7 @@ Ashok Nagar, Bengaluru, Karnataka 560025</span>
 
 
 
-<form
-class="row d-flex justify-content-center mb-6 needs-validation"
-novalidate @submit.prevent="email_subscription">
+<form class="row d-flex justify-content-center mb-6 needs-validation" @submit.prevent="email_subscription">
 <div class="col-lg-6">
     <label for="subscribeEmail"
         class="visually-hidden">Email</label>
@@ -554,7 +546,7 @@ link:'Calculate Your Emissions',url:'carbon.footprint'},
 
 {title:'Manage Carbon Emissions',
 description:'Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.',
-link:'Create Your Carbon reductionstrategy',url:'emissions.uganda'},
+link:'Create Your Carbon reduction Strategy',url:'emission.manage'},
 
 {title:'Offset Carbon Emissions',
 description:'Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.',
@@ -639,11 +631,8 @@ margin-top:20px;
 ul li p{
 font-size: 18px;
 }
-p{
 
-}
-
-.form-control-wrap{
-margin-bottom:10px;
+ol li{
+list-style-type:lower-roman;
 }
 </style>

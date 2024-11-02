@@ -71,7 +71,7 @@ border-radius:20px;
 body{
 overflow-x:hidden;
 }
-p{
+p, ol li, ul li{
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 letter-spacing:0.8px;
 font-size: 14.5px;

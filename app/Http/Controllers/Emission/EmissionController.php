@@ -79,6 +79,16 @@ return Inertia::render('UgandaEmissionsPage',$data);
 }
 
 
+public function carbonEmissionStrategy(){
+$data['title']='Emission Reduction Strategies';
+$data['response']=[];
+return Inertia::render('EmissionStrategyPage',$data);
+}
+
+
+
+
+
 
 
 
