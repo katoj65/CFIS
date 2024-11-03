@@ -2,12 +2,6 @@
 <app-layout>
 <create-profile v-if="profile==null"/>
 
-
-
-
-
-
-
 <div v-else>
 <div class="row">
 <div class="col-md-3 col-12 pl-2 pt-0 pr-2 pb-1" v-for="(g,key) in emissions" :key="key">
