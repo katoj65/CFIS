@@ -115,7 +115,7 @@ LinkPointerComponent
 
 
 data(){return{
-subtitle:"The Carbon Fund is a dedicated financial mechanism designed to provide essential financial resources to enable carbon-reduction projects across Uganda. Through innovative funding options, including carbon credit microfinance, the fund promotes financial inclusion and empowers community-driven climate projects. By providing loans and financing for eligible carbon-reduction initiatives, the Carbon Fund supports sustainable development while contributing to the generation of carbon credits.",
+subtitle:"The Carbon Fund is a dedicated financial mechanism designed to provide essential financial resources to enable carbon-reduction projects across Uganda. Through innovative funding options, including carbon credit microfinance, the fund promotes financial inclusion and empowers community-driven climate projects.",
 
 
 

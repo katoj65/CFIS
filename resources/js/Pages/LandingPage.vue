@@ -45,7 +45,7 @@
 
 
 
-<section>
+<section  style="border-top:solid 3px #b03a2e;">
 <div class="container-fluid py-5 p-0 bg-dark2">
 <div class="row g-0">
 <div class="col-12 col-md-12">
@@ -77,21 +77,6 @@
 </div>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

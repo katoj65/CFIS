@@ -74,7 +74,7 @@
 
 
                     <div class="col-lg-6 col-12 order-lg-2">
-                        <div class="card shadow-sm mb-5">
+                        <div class="card  mb-5 border-0">
                             <div class="card-body">
                                <success-component/>
             <form @submit.prevent="submit" class="">

@@ -1,177 +1,116 @@
 <template>
 <landing-layout>
-<banner-component/>
+<banner-component :subtitle="subtitle"/>
+<section class="py-4 mb-5">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-12 offset-lg-2">
 
-<div class="container-fluid feature py-0">
-<div class="container mt-5">
-<div class="mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
 
+
+
+
+<div class="mb-4">
+<h5>
+Why Sponsor a Project?
+</h5>
 <p>
-    We believe that partnerships are key to building a sustainable future. By sponsoring a Carbon Mitigation Project in Uganda, you’ll play a crucial role in reducing greenhouse gas emissions, promoting environmental sustainability, and empowering local communities. Whether you're a business, NGO, or an individual passionate about climate action, your sponsorship can have a lasting impact.
+    By sponsoring a project with Uganda Carbon Registry, you contribute directly to reducing greenhouse gas emissions while driving social and economic benefits. Your sponsorship helps:
 </p>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container-fluid feature bg-white py-0">
-    <div class="container py-5">
-        <div class="row g-0 p-0">
-            <div class="col-md-6 bg-light d-flex align-items-center">
-                <div class="p-5">
-                    <!-- <h6 class="section-title text-start text-uppercase mb-3 text-danger">Luxury Living</h6> -->
-                    <h4 class="mb-4">Why Sponsor a Carbon Mitigation Project?</h4>
-
-<ul>
-
-<li>
-<p>
-Support climate action by helping Uganda reduce carbon emissions and contribute to global efforts to combat climate change.
-</p>
+<ol>
+<li class="text-muted">
+Accelerate climate resilience by protecting vulnerable ecosystems and support climate adaptation for at-risk communities.
 </li>
-
-<li>
-<p>
-Your sponsorship will support projects that create economic opportunities, improve livelihoods, and protect the environment hence realising sustainable development.
-</p>
+<li class="text-muted">
+Create carbon credits through supporting projects that generate verified carbon credits, contributing to Uganda’s carbon market and offering potential financial returns.
 </li>
-
-<li>
-<p>
-Sponsoring a project allows you to offset your own emissions, enhancing your sustainability credentials.
-</p>
+<li class="text-muted">
+Foster Sustainable Development by enabling impactful projects that provide clean energy, preserve forests, and promote sustainable practices.
 </li>
-
-<li>
-<p>
-Corporate Social Responsibility (CSR).Demonstrate your commitment to sustainability and responsible corporate practices by supporting projects that align with your CSR goals.
-</p>
-</li>
-
-</ul>
-
-
-
-
-
-
-
-<h4 class="mb-3 mt-5">Become a sponsor</h4>
-
-<ul>
-
-<li>
-<p>
-   <strong style="font-weight:bold;"> Select a Project.</strong> <br/>
-    Choose a carbon mitigation project that aligns with your environmental, social, or business goals. We’ll provide you with a list of ongoing and upcoming projects that need sponsorship.
-</p>
-</li>
-
-<li>
-<p>
-   <strong style="font-weight:bold;"> Define your sponsorship contribution.</strong> <br/>
-    You can sponsor a project fully or partially, depending on the scale of your contribution. Whether you’re interested in funding a single aspect (e.g., equipment purchase) or the entire project, we offer flexible options.
-</p>
-</li>
-
-<li>
-<p>
-   <strong style="font-weight:bold;"> Track the impact.</strong> <br/>
-    As a sponsor, you’ll receive regular updates on the progress of the project, including data on the emissions reductions achieved and the social benefits created for local communities.
-</p>
-</li>
-
-<li>
-<p>
-
-
-<strong style="font-weight:bold;">Carbon credit option.</strong> <br/>
-Your sponsorship can help generate carbon credits that offset your emissions. We can assist with the certification process so that you receive verified carbon credits from the project.
-</p>
-</li>
-
-</ul>
-
-
-
-
-
-
-
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-md-6 bg-dark">
-<div class="p-5">
-<!-- <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6> -->
-<h4 class="text-white mb-3">Sponsorship Benefits</h4>
-<ol id="benefits">
-<li>
-<p class="text-white">
-As a sponsor, your organization will be recognized for its contribution to carbon reduction and sustainable development. This includes your logo and name featured in project reports and promotional materials, mention on our website and social media platforms and
-</p>
-</li>
-<li>
-<p class="text-white">
-Get behind the scenes access to project developments, including site visits and interactions with local communities.
-</p>
-</li>
-<li>
-<p class="text-white">
-Depending on your country’s regulations, your sponsorship may qualify for tax deductions as a charitable contribution or CSR expenditure.
-</p>
+<li class="text-muted">
+Meet Corporate Social Responsibility (CSR) goals through showcasing your commitment to sustainability by investing in climate-positive actions aligned with global environmental standards.
 </li>
 </ol>
+</div>
 
 
-<h4 class="text-white mb-3 mt-5">Our Current Sponsors and Partners</h4>
-<p class="text-white">
-    We are proud to partner with leading organizations, companies, and individuals committed to advancing climate action. Join our growing network of sponsors making a difference in Uganda and beyond.<br/>
-    <a href="" class="text-warning">Visit sponsors page</a>
+
+<div class="mb-4">
+<h5>
+How it Works
+</h5>
+<ol>
+
+<li class="text-muted">
+<strong>Choose a project.</strong><br/>
+Explore our portfolio of carbon mitigation projects, each tailored to reduce emissions and align with Uganda’s climate goals. Select a project that resonates with your sustainability values and objectives.
+</li>
+
+
+<li class="text-muted">
+<strong>Commit your support.</strong><br/>
+Pledge financial support to cover project implementation, maintenance, or expansion costs. Your contribution will directly fund project activities, including material acquisition, labor, training, and monitoring.
+</li>
+
+<li class="text-muted">
+<strong>Generate and receive carbon credits.</strong><br/>
+Sponsored projects generate measurable carbon reductions verified by Uganda Carbon Registry. As a sponsor, you will receive carbon credits that can be applied to your organisation’s emission targets, used for carbon offsetting, or exchanged on the carbon market.
+</li>
+
+
+<li class="text-muted">
+<strong>Impact tracking and reporting.</strong><br/>
+Uganda Carbon Registry provides regular updates and reports on project milestones, emission reductions achieved, and the social and environmental impact.
+<br/> Sponsors receive detailed insights into how their support is making a difference.
+</li>
+
+
+
+
+
+</ol>
+</div>
+
+<div class="mb-4">
+<h5>
+Become a Climate Action Partner
+</h5>
+<ol>
+<li class="text-muted">
+<strong>
+Select Your Sponsorship Level.
+</strong><br/>
+We offer flexible sponsorship options to match your impact goals, from one-time contributions to long-term partnerships.
+</li>
+
+
+<li class="text-muted">
+<strong>
+Engage with the Community.
+</strong><br/>
+Opportunities to visit projects on the ground, engage with local stakeholders, and see firsthand how your support drives positive change.
+</li>
+
+
+<li class="text-muted">
+<strong>
+Recognition and Visibility.
+</strong><br/>
+Your sponsorship demonstrates a clear commitment to climate action. Uganda Carbon Registry will showcase sponsor contributions on our platforms, offering visibility and recognition for your role in Uganda’s sustainable development.
+</li>
+
+</ol>
+</div>
+
+
+
+<div>
+<h5>
+Get Involved Today
+</h5>
+<p>
+Invest in Uganda’s future by sponsoring a carbon mitigation project with Uganda Carbon Registry. Together, we can create measurable, lasting impacts on climate resilience, economic sustainability, and environmental health across the country. <link-pointer-component :title="'Contact us for more details'" :url="'contact'" />
 </p>
-
-
-
-<h4 class="text-white mb-3 mt-5">Ready to Sponsor?</h4>
-<p class="text-white">
-Sponsoring a carbon mitigation project is a meaningful way to contribute to the fight against climate change while supporting sustainable development in Uganda.
-</p>
-
-
-
-<contact-info/>
-
-</div>
-
-</div>
-</div>
-</div>
 </div>
 
 
@@ -184,38 +123,45 @@ Sponsoring a carbon mitigation project is a meaningful way to contribute to the 
 
 
 
+
+</div>
+</div>
+</div>
+</section>
 </landing-layout>
 </template>
 <script>
 import LandingLayout from '../Layouts/LandingLayout.vue';
 import BannerComponent from '../components/BannerComponent.vue';
-import SubtitleComponent from '../components/SubtitleComponent.vue';
-import ContactInfo from '../components/ContactInfo.vue';
+import LinkPointerComponent from '../components/LinkPointerComponent.vue';
+
 export default {
 components:{
 LandingLayout,
 BannerComponent,
-SubtitleComponent,
-ContactInfo
+LinkPointerComponent
 
-}
+},
+
+data(){return{
+subtitle:"We invites organisations, businesses, and individuals to become champions of climate action by sponsoring verified carbon mitigation projects across Uganda. Our diverse portfolio includes reforestation, renewable energy, sustainable agriculture, and community-driven conservation initiatives that not only reduce carbon emissions but also support local communities, protect biodiversity, and foster sustainable development.",
+
+
+
+
+
+}}
+
+
+
 }
 </script>
 <style scoped>
-ul li{
-list-style-type: circle;
-margin-bottom: 15px;
+ol li{
+list-style-type:lower-roman;
+margin-bottom: 10px;
 }
 
-#benefits li p{
-color:white
-}
-
-#benefits li{
- margin-bottom:15px;
- list-style-type: circle;
- color:white;
-}
 
 
 </style>

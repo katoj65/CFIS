@@ -5,9 +5,9 @@
 <div class="col-12 col-md-6 offset-lg-3 text-center pt-3">
 
 <ul>
-<li><Inertia-link :href="route('project.developer')"><b-icon icon="tree-fill"></b-icon> Become a developer</Inertia-link></li>
+<li><Inertia-link :href="route('project.developer')" class="text-white"><b-icon icon="tree-fill"></b-icon> Become a developer</Inertia-link></li>
 <li>
-<Inertia-link> <b-icon icon="search"></b-icon> Search</Inertia-link></li>
+<Inertia-link class="text-white"> <b-icon icon="search"></b-icon> Search</Inertia-link></li>
 </ul>
 
 
