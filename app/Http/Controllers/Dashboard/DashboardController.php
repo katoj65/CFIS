@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\ReportGasEmission;
@@ -16,12 +17,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+    return redirect('/'.Auth::user()->role.'-dashboard');
     $data['title']='dashboard';
     $data['gas_emission']=ReportGasEmission::limit(4)->get();
-
     return Inertia::render('Dashboard',$data);
-
     }
 
     /**

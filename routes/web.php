@@ -36,10 +36,18 @@ use App\Http\Controllers\Test\TestController;
 |
 */
 //include apps
-include('hub.php');
-include('cfis.php');
-include('microfinance.php');
-include('market.php');
+$files=[
+'hub.php',
+'cfis.php',
+'microfinance.php',
+'market.php',
+'admin.php'
+
+];
+foreach($files as $f){
+include_once($f);
+}
+
 
 //
 

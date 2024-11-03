@@ -14,21 +14,18 @@ use App\Models\User;
 
 class HomeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+/**
+ * Display a listing of the resource.
+ *
+ * @return \Illuminate\Http\Response
+ */
 public function index(Request $request)
 {
 //
 
-
 if($request->user()){
 return redirect('/dashboard');
 }
-
-
 
 
 $data['title']='Welcome';
@@ -37,10 +34,7 @@ $data['response']=[
 'developers'=>ProjectModel::select('developer_id')->distinct()->count(),
 'clients'=>User::select('id')->where(['user_status'=>'active'])->where(['role'=>'organisation'])->orWhere(['role'=>'user'])
 ->orWhere(['role'=>'business'])->orWhere(['role'=>'government'])->count(),
-
 ];
-
-
 
 return Inertia::render('LandingPage',$data);
 }

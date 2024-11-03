@@ -1,23 +1,39 @@
 <template>
 <app-layout>
-<dashboard-switch>
-</dashboard-switch>
+<!-- <dashboard-switch>
+</dashboard-switch> -->
+<create-profile v-if="profile==null"/>
+
+mdkdmd
+
+
+
+
+
+
+
 </app-layout>
 </template>
 
 <script>
 import AppLayout from '@/Layouts/AppLayout';
-import DashboardSwitch from '../components/DashboardSwitch.vue';
+import CreateProfile from '../forms/CreateProfile.vue';
+//import DashboardSwitch from '../components/DashboardSwitch.vue';
 export default {
 components: {
 AppLayout,
-DashboardSwitch,
+CreateProfile,
+
+//DashboardSwitch,
 
 
 },
 props:{
-gas_emission:[]
+response:[]
 },
+
+
+
 
 data(){return{
 gases:[
@@ -35,7 +51,18 @@ gases:[
 
 }},
 
+computed:{
+profile(){
+return this.$page.props.auth.profile;
+}
+,
+emissions(){
+return this.$page.props.response.gas_emission;
+}
 
+
+
+}
 
 
 
