@@ -109,7 +109,7 @@ Your sponsorship demonstrates a clear commitment to climate action. Uganda Carbo
 Get Involved Today
 </h5>
 <p>
-Invest in Uganda’s future by sponsoring a carbon mitigation project with Uganda Carbon Registry. Together, we can create measurable, lasting impacts on climate resilience, economic sustainability, and environmental health across the country. <link-pointer-component :title="'Contact us for more details'" :url="'contact'" />
+Invest in Uganda’s future by sponsoring a carbon mitigation project with Uganda Carbon Registry. Together, we can create measurable, lasting impacts on climate resilience, economic sustainability, and environmental health across the country. <link-pointer-component :title="'Get in touch with our project development team'" :url="'contact'" />
 </p>
 </div>
 

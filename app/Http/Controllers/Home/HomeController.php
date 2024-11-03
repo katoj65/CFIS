@@ -22,9 +22,14 @@ class HomeController extends Controller
 public function index(Request $request)
 {
 //
+
+
 if($request->user()){
 return redirect('/dashboard');
 }
+
+
+
 
 $data['title']='Welcome';
 $data['response']=[
@@ -34,6 +39,8 @@ $data['response']=[
 ->orWhere(['role'=>'business'])->orWhere(['role'=>'government'])->count(),
 
 ];
+
+
 
 return Inertia::render('LandingPage',$data);
 }
