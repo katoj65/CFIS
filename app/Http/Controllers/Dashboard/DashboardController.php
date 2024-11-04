@@ -17,7 +17,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-    return redirect('/'.Auth::user()->role.'-dashboard');
+    $role=Auth::user()->role;
+    if($role=='user'){
+    $role='home';
+    }
+    return redirect('/'.$role);
+
     $data['title']='dashboard';
     $data['gas_emission']=ReportGasEmission::limit(4)->get();
     return Inertia::render('Dashboard',$data);

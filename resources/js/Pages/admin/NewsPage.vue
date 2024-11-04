@@ -1,9 +1,8 @@
 <template>
-<app-layout>
-
-
-some information
-
+<app-layout :title="'News and Updates'">
+<template #action>
+Some info
+</template>
 
 
 

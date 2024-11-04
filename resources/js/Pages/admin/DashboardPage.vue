@@ -1,7 +1,11 @@
 <template>
-<app-layout>
-<create-profile v-if="profile==null"/>
+<app-layout :title="'Welcome Admin'" :subtitle="'In last 15 days buy and sells overview.'">
+<template #action>
+</template>
 
+
+
+<create-profile v-if="profile==null"/>
 <div v-else>
 <div class="row">
 <div class="col-md-3 col-12 pl-2 pt-0 pr-2 pb-1" v-for="(g,key) in emissions" :key="key">
@@ -20,16 +24,6 @@
 </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="row mt-3">
@@ -150,56 +144,6 @@
 </div><!-- .card-inner -->
 </div>
 
-<div class="card">
-<div class="card-inner">
-<div class="card-title-group align-start mb-3">
-<div class="card-title">
-<h6 class="title">User Activities</h6>
-<p>In last 30 days <em class="icon ni ni-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="Referral Informations"></em></p>
-</div>
-<div class="card-tools mt-n1 mr-n1">
-<div class="drodown">
-    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-        <ul class="link-list-opt no-bdr">
-            <li><a href="#"><span>15 Days</span></a></li>
-            <li><a href="#" class="active"><span>30 Days</span></a></li>
-            <li><a href="#"><span>3 Months</span></a></li>
-        </ul>
-    </div>
-</div>
-</div>
-</div>
-<div class="user-activity-group g-4">
-<div class="user-activity">
-<em class="icon ni ni-users"></em>
-<div class="info">
-    <span class="amount">345</span>
-    <span class="title">Direct Join</span>
-</div>
-<div class="gfx" data-color="#9cabff" style="color: rgb(156, 171, 255);">
-    <svg enable-background="new 0 0 48 17.5" version="1.1" viewBox="0 0 48 17.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-        <path fill="currentColor" d="m1.2 17.4h-0.3c-0.5-0.1-0.8-0.7-0.7-1.2 2-7.2 5-12.2 8.8-14.7 1.5-1 3-1.5 4.5-1.4 4.9 0.3 7.2 4.9 9 8.5 0.3 0.4 0.5 0.8 0.7 1.2 1 1.8 2.7 3.9 4.5 4.3 0.9 0.2 1.7-0.1 2.6-0.8 1.8-1.4 3-3.7 4.1-5.9 0.5-1 1-1.9 1.5-2.9 1-1.5 2.8-3.5 4.9-3.8 1.1-0.1 2.2 0.3 3.1 1 1.3 1.1 1.9 2.6 2.4 4.1 0.4 1 0.7 1.9 1.2 2.6 0.3 0.4 0.2 1.1-0.2 1.4s-1.1 0.2-1.4-0.2c-0.7-0.9-1.1-2-1.5-3-0.5-1.3-1-2.5-1.9-3.3-0.5-0.4-1-0.6-1.5-0.5-1.3 0.2-2.7 1.6-3.5 2.8-0.5 0.8-1 1.8-1.4 2.7-1.2 2.4-2.4 4.9-4.6 6.5-1.3 1.1-2.8 1.5-4.2 1.2-3.1-0.6-5.1-3.9-5.9-5.3-0.2-0.4-0.4-0.8-0.6-1.3-1.7-3.4-3.5-7.2-7.3-7.4-1.1-0.1-2.1 0.3-3.3 1-3.5 2.4-6.2 7-8 13.7-0.2 0.4-0.6 0.7-1 0.7z"></path>
-    </svg>
-</div>
-</div>
-<div class="user-activity">
-<em class="icon ni ni-users"></em>
-<div class="info">
-    <span class="amount">49</span>
-    <span class="title">Referral Join</span>
-</div>
-<div class="gfx" data-color="#ccd4ff" style="color: rgb(204, 212, 255);">
-    <svg enable-background="new 0 0 48 17.5" version="1.1" viewBox="0 0 48 17.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-        <path fill="currentColor" d="m1.2 17.4h-0.3c-0.5-0.1-0.8-0.7-0.7-1.2 2-7.2 5-12.2 8.8-14.7 1.5-1 3-1.5 4.5-1.4 4.9 0.3 7.2 4.9 9 8.5 0.3 0.4 0.5 0.8 0.7 1.2 1 1.8 2.7 3.9 4.5 4.3 0.9 0.2 1.7-0.1 2.6-0.8 1.8-1.4 3-3.7 4.1-5.9 0.5-1 1-1.9 1.5-2.9 1-1.5 2.8-3.5 4.9-3.8 1.1-0.1 2.2 0.3 3.1 1 1.3 1.1 1.9 2.6 2.4 4.1 0.4 1 0.7 1.9 1.2 2.6 0.3 0.4 0.2 1.1-0.2 1.4s-1.1 0.2-1.4-0.2c-0.7-0.9-1.1-2-1.5-3-0.5-1.3-1-2.5-1.9-3.3-0.5-0.4-1-0.6-1.5-0.5-1.3 0.2-2.7 1.6-3.5 2.8-0.5 0.8-1 1.8-1.4 2.7-1.2 2.4-2.4 4.9-4.6 6.5-1.3 1.1-2.8 1.5-4.2 1.2-3.1-0.6-5.1-3.9-5.9-5.3-0.2-0.4-0.4-0.8-0.6-1.3-1.7-3.4-3.5-7.2-7.3-7.4-1.1-0.1-2.1 0.3-3.3 1-3.5 2.4-6.2 7-8 13.7-0.2 0.4-0.6 0.7-1 0.7z"></path>
-    </svg>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
 
 
 </div>
