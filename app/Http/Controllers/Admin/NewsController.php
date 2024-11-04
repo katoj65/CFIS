@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Inertia\Inertia;
 use App\Models\News;
@@ -53,7 +54,11 @@ $form=$request->validate([
 'description'=>'required|string',
 ]);
 
-News::create($form);
+News::create([
+'user_id'=>Auth::user()->id,
+'title'=>$request->title,
+'description'=>$request->description,
+'file'=>null]);
 return redirect('/admin/news')->with('success','News article has been created');
 
 }else{

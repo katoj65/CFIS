@@ -21,43 +21,36 @@
 </div>
 </div>
 <div class="card-body">
+
 <form @submit.prevent="submit">
-
-{{ form }}
-    <div class="form-group">
-
-        <div class="form-control-wrap">
-            <input type="text" class="form-control" id="default-01" placeholder="Title" v-model="form.title">
-        </div>
-        <ErrorInline :error="form.errors.title"/>
-    </div>
-
-    <div class="form-group">
-
-        <div class="form-control-wrap">
-            <b-form-file
-            v-model="form.file"
-            :state="Boolean(form.file)"
-            placeholder="Choose a file or drop it here..."
-            drop-placeholder="Drop file here..."
-          ></b-form-file>
-        </div>
-    </div>
-
-    <div class="form-group">
-
-        <div class="form-control-wrap">
-            <textarea class="form-control" id="default-01" placeholder="Write news content" style="min-height:200px;" v-model="form.description"></textarea>
-        </div>
-        <ErrorInline :error="form.errors.description"/>
-    </div>
-
-    <div class="form-group">
-        <SubmitButton :title="'Publish'" :isLoading="isLoading"></SubmitButton>
-    </div>
-
-
+<div class="form-group">
+<div class="form-control-wrap">
+<input type="text" class="form-control" id="default-01" placeholder="Title" v-model="form.title">
+</div>
+<ErrorInline :error="form.errors.title"/>
+</div>
+<div class="form-group">
+<div class="form-control-wrap">
+<b-form-file
+v-model="form.file"
+:state="Boolean(form.file)"
+placeholder="Choose a file or drop it here..."
+drop-placeholder="Drop file here..."
+></b-form-file>
+</div>
+</div>
+<div class="form-group">
+<div class="form-control-wrap">
+<textarea class="form-control" id="default-01" placeholder="Write content description" style="min-height:200px;" v-model="form.description"></textarea>
+</div>
+<ErrorInline :error="form.errors.description"/>
+</div>
+<div class="form-group">
+<SubmitButton :title="'Publish Article'" :isLoading="isLoading"></SubmitButton>
+</div>
 </form>
+
+
 </div>
 </div>
 

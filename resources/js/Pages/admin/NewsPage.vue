@@ -6,7 +6,7 @@
 </Inertia-link>
 </template>
 
-
+{{ response }}
 
 <section>
 <div class="row">
