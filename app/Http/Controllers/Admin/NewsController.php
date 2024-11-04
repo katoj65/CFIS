@@ -31,12 +31,10 @@ $data['response']=[
 
 
 return Inertia::render('Admin/NewsPage',$data);
-
 }else{
 return redirect('/');
 }
-
-    }
+}
 
     /**
      * Store a newly created resource in storage.
@@ -47,6 +45,21 @@ return redirect('/');
     public function store(Request $request)
     {
         //
+
+if(Gate::allows('is_admin')){
+$form=$request->validate([
+'title'=>'required|string',
+'file'=>'nullable|string',
+'description'=>'required|string',
+]);
+
+News::create($form);
+return redirect('/admin/news')->with('success','News article has been created');
+
+}else{
+return redirect('/');
+}
+
     }
 
     /**
@@ -82,4 +95,21 @@ return redirect('/');
     {
         //
     }
+
+
+//create news
+public function createNews(){
+if(Gate::allows('is_admin')){
+$data['title']='Create News';
+$data['response']=[];
+
+return Inertia::render('Admin/CreateNewsPage',$data);
+
+}else{
+return redirect('/');
 }
+}
+
+
+}
+
