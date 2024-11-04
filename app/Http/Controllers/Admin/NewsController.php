@@ -46,7 +46,7 @@ return redirect('/');
     public function store(Request $request)
     {
         //
-   
+
 
 if(Gate::allows('is_admin')){
 $form=$request->validate([
@@ -75,10 +75,27 @@ return redirect('/');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+public function show(Request $request)
+{
+//
+if(Gate::allows('is_admin')){
+$data['title']='News Article';
+$data['response']=[
+'article'=>News::where('id',$request->id)->first(),
+
+
+
+
+];
+
+return Inertia::render('Admin/ShowNewsPage',$data);
+
+
+}else{
+    return redirect('/');
+}
+
+}
 
     /**
      * Update the specified resource in storage.

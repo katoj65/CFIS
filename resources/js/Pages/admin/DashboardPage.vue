@@ -1,6 +1,9 @@
 <template>
-<app-layout :title="'Welcome Admin'" :subtitle="'In last 15 days buy and sells overview.'">
+<app-layout :title="'Welcome Admin'" :subtitle="'Drive real change with carbon accountability.'">
 <template #action>
+<Inertia-link class="btn btn-secondary" :href="route('home')">
+Carbon Market
+</Inertia-link>
 </template>
 
 

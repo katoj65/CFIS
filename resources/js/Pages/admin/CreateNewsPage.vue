@@ -1,7 +1,7 @@
 <template>
 <app-layout :title="'Create News Article'" :subtitle="subtitle">
 <template #action>
-<Inertia-link class="btn btn-outline-secondary" :href="route('admin.news')">
+<Inertia-link class="btn btn-secondary" :href="route('admin.news')">
     News
 </Inertia-link>
 </template>
