@@ -2,12 +2,12 @@
 <ul class="nk-menu">
 
 <li class="nk-menu-item" v-for="(m,key) in menu" :key="key">
-<a href="html/index.html" class="nk-menu-link">
+<Inertia-link :href="route(m.url)" class="nk-menu-link">
 <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
 <span class="nk-menu-text">
 {{ m.name }}
 </span>
-</a>
+</Inertia-link>
 </li><!-- .nk-menu-item -->
 
 </ul>
@@ -17,7 +17,7 @@
 export default {
 data(){return{
 menu:[
-{name:'Carbon Emissions',icon:'',url:'/emissions',
+{name:'Carbon Emissions',icon:'',url:'home',
 subMenu:[
 {name:'Agriculture',icon:'',url:'/emissions/agriculture'},
 {name:'Energy',icon:'',url:'/emissions/energy'},
@@ -30,8 +30,9 @@ subMenu:[
 ]
 },
 
-{name:'Carbon Offet',icon:'',url:'carbon-offset'},
-{name:'Carbon Markets',icon:'',url:'carbon-markets'},
+{name:'Carbon Offet',icon:'',url:'home'},
+{name:'Carbon Markets',icon:'',url:'home'},
+{name:'News',icon:'',url:'admin.news'}
 
 ],
 

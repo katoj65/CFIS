@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class ArticleController extends Controller
 {
@@ -15,6 +16,11 @@ class ArticleController extends Controller
     public function index()
     {
         //
+
+
+
+
+
     }
 
     /**
