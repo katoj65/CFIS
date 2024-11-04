@@ -183,7 +183,9 @@ background:#f8f9f9;
     font-family: 'Doppio One';
 }
 .border-dark-red{border:solid 3px #b03a2e;}
-
+.text-captalize{
+text-transform: capitalize;
+}
 </style>
 
 <!-- Scripts -->

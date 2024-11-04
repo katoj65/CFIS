@@ -46,6 +46,7 @@ return redirect('/');
     public function store(Request $request)
     {
         //
+   
 
 if(Gate::allows('is_admin')){
 $form=$request->validate([
@@ -55,17 +56,18 @@ $form=$request->validate([
 ]);
 
 News::create([
-'user_id'=>Auth::user()->id,
+'user_id'=>Auth::id(),
 'title'=>$request->title,
 'description'=>$request->description,
 'file'=>null]);
+
 return redirect('/admin/news')->with('success','News article has been created');
 
 }else{
 return redirect('/');
 }
 
-    }
+}
 
     /**
      * Display the specified resource.
