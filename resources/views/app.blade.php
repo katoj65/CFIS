@@ -186,6 +186,10 @@ background:#f8f9f9;
 .text-captalize{
 text-transform: capitalize;
 }
+.form-control{
+padding:10px;
+min-height:40px;
+}
 </style>
 
 <!-- Scripts -->

@@ -2,29 +2,35 @@
 <app-layout :title="'News and Updates'" :subtitle="subtitle">
 <template #action>
 <Inertia-link class="btn btn-secondary" :href="route('admin.news_create')">
-    <b-icon icon="plus-square-fill" aria-hidden="true"></b-icon> Create
+    <b-icon icon="plus-lg" aria-hidden="true"></b-icon> Create
 </Inertia-link>
 </template>
 
 
 
 <section>
-<div class="row">
+<div class="row" v-if="news.length>0">
 
 <div class="col-12 col-md-4 mb-4" v-for="(a,key) in news" :key="key">
 <Inertia-link :href="route('admin.news_show',{id:a.id})">
-    <div class="card shadow-sm h-100">
-        <img src="https://picsum.photos/400/200/?image=41" class="card-img-top" alt="..." v-if="a.file!=null">
-        <div class="card-body">
-          <h5 class="card-title text-capitalize">{{ a.title}}</h5>
-          <p class="card-text">
+    <div class="bg-white card   p-3 h-100" style="border:solid 1px  #e9edf0;">
+        <figure class="mb-3 card-lift">
+        <img src="http://localhost/carbon/public/images/deforestation.jpeg" class="img-fluid" />
+        </figure>
+        <div>
+        <h6 style="text-transform:initial;">{{ a.title }} </h6>
+        <div class="ms-2">
+        <span class="text-muted">
         {{ a.description }}
-          </p>
-          <p class="card-text"><small class="text-dark">
+        </span>
+        <div>
+        <small class="text-dark">
         Date: {{ a.created_at }}
-          </small></p>
+        </small>
         </div>
-      </div>
+        </div>
+        </div>
+        </div>
 
 
 
@@ -32,9 +38,10 @@
 
     </Inertia-link>
 </div>
-
 </div>
-
+<div v-else class="text-center p-5 m-5">
+<h6 class="text-center text-muted">No news articles</h6>
+</div>
 
 
 

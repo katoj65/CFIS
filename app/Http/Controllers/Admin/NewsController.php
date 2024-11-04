@@ -25,7 +25,7 @@ class NewsController extends Controller
 if(Gate::allows('is_admin')){
 $data['title']='News';
 $data['response']=[
-'news'=>News::get(),
+'news'=>News::orderby('created_at','DESC')->get(),
 
 
 ];

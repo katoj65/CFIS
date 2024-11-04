@@ -88,14 +88,11 @@
 
 
 
-
-
-
 <section>
 <div class="container-xxl py-5">
 <div class="container">
 <div class="row">
-<div class="col-10 offset-lg-1">
+<div class="col-md-10 col-12 offset-lg-1">
 <div class="row g-5">
 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
 <div class="border-start border-5 border-danger ps-4 mb-5">
@@ -172,7 +169,7 @@ Read more<i class="bi bi-arrow-right ml-1"></i></Inertia-link>
 <section class="text-light row bg-light2 py-2" style="border-top:solid 1px  #e9edf0;">
 <div class="container pb-md-6 pt-2">
 <div>
-<div class="offset-lg-1 col-10">
+<div class="offset-lg-1 col-md-10 col-12">
 <div class="row mt-4">
 
 <div class="col-12 col-md-4" v-for="(s,key) in botton_section" :key="key">
@@ -297,36 +294,35 @@ Read more<i class="bi bi-arrow-right ml-1"></i></Inertia-link>
 <!--location-->
 <section class="mb-xl-9 py-5 bg-light2" style="border-top:solid 1px  #e9edf0;">
 <div class="container">
-
 <div class="text-center mb-xl-7 mb-5">
-<small class="text-uppercase ls-md fw-semibold text-danger">News and Updates</small>
+<small class="text-uppercase ls-md fw-semibold text-danger">
+<Inertia-link :href="route('home')" class="text-danger"> News and Updates</Inertia-link>
+</small>
 <h2 class="my-3 text-white-stable"><span class="title-font2">STAY AHEAD OF THE CURVE</span></h2>
 <p class="mb-0 text-body" style="padding-left:25%;padding-right:25%;">
 The climate crisis has never been more urgent, and with every new headline, the impacts on our planet and our future become clearer.</p>
+
 </div>
+
 
 
 <div class="row g-4">
 
-<div class="col-md-3 col-12" v-for="(n,key) in 4" :key="key">
-<div class="bg-white card   p-3" style="border:solid 1px  #e9edf0;">
+<div class="col-md-3 col-12" v-for="(n,key) in news" :key="key">
+<div class="bg-white card   p-3 h-100" style="border:solid 1px  #e9edf0;">
 <figure class="mb-3 card-lift">
 <img src="http://localhost/carbon/public/images/deforestation.jpeg" class="img-fluid" />
 </figure>
 <div>
-<h6>Some title</h6>
+<h6 style="text-transform:initial;">{{ n.title }} </h6>
 <div class="ms-2">
-<span>WeWork, 412, Residency Rd, Shanthala Nagar,
-Ashok Nagar, Bengaluru, Karnataka 560025</span>
+<p>
+{{ n.description }}
+</p>
 </div>
 </div>
 </div>
 </div>
-
-
-
-
-
 </div>
 
 </div>
@@ -577,14 +573,27 @@ url:'projects.overview'
 
 
 
-
-
-
-
 ];
+},
+
+
+news(){
+const articles=[];
+let content=this.response.news;
+content.forEach(element => {
+articles.push({
+title:element.title,
+description:element.description.length>130?element.description.substring(0, 130)+'...':element.description,
+id:element.id,
+created_at:element.created_at,
+file:element.file
+
+});
+});
+
+
+return articles;
 }
-
-
 
 
 

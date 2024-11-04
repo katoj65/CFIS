@@ -9,6 +9,7 @@ use App\Models\ReportSectorEmission;
 use App\Models\EmissionSource;
 use App\Models\ProjectModel;
 use App\Models\User;
+use App\Models\News;
 
 
 
@@ -34,6 +35,7 @@ $data['response']=[
 'developers'=>ProjectModel::select('developer_id')->distinct()->count(),
 'clients'=>User::select('id')->where(['user_status'=>'active'])->where(['role'=>'organisation'])->orWhere(['role'=>'user'])
 ->orWhere(['role'=>'business'])->orWhere(['role'=>'government'])->count(),
+'news'=>News::orderby('created_at','DESC')->limit(4)->get()
 ];
 
 return Inertia::render('LandingPage',$data);

@@ -33,10 +33,8 @@
 <div class="form-control-wrap">
 <b-form-file
 v-model="form.file"
-:state="Boolean(form.file)"
-placeholder="Choose a file or drop it here..."
-drop-placeholder="Drop file here..."
-></b-form-file>
+:state="Boolean(form.file)" placeholder="Choose a file or drop it here..." drop-placeholder="Drop file here..."
+  style="border:none;"></b-form-file>
 </div>
 </div>
 <div class="form-group">
@@ -80,6 +78,7 @@ import AppLayout from '../../Layouts/AppLayout.vue';
 import SubmitButton from '../../components/SubmitButton.vue';
 import ErrorInline from '../../components/ErrorInline.vue';
 
+
 export default {
 components:{
 AppLayout,
@@ -100,17 +99,38 @@ description:'',
 file:'',
 }),
 
-
 }},
 
 methods:{
+
 submit(){
+this.isLoading=true;
 this.form.post(route('news.store'),{
 
+onFinish:()=>{
+this.isLoading=false;
+},
 onSuccess:()=>{
-this.form.clear();
-alert();
+this.form.reset();
+this.isLoading=false;
+
+this.$notify({
+title: 'Success',
+message: 'This is a success message',
+type: 'success',
+position: 'bottom-right'
+});
+
+
+
 }
+
+
+
+
+
+
+
 });
 
 }
