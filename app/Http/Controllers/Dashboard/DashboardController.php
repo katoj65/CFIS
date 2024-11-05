@@ -36,17 +36,10 @@ $data['response']=[
 
 ];
 
-
-
-
 //create profile
 return Inertia::render('Profile/CreateProfile',$data);
 
 }
-
-    // $data['title']='dashboard';
-    // $data['gas_emission']=ReportGasEmission::limit(4)->get();
-    // return Inertia::render('Dashboard',$data);
 
 }
 

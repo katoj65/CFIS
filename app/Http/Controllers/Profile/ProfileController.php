@@ -46,21 +46,20 @@ $validate=$request->validate([
 'job'=>['required']
 ],['required'=>'This field is required.']);
 
-return $validate;
-
 Profile::create([
 'user_id'=>Auth::user()->id,
+'gender'=>$request->gender,
 'dob'=>$request->dob,
 'address'=>$request->address,
 'tel'=>$request->tel,
-'role'=>$request->role,
+'role'=>'personal',
 'profession'=>$request->profession,
 'job'=>$request->job
 ]);
 
 
 
-return redirect('/dashboard')->with(['success'=>'Profile has been created']);
+return redirect('/dashboard')->with('success','Profile has been created');
 
 }
 

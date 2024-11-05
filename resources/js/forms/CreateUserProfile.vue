@@ -98,8 +98,7 @@ gender:'',
 address:'',
 tel:'',
 profession:'',
-job:'',
-
+job:''
 }),
 
 
@@ -117,10 +116,17 @@ this.isLoading=true;
 this.form.post(route('profile.personal_create'),{
 onSuccess:()=>{
 this.form.reset();
+this.$notify({
+title:'Successful',
+message:this.$page.props.flash.success,
+type:'success',
+position:'bottom-right'
+
+});
+
 },
 onFinish:()=>{
 this.isLoading=false;
-
 }
 
 });
