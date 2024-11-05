@@ -190,6 +190,36 @@ text-transform: capitalize;
 padding:10px;
 min-height:40px;
 }
+.btn-dark-red{
+background:#6a150c ;
+color:white;
+padding:10px;
+border-radius:5px;
+}
+.btn-dark-red:hover{
+color:white;
+}
+
+.btn-dark2{
+background:#1A374D;
+padding:10px;
+border-radius:5px;
+color:white;
+}
+
+.btn-border-dark2{
+border:solid 1px #1A374D;
+padding:10px;
+border-radius:5px;
+color:#1A374D;
+}
+.btn-border-dark2:hover{
+color:black;
+}
+.btn-dark2:hover{
+color:white;
+}
+
 </style>
 
 <!-- Scripts -->

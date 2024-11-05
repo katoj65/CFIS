@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use App\Models\User;
+use App\Models\Profile;
+use App\Models\OrganisationProfile;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -67,6 +69,15 @@ Gate::define('is_login',function(User $user){
 return $user->id!=null;
 });
 
+
+Gate::define('is_user_profile',function(User $user, Profile $profile){
+return $user->id==$profile->user_id;
+});
+
+
+Gate::define('is_organisation_profile',function(User $user, OrganisationProfile $organisation){
+return $user->id==$organisation->user_id;
+});
 
 
 

@@ -41,7 +41,8 @@ $files=[
 'cfis.php',
 'microfinance.php',
 'market.php',
-'admin.php'
+'admin.php',
+'user.php'
 
 ];
 foreach($files as $f){

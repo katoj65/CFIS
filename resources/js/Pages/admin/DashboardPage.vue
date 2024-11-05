@@ -1,8 +1,8 @@
 <template>
 <app-layout :title="'Welcome Admin'" :subtitle="'Drive real change with carbon accountability.'">
 <template #action>
-<Inertia-link class="btn btn-secondary" :href="route('home')">
-Carbon Market
+<Inertia-link class="btn-dark2" :href="route('market.index')">
+    <b-icon icon="cloud-fog2" aria-hidden="true" class="mr-1"></b-icon> Carbon Market
 </Inertia-link>
 </template>
 
