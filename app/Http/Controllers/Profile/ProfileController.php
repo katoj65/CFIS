@@ -36,14 +36,17 @@ return Inertia::render('ProfilePage',$data);
     public function store(Request $request)
     {
         //
+
 $validate=$request->validate([
+'gender'=>'required',
 'dob'=>['required','date'],
 'address'=>['required'],
 'tel'=>['required'],
-'role'=>['required'],
 'profession'=>['required'],
 'job'=>['required']
-]);
+],['required'=>'This field is required.']);
+
+return $validate;
 
 Profile::create([
 'user_id'=>Auth::user()->id,
@@ -54,6 +57,8 @@ Profile::create([
 'profession'=>$request->profession,
 'job'=>$request->job
 ]);
+
+
 
 return redirect('/dashboard')->with(['success'=>'Profile has been created']);
 

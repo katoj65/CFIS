@@ -12,13 +12,15 @@
             <div class="team">
 
                 <div class="user-card user-card-s2">
-                    <div class="user-avatar lg bg-primary">
-                        <img src="" alt="">
+                    <div class="user-avatar lg bg-success">
+                        <b-icon icon="person-fill" aria-hidden="true"></b-icon>
                         <div class="status dot dot-lg dot-success"></div>
                     </div>
                     <div class="user-info">
-                        <h6>{{ user.firstname }} {{ user.lastname }} </h6>
-                        <span class="sub-text">UI/UX Designer</span>
+                        <h6 style="text-transform:capitalize;">{{ user.firstname }} {{ user.lastname }} </h6>
+                        <span class="sub-text text-uppercase">
+                            <b-icon icon="shield-fill" aria-hidden="true" class="mr-1"></b-icon> {{ user.role }}
+                        </span>
                     </div>
                 </div>
                 <ul class="team-info">
@@ -41,7 +43,7 @@
 
 
 </div>
-<div class="col-12 col-md-8 mb-5">
+<div class="col-12 col-md-8 mb-4">
 
 
 <div class="card card-bordered h-100" style="min-height:500px;">
@@ -59,13 +61,33 @@ Fill in the required information
 
     <el-tabs type="">
         <el-tab-pane>
-          <span slot="label"><i class="el-icon-date"></i>
-Create User Profile
+          <span slot="label">
+            <b-icon icon="person-fill" aria-hidden="true" style="position:absolute;"></b-icon>
+<span class="ml-3">Create User Profile</span>
         </span>
-User form
-        </el-tab-pane>
-        <el-tab-pane label="Create Business/Organisation Profile">
-Business form
+
+<div class="p-4">
+<h6>User profile information</h6>
+<create-user-profile/>
+</div>
+
+ </el-tab-pane>
+        <el-tab-pane>
+            <span slot="label">
+                <b-icon icon="building" aria-hidden="true" style="position:absolute;"></b-icon>
+    <span class="ml-3">Create Business/Organisation Profile</span>
+            </span>
+
+<div>
+    <h6>Business profile information</h6>
+
+
+
+
+
+
+    </div>
+
         </el-tab-pane>
 
       </el-tabs>
@@ -97,10 +119,14 @@ Business form
 </template>
 <script>
 import AppLayout from '../../Layouts/AppLayout.vue';
+import CreateUserProfile from '../../forms/CreateUserProfile.vue';
 export default {
 components:{
-AppLayout
+AppLayout,
+CreateUserProfile,
+
 },
+
 props:{
 title:{},
 response:[],

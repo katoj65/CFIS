@@ -145,7 +145,8 @@ Route::get('/calculate/land-use',[CalculatorController::class,'energyView'])->na
 Route::get('/calculate/building',[CalculatorController::class,'energyView'])->name('building.show');
 Route::get('/calculate/supply-chain',[CalculatorController::class,'energyView'])->name('supply-chain.show');
 
-//Carbon Credit
+//create profile
+Route::post('profile/create-personal', [ProfileController::class, 'store'])->name('profile.personal_create');
 
 
 
