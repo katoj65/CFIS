@@ -30,13 +30,17 @@ $role='home';
 return redirect('/'.$role);
 }else{
 
+$data['title']='Create Profile';
+$data['response']=[
+'user'=>Auth::user(),
 
+];
 
 
 
 
 //create profile
-return('profile');
+return Inertia::render('Profile/CreateProfile',$data);
 
 }
 
