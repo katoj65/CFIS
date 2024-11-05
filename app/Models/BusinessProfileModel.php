@@ -5,19 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OrganisationProfile extends Model
+class BusinessProfileModel extends Model
 {
     use HasFactory;
-    protected $table='organisation_profiles';
+    protected $table='business_profile';
     protected $fillable=[
     'user_id',
     'name',
-    'type_of_organisation',
+    'business_category',
     'business_type',
     'address',
     'tel',
     'email',
-    'date_founded',
-    'country_of_origin'
+    'founded_at',
+    'origin'
+
     ];
 }

@@ -6,7 +6,8 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Illuminate\Support\Facades\Gate;
 use App\Models\User;
 use App\Models\Profile;
-use App\Models\OrganisationProfile;
+use App\Models\BusinessProfileModel;
+
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -69,14 +70,25 @@ Gate::define('is_login',function(User $user){
 return $user->id!=null;
 });
 
-
-Gate::define('is_user_profile',function(User $user, Profile $profile){
-return $user->id==$profile->user_id;
+//check if account has user profile
+Gate::define('is_user_profile',function(User $user){
+$profile=Profile::where('user_id',$user->id)->first();
+$user_id=0;
+if($profile!=null){
+$user_id=$profile->user_id;
+}
+return $user->id==$user_id;
 });
 
 
-Gate::define('is_organisation_profile',function(User $user, OrganisationProfile $organisation){
-return $user->id==$organisation->user_id;
+//check if account has organisation profile
+Gate::define('is_business_profile',function(User $user){
+$profile=BusinessProfileModel::where('user_id',$user->id)->first();
+$user_id=0;
+if($profile!=null){
+$user_id=$profile->id;
+}
+return $user->id==$user_id;
 });
 
 
