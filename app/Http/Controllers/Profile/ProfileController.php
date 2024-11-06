@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Profile;
 use Inertia\Inertia;
+use App\Models\BusinessProfileModel;
 
 class ProfileController extends Controller
 {
@@ -57,11 +58,35 @@ Profile::create([
 'job'=>$request->job
 ]);
 
-
-
 return redirect('/dashboard')->with('success','Profile has been created');
 
 }
+
+
+//store business profile
+public function storeBusinessProfile(Request $request){
+$validate=$request->validate([
+'name'=>$request->name,
+'business_category'=>$request->category,
+'business_type'=>$request->type,
+'address'=>$request->address,
+'tel'=>$request->tel,
+'email'=>$request->email,
+'founded_at'=>$request->founded_at,
+'origin'=>$request->origin
+],['required'=>'This field is required']);
+
+
+
+
+
+}
+
+
+
+
+
+
 
     /**
      * Display the specified resource.
