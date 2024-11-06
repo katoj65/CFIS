@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Models\News;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
+use App\Models\BusinessSector;
 
 
 
@@ -27,7 +28,12 @@ public function index(Request $request)
 
 
 if(Auth::user()!=''){
-if(Gate::allows('is_user_profile') or Gate::allows('is_business_profile')){
+
+if(Gate::allows('is_user') or Gate::allows('is_business')
+ or Gate::allows('is_organisation') or Gate::allows('is_government')){
+
+
+
 $role=Auth::user()->role;
 if($role=='user'){
 $role='home';
@@ -41,6 +47,7 @@ return redirect('/'.$role);
 $data['title']='Create Profile';
 $data['response']=[
 'user'=>Auth::user(),
+'category'=>BusinessSector::orderby('name','ASC')->get(),
 
 ];
 //create profile

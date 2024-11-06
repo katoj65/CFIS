@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Profile;
 use Inertia\Inertia;
 use App\Models\BusinessProfileModel;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -63,22 +64,39 @@ return redirect('/dashboard')->with('success','Profile has been created');
 }
 
 
+
+
+
+
 //store business profile
 public function storeBusinessProfile(Request $request){
 $validate=$request->validate([
+'name'=>'required',
+'business_category'=>'required',
+'business_type'=>'required',
+'address'=>'required',
+'tel'=>'required',
+'email'=>'required',
+'founded_at'=>'required',
+'origin'=>'required'
+],['required'=>'This field is required']);
+
+BusinessProfileModel::create([
+'user_id'=>Auth::user()->id,
 'name'=>$request->name,
-'business_category'=>$request->category,
-'business_type'=>$request->type,
+'business_category'=>$request->business_category,
+'business_type'=>$request->business_type,
 'address'=>$request->address,
 'tel'=>$request->tel,
 'email'=>$request->email,
 'founded_at'=>$request->founded_at,
 'origin'=>$request->origin
-],['required'=>'This field is required']);
+]);
 
-
-
-
+$user=User::find(Auth::user()->id);
+$user->profile_status='true';
+$user->save();
+return redirect('/')->with('success','Your profile information has been saved');
 
 }
 

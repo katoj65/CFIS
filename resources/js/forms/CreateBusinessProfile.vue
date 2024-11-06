@@ -2,31 +2,43 @@
     <div>
 
         <form @submit.prevent="submit">
-            <!-- <error-component :form="form"/> -->
 
 
 
             <div class="form-group">
-                <label class="form-label" for="address">Gender</label>
+                <label class="form-label" for="address">Business Name</label>
                 <div class="form-control-wrap">
-                    <select class="form-control" @change="select_gender($event)">
-                        <option value="">--Select--</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                    <input type="text" class="form-control" id="address" placeholder="Enter your business name" v-model="form.name" style="text-transform:capitalize;">
                 </div>
-                <error-inline :error="form.errors.gender"></error-inline>
+                <error-inline :error="form.errors.name"></error-inline>
             </div>
 
 
 
 
             <div class="form-group">
-                <label class="form-label" for="full-name">Your date of birth</label>
+                <label class="form-label" for="address">Business Category</label>
                 <div class="form-control-wrap">
-                    <input type="date" class="form-control" id="full-name" v-model="form.dob">
+                    <select class="form-control" @change="select_gender($event)">
+                        <option value="">--Select--</option>
+                        <option value="male" v-for="(c,key) in category" :key="key">
+                        {{ c.name }}
+                        </option>
+
+                    </select>
                 </div>
-                <error-inline :error="form.errors.dob"></error-inline>
+                <error-inline :error="form.errors.business_category"></error-inline>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label class="form-label" for="full-name">Type of Services</label>
+                <div class="form-control-wrap">
+                    <input type="text" class="form-control" id="full-name" v-model="form.business_type" placeholder="Enter the type of services">
+                </div>
+                <error-inline :error="form.errors.business_type"></error-inline>
             </div>
 
 
@@ -41,7 +53,7 @@
 
 
             <div class="form-group">
-                <label class="form-label" for="phone-no">Phone number</label>
+                <label class="form-label" for="phone-no">Phone Number</label>
                 <div class="form-control-wrap">
                     <input type="number" class="form-control" id="phone-no" placeholder="Enter your phone number" v-model="form.tel">
                 </div>
@@ -52,22 +64,30 @@
 
 
             <div class="form-group">
-                <label class="form-label" for="prof">Profession</label>
+                <label class="form-label" for="prof">Business Email</label>
                 <div class="form-control-wrap">
-                    <input type="text" class="form-control" id="prof" placeholder="Enter your profession" v-model="form.profession">
+                    <input type="text" class="form-control" id="prof" placeholder="Enter business email" v-model="form.email">
                 </div>
-                <error-inline :error="form.errors.profession"></error-inline>
+                <error-inline :error="form.errors.email"></error-inline>
             </div>
 
 
             <div class="form-group">
-                <label class="form-label" for="job">Employment</label>
+                <label class="form-label" for="job">Year of Founding</label>
                 <div class="form-control-wrap">
-                    <input type="text" class="form-control" id="job" placeholder="Enter your current job" v-model="form.job">
+                    <input type="year" class="form-control" id="job" placeholder="Enter the year of founding" v-model="form.founded_at">
                 </div>
-                <error-inline :error="form.errors.job"></error-inline>
+                <error-inline :error="form.errors.founded_at"></error-inline>
             </div>
 
+
+            <div class="form-group">
+                <label class="form-label" for="job">Country of Origin</label>
+                <div class="form-control-wrap">
+                    <input type="text" class="form-control" id="job" placeholder="Enter the business orign" v-model="form.origin">
+                </div>
+                <error-inline :error="form.errors.origin"></error-inline>
+            </div>
 
             <div class="form-group pt-3" style="width:200px;">
               <submit-button :isLoading="isLoading" :title="'Save'"/>
@@ -87,18 +107,21 @@ SubmitButton,
 ErrorInline,
 },
 props:{
+category:{},
 
 },
 data(){
 return{
 isLoading:false,
 form:this.$inertia.form({
-dob:'',
-gender:'',
+name:this.$page.props.user.firstname+' '+this.$page.props.user.lastname,
+business_category:'',
+business_type:'',
 address:'',
 tel:'',
-profession:'',
-job:''
+email:'',
+founded_at:'',
+origin:''
 }),
 
 
@@ -113,7 +136,7 @@ job:''
 methods:{
 submit(){
 this.isLoading=true;
-this.form.post(route('profile.personal_create'),{
+this.form.post(route('profile.business_create'),{
 onSuccess:()=>{
 this.form.reset();
 this.$notify({
@@ -133,13 +156,19 @@ this.isLoading=false;
 
 },
 
+
 select_gender(event){
-this.form.gender=event.target.value;
+this.form.business_category=event.target.value;
+},
+
+
+
+},
+
+computed:{
+user(){
+return this.$page.props.user;
 }
-
-
-
-
 
 
 }

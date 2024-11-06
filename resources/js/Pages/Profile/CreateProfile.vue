@@ -69,7 +69,7 @@
 
 <div class="p-4">
 <h6>Business profile information</h6>
-<create-business-profile/>
+<create-business-profile :category="category"/>
 </div>
 </el-tab-pane>
 </el-tabs>
@@ -130,6 +130,9 @@ subtitle:'Help us understand your needs and preferences.',
 computed:{
 user(){
 return this.response.user;
+},
+category(){
+return this.response.category;
 }
 
 

@@ -147,6 +147,8 @@ Route::get('/calculate/supply-chain',[CalculatorController::class,'energyView'])
 
 //create profile
 Route::post('profile/create-personal', [ProfileController::class, 'store'])->name('profile.personal_create');
+Route::post('profile/create-business', [ProfileController::class, 'storeBusinessProfile'])->name('profile.business_create');
+
 
 
 
