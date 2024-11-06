@@ -18,7 +18,11 @@ class AdminController extends Controller
 public function index()
 {
 //
+
+
+
 if(Gate::allows('is_admin')){
+
 $data['title']='dashboard';
 $data['response']=[
 'gas_emission'=>ReportGasEmission::limit(4)->get(),

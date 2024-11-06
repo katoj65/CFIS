@@ -7,7 +7,7 @@
 <div class="nk-sidebar nk-sidebar-fixed bg-dark2" data-content="sidebarMenu" style="border:none;">
 <div class="nk-sidebar-element nk-sidebar-head" style="border:none;">
 <div class="nk-sidebar-brand" style="border-bottom:none;">
-<inertia-link class="logo-link nk-sidebar-logo"  style="border-bottom:none;margin-bottom:10px;" :href="route('dashboard')">
+<inertia-link class="logo-link nk-sidebar-logo"  style="border-bottom:none;margin-bottom:10px;" :href="route('home')">
 <img class="logo-light logo-img" src="http://localhost/carbon/public/images/logos/logo1.png"  alt="logo">
 <img class="logo-dark logo-img mt-1" src="http://localhost/carbon/public/images/logos/logo-with-red.png" alt="logo-dark"><br/>
 
@@ -65,7 +65,7 @@ Carbon Footprint Information System<br/>
 <div class="nk-header-tools">
 <ul class="nk-quick-nav">
 <li>
-<inertia-link :href="route('dashboard')" class="router_menu nk-quick-nav-icon">
+<inertia-link :href="route('home')" class="router_menu nk-quick-nav-icon">
 <em class="icon ni ni-home"></em>
 </inertia-link>
 </li>

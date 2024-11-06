@@ -20,10 +20,12 @@ class ActiveProfile
     {
 
 
-if(Auth::check()){
-return redirect('test');
+if(Auth::check() && Auth::user()->profile_status===false){
+return $next($request);
+
 }
 
-return $next($request);
-    }
+return redirect('/settings');
+
+}
 }

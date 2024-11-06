@@ -19,6 +19,8 @@ class UserController extends Controller
     {
         //
 
+
+
 if(Gate::allows('is_user')){
 $data['title']='Welcome User';
 $data['response']=[];

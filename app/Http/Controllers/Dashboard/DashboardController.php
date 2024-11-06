@@ -33,9 +33,7 @@ return redirect('/'.$role);
 $data['title']='Create Profile';
 $data['response']=[
 'user'=>Auth::user(),
-
 ];
-
 //create profile
 return Inertia::render('Profile/CreateProfile',$data);
 

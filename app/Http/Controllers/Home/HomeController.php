@@ -10,6 +10,8 @@ use App\Models\EmissionSource;
 use App\Models\ProjectModel;
 use App\Models\User;
 use App\Models\News;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -22,12 +24,32 @@ class HomeController extends Controller
  */
 public function index(Request $request)
 {
-//
 
-if($request->user()){
-return redirect('/dashboard');
+
+if(Auth::user()!=''){
+if(Gate::allows('is_user_profile') or Gate::allows('is_business_profile')){
+$role=Auth::user()->role;
+if($role=='user'){
+$role='home';
 }
 
+return redirect('/'.$role);
+
+
+}else{
+
+$data['title']='Create Profile';
+$data['response']=[
+'user'=>Auth::user(),
+
+];
+//create profile
+return Inertia::render('Profile/CreateProfile',$data);
+
+}
+
+
+}else{
 
 $data['title']='Welcome';
 $data['response']=[
@@ -39,6 +61,11 @@ $data['response']=[
 ];
 
 return Inertia::render('LandingPage',$data);
+
+
+}
+
+
 }
 
 

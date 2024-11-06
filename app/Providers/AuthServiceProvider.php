@@ -11,6 +11,10 @@ use App\Models\BusinessProfileModel;
 
 class AuthServiceProvider extends ServiceProvider
 {
+
+
+
+
     /**
      * The policy mappings for the application.
      *
@@ -29,34 +33,38 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+
+
+
+
         //define roles
 
 Gate::define('is_admin',function(User $user){
 
-    return $user->role=='admin';
+return ($user->role==='admin' && $user->profile_status==='true');
 
 });
 
 Gate::define('is_user',function(User $user){
-return $user->role=='user';
+return ($user->role==='user' && $user->profile_status==='true');
 });
 
 
 Gate::define('is_organisation',function(User $user){
-return $user->role=='organisation';
+return ($user->role=='organisation' && $user->profile_status==='true');
 });
 
 
 Gate::define('is_government',function(User $user){
-return $user->role=='government';
+return ($user->role=='government' && $user->profile_status==='true');
 });
 
 Gate::define('is_business',function(User $user){
-return $user->role=='business';
+return ($user->role=='business' && $user->profile_status==='true');
 });
 
 Gate::define('has_role',function(User $user,$role){
-return $user->role==$role;
+return ($user->role==$role && $user->profile_status==='true');
 });
 
 
