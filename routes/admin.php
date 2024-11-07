@@ -19,8 +19,9 @@ Route::get('admin/administration-units', [AdministrationUnitController::class, '
 });
 Route::get('admin/districts/create',[AdministrationUnitController::class,'createDistrict'])->name('districts.create');
 Route::post('admin/district/stiore',[AdministrationUnitController::class,'storeDistrict'])->name('district.store');
-
-
+Route::get('admin/district/{id}',[AdministrationUnitController::class,'show'])->name('district.show');
+Route::get('admin/district/{id}/edit',[AdministrationUnitController::class,'edit'])->name('district.edit');
+Route::put('admin/district/{id}',[AdministrationUnitController::class,'update'])->name('district.update');
 
 
 

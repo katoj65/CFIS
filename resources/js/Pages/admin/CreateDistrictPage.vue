@@ -15,6 +15,9 @@ Fill in the district information
 </div>
 </div>
 
+
+
+
 <div class="card-body p-5">
 
 <div class="form-group">
@@ -98,6 +101,11 @@ this.isLoading=true;
 this.form.post(route('district.store'),{
 onSuccess:()=>{
 this.form.reset();
+this.$notify({
+title:'Successful',
+message:this.$page.props.flash.success,
+position:'bottom-right'
+});
 
 },
 onFinish:()=>{

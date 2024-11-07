@@ -27,13 +27,14 @@ if(Gate::allows('is_admin')){
     'regions.name as region',
     'districts.region_id as region_id')
     ->join('regions','districts.region_id','=','regions.id')
+    ->orderby('districts.name','ASC')
     ->get(),
 
 
 
 
 
-    
+
     ];
 
     return Inertia::render('Admin/AdminUnitsPage',$data);
@@ -71,10 +72,43 @@ return redirect('/');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         //
-    }
+if(Gate::allows('is_admin')){
+$result='';
+$district=District::select('districts.name as title',
+'districts.id as id',
+'regions.name as subtitle',
+'districts.region_id as region_id')
+->join('regions','districts.region_id','=','regions.id')
+->where('districts.id',$request->segment(3))
+->get();
+if(count($district)==1){
+foreach($district as $result);
+}
+
+
+
+
+
+$data['title']='';
+$data['response']=[
+'district'=>$result,
+
+
+
+
+
+
+];
+
+return Inertia::render('Admin/ShowDistrictPage',$data);
+
+}else{
+return redirect('/');
+}
+}
 
     /**
      * Show the form for editing the specified resource.
@@ -82,10 +116,40 @@ return redirect('/');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+public function edit(Request $request)
+{
+//
+
+if(Gate::allows('is_admin')){
+
+$result='';
+$district=District::select('districts.name as district',
+'districts.id as id',
+'regions.name as region',
+'districts.region_id as region_id')
+->join('regions','districts.region_id','=','regions.id')
+->where('districts.id',$request->segment(3))
+->get();
+if(count($district)==1){
+foreach($district as $result);
+}
+
+
+$data['title']='Edit District Information';
+$data['response']=[
+'region'=>Region::orderby('name','ASC')->get(),
+'district'=>$result,
+
+];
+
+return Inertia::render('Admin/EditDistrictPage',$data);
+}else{
+return redirect('/');
+}
+
+
+
+}
 
     /**
      * Update the specified resource in storage.
@@ -94,10 +158,25 @@ return redirect('/');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
-    }
+$validate=$request->validate([
+'name'=>'required',
+'region_id'=>'required'
+],['required'=>'Field is required.']);
+$district=District::find($request->id);
+//compare
+if($district->name==$request->name and $district->region_id==$request->region_id){
+return redirect('/admin/district/'.$request->id.'/edit')->with('warning',$district->name.' district was not changed');
+}else{
+$district->name=$request->name;
+$district->region_id=$request->region_id;
+$district->save();
+return redirect('/admin/district/'.$request->id)->with('success',$district->name.' district has been edited');
+}
+
+}
 
     /**
      * Remove the specified resource from storage.
@@ -131,10 +210,7 @@ $validate=$request->validate([
 'region_id'=>'required'
 ],['required'=>'Field is required.']);
 $create=District::create($validate);
-return $create->id;
-//return redirect('/admin/');
-
-
+return redirect('/admin/administration-units')->with('success',$create->name.' district has been added');
 }
 
 

@@ -10,8 +10,8 @@
           <el-dropdown-item>
         <Inertia-link class="text-muted" :href="route('districts.create')">Add District</Inertia-link>
         </el-dropdown-item>
-          <el-dropdown-item>District</el-dropdown-item>
-          <el-dropdown-item>Region</el-dropdown-item>
+          <el-dropdown-item>Add Region</el-dropdown-item>
+          <!-- <el-dropdown-item>Region</el-dropdown-item> -->
           <!-- <el-dropdown-item>Subcounty</el-dropdown-item>
           <el-dropdown-item>Parish</el-dropdown-item>
           <el-dropdown-item>Village</el-dropdown-item> -->
@@ -25,10 +25,10 @@
 <div class="row">
 <div class="col-12">
 
-    <table class="table table-sm">
+    <table class="table table-sm my-3">
         <thead class="border-0">
           <tr class="border-0">
-
+            <th scope="col" class="border-0" style="width:10px;">#</th>
             <th scope="col" class="border-0">District</th>
             <th scope="col" class="border-0">Region</th>
             <th scope="col" class="border-0">Divisions</th>
@@ -39,8 +39,15 @@
 </thead>
 <tbody class="border-0" for>
 <tr v-for="(d,key) in  districts" :key="key">
+<td class="border-0 text-muted">
+{{ key+1 }}
+</td>
+<td class="border-0 text-muted" style="text-transform: capitalize;">
 
-<td class="border-0 text-muted" style="text-transform: capitalize;">{{ d.district }} </td>
+<Inertia-link :href="route('district.show',{id:d.id})" class="text-muted">
+    {{ d.district }}
+</Inertia-link>
+</td>
 <td class="border-0 text-muted">
 {{ d.region }}
 </td>
@@ -83,4 +90,5 @@ table tr th, table tr td{padding:10px;}
 padding-left:10px;
 padding-right:10px;
 }
+
 </style>
