@@ -10,11 +10,11 @@
           <el-dropdown-item>
         <Inertia-link class="text-muted" :href="route('districts.create')">Add District</Inertia-link>
         </el-dropdown-item>
+          <el-dropdown-item>District</el-dropdown-item>
           <el-dropdown-item>Region</el-dropdown-item>
-          <el-dropdown-item>County</el-dropdown-item>
-          <el-dropdown-item>Subcounty</el-dropdown-item>
+          <!-- <el-dropdown-item>Subcounty</el-dropdown-item>
           <el-dropdown-item>Parish</el-dropdown-item>
-          <el-dropdown-item>Village</el-dropdown-item>
+          <el-dropdown-item>Village</el-dropdown-item> -->
         </el-dropdown-menu>
       </el-dropdown>
 </template>
@@ -28,23 +28,30 @@
     <table class="table table-sm">
         <thead class="border-0">
           <tr class="border-0">
-            <th scope="col" class="border-0">#</th>
-            <th scope="col" class="border-0">First</th>
-            <th scope="col" class="border-0">Last</th>
-            <th scope="col" class="border-0">Handle</th>
-          </tr>
-        </thead>
-        <tbody class="border-0" for>
-          <tr v-for="(n,key) in 20" :key="key">
-            <th scope="row" class="border-0">1</th>
-            <td class="border-0">Mark</td>
-            <td class="border-0">Otto</td>
-            <td class="border-0">@mdo</td>
-          </tr>
+
+            <th scope="col" class="border-0">District</th>
+            <th scope="col" class="border-0">Region</th>
+            <th scope="col" class="border-0">Divisions</th>
+            <th scope="col" class="border-0">Parishes</th>
+            <th scope="col" class="border-0">Villages</th>
+
+</tr>
+</thead>
+<tbody class="border-0" for>
+<tr v-for="(d,key) in  districts" :key="key">
+
+<td class="border-0 text-muted" style="text-transform: capitalize;">{{ d.district }} </td>
+<td class="border-0 text-muted">
+{{ d.region }}
+</td>
+<td class="border-0 text-muted">20</td>
+<td class="border-0 text-muted">12</td>
+<td class="border-0 text-muted">16</td>
+</tr>
 
 
-        </tbody>
-      </table>
+</tbody>
+</table>
 
 
 
@@ -66,6 +73,7 @@ export default {
     },
     data(){return{
         subtitle:'Region, District, County, Subcounty, Parish and Village.',
+        districts:this.response.district,
     }}
 }
 </script>

@@ -22,9 +22,18 @@ class AdministrationUnitController extends Controller
 if(Gate::allows('is_admin')){
     $data['title']='Administration Units';
     $data['response']=[
-    'district'=>District::all(),
+    'district'=>District::select('districts.name as district',
+    'districts.id as id',
+    'regions.name as region',
+    'districts.region_id as region_id')
+    ->join('regions','districts.region_id','=','regions.id')
+    ->get(),
 
 
+
+
+
+    
     ];
 
     return Inertia::render('Admin/AdminUnitsPage',$data);
@@ -121,7 +130,8 @@ $validate=$request->validate([
 'name'=>'required',
 'region_id'=>'required'
 ],['required'=>'Field is required.']);
-return Ristrict::create($validate);
+$create=District::create($validate);
+return $create->id;
 //return redirect('/admin/');
 
 
