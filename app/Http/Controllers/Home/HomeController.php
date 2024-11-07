@@ -29,7 +29,9 @@ public function index(Request $request)
 
 if(Auth::user()!=''){
 
-if(Gate::allows('is_user') or Gate::allows('is_business')
+
+
+if(Gate::allows('is_admin') or Gate::allows('is_user') or Gate::allows('is_business')
  or Gate::allows('is_organisation') or Gate::allows('is_government')){
 
 

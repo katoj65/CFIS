@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\CarbonMarketController;
+use App\Http\Controllers\Admin\AdministrationUnitController;
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
@@ -14,7 +15,10 @@ Route::get('admin/news/create',[NewsController::class,'createNews'])->name('admi
 Route::post('admin/mews/store', [NewsController::class, 'store'])->name('news.store');
 Route::get('admin/news/article/{id}',[NewsController::class,'show'])->name('admin.news_show');
 Route::get('admin/carbon-market',[CarbonMarketController::class,'index'])->name('market.index');
+Route::get('admin/administration-units', [AdministrationUnitController::class, 'index'])->name('administration.units');
 });
+Route::get('admin/districts/create',[AdministrationUnitController::class,'createDistrict'])->name('districts.create');
+Route::post('admin/district/stiore',[AdministrationUnitController::class,'storeDistrict'])->name('district.store');
 
 
 

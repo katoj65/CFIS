@@ -59,7 +59,10 @@ Profile::create([
 'job'=>$request->job
 ]);
 
-return redirect('/dashboard')->with('success','Profile has been created');
+$user=User::find(Auth::user()->id);
+$user->profile_status='true';
+$user->save();
+return redirect('/')->with('success','Your profile information has been saved');
 
 }
 
