@@ -165,7 +165,7 @@ Carbon Footprint Information System<br/>
   <div class="nk-block-head nk-block-head-sm" v-if="title!=null">
     <div class="nk-block-between">
         <div class="nk-block-head-content">
-            <h4 class="nk-block-title page-title text-muted" style="font-size:22px;">
+            <h4 class="nk-block-title page-title text-muted" style="font-size:22px;text-transform:capitalize;">
             {{ title }}
             </h4>
             <div class="nk-block-des text-soft">

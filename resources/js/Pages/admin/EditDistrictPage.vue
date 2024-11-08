@@ -5,7 +5,6 @@
 <div class="row">
 <div class="col-12 col-md-8 offset-lg-2">
 
-
 <form @submit.prevent="submit">
 <div class="card p-3" v-if="article!=''">
 <div class="card-header mt-2 bg-white border-0">
@@ -55,11 +54,6 @@ Edit district information
 </div>
 
 </form>
-
-
-
-
-
 
 </div>
 </div>
@@ -154,10 +148,6 @@ return items;
 
 
 }
-
-
-
-
 
 
 }
