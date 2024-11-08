@@ -306,7 +306,7 @@
 
 <div class="col-12 col-md-4">
 
-<div class="card mb-3 p-3 h-100" style="max-width: 540px;">
+<div class="card mb-3 p-3 h-100 shadow-sm" style="max-width: 540px;">
     <h6 class="text-muted">Subscription</h6>
 
     <ul class="list-group list-group-flush">
@@ -320,7 +320,7 @@
 
 </div>
 <div class="col-12 col-md-4">
-<div class="card mb-3 p-3 h-100">
+<div class="card mb-3 p-3 h-100 shadow-sm">
 <h6 class="text-muted">Learn with Us</h6>
 
 <ul class="list-group list-group-flush">
@@ -336,7 +336,7 @@
 </div>
 
 <div class="col-12 col-md-4">
-<div class="card mb-3 p-3 h-100">
+<div class="card mb-3 p-3 h-100 shadow-sm">
 <h6 class="text-muted">Collective Impact</h6>
 <p>Collaboration fuels progress.</p>
 <div>
@@ -429,9 +429,10 @@ offsetOptions:[
 subscription:[
 {title:'Monitoring and Reporting',icon:'',url:''},
 {title:'Partnerships',icon:'',url:''},
-{title:'Verification and Issuance',icon:'',url:''},
+{title:'Carbon Credit Verification and Issuance',icon:'',url:''},
 {title:'Compliance and Regulatory Support',icon:'',url:''},
-{title:'Educational Resources and Best Practices',icon:'',url:''}
+{title:'Educational Resources',icon:'',url:''},
+{title:'Seminars & Conferences',icon:'',url:''}
 ],
 
 topics:[
@@ -439,7 +440,7 @@ topics:[
 {title:'Climate Financing',url:''},
 {title:'Carbon Offset',url:''},
 {title:'Regilations & Policies',url:''},
-{title:'Projects',url:''},
+{title:'Emission Reduction Projects',url:''},
 
 
 ]
