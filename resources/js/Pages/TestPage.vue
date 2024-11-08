@@ -46,343 +46,227 @@
 
 
 
-<div class="container-fluid py-5 p-0 bg-dark2">
-<div class="row g-0">
-<div class="col-12 col-md-12">
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                    <div class="text-center mb-8">
-
-                        <h2 class="mb-3 mt-3 text-white">
-                           <span style="font-family:'Times New Roman', Times, serif;"> OUR MISSION</span>
-                        </h2>
-                        <p class="mb-0 px-lg-6 text-white" style="font-size:16px;">
-                            We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. It's time to unite and reduce emissions, protect ecosystems, and invest in sustainable solutions.
-                        </p>
-                        <div class="p-3">
-                            <Inertia-link class="btn btn-outline-light" style="border:solid 2px white;border-radius:20px;font-weight:bold;"> Get To Know Us <i class="bi bi-arrow-right"></i></Inertia-link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-</div>
-<div class="col-12 col-md-4"></div>
-</div>
-</div>
 
 
 
 
 
+<section id="contact" class="bg-light2">
 
-
-
-
-
-
-
-
-<section class="my-xl-10 my-5" data-cue="fadeIn" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-    <div class="container">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
     <div class="row">
-    <div class="col-10 offset-lg-1">
-
-    <div class="row align-items-center">
-    <div class="col-lg-4 col-md-8 col-12">
-    <div class="mb-6 mb-lg-0" data-cue="zoomIn" data-show="true" style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-
-    <h2 class="my-3 text-uppercase">
-    <span style="font-family:'Times New Roman', Times, serif;"> Leading the Way in Climate Action</span>
-    </h2>
-    <p class="mb-4">
-        The Uganda Carbon Registry leads efforts to combat climate change by promoting a shift to a sustainable, low-carbon economy. We offer carbon financing, emissions tracking, biodiversity protection, and community resilience support, aiming to create a future where economic growth and environmental protection go hand in hand. Our goal is to reduce carbon emissions, promote green innovation, and make climate financing accessible to all, helping Uganda achieve its climate goals while building a sustainable economy for all.
-    <br/>
-
-</p>
-<p class="mb-2">
-    Uganda aims to reduce greenhouse gas emissions by 22% by 2030, focusing on renewable energy, climate-resilient agriculture, and sustainable land management. The Uganda Carbon Registry tracks carbon credits and supports climate projects, contributing to accurate emissions accounting and sustainable development. </p>
-
-
-    <a href="#!" class="icon-link icon-link-hover link-danger">
-    Learn more about our services and activities
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-    </path>
-    </svg>
-    </a>
-</p>
-
-
-    </div>
-    </div>
-    <div class="col-lg-7 offset-lg-1 col-12">
-    <div class="row">
-    <div class="col-md-6">
-    <div class="card bg-danger bg-opacity-10 border-0 mb-5" data-cue="fadeIn" data-delay="500" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 700ms; animation-direction: normal; animation-fill-mode: both;">
-    <div class="card-body">
-    <div class="mb-4">
-    <b-icon icon="tree-fill" scale="2"></b-icon>
-    </div>
-    <div class="mb-4">
-    <h5>Carbon Footprint Management</h5>
-    <p class="mb-0">
-    Providing tools to help businesses, organizations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.
-    </p>
-    </div>
-
-    <a href="#!" class="icon-link icon-link-hover link-danger">
-    Read more
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-    </path>
-    </svg>
-    </a>
-    </div>
-    </div>
-    <div class="card bg-warning bg-opacity-10 border-0 mb-5 mb-lg-0" data-cue="fadeIn" data-delay="1000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1000ms; animation-direction: normal; animation-fill-mode: both;">
-    <div class="card-body">
-    <div class="mb-4">
-    <b-icon icon="tree-fill" scale="2"></b-icon>
-    </div>
-    <div class="mb-4">
-    <h5>Access to the Carbon Market</h5>
-    <p class="mb-0">
-    Entities can use the registry to participate in carbon markets, buying and selling carbon credits to offset their emissions and support greenhouse gas reduction projects, assisting Uganda in meeting its climate commitments.
-    </p>
-    </div>
-
-    <a href="#!" class="icon-link icon-link-hover link-warning">
-    Read more
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-    </path>
-    </svg>
-    </a>
+    <div class="col-12 col-md-8 offset-lg-2">
+      <h2>Our Mission</h2>
+      <p> We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda.</p>
     </div>
     </div>
     </div>
-    <div class="col-md-6 mt-md-5">
-    <div class="card bg-info bg-opacity-10 border-0 mb-5" data-cue="fadeIn" data-delay="1500" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;">
-    <div class="card-body">
-    <div class="mb-4">
-    <b-icon icon="tree-fill" scale="2"></b-icon>
-    </div>
-    <div class="mb-4">
-    <h5>Carbon Microfinace</h5>
-    <p class="mb-0">Offering financial support to small-scale green projects, such as renewable energy, reforestation, and climate-smart agriculture, to reduce emissions and foster sustainable economic development
-    </p>
-    </div>
+    <!-- End Section Title -->
 
-    <a href="#!" class="icon-link icon-link-hover link-info">
-    Read more
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-    </path>
-    </svg>
-    </a>
-    </div>
-    </div>
-    <div class="card bg-success bg-opacity-10 border-0 mb-5 mb-lg-0" data-cue="fadeIn" data-delay="2000" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 2000ms; animation-direction: normal; animation-fill-mode: both;">
-    <div class="card-body">
-    <div class="mb-4">
-    <b-icon icon="tree-fill" scale="2"></b-icon>
-    </div>
-    <div class="mb-4">
-    <h5>Carbon Offset Projects</h5>
-    <p class="mb-0">
-    Facilitating the development of carbon offset projects that decrease or eliminate emissions, such as reforestation and clean energy initiatives. These projects produce carbon credits, promoting sustainable practices and contributing to Uganda’s low-carbon growth path.
-    </p>
-    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-    <a href="#!" class="icon-link icon-link-hover link-success">
-    Read more
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-    </path>
-    </svg>
-    </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+      <div class="row gy-4">
 
-    </div>
-    </div>
-    </div>
-    </section>
+        <div class="col-lg-6">
+            <form  method="post" class="php-email-form card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
+
+              <h4>Leading the Way in Climate Action</h4>
+              <p>We are proud to lead Uganda’s response to climate change by empowering organisations, businesses, and communities to take action toward a sustainable future. Our comprehensive approach combines advanced carbon tracking, targeted emission reduction strategies, and accessible carbon financing to accelerate Uganda’s progress toward national climate goals and net-zero emissions.</p>
+
+              <p>At UCR we create tools and strategies to help businesses, organisations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.</p>
+
+            </form>
+          </div><!-- End Contact Form -->
 
 
 
+        <div class="col-lg-6">
 
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <div class="info-item card p-5 border-0 shadow-sm h-100 round" style="border-radius:40px;">
 
+                <h5>Carbon Footprint Management</h5>
+                <p>Transforming Uganda through mindful carbon footprint management and reduction</p>
 
+              </div>
+            </div><!-- End Info Item -->
 
+            <div class="col-md-6 ">
+              <div class="info-item card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
 
+                <h5>Carbon Fund</h5>
+                <p>Boost Uganda’s climate resilience. Our carbon fund turns offsets into solutions.</p>
 
+              </div>
+            </div><!-- End Info Item -->
 
+            <div class="col-md-6">
+              <div class="info-item card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
 
+                <h5>Carbon Markets</h5>
+                <p>Invest in Uganda’s carbon market to support emissions reduction and economic growth.</p>
 
+              </div>
+            </div><!-- End Info Item -->
 
+            <div class="col-md-6">
+              <div class="info-item card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
 
+                <h5>Carbon Offset Projects</h5>
+                <p>Support Uganda’s green future with impactful carbon offset projects.</p>
 
+              </div>
+            </div><!-- End Info Item -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="text-light row bg-light2 py-5">
-    <div class="container pb-md-6">
-  <div class="">
-  <div class="offset-lg-1 col-10">
-      <div class="row mt-4">
-
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="ml-3">
-            <h5> Measure Your Carbon Footprint </h5>
-            <p>
-                Start your carbon mitigation journey by accurately measuring your carbon emissions. With real-time monitoring, track and reduce your environmental impact efficiently.
-            </p>
-            <div>
-            <Inertia-link href="" class="btn btn-clear text-danger p-0">Calculate your  emissions <i class="bi bi-arrow-right"></i></Inertia-link>
-            </div>
           </div>
+
         </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="ml-3">
-            <h5>Carbon Management for Sustainability</h5>
-            <p>
-                Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.
-            </p>
-            <div>
-                <Inertia-link href="" class="btn btn-clear text-danger p-0">Create your Carbon reduction strategy <i class="bi bi-arrow-right"></i></Inertia-link>
-                </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="300">
-
-          <div class="ml-3">
-            <h5>Offset Your Carbon Emissions</h5>
-            <p>
-                Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.
-            </p>
-            <div>
-                <Inertia-link href="" class="btn btn-clear text-danger p-0">Investiment in carbon reduction <i class="bi bi-arrow-right"></i></Inertia-link>
-                </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="400">
-
-          <div class="ml-3">
-            <h5>Buy and Sell Carbon Credits</h5>
-            <p>
-                Tap into carbon markets by buying and selling carbon credits, turning emission reductions into financial value and supporting global climate initiatives.
-            </p>
-            <div>
-                <Inertia-link href="" class="btn btn-clear text-danger p-0">Get Access to Carbon Markets <i class="bi bi-arrow-right"></i></Inertia-link>
-                </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="500">
-
-          <div class="ml-3">
-            <h5>Microfinance for Climate Action</h5>
-            <p>
-                Access microfinance services tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.
-            </p>
-            <div>
-                <Inertia-link href="" class="btn btn-clear text-danger p-0">Finance Your Emission Reduction Plan <i class="bi bi-arrow-right"></i></Inertia-link>
-                </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex mb-4 aos-init aos-animate p-4" data-aos="fade-up" data-aos-delay="600">
-
-          <div class="ml-3">
-            <h5>Environmental Education Hub</h5>
-            <p>
-                Equip yourself and your community with the knowledge needed to tackle climate challenges through an accessible environmental education hub focused on carbon mitigation and sustainability.
-            </p>
-            <div>
-                <Inertia-link :href="route('hub')" class="btn btn-clear text-danger p-0">Empower yourself with knowledge <i class="bi bi-arrow-right"></i></Inertia-link>
-                </div>
-          </div>
-        </div>
-
-  <div class="col-12">
-<div class="col-12">
- <!--Stats start-->
- <section class="py-2">
-    <div class="container pt-5">
-        <div class="row">
-            <div class="col-lg-3 col-6">
-                <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                    <small
-                        class="text-uppercase  ls-md fw-semibold text-muted">Active Clients</small>
-                    <h2 class="mb-0 mt-2">50+</h2>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6">
-                <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                    <small
-                        class="text-uppercase  ls-md fw-semibold text-muted">Projects</small>
-                    <h2 class="mb-0 mt-2">200+</h2>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6">
-                <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                    <small
-                        class="text-uppercase ls-md fw-semibold text-muted">Project Developers
-                        </small>
-                    <h2 class="mb-0 mt-2">96</h2>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6">
-                <div class="text-center px-lg-5 mb-5 mb-lg-0">
-                    <small
-                        class="text-uppercase ls-md fw-semibold text-muted">Impact Created</small>
-                    <h2 class="mb-0 mt-2">30%</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-</div>
-
-  </div>
-
 
 
       </div>
 
-  </div>
-  </div>
-
     </div>
+
   </section>
+
+
+
+
+
+
+  <section class="py-2 bg-dark2 py-5">
+    <div class="container pb-4">
+    <div class="row py-4">
+    <div class="col-lg-3 col-6">
+    <div class="text-center px-lg-5 mb-5 mb-lg-0">
+    <small class="text-uppercase  ls-md fw-semibold text-white bold">Active Clients</small>
+    <h2 class="mb-0 mt-2 text-white">200 </h2>
+    </div>
+    </div>
+    <div class="col-lg-3 col-6">
+    <div class="text-center px-lg-5 mb-5 mb-lg-0">
+    <small class="text-uppercase  ls-md fw-semibold text-white bold">Projects</small>
+    <h2 class="mb-0 mt-2 text-white">100 </h2>
+    </div>
+    </div>
+    <div class="col-lg-3 col-6">
+    <div class="text-center px-lg-5 mb-5 mb-lg-0">
+    <small class="text-uppercase ls-md fw-semibold text-white bold">Project Developers
+    </small>
+    <h2 class="mb-0 mt-2 text-white">203 </h2>
+    </div>
+    </div>
+    <div class="col-lg-3 col-6">
+    <div class="text-center px-lg-5 mb-5 mb-lg-0">
+    <small class="text-uppercase ls-md fw-semibold text-white bold">Impact Created</small>
+    <h2 class="mb-0 mt-2 text-white">30%</h2>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+
+    <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Measure Carbon Footprint</a></h4>
+                  <p class="description">
+
+                   Start your carbon mitigation journey by accurately measuring your carbon emissions. With real-time monitoring, track and reduce your environmental impact efficiently.
+                </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Manage Carbon Emissions</a></h4>
+                  <p class="description">
+                    Implement comprehensive carbon management strategies to lower emissions, optimize resource use, and meet sustainability goals while boosting operational efficiency.
+                </p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Offset Carbon Emissions</a></h4>
+                  <p class="description">
+                    Invest in certified carbon offset projects that reduce emissions elsewhere, balancing out your carbon footprint and contributing to global climate action.
+
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Carbon Markets</a></h4>
+                  <p class="description">
+                    Tap into carbon markets by buying and selling carbon credits, turning emission reductions into financial value and supporting global climate initiatives.
+                </p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">
+                    Carbon Fund
+                </a></h4>
+                  <p class="description">Access funding tailored for climate-friendly projects, empowering local communities to implement low-carbon solutions and green technologies.</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">
+                    Education Hub
+                  </a></h4>
+                  <p class="description">
+                    Equip yourself and your community with the knowledge needed to tackle climate challenges through an accessible environmental education hub focused on carbon mitigation and sustainability.
+                </p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+
+          </div>
+
+        </div>
+
+      </section>
+
 
 
 
@@ -390,107 +274,38 @@
 
 
 <!--testmonial start-->
-<section class="bg-white py-5">
+<section class="bg-light2 py-5" style="border-top:solid 1px  #e9edf0;">
     <div class="container">
-        <div class="col-xxl-8 offset-xxl-2 col-md-12">
-            <div class="row align-items-center">
-                <div class="col-md-4">
-                    <div class="mb-5 mb-lg-0">
-                        <img src="http://localhost/carbon/public/images/lagarde.png" alt="textmonial" class="img-fluid rounded-3" />
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="mb-4">
-                        <p class="lead text-dark me-xl-6">
-                            “The longer we delay, the more we will pay. And the higher the cost will be—not just financially, but in human lives, in livelihoods, and in lost opportunities.”
-                        </p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="mb-0">Christine Lagarde</h5>
-                            <small>President of the European Central Bank</small>
-                        </div>
-                        <div>
-                            <figure>
-                                <img src="http://localhost/carbon/public/images/eu.png" alt="brand" style="width:50px" />
-                            </figure>
-                        </div>
-                    </div>
-                </div>
+    <div class="col-xxl-8 offset-xxl-2 col-md-12">
+    <div class="row align-items-center">
+    <div class="col-md-4">
+        <div class="mb-5 mb-lg-0">
+            <img src="http://localhost/carbon/public/images/lagarde.png" alt="textmonial" class="img-fluid rounded-3" />
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="mb-4">
+            <p class="lead text-dark me-xl-6">
+                “The longer we delay, the more we will pay. And the higher the cost will be—not just financially, but in human lives, in livelihoods, and in lost opportunities.”
+            </p>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <h5 class="mb-0">Christine Lagarde</h5>
+                <small>President of the European Central Bank</small>
+            </div>
+            <div>
+                <figure>
+                    <img src="http://localhost/carbon/public/images/eu.png" alt="brand" style="width:50px" />
+                </figure>
             </div>
         </div>
     </div>
-  </section>
-  <!--testmonial end-->
-
-
-
-
-
-
-<!--location-->
-<section class="mb-xl-9 py-5 bg-light2">
-    <div class="container">
-
-      <div class="text-center mb-xl-7 mb-5">
-        <small class="text-uppercase ls-md fw-semibold text-danger">News and Updates</small>
-        <h2 class="my-3 text-white-stable"><span class="title-font2">STAY AHEAD OF THE CURVE</span></h2>
-        <p class="mb-0 text-body" style="padding-left:25%;padding-right:25%;">
-          The climate crisis has never been more urgent, and with every new headline, the impacts on our planet and our future become clearer.</p>
-     </div>
-
-
-
-      <div class="row g-4">
-        <!-- <div class="col-lg-12 col-md-12 col-12">
-            <h2 class="mb-lg-7">Our offices around the world</h2>
-        </div> -->
-
-
-
-
-
-
-  <div class="col-md-3 col-12" v-for="(n,key) in 4" :key="key">
-  <div class="bg-white card border-0 p-3">
-  <!-- <h3 class="mb-3">India</h3> -->
-  <figure class="mb-3 card-lift">
-      <img src="http://localhost/carbon/public/images/deforestation.jpeg" class="img-fluid" />
-  </figure>
-  <div>
-  <h6>Some title</h6>
-      <div class="ms-2">
-          <span>WeWork, 412, Residency Rd, Shanthala Nagar,
-              Ashok Nagar, Bengaluru, Karnataka 560025</span>
-      </div>
-  </div>
-  </div>
-  </div>
-
-
-
-
-
-  </div>
-
     </div>
-  </section>
-  <!--location-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+    </div>
+    </section>
+    <!--testmonial end-->
 
 
 

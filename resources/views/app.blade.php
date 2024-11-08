@@ -28,11 +28,18 @@ Carbon Footprint Information System
 <link rel="stylesheet" href="{{ asset('/public/css/dashlite.css?ver=2.2.0') }}">
 <link id="skin-default" rel="stylesheet" href="{{ asset('/public/css/theme.css?ver=2.2.0') }}">
 <!-- Styles -->
+
+
+
+
 <link rel="stylesheet" href="{{ asset('/public/css/app.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/bootstrap-icons.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/templatemo-kind-heart-charity.css') }}">
+
+
+
 <!----LANDING PAGE------>
 {{-- <link rel="stylesheet" href="{{ asset('/public/css/animate.css') }}">
 <link rel="stylesheet" href="{{ asset('/public/css/lineicons.css') }}">
@@ -40,7 +47,13 @@ Carbon Footprint Information System
 <link rel="stylesheet" href="{{ asset('/public/css/default.css') }}"> --}}
 
 <!---GOOGLE CSS---->
-
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="{{ asset('/public/css/landing/main.css') }}">
+  <link href="{{asset('/public/css/landing/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('/public/css/landing/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ asset('/public/css/landing/vandor/aos/aos.css" rel="stylesheet')}}">
+  <link href="{{ asset('/public/css/landing/vendor/glightbox/css/glightbox.min.css" rel="stylesheet')}}">
+  <link href="{{ asset('/public/css/landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet')}}">
 <!------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
