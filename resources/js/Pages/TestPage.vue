@@ -49,87 +49,40 @@
 
 
 
+<section id="contact" class="bg-light2" style="border-top:solid 1px  #e9edf0;">
 
 
-<section id="contact" class="bg-light2">
-
-    <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
     <div class="row">
-    <div class="col-12 col-md-8 offset-lg-2">
+    <div class="col-8 offset-lg-2">
       <h2>Our Mission</h2>
-      <p> We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda.</p>
-    </div>
-    </div>
-    </div>
-    <!-- End Section Title -->
+      <p> We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. Through innovative carbon offset projects and sustainable practices, we aim to create lasting value for Ugandan communities, fostering green growth, resilience, and a thriving environment for future generations. </p>
+   
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-6">
-            <form  method="post" class="php-email-form card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
-
-              <h4>Leading the Way in Climate Action</h4>
-              <p>We are proud to lead Uganda’s response to climate change by empowering organisations, businesses, and communities to take action toward a sustainable future. Our comprehensive approach combines advanced carbon tracking, targeted emission reduction strategies, and accessible carbon financing to accelerate Uganda’s progress toward national climate goals and net-zero emissions.</p>
-
-              <p>At UCR we create tools and strategies to help businesses, organisations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.</p>
-
-            </form>
-          </div><!-- End Contact Form -->
+<div class="row mt-5">
+<div class="row">
+<div class="col-12 col-md-6" v-for="(s, key) in stepper" :key="key">
+<div class="card border-0 bg-wgite mb-4 p-3 shadow-sm">
+<div class=" text-left">
+<Inertia-link class="text-left text-dark bold" :href="route(s.url)">{{ s.title }}  <b-icon icon="arrow-right"></b-icon> </Inertia-link>
+<p class="text-left">
+    Approach combines advanced carbon Approach combines advanced carbon
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 
-        <div class="col-lg-6">
-
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <div class="info-item card p-5 border-0 shadow-sm h-100 round" style="border-radius:40px;">
-
-                <h5>Carbon Footprint Management</h5>
-                <p>Transforming Uganda through mindful carbon footprint management and reduction</p>
-
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="col-md-6 ">
-              <div class="info-item card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
-
-                <h5>Carbon Fund</h5>
-                <p>Boost Uganda’s climate resilience. Our carbon fund turns offsets into solutions.</p>
-
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="col-md-6">
-              <div class="info-item card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
-
-                <h5>Carbon Markets</h5>
-                <p>Invest in Uganda’s carbon market to support emissions reduction and economic growth.</p>
-
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="col-md-6">
-              <div class="info-item card p-5 border-0 shadow-sm h-100" style="border-radius:40px;">
-
-                <h5>Carbon Offset Projects</h5>
-                <p>Support Uganda’s green future with impactful carbon offset projects.</p>
-
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-        </div>
-
-
-      </div>
 
     </div>
-
+    </div>
+    </div>
   </section>
+
+
 
 
 
@@ -270,11 +223,8 @@
 
 
 
-
-
-
 <!--testmonial start-->
-<section class="bg-light2 py-5" style="border-top:solid 1px  #e9edf0;">
+<section class="py-5 bg-light2" style="border-top:solid 1px  #e9edf0;">
     <div class="container">
     <div class="col-xxl-8 offset-xxl-2 col-md-12">
     <div class="row align-items-center">
@@ -306,7 +256,6 @@
     </div>
     </section>
     <!--testmonial end-->
-
 
 
 
@@ -346,11 +295,22 @@ links:[
 ],
 
 stepper:[
-{title:'Measure and Assess Your Carbon Emissions'},
-{title:'Set Your Carbon Emission Reduction Target'},
-{title:'Implement Your Carbon Reduction Strategies'},
-{title:'Offset Your Carbon Emissions'},
-{title:'Monitor and Report Your Progress'},
+    {title:'Carbon Footprint Management',
+description:'Tools to help businesses, organisations, and individuals track, measure, and reduce carbon emissions to contribute to national emission reduction targets and Uganda’s NDCs under the Paris Agreement.',
+url:'cfis.overview'
+},
+{title:'Carbon Fund',
+description:'Get access to financial resources to invest in projects aimed at reducing greenhouse gas emissions, generating carbon credits that can be sold in carbon markets.',
+url:'market.overview'
+},
+{title:'Carbon Markets',
+description:'Entities can use the registry to participate in carbon markets, buying and selling carbon credits to offset their emissions and support greenhouse gas reduction projects, assisting Uganda in meeting its climate commitments.',
+url:'microfinance.overview'
+},
+{title:'Carbon Offset Projects',
+description:'Facilitating the development of carbon offset projects that decrease or eliminate emissions, such as reforestation and clean energy initiatives. These projects produce carbon credits, promoting sustainable practices and contributing to Uganda’s low-carbon growth path.',
+url:'projects.overview'
+}
 
   ],
 

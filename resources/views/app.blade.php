@@ -233,6 +233,7 @@ color:black;
 color:white;
 }
 
+.page-title{background:none;}
 </style>
 
 <!-- Scripts -->
