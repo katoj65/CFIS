@@ -1,7 +1,42 @@
 <template>
 <landing-layout>
-<section class="py-5 cover" style="margin-top:-30px;">
-<home-page-banner></home-page-banner>
+<section class="py-5 cover" style="">
+
+
+
+  <div class="row mt-5 pt-5">
+  <div class="col-12 col-md-8 offset-lg-1 py-3 mt-3">
+  <h1 class="display-3 text-center text-lg-start title-font" style="font-size:40px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+    <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white; text-shadow: 3px 5px 5px black;">CONTRIBUTE TO <br/>A SUSTAINABLE</span> <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white;text-shadow: 3px 4px 4px black;"> FUTURE</span>
+
+    <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;border:solid 6px black;border-left:0;border-top:0;">NOW!</span>
+    </h1>
+    </div>
+</div>
+
+
+
+
+
+
+<div style="background:white;opacity:0.9;position:absolute;bottom:65px;width:100%" class="row py-2">
+  <div class="card border-0 col-12 col-md-8 offset-lg-2" style="background:none;">
+    <div class="row g-0">
+    <div class="col-md-4" style="width:150px;">
+    <img src="http://localhost/carbon/public/images/antonio_guterres.png" class="img-fluid rounded-start" alt="Antonio Guterres" style="width:150px;">
+    </div>
+    <div class="col-md-10">
+    <div class="card-body">
+    <h6 class="card-title p-0 m-0">Antonio Guterres</h6>
+    <p class="card-text p-0 m-0"><small class="text-body-secondary">UN Secretary General</small></p>
+    <p class="card-text text-danger p-0 m-0" style="font-size:16px;">"The Era of Global Warming has Ended: The Era of Global Boiling Has Arrived."</p>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+</div>
 </section>
 
 
@@ -361,14 +396,14 @@ The climate crisis has never been more urgent, and with every new headline, the 
 import LandingLayout from '../Layouts/LandingLayout.vue';
 import BannerComponent from '../components/BannerComponent.vue';
 import LinkPointerComponent from '../components/LinkPointerComponent.vue';
-import HomePageBanner from '../components/HomePageBanner.vue';
+
 
 export default {
 components: {
 LandingLayout,
 BannerComponent,
 LinkPointerComponent,
-HomePageBanner
+
 
 },
 
