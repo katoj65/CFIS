@@ -34,30 +34,30 @@
 
 
 
-<div class="row mt-5" style="margin-bottom:-60px;">
+<div class="row mt-4 bg-dark2 py-3" style="margin-bottom:-60px;border-radius:10px;">
 <div class="col-lg-3 col-6">
 <div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase  ls-md fw-semibold text-dark2 bold">Subscribers</small>
-<h4 class="mb-0 mt-2">{{ response.clients }} </h4>
-</div>
-</div>
-<div class="col-lg-3 col-6">
-<div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase  ls-md fw-semibold text-dark2 bold">Projects</small>
-<h4 class="mb-0 mt-2">{{ response.projects }} </h4>
+<small class="text-uppercase  ls-md fw-semibold text-white bold">Subscribers</small>
+<h4 class="mb-0 mt-2 text-white">{{ response.clients }} </h4>
 </div>
 </div>
 <div class="col-lg-3 col-6">
 <div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase ls-md fw-semibold text-dark2 bold">Project Developers
+<small class="text-uppercase  ls-md fw-semibold text-white bold">Projects</small>
+<h4 class="mb-0 mt-2 text-white">{{ response.projects }} </h4>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="text-center mb-5 mb-lg-0">
+<small class="text-uppercase ls-md fw-semibold text-white bold">Project Developers
 </small>
-<h4 class="mb-0 mt-2">{{ response.developers }} </h4>
+<h4 class="mb-0 mt-2 text-white">{{ response.developers }} </h4>
 </div>
 </div>
 <div class="col-lg-3 col-6">
 <div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase ls-md fw-semibold text-dark2 bold">Impact Created</small>
-<h4 class="mb-0 mt-2">30%</h4>
+<small class="text-uppercase ls-md fw-semibold text-white bold">Impact Created</small>
+<h4 class="mb-0 mt-2 text-white">30%</h4>
 </div>
 </div>
 </div>
