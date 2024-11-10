@@ -166,7 +166,7 @@ return this.$page.props.system.url+'public/images/logos/logo-with-red.png';
 <style>
 .cover{
 background-image: url('http://localhost/carbon/public/images/deforestation.jpeg');
-height: 500px;
+height: 530px;
 background-size: cover;
 background-position: 100% 40%;
 margin:0;
