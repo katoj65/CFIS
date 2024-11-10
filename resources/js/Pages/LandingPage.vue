@@ -1,6 +1,6 @@
 <template>
 <landing-layout>
-<section class="py-5 cover">
+<section class="py-5 cover" style="margin-top:-30px;">
 <home-page-banner></home-page-banner>
 </section>
 

@@ -1,15 +1,22 @@
 <template>
 <landing-layout>
 <banner-component/>
+<section>
+<div class="container">
+<div class="row">
+
+<div class="col-12 col-md-8 offset-2">
+
+
+some information
 
 
 
+</div>
 
-
-
-
-
-
+</div>
+</div>
+</section>
 </landing-layout>
 </template>
 <script>
@@ -20,6 +27,24 @@ components:{
 BannerComponent,
 LandingLayout
 
-    }
+    },
+
+props:{
+title:{},
+response:[],
+},
+
+data(){return{
+
+
+
+
+
+
+}}
+
+
+
+
 }
 </script>
