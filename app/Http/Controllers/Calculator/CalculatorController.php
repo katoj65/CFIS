@@ -25,18 +25,14 @@ class CalculatorController extends Controller
 $data['title']='Emission Calculator';
 $data['response']=[
 'sources'=>CarbonFootprintParameter::all(),
-'role'=>''
-];
 
+];
 
 //type of calculator to display
 $page='CarbonCalculatorPage';
 if(Gate::allows('is_business')){
-$page='BusinessCarbonCalculatorPage';
+$page='Business/BusinessCarbonCalculatorPage';
 }
-
-
-
 
 return Inertia::render($page,$data);
 }
