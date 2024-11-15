@@ -6,6 +6,10 @@
 
 <el-tabs :tab-position="tabPosition" style="min-height:200px;">
 <el-tab-pane label="Overview">
+
+<div class="row">
+<div class="col-12 col-md-10 offset-lg-1">
+
 <div class="card p-3" style="min-height:500px;">
 <div class="card-inner">
 <h6 class="card-title">Calculate Your Carbon Footprint</h6>
@@ -15,10 +19,6 @@ In today’s world, every action we take whether it’s commuting, eating, or po
 <p>
 Calculating your carbon emissions isn’t just about numbers; it’s about understanding your role in the fight against climate change and discovering opportunities to make a difference. Here’s why you should start today:
 </p>
-
-
-
-
 
 <el-collapse accordion>
 <el-collapse-item name="1">
@@ -83,46 +83,26 @@ While reducing emissions is vital, some activities will always produce carbon. M
 
 </div>
 </div>
+</div>
+</div>
 
 </el-tab-pane>
 <el-tab-pane label="Energy">
+<div class="row">
+<div class="col-12 col-md-10 offset-lg-1">
 <energy-consumption/>
+</div>
+</div>
+
 </el-tab-pane>
 <el-tab-pane label="Transportation">
-<div class="card card-bordered" style="height:500px;">
-<div class="card-inner">
-<h5 class="card-title">Emissions from Transportation</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-
-
-</div>
-</div>
+Comming Up
 </el-tab-pane>
 <el-tab-pane label="Diet and Meals">
-<div class="card card-bordered" style="height:500px;">
-<div class="card-inner">
-<h5 class="card-title">Emission from Diet and Meals</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-
-
-</div>
-</div>
+Comming Up
 </el-tab-pane>
 <el-tab-pane label="Waste Disposal">
-<div class="card card-bordered" style="height:500px;">
-<div class="card-inner">
-<h5 class="card-title">Emissions from Waste Disposal</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-
-
-
-
-
-</div>
-</div>
+Comming Up
 </el-tab-pane>
 </el-tabs>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Calculator;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Inertia\Inertia;
 use App\Models\CarbonFootprintParameter;
 use App\Models\EmissionSourceItem;
@@ -25,11 +26,19 @@ $data['title']='Emission Calculator';
 $data['response']=[
 'sources'=>CarbonFootprintParameter::all(),
 'role'=>''
-
-
 ];
 
-return Inertia::render('CarbonCalculatorPage',$data);
+
+//type of calculator to display
+$page='CarbonCalculatorPage';
+if(Gate::allows('is_business')){
+$page='BusinessCarbonCalculatorPage';
+}
+
+
+
+
+return Inertia::render($page,$data);
 }
 
     /**
