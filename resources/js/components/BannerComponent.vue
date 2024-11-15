@@ -1,34 +1,20 @@
 <template>
-<div class="container-fluid feature bg-dark2 py-0" style="margin-top:-35px;border-bottom:solid 3px #b03a2e;">
-<div class="container py-5 ">
-<div class="row mt-3">
-
-<div class="col-12 col-md-8 offset-lg-2">
-
-<h1 class="text-dark2 pt-4 text-center" style="font-size:25px;">
-<span class="section_title1 text-white"> {{ title }}
-</span>
-</h1>
-<p class="mb-0 text-left  mt-3 text-white">
-{{ subtitle }}
-</p>
-<slot/>
-</div>
-
+<div class="" style="background:#f4f6f7;margin-top:-20px;">
+<div class="row py-5 pl-5 pr-5 shadow-sm">
+<div class="col-12 col-md-8 offset-lg-2 pl-4 pr-4">
+    <h1 class="text-dark2 pt-4 text-center" style="font-size:25px;">
+        <span class="section_title1"> {{ title }}
+        </span>
+        </h1>
+        <p class="mb-0 text-left mt-3 ">
+        {{ subtitle }}
+        </p>
+        <slot/>
 
 
 </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
 </template>
 <script>
 export default {
@@ -48,4 +34,14 @@ title:this.$page.props.title,
 h1,h2,h3,h4,h5,h6{
     letter-spacing: 0.3px;
     }
+
+
+    .coverBanner{
+        background-image: url('http://localhost/carbon/public/images/deforestation.jpeg');
+        background-size: cover;
+        background-position: 100% 50%;
+        height: 300;
+        margin:0;
+
+        }
 </style>

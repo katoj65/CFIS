@@ -11,13 +11,6 @@
 <img class="logo-light logo-img" src="http://localhost/carbon/public/images/logos/logo1.png"  alt="logo">
 <img class="logo-dark logo-img mt-1" src="http://localhost/carbon/public/images/logos/logo-with-red.png" alt="logo-dark"><br/>
 
-<!-- <div style="font-size:20px;font-weight:bolder;color:white;padding-top:15px;">
-<span style="border-bottom:solid thin white;padding-bottom:7px;">
-Uganda Carbon Registry</span>
-<div style="font-weight:normal;font-size:14px;padding-top:5px;">
-Empowering sustainablity through data
-</div>
-</div> -->
 
 </inertia-link>
 </div>
@@ -53,13 +46,27 @@ Carbon Footprint Information System<br/>
 </div>
 <div class="nk-header-brand d-xl-none">
 <a href="html/index.html" class="logo-link">
-<img class="logo-light logo-img" src=""  alt="logo">
-<img class="logo-dark logo-img" src=""  alt="logo-dark">
+<img class="logo-light logo-img" src="http://localhost/carbon/public/images/logos/logo-with-red.png"  alt="logo">
+<img class="logo-dark logo-img" src="http://localhost/carbon/public/images/logos/logo-with-red.png"  alt="logo-dark">
 </a>
 </div><!-- .nk-header-brand -->
 <div class="nk-header-news d-none d-xl-block">
 <div class="nk-news-list">
-<modal-component/>
+
+
+
+  <Inertia-link class="nk-news-item p-1" :href="route('calculator.index')">
+    <div class="nk-news-icon">
+    <b-icon icon="calculator" aria-hidden="true" class="icon" style="font-size:25px;color:black;"></b-icon>
+    </div>
+    <div class="nk-news-text" style="width:300px;">
+    <p style="color:black;font-size:15px;">Emission Calculator</p>
+    </div>
+  </Inertia-link>
+
+
+
+
 </div>
 </div><!-- .nk-header-news -->
 <div class="nk-header-tools">

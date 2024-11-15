@@ -42,7 +42,8 @@ $files=[
 'microfinance.php',
 'market.php',
 'admin.php',
-'user.php'
+'user.php',
+'calculator.php'
 
 ];
 foreach($files as $f){

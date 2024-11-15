@@ -20,16 +20,15 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         //
-$count=CarbonFootprintParameter::where('url',$request->segment(2))->first();
-if($count==null){
-return redirect('/dashboard');
-}
+
+$data['title']='Emission Calculator';
+$data['response']=[
+'sources'=>CarbonFootprintParameter::all(),
+'role'=>''
 
 
-$data['title']='Carbon Caliculator';
-$data['carbon_footprint_parameter']=CarbonFootprintParameter::all();
-$data['emission_source']=EmissionSourceItem::select(['name','id','usage'])->where('source_id',$count->id)
-->orderby('name','ASC')->get();
+];
+
 return Inertia::render('CarbonCalculatorPage',$data);
 }
 

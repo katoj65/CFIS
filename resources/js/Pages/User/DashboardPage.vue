@@ -14,10 +14,10 @@
 <div class="card-title-group align-start mb-2">
 <div class="card-title">
 <h6 class="title">Total Emission</h6>
-<p>Shrink your footprint, live greener today.</p>
+<!-- <p>Shrink your footprint, live greener today.</p> -->
 </div>
 <div class="card-tools">
-<em class="card-hint icon ni ni-help-fill" data-toggle="tooltip" data-placement="left" title="" data-original-title="Revenue from subscription"></em>
+
 </div>
 </div>
 <div class="align-end gy-3 gx-5 flex-wrap flex-md-nowrap flex-lg-wrap flex-xxl-nowrap">
@@ -45,15 +45,7 @@
 <div class="card-title-group align-start gx-3 mb-3">
 <div class="card-title">
 <h6 class="title">Emission Trend</h6>
-<p>Track emissions over time and aim for steady reductions.</p>
-</div>
-<div class="card-tools">
-<div class="dropdown">
-<a href="#" class="btn btn-success btn-dim text-dark"><em class="icon ni ni-download-cloud"></em><span>
-    Emission Targets</span></a>
-<a href="#" class="btn btn-icon btn-primary btn-dim d-sm-none" data-toggle="dropdown"><em class="icon ni ni-download-cloud"></em></a>
-
-</div>
+<!-- <p>Track emissions over time and aim for steady reductions.</p> -->
 </div>
 </div>
 <div class="nk-sale-data-group align-center justify-between gy-3 gx-5">
@@ -64,7 +56,7 @@ Latest: 14, November 2024
 </span>
 </div>
 <div class="nk-sale-data">
-<Inertia-link class="amount sm">1,937 <small> Declare your emissions</small></Inertia-link>
+<Inertia-link class="btn btn-outline-danger"><small>Emission Targets</small></Inertia-link>
 </div>
 </div>
 

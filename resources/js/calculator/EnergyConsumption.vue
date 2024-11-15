@@ -1,13 +1,13 @@
 <template>
-    <div class="card h-100">
-        <div class="card-inner">
-            <div class="card-head">
-                <h5 class="card-title">Energy Consumption</h5>
+<div class="card h-100 p-2">
+<div class="card-inner">
+<div class="card-head">
+<h6 class="card-title">Calaculate your energy consumption</h6>
 
-            </div>
-            <p class="card-sub-title">
-                Calculate your energy usage
-            </p>
+</div>
+<p class="card-sub-title">
+Calculate your energy usage
+</p>
 
 
 
@@ -15,180 +15,8 @@
 
 
 <div>
-<b-tabs content-class="mt-3" fill active>
-<b-tab active>
-<template #title>
-<h6 @click="select_source('lighting')">Lighting</h6>
-</template>
-<form>
 
 
-<div class="form-group pb-4 ">
-<label class="form-label" for="cf-full-name">
-</label>
-<div class="row">
-<div class="col-6">
-<select class="form-control" id="cf-full-name">
-<option value="default_option">--Select Source--</option>
-<option value="option_select_name" v-for="(l,key) in emission_source" :key="key">
-{{ l.name }}
-</option>
-</select>
-</div>
-<div class="col-6">
-<input type="text" class="form-control" id="cf-full-name1" placeholder="Hours used">
-</div>
-<div class="col-12 mt-4">
-<input type="text" class="form-control" id="cf-full-name2" placeholder="Number of lights">
-</div>
-</div>
-</div>
-
-
-
-
-
-<div class="form-group">
-<button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
-</div>
-</form>
-</b-tab>
-
-
-
-
-
-<b-tab>
-<template #title>
-<h6 @click="select_source('cooking')">Cooking</h6>
-</template>
-<form>
-
-
-<div class="form-group pb-4 ">
-<label class="form-label" for="cf-full-name">
-
-</label>
-<div class="row">
-<div class="col-6">
-<select class="form-control" id="cf-full-name">
-<option value="default_option">--Select Source--</option>
-<option value="option_select_name" v-for="(l,key) in emission_source" :key="key">
-{{ l.name }}
-</option>
-
-</select>
-</div>
-<div class="col-6">
-<input type="text" class="form-control" id="cf-full-name1" placeholder="Hours used">
-</div>
-<div class="col-12 mt-4">
-<input type="text" class="form-control" id="cf-full-name2" placeholder="Number of lights">
-</div>
-</div>
-</div>
-
-
-
-
-
-<div class="form-group">
-<button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
-</div>
-
-
-
-</form>
-</b-tab>
-
-
-<b-tab>
-<template #title>
-<h6 @click="select_source('freezing')">Freezing</h6>
-</template>
-<form>
-
-<div class="form-group pb-4 ">
-<label class="form-label" for="cf-full-name">
-
-</label>
-<div class="row">
-<div class="col-6">
-<select class="form-control" id="cf-full-name">
-<option value="default_option">--Select Source--</option>
-<option value="option_select_name" v-for="(l,key) in emission_source" :key="key">
-{{ l.name }}
-</option>
-
-</select>
-</div>
-<div class="col-6">
-<input type="text" class="form-control" id="cf-full-name1" placeholder="Hours used">
-</div>
-<div class="col-12 mt-4">
-<input type="text" class="form-control" id="cf-full-name2" placeholder="Number of lights">
-</div>
-</div>
-</div>
-
-
-
-
-
-<div class="form-group">
-<button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
-</div>
-
-
-
-</form>
-</b-tab>
-
-
-
-<b-tab>
-<template #title>
-<h6 @click="select_source('heating')">Heating</h6>
-</template>
-<form>
-
-<div class="form-group pb-4 ">
-<label class="form-label" for="cf-full-name">
-
-</label>
-<div class="row">
-<div class="col-6">
-    <select class="form-control" id="cf-full-name">
-        <option value="default_option">--Select Source--</option>
-        <option value="option_select_name" v-for="(l,key) in emission_source" :key="key">
-            {{ l.name }}
-        </option>
-
-    </select>
-</div>
-<div class="col-6">
-<input type="text" class="form-control" id="cf-full-name1" placeholder="Hours used">
-</div>
-<div class="col-12 mt-4">
-    <input type="text" class="form-control" id="cf-full-name2" placeholder="Number of lights">
-    </div>
-</div>
-</div>
-
-
-
-
-
-<div class="form-group">
-<button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
-</div>
-
-
-
-</form>
-</b-tab>
-
-</b-tabs>
 </div>
 
 
@@ -201,8 +29,8 @@
 
 
 
-        </div>
-    </div>
+</div>
+</div>
 </template>
 <script>
 

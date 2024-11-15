@@ -4,7 +4,7 @@
 
 
 
-  <div class="row mt-5 pt-5">
+  <div class="row mt-5 pt-3">
   <div class="col-12 col-md-8 offset-lg-1 py-3 mt-3">
   <h1 class="display-3 text-center text-lg-start title-font" style="font-size:40px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
     <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white; text-shadow: 3px 5px 5px black;">CONTRIBUTE TO <br/>A SUSTAINABLE</span> <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white;text-shadow: 3px 4px 4px black;"> FUTURE</span>
@@ -19,17 +19,22 @@
 
 
 
-<div style="background:white;opacity:0.9;position:absolute;bottom:65px;width:100%" class="row py-2">
+<div style="background:white;opacity:0.9;position:absolute;bottom:65px;width:100%;" class="row py-2" v-if="update!=null">
   <div class="card border-0 col-12 col-md-8 offset-lg-2" style="background:none;">
-    <div class="row g-0">
+    <div class="row g-0 py-3">
     <div class="col-md-4" style="width:150px;">
     <img src="http://localhost/carbon/public/images/antonio_guterres.png" class="img-fluid rounded-start" alt="Antonio Guterres" style="width:150px;">
     </div>
     <div class="col-md-10">
     <div class="card-body">
-    <h6 class="card-title p-0 m-0">Antonio Guterres</h6>
-    <p class="card-text p-0 m-0"><small class="text-body-secondary">UN Secretary General</small></p>
-    <p class="card-text text-danger p-0 m-0" style="font-size:16px;">"The Era of Global Warming has Ended: The Era of Global Boiling Has Arrived."</p>
+    <h6 class="card-title p-0 m-0">{{ update.title }} </h6>
+    <p class="card-text p-0 m-0"><small class="text-body-secondary">
+    {{ update.subtitle }}
+    </small></p>
+    <p class="card-text text-danger p-0 m-0" style="font-size:16px;">
+     {{ update.message }}
+    </p>
+
     </div>
     </div>
     </div>
@@ -37,6 +42,14 @@
 
 
 </div>
+
+
+
+
+
+
+
+
 </section>
 
 
@@ -564,6 +577,10 @@ file:element.file
 
 
 return articles;
+},
+
+update(){
+return this.response.update;
 }
 
 

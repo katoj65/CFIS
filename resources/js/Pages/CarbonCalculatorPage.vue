@@ -1,59 +1,158 @@
 <template>
-<app-layout>
-<div class="row">
-<div class="col-12 col-md-3">
-</div>
-<div class="col-12 col-md-6">
+<app-layout :title="title" :subtitle="subtitle">
 
-<!-- <energy-consumption v-if="formOption=='energy-consumption'" :source="source"/>
-<water-usage v-if="formOption=='water-usage'" :source="source"/>
-<transport v-if="formOption=='transport'" :source="source"/>
-<waste-management v-if="formOption=='waste-management'" :source="source"/>
-<food-diet v-if="formOption=='food-diet'" :source="source"/>
-<goods v-if="formOption=='goods'" :source="source"/>
-<land-use v-if="formOption=='land-use'" :source="source"/>
-<building v-if="formOption=='building'" :source="source"/>
-<supply-chain v-if="formOption=='supply-chain'" :source="source"/> -->
 
-<slot/>
+
+
+<el-tabs :tab-position="tabPosition" style="min-height:200px;">
+<el-tab-pane label="Overview">
+<div class="card p-3" style="min-height:500px;">
+<div class="card-inner">
+<h6 class="card-title">Calculate Your Carbon Footprint</h6>
+<p class="card-text">
+In today’s world, every action we take whether it’s commuting, eating, or powering our homes contributes to greenhouse gas emissions that impact the planet. But did you know that understanding your carbon footprint is one of the most empowering steps you can take toward climate action?
+</p>
+<p>
+Calculating your carbon emissions isn’t just about numbers; it’s about understanding your role in the fight against climate change and discovering opportunities to make a difference. Here’s why you should start today:
+</p>
+
+<ol>
+<li>
+<h6>
+Awareness is the First Step
+</h6>
+<p>
+You can’t manage what you don’t measure. Knowing the carbon emissions tied to your lifestyle whether it’s your commute, energy use, or dietary choices—shines a light on areas where you can reduce your environmental impact.
+</p>
+</li>
+
+<li>
+<h6>
+Combatting Climate Change Starts at Home
+</h6>
+<p>
+Climate change may feel like a vast, global issue, but it’s driven by individual choices. By calculating your carbon footprint, you recognize how personal decisions contribute to a collective challenge, allowing you to take responsibility and be part of the solution.
+</p>
+</li>
+<li>
+<h6>
+Identify Cost-Effective Opportunities
+</h6>
+<p>
+ Many actions that reduce your carbon footprint like cutting energy waste, using efficient appliances, or driving less can also save you money. Measuring your emissions helps you identify where small adjustments can yield financial and environmental benefits.
+</p>
+</li>
+<li>
+<h6>Support Behavior Change</h6>
+<p>
+By measuring and sharing your carbon footprint, you advocate for transparency and encourage businesses and governments to do the same. Your demand for greener options drives broader behavior change, fostering sustainable policies and innovations.
+</p>
+
+</li>
+<li>
+<h6> Track Your Progress</h6>
+<p>
+Climate action is a journey. Regularly measuring your carbon footprint helps you set realistic goals, monitor improvements, and celebrate milestones. It also keeps you motivated to keep striving for a more sustainable lifestyle.
+</p>
+</li>
+<li>
+<h6>Strengthen Community Impact</h6>
+<p>
+    When you calculate your footprint, you’re not acting alone. Your efforts contribute to a growing global community taking action against climate change. Together, individual actions amplify into collective impact, fostering a sense of shared responsibility and accomplishment.
+</p>
+</li>
+<li>
+<h6>Offset What You Can’t Avoid</h6>
+<p>
+ While reducing emissions is vital, some activities will always produce carbon. Measuring your footprint helps you calculate exactly what you need to offset through credible carbon offset programs, allowing you to achieve net-zero emissions and support global sustainability projects.
+</p>
+</li>
+
+</ol>
+
+
+
+
+
+
+
 </div>
-<div class="col-12 col-md-3">
+</div>
+
+</el-tab-pane>
+<el-tab-pane label="Energy">
+<energy-consumption/>
+</el-tab-pane>
+<el-tab-pane label="Transportation">
+<div class="card card-bordered" style="height:500px;">
+<div class="card-inner">
+<h5 class="card-title">Emissions from Transportation</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+
 </div>
 </div>
+</el-tab-pane>
+<el-tab-pane label="Diet and Meals">
+<div class="card card-bordered" style="height:500px;">
+<div class="card-inner">
+<h5 class="card-title">Emission from Diet and Meals</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+
+</div>
+</div>
+</el-tab-pane>
+<el-tab-pane label="Waste Disposal">
+<div class="card card-bordered" style="height:500px;">
+<div class="card-inner">
+<h5 class="card-title">Emissions from Waste Disposal</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+
+
+
+
+</div>
+</div>
+</el-tab-pane>
+</el-tabs>
+
+
+
+
+
+
+
 </app-layout>
 </template>
 <script>
 import AppLayout from '../Layouts/AppLayout.vue';
 import EnergyConsumption from '../calculator/EnergyConsumption.vue';
-import WaterUsage from '../calculator/WaterUsage.vue';
-import Transport from '../calculator/Transport.vue';
-import WasteManagement from '../calculator/WasteManagement.vue';
-import FoodDiet from '../calculator/FoodDiet.vue';
-import Goods from '../calculator/Goods.vue';
-import LandUse from '../calculator/LandUse.vue';
-import Building from '../calculator/Building.vue';
-import SupplyChain from '../calculator/SupplyChain.vue';
-
-
 export default {
 components:{
 AppLayout,
 EnergyConsumption,
-WaterUsage,
-Transport,
-WasteManagement,
-FoodDiet,
-Goods,
-LandUse,
-Building,
-SupplyChain,
-
 
 },
 props:{
-carbon_footprint_parameter:[],
-emission_source:[],
+title:{},
+response:{},
 },
+
+
+data(){return{
+subtitle:'Calculate emissions by converting activity data to CO₂ with standardised emission factors.',
+tabPosition: 'left',
+
+
+
+}},
+
+
 
 
 computed:{
@@ -74,3 +173,12 @@ return this.emission_source;
 
 }
 </script>
+
+<style scoped>
+ol li{
+list-style-type:lower-roman;
+width:90%;
+margin-bottom:10px;
+}
+
+</style>

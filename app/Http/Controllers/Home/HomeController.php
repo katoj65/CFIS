@@ -13,6 +13,7 @@ use App\Models\News;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 use App\Models\BusinessSector;
+use App\Models\UpdateModel;
 
 
 
@@ -25,7 +26,6 @@ class HomeController extends Controller
  */
 public function index(Request $request)
 {
-
 
 if(Auth::user()!=''){
 
@@ -51,6 +51,7 @@ $data['response']=[
 'user'=>Auth::user(),
 'category'=>BusinessSector::orderby('name','ASC')->get(),
 
+
 ];
 //create profile
 return Inertia::render('Profile/CreateProfile',$data);
@@ -66,7 +67,8 @@ $data['response']=[
 'developers'=>ProjectModel::select('developer_id')->distinct()->count(),
 'clients'=>User::select('id')->where(['user_status'=>'active'])->where(['role'=>'organisation'])->orWhere(['role'=>'user'])
 ->orWhere(['role'=>'business'])->orWhere(['role'=>'government'])->count(),
-'news'=>News::orderby('created_at','DESC')->limit(4)->get()
+'news'=>News::orderby('created_at','DESC')->limit(4)->get(),
+'update'=>UpdateModel::where('id',1)->first(),
 ];
 
 return Inertia::render('LandingPage',$data);

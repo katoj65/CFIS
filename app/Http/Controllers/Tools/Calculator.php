@@ -12,19 +12,4 @@ class Calculator extends Controller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
