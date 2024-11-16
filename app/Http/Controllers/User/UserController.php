@@ -17,28 +17,15 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
-
-
 
 if(Gate::allows('is_user')){
 $data['title']='Welcome User';
 $data['response']=[];
-
-
-
 return Inertia::render('User/DashboardPage',$data);
-
-
-
-
-
-
 }else{
 return redirect('/');
 }
-
-    }
+}
 
     /**
      * Store a newly created resource in storage.

@@ -1,11 +1,6 @@
 <template>
 <app-layout :title="title" :subtitle="subtitle">
-
-
-
-
-<el-tabs :tab-position="tabPosition" style="min-height:200px;">
-<el-tab-pane label="Overview">
+<user-layout>
 
 <div class="row">
 <div class="col-12 col-md-10 offset-lg-1">
@@ -86,43 +81,18 @@ While reducing emissions is vital, some activities will always produce carbon. M
 </div>
 </div>
 
-</el-tab-pane>
-<el-tab-pane label="Energy">
-<div class="row">
-<div class="col-12 col-md-10 offset-lg-1">
-<energy-consumption/>
-</div>
-</div>
-
-</el-tab-pane>
-<el-tab-pane label="Transportation">
-Comming Up
-</el-tab-pane>
-<el-tab-pane label="Diet and Meals">
-Comming Up
-</el-tab-pane>
-<el-tab-pane label="Waste Disposal">
-Comming Up
-</el-tab-pane>
-</el-tabs>
-
-
-
-
-
-
-
+</user-layout>
 </app-layout>
 </template>
 <script>
 import AppLayout from '../Layouts/AppLayout.vue';
-import EnergyConsumption from '../calculator/EnergyConsumption.vue';
+import UserLayout from '../calculator/UserLayout.vue';
 export default {
 components:{
 AppLayout,
-EnergyConsumption,
-
+UserLayout
 },
+
 props:{
 title:{},
 response:{},
@@ -139,31 +109,5 @@ tabPosition: 'left',
 
 
 
-
-computed:{
-formOption(){
-const url=this.$page.url;
-const r=url.split("/");
-return r[3];
-},
-
-source(){
-return this.emission_source;
-}
-
-
-
-}
-
-
 }
 </script>
-
-<style scoped>
-ol li{
-list-style-type:lower-roman;
-width:90%;
-margin-bottom:10px;
-}
-
-</style>

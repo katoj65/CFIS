@@ -10,78 +10,121 @@ Calculate your energy usage
 </p>
 
 
+<div class="row">
+<div class="col-12 col-md-6">
+<div class="form-group">
+<label class="form-label" for="default-01">Source:</label>
+<div class="form-control-wrap">
+<el-select  clearable placeholder="Select Source" class="form-control">
+<el-option>
+</el-option>
+</el-select>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-md-6">
+<div class="form-group">
+<label class="form-label" for="default-01">Appliance:</label>
+<div class="form-control-wrap">
+<el-select  clearable placeholder="Select Appliance" class="form-control">
+<el-option>
+</el-option>
+</el-select>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="row">
+<div class="col-12 col-md-6">
+<div class="form-group">
+<label class="form-label" for="default-01">Number of Appliances:</label>
+<div class="form-control-wrap">
+<el-input-number  @change="handleChange" :min="1" :max="10000" class="form-control" v-model="num"></el-input-number>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-group">
+<label class="form-label" for="default-01">Consumption (Watts):</label>
+<div class="form-control-wrap">
+<el-input placeholder="Enter number of Watts" type="number" class="form-control"></el-input>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label class="form-label" for="default-01">Hours Used in a Day:</label>
+<div class="form-control-wrap">
+
+<el-select  clearable placeholder="Select Number of Hours Used" class="form-control">
+    <el-option>
+    </el-option>
+    </el-select>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="form-group mt-4">
+<submit-button :title="'Save'" :isLoading="isLoading"></submit-button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
 
 
 
 
 <div>
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 </div>
 </div>
 </template>
 <script>
-
+import SubmitButton from '../components/SubmitButton.vue'
 export default {
-props:{
-source:[],
-
+components:{
+SubmitButton
 },
+props:{},
 data(){return{
-//
-def:'lighting',
-emission_source:'',
-//
+isLoading:false,
+num:1,
 
-
-
-//
 form:this.$inertia.form({
-lightSource:'',
-lightHours:'',
-lightNum:'',
-cookSource:'',
-cookHours:'',
-cookItem:'',
+source:'',
+appliance:'',
+number_of_items:'',
+consumption:'',
+hours:'',
 
-})
+
+
+}),
+
+
+
+
 
 }},
 
-
 methods:{
-select_source(param){
-this.def=[];
-this.def=param;
-const item=this.def;
-const data=this.source
-var emission=[];
-data.forEach(element => {
-if(element.usage===item){
-emission.push(element);
+handleChange(value) {
+console.log(value)
 }
-});
-console.log(emission);
-this.emission_source=emission;
 }
 
-},
 
-mounted(){
-this.select_source('lighting');
-}
 
 
 
@@ -89,14 +132,26 @@ this.select_source('lighting');
 
 }
 </script>
+
+
+
+
+
+
 <style scoped>
 .form-label{
-font-size:16px;
-font-weight:bold;
+font-size:14px;
+
 }
 h6{
 margin:0;
 width:100%;
 height:100%;
+}
+.form-group{margin-bottom:10px}
+.form-control{
+border:none;
+padding:0;
+margin:0;
 }
 </style>
