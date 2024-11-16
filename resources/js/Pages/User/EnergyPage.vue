@@ -3,6 +3,8 @@
 <user-layout>
 <div class="row">
 <div class="col-12 col-md-8 offset-lg-2">
+{{ appliance }}
+
 <energy-consumption/>
 </div>
 </div>
@@ -29,6 +31,14 @@ response:{},
 data(){return{
 subtitle:'Calculate emissions by converting activity data to CO₂ with standardised emission factors.',
 tabPosition: 'left',
+//
+
+
+
+
+
+
+
 
 
 

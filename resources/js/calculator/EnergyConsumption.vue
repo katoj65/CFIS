@@ -10,6 +10,9 @@ Calculate your energy usage
 </p>
 
 
+
+
+
 <div class="row">
 <div class="col-12 col-md-6">
 <div class="form-group">
@@ -24,10 +27,11 @@ Calculate your energy usage
 </div>
 <div class="col-md-6 col-md-6">
 <div class="form-group">
-<label class="form-label" for="default-01">Appliance:</label>
+<label class="form-label" for="default-01">Home Appliance:</label>
 <div class="form-control-wrap">
-<el-select  clearable placeholder="Select Appliance" class="form-control">
-<el-option>
+<el-select  clearable placeholder="Select Home Appliance" class="form-control" v-model="form.appliance">
+<el-option v-for="(a,key) in appliance" :key="key" :value="a.name">
+{{ a.name }}
 </el-option>
 </el-select>
 </div>
@@ -100,17 +104,21 @@ props:{},
 data(){return{
 isLoading:false,
 num:1,
-
 form:this.$inertia.form({
 source:'',
 appliance:'',
 number_of_items:'',
 consumption:'',
 hours:'',
-
-
-
 }),
+
+//
+
+response:this.$page.props.response,
+
+
+
+
 
 
 
@@ -122,6 +130,17 @@ methods:{
 handleChange(value) {
 console.log(value)
 }
+},
+
+
+
+computed:{
+appliance(){
+return this.response.appliance;
+}
+
+
+
 }
 
 

@@ -45,12 +45,12 @@ menu:[
 
 <style scoped>
 .nav-menu{
-padding:10px;
+padding:2px;
 font-family:Arial, Helvetica, sans-serif;
 color:#1A374D;
 margin-bottom:20px;
 font-weight:bolder;
-font-size:16px;
+font-size:15px;
 
 }
 .nav-menu:hover{
