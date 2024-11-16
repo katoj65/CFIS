@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableApplianceCategory extends Migration
+class CreateTableApplianceUse extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateTableApplianceCategory extends Migration
      */
     public function up()
     {
-        Schema::create('appliance_category', function (Blueprint $table) {
+        Schema::create('appliance_use', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateTableApplianceCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appliance_category');
+        Schema::dropIfExists('appliance_use');
     }
 }
