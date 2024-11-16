@@ -20,7 +20,7 @@ class EnergySourceSeeder extends Seeder
     'Solar',
     'Wind',
     'Geothermal',
-    'Gal',
+    'Gas',
     'Fuel',
     'Charcoal',
     'Firewood'];

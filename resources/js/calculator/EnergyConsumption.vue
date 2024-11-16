@@ -9,17 +9,15 @@
 Calculate your energy usage
 </p>
 
-
-
-
-
+<form>
 <div class="row">
 <div class="col-12 col-md-6">
 <div class="form-group">
 <label class="form-label" for="default-01">Source:</label>
 <div class="form-control-wrap">
-<el-select  clearable placeholder="Select Source" class="form-control">
-<el-option>
+<el-select  clearable placeholder="Select Source" class="form-control" v-model="form.source">
+<el-option v-for="(e,key) in energySource" :key="key" :value="e.name">
+{{ e.name }}
 </el-option>
 </el-select>
 </div>
@@ -40,8 +38,6 @@ Calculate your energy usage
 </div>
 
 
-
-
 <div class="row">
 <div class="col-12 col-md-6">
 <div class="form-group">
@@ -55,7 +51,7 @@ Calculate your energy usage
 <div class="form-group">
 <label class="form-label" for="default-01">Consumption (Watts):</label>
 <div class="form-control-wrap">
-<el-input placeholder="Enter number of Watts" type="number" class="form-control"></el-input>
+<el-input placeholder="Enter number of Watts" type="number" class="form-control" v-model="form.consumption"></el-input>
 </div>
 </div>
 </div>
@@ -64,10 +60,11 @@ Calculate your energy usage
 <label class="form-label" for="default-01">Hours Used in a Day:</label>
 <div class="form-control-wrap">
 
-<el-select  clearable placeholder="Select Number of Hours Used" class="form-control">
-    <el-option>
-    </el-option>
-    </el-select>
+<el-select  clearable placeholder="Select Number of Hours Used" class="form-control" v-model="form.consumption">
+<el-option v-for="(e,key) in energy_consumption" :key="key" :value="e.value">
+{{ e.name }}
+</el-option>
+</el-select>
 </div>
 </div>
 </div>
@@ -79,14 +76,7 @@ Calculate your energy usage
 </div>
 
 
-
-
-
-
-
-
-
-
+</form>
 
 
 <div>
@@ -107,7 +97,7 @@ num:1,
 form:this.$inertia.form({
 source:'',
 appliance:'',
-number_of_items:'',
+number_of_items:1,
 consumption:'',
 hours:'',
 }),
@@ -128,7 +118,8 @@ response:this.$page.props.response,
 
 methods:{
 handleChange(value) {
-console.log(value)
+console.log(value);
+this.form.number_of_items=value;
 }
 },
 
@@ -137,6 +128,12 @@ console.log(value)
 computed:{
 appliance(){
 return this.response.appliance;
+},
+energySource(){
+return this.response.source;
+},
+energy_consumption(){
+return this.response.consumption;
 }
 
 
