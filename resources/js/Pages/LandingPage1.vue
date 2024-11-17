@@ -1,46 +1,54 @@
 <template>
   <landing-layout>
-  <section class="py-5">
-  <div class="container position-relative z-2 mt-3 mt-sm-4 mt-md-1">
-  <div class="row pt-xl-3 pt-xxl-4">
-  <div class="col-lg-7 col-xxl-6">
-  <h1 class="display-3 text-center text-lg-start title-font" style="font-size:50px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-  <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">CONTRIBUTE TO <br/>A SUSTAINABLE</span> <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> FUTURE</span> <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">NOW!</span>
-  </h1>
-
-  </div>
-  <div class="col-lg-5 offset-xxl-1 pt-sm-3">
+  <section class="py-5 cover" style="">
 
 
 
-  <div class="row mt-5">
-  <div class="col-12 col-md-4 mt-5">
-  <img src="http://localhost/carbon/public/images/antonio_guterres.png">
-  </div>
-  <div class="col-12 col-md-6">
-  <div style="position:absolute;bottom:10px;background:white;">
-  <h6 class="p-0 m-0" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Antonio Guterres</h6>
-  <p class="text-secondary" style="padding:0;margin:0;line-height:20px;">UN Secretary General</p>
-  </div>
-  </div>
-  <div class="col-12">
-  <p class="fs-lg text-left text-lg-start pb-3 pb-sm-0 pb-md-2 mb-4 mb-sm-5 text-danger" style="font-size:18px;line-height:30px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-  "The Era of Global Warming has Ended: The Era of Global Boiling Has Arrived."
-  </p>
-  </div>
+    <div class="row mt-5 pt-3">
+    <div class="col-12 col-md-8 offset-lg-1 py-3 mt-3">
+    <h1 class="display-3 text-center text-lg-start title-font" style="font-size:40px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+      <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white; text-shadow: 3px 5px 5px black;">CONTRIBUTE TO <br/>A SUSTAINABLE</span> <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white;text-shadow: 3px 4px 4px black;"> FUTURE</span>
+
+      <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;border:solid 6px black;border-left:0;border-top:0;">NOW!</span>
+      </h1>
+      </div>
   </div>
 
 
 
 
 
-  <!-- Contact form -->
+
+  <div style="background:white;opacity:0.9;position:absolute;bottom:65px;width:100%;" class="row py-2" v-if="update!=null">
+    <div class="card border-0 col-12 col-md-8 offset-lg-2" style="background:none;">
+      <div class="row g-0 py-3">
+      <div class="col-md-4" style="width:150px;">
+      <img src="http://localhost/carbon/public/images/antonio_guterres.png" class="img-fluid rounded-start" alt="Antonio Guterres" style="width:150px;">
+      </div>
+      <div class="col-md-10">
+      <div class="card-body">
+      <h6 class="card-title p-0 m-0">{{ update.title }} </h6>
+      <p class="card-text p-0 m-0"><small class="text-body-secondary">
+      {{ update.subtitle }}
+      </small></p>
+      <p class="card-text text-danger p-0 m-0" style="font-size:16px;">
+       {{ update.message }}
+      </p>
+
+      </div>
+      </div>
+      </div>
+      </div>
+
 
   </div>
-  </div>
-  </div>
 
-  <!-- Parallax image -->
+
+
+
+
+
+
 
   </section>
 
@@ -49,8 +57,6 @@
 
 
   <section id="contact" class="bg-light2" style="border-top:solid 1px  #e9edf0;">
-
-
       <div class="container section-title" data-aos="fade-up">
       <div class="row">
       <div class="col-12 col-md-8 offset-lg-2">
@@ -76,30 +82,30 @@
 
 
 
-  <div class="row mt-5" style="margin-bottom:-60px;">
+  <div class="row mt-4 bg-dark2 py-3" style="margin-bottom:-60px;border-radius:10px;">
   <div class="col-lg-3 col-6">
   <div class="text-center mb-5 mb-lg-0">
-  <small class="text-uppercase  ls-md fw-semibold text-dark2 bold">Active Clients</small>
-  <h4 class="mb-0 mt-2">{{ response.clients }} </h4>
-  </div>
-  </div>
-  <div class="col-lg-3 col-6">
-  <div class="text-center mb-5 mb-lg-0">
-  <small class="text-uppercase  ls-md fw-semibold text-dark2 bold">Projects</small>
-  <h4 class="mb-0 mt-2">{{ response.projects }} </h4>
+  <small class="text-uppercase  ls-md fw-semibold text-white bold">Subscribers</small>
+  <h4 class="mb-0 mt-2 text-white">{{ response.clients }} </h4>
   </div>
   </div>
   <div class="col-lg-3 col-6">
   <div class="text-center mb-5 mb-lg-0">
-  <small class="text-uppercase ls-md fw-semibold text-dark2 bold">Project Developers
+  <small class="text-uppercase  ls-md fw-semibold text-white bold">Projects</small>
+  <h4 class="mb-0 mt-2 text-white">{{ response.projects }} </h4>
+  </div>
+  </div>
+  <div class="col-lg-3 col-6">
+  <div class="text-center mb-5 mb-lg-0">
+  <small class="text-uppercase ls-md fw-semibold text-white bold">Project Developers
   </small>
-  <h4 class="mb-0 mt-2">{{ response.developers }} </h4>
+  <h4 class="mb-0 mt-2 text-white">{{ response.developers }} </h4>
   </div>
   </div>
   <div class="col-lg-3 col-6">
   <div class="text-center mb-5 mb-lg-0">
-  <small class="text-uppercase ls-md fw-semibold text-dark2 bold">Impact Created</small>
-  <h4 class="mb-0 mt-2">30%</h4>
+  <small class="text-uppercase ls-md fw-semibold text-white bold">Impact Created</small>
+  <h4 class="mb-0 mt-2 text-white">30%</h4>
   </div>
   </div>
   </div>
@@ -404,11 +410,13 @@
   import BannerComponent from '../components/BannerComponent.vue';
   import LinkPointerComponent from '../components/LinkPointerComponent.vue';
 
+
   export default {
   components: {
   LandingLayout,
   BannerComponent,
-  LinkPointerComponent
+  LinkPointerComponent,
+
 
   },
 
@@ -569,6 +577,10 @@
 
 
   return articles;
+  },
+
+  update(){
+  return this.response.update;
   }
 
 
@@ -586,7 +598,7 @@
   .cover{
   background-image: url('http://localhost/carbon/public/images/deforestation.jpeg');
   background-size: cover;
-  background-position: 100% 100%;
+  background-position: 100% 50%;
   margin:0;
 
   }

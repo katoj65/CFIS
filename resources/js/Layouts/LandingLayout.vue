@@ -1,141 +1,90 @@
 <template>
-<body style="padding-top:65px;">
+<div style="padding:0;margin:0;">
+<header class="py-2" style="border-bottom:none;border-radius:0;background:#1A374D;z-index:100000;">
+<div class="row pb-2">
+<div class="col-10 offset-lg-1">
+<div class="d-flex flex-column flex-md-row align-items-center">
+<Inertia-link :href="route('home')" class="p-2 d-flex align-items-center link-body-emphasis text-decoration-none">
+<img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3" style="position:absolute;margin-top:8px;">
+<span class="fs-4 ml-5 pl-5">
+<!-- <span class="ml-3 text-bold" style="font-size:18px;font-weight:bolder;color:white"> Uganda Carbon Registry</span> -->
+</span>
+</Inertia-link>
 
-<nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 shadow " style="border-bottom:none;position:fixed;width:100%;border-radius:0;background:#1A374D;">
-<a :href="route('home')" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-<h5 class="m-0 text-white"> Uganda Carbon Registry
-    <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3" style="position:absolute;margin-top:8px;">
-    <div style="font-weight:normal;font-size:12px;padding-top:4px;">
-        Empowering sustainability through data
-    </div>
-</h5>
-</a>
-<button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarCollapse">
-<div class="navbar-nav ms-auto p-4 p-lg-0">
-    <inertia-link :href="route('home')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Home</inertia-link>
-    <inertia-link :href="route('about')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">About</inertia-link>
-    <!-- <inertia-link :href="route('carbon-credit')" class="nav-item nav-link text-white" style="font-size:15px;font-weight:normal;">Carbon Credit</inertia-link> -->
-    <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" style="font-size:15px;font-weight:normal;">Carbon Fund</a>
-        <div class="dropdown-menu fade-up m-0">
-            <Inertia-link :href="route('microfinance.introduction')" class="dropdown-item" style="font-size:15px;padding:10px;">
-                Overview </Inertia-link>
-            <Inertia-link :href="route('microfinance.overview')" class="dropdown-item" style="font-size:15px;padding:10px;">Apply for a Loan</Inertia-link>
-            <Inertia-link :href="route('sponsor.project')" class="dropdown-item" style="font-size:15px;padding:10px;">
-Sponsor a Project
-            </Inertia-link>
-            <Inertia-link :href="route('partner.microfinance-partnership')" class="dropdown-item" style="font-size:15px;padding:10px;">
-            Partnerships
-            </Inertia-link>
-            <Inertia-link :href="route('microfinance.fundraising')"  class="dropdown-item" style="font-size:15px;padding:10px;">
-                Start a Fundraiser
-            </Inertia-link>
-
-        </div>
-    </div>
-    <inertia-link :href="route('contact')" class="nav-item nav-link text-white" style="margin-right:15px;margin-left:-25px;font-size:15px;font-weight:normal;">Contact</inertia-link>
-
-
-</div>
-<inertia-link :href="route('login')" class="btn  py-4 px-lg-5 d-none d-lg-block text-white" style="border-radius:0;font-size:15px;background:#ec7063;font-weight:bold;font-weight:normal;">Login</inertia-link>
-</div>
+<nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('about')">About</Inertia-link>
+<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('microfinance.introduction')">Carbon Fund</Inertia-link>
+<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('contact')">Contacts</Inertia-link>
+<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('login')">Login</Inertia-link>
 </nav>
-
-
-
-
-<div>
-<slot/>
-
-</div>
-
-
-
-
-
-
-
-
-
- <!-- Footer Start -->
-<div class="container-fluid footer bg-dark2 " style="margin:0;">
-<div class="container py-5">
-
-<div class="row footer-inner">
-<div class="col-md-6 col-lg-6 col-xl-3">
-<div class="footer-item mt-5">
-<h4 class="text-light mb-4">
-<img :src="logo" style="width:100px;">
-</h4>
-<p class="mb-4 text-secondary">Uganda Carbon Registry is committed to empowering individuals,
-     businesses, and communities to reduce their carbon footprints....</p>
-<a href="" class="btn btn-danger py-2 px-4">Donate Now</a>
-</div>
-</div>
-<div class="col-md-6 col-lg-6 col-xl-3">
-<div class="footer-item mt-5">
-<h4 class="text-light mb-4">Find Us</h4>
-<div class="d-flex flex-column">
-<h6 class="text-secondary mb-0">Our Address</h6>
-<div class="d-flex align-items-center border-bottom py-4">
-<b-icon icon="pin-map-fill" aria-hidden="true" class="text-white" scale="1.5"></b-icon>
-
-<span class=" pl-2" style="color:white;">Masajja Division, Wakiso District</span>
-</div>
-<h6 class="text-secondary mt-4 mb-0">Our Contact</h6>
-<div class="d-flex align-items-center py-4">
-    <b-icon icon="telephone-fill" aria-hidden="true" class="text-white" scale="1.5"></b-icon>
-<span class=" pl-2" style="color:white;">+256 752567534</span>
 </div>
 </div>
 </div>
-</div>
-<div class="col-md-6 col-lg-6 col-xl-3">
-<div class="footer-item mt-5">
-<h4 class="text-light mb-4">Explore Link</h4>
-<div class="d-flex flex-column align-items-start">
-<Inertia-link class="text-white mb-2" :href="route('home')">Home</Inertia-link>
-<Inertia-link class="text-white mb-2" :href="route('about')">About Us</Inertia-link>
-<a class="text-white mb-2" href="">Carbon Credit</a>
-<a class="text-white mb-2" href="">Microfinance</a>
-<Inertia-link class="text-white mb-2" :href="route('contact')">Contact us</Inertia-link>
+</header>
+<div class="row">
+<div class="col-12">
 
 </div>
 </div>
-</div>
-<div class="col-md-6 col-lg-6 col-xl-3">
-<div class="footer-item mt-5">
-<h4 class="text-light mb-4">Stay Connected</h4>
-<ul style="padding:0;" class="social">
-<li>
-<a class="text-white mb-2" href="">
-<b-icon icon="facebook" class="mr-2"></b-icon> Facebook</a>
-</li>
-<li>
-<a class="text-white mb-2" href=""><b-icon icon="twitter" class="mr-2"></b-icon>Twitter</a>
-</li>
-<li>
-<a class="text-white mb-2" href=""><b-icon icon="linkedin" class="mr-2"></b-icon>LinkedIn</a>
-</li>
-<li>
-<a class="text-white mb-2" href=""><b-icon icon="instagram" class="mr-2"></b-icon>Instagram</a>
-</li>
+<main>
+<slot></slot>
+</main>
+
+<footer class="bg-light border-top">
+<div class="row pt-5">
+<div class="col-12 col-md-8 offset-lg-2">
+<div class="row">
+<div class="col-6 col-md-4">
+<h5>Features</h5>
+<ul class="list-unstyled text-small">
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
 </ul>
 </div>
-</div>
-</div>
+<div class="col-6 col-md-4">
+<h5>Resources</h5>
+<ul class="list-unstyled text-small">
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+</ul>
 </div>
 
+ <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+
+
+
+
+
 </div>
-<!-- Footer End -->
+</div>
+</div>
+</footer>
 
 
-</body>
+
+
+
+
+
+</div>
 </template>
 <script>
+import { Inertia } from '@inertiajs/inertia';
+
 
 export default {
 components:{},
@@ -166,7 +115,7 @@ return this.$page.props.system.url+'public/images/logos/logo-with-red.png';
 <style>
 .cover{
 background-image: url('http://localhost/carbon/public/images/deforestation.jpeg');
-min-height: 580px;
+min-height: 400px;
 background-size: cover;
 background-position: 100% 50%;
 margin:0;
@@ -195,8 +144,8 @@ letter-spacing: 1px;
 }
 
 #heading{
-    background:black;
-    opacity: 0.81;
+background:black;
+opacity: 0.81;
 }
 .social li{
 margin-bottom:15px;
