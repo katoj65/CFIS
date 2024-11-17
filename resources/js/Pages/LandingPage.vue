@@ -9,7 +9,11 @@
     <h1 class="display-3 text-center text-lg-start title-font" style="font-size:40px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
       <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white; text-shadow: 3px 5px 5px black;">CONTRIBUTE TO <br/>A SUSTAINABLE</span> <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white;text-shadow: 3px 4px 4px black;"> FUTURE</span>
 
-      <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;border:solid 6px black;border-left:0;border-top:0;">NOW!</span>
+<div style="margin-top:10px;">
+  <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;border:solid 6px black;border-left:0;border-top:0;">NOW!</span>
+</div>
+
+
       </h1>
       </div>
   </div>
@@ -50,10 +54,12 @@
 </div>
 <div class="col-12 col-md-9 text-left">
 <div class="pt-4">
-<h6 class="p-0 m-0">{{ update.title }} </h6>
-<p class="p-0 m-0"><small class="text-body-secondary">
+<h5 class="p-0 m-0">{{ update.title }} </h5>
+<p class="p-0 m-0">
+<small class="text-body-secondary" style="font-size:14px;">
 {{ update.subtitle }}
-</small></p>
+</small>
+</p>
 <p class="text-danger p-0 m-0" style="font-size:16px;">
 {{ update.message }}
 </p>
