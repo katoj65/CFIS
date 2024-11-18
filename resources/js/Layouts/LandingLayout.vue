@@ -60,6 +60,7 @@
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Footprint</a></li>
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Markets</a></li>
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Get Involved</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Policies and Regulations</a></li>
 </ul>
 </div>
 
@@ -87,7 +88,7 @@
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Offest Projects</a></li>
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
             Carbon Credit</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Investiments </a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Investiment Opportunities</a></li>
         </ul>
       </div>
 
