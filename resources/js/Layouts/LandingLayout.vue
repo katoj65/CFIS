@@ -14,6 +14,7 @@
 <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
 <Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('about')">About</Inertia-link>
 <Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('microfinance.introduction')">Carbon Fund</Inertia-link>
+<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('news.index')">Press</Inertia-link>
 <Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('contact')">Contacts</Inertia-link>
 <Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('login')">Login</Inertia-link>
 </nav>
@@ -30,20 +31,21 @@
 <slot></slot>
 </main>
 
-<footer class="bg-white">
+<footer class="bg-white" style="border-top:solid 1px #f2f3f4">
 <div class="row pt-5">
 <div class="col-12 col-md-8 offset-lg-2">
 <div class="row">
-<div class="col-6 col-md-1">
+<div class="col-12 col-md-1">
 <ul class="list-unstyled text-small mt-3">
-<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-facebook" style="font-size:40px;"></i></a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-facebook" style="font-size:30px;"></i></a></li>
 <li class="mb-3"><a class="link-secondary text-decoration-none" href="#">
-  <i class="bi bi-whatsapp" style="font-size:40px;"></i>
+<i class="bi bi-whatsapp" style="font-size:30px;"></i>
 </a></li>
 <li class="mb-3"><a class="link-secondary text-decoration-none" href="#">
-  <i class="bi bi-instagram" style="font-size:40px;"></i>
+<i class="bi bi-instagram" style="font-size:30px;"></i>
 </a></li>
-<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-twitter-x" style="font-size:40px;"></i></a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-twitter-x" style="font-size:30px;"></i></a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-linkedin" style="font-size:30px;"></i></a></li>
 </ul>
 </div>
 
@@ -68,29 +70,31 @@
 
 
 <div class="col-6 col-md-4">
-  <h5>Useful Links</h5>
-  <ul class="list-unstyled text-small mt-3">
-  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">User Guide</a></li>
-  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Create Account</a></li>
-  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Project Developers</a></li>
-  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Partners</a></li>
-  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Funding Opportunities</a></li>
-  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Careers </a></li>
-  </ul>
-  </div>
+<h5>Useful Links</h5>
+<ul class="list-unstyled text-small mt-3">
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">User Guide</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Create Account</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Project Developers</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Partners</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Funding Opportunities</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Careers </a></li>
+</ul>
+</div>
 
- <div class="col-6 col-md-4">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small mt-3">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Overview</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">About Us</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Fund</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Offest Projects</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
-            Carbon Credit</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Investiment Opportunities</a></li>
-        </ul>
-      </div>
+<div class="col-6 col-md-4">
+<h5>About</h5>
+<ul class="list-unstyled text-small mt-3">
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Overview</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">About Us</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Fund</a></li>
+<li class="mb-1">
+<Inertia-link class="link-secondary text-decoration-none" :href="route('news.index')">Press</Inertia-link></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Offest Projects</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
+Carbon Credit</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Investiment Opportunities</a></li>
+</ul>
+</div>
 
 
 
