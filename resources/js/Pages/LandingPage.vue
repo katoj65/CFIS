@@ -140,7 +140,9 @@ Developers
 
           <div class="col-lg-6 bg-white" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-calculator"></i>
+              </div>
               <div>
                 <h4 class="title"><Inertia-link :href="route('carbon.footprint')" class="stretched-link">Measure Carbon Footprint</Inertia-link></h4>
                 <p class="description">
@@ -154,7 +156,9 @@ Developers
 
           <div class="col-lg-6 bg-white" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-cloud-haze"></i>
+              </div>
               <div>
                 <h4 class="title"><Inertia-link :href="route('emissions.uganda')" class="stretched-link">Manage Carbon Emissions</Inertia-link></h4>
                 <p class="description">
@@ -166,7 +170,9 @@ Developers
 
           <div class="col-lg-6 bg-white " data-aos="fade-up" data-aos-delay="300">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-tree"></i>
+              </div>
               <div>
                 <h4 class="title"><Inertia-link :href="route('carbon.offestting')" class="stretched-link">Offset Carbon Emissions</Inertia-link></h4>
                 <p class="description">
@@ -179,7 +185,9 @@ Developers
 
           <div class="col-lg-6 bg-white" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-bag"></i>
+              </div>
               <div>
                 <h4 class="title"><Inertia-link :href="route('market.overview')" class="stretched-link">Carbon Markets</Inertia-link></h4>
                 <p class="description">
@@ -191,7 +199,9 @@ Developers
 
           <div class="col-lg-6 bg-white" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-cash-coin"></i>
+              </div>
               <div>
                 <h4 class="title"><Inertia-link :href="route('microfinance.overview')" class="stretched-link">
                   Carbon Fund
@@ -203,7 +213,9 @@ Developers
 
           <div class="col-lg-6 bg-white" data-aos="fade-up" data-aos-delay="600">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-backpack4"></i>
+              </div>
               <div>
                 <h4 class="title"><Inertia-link :href="route('hub')" class="stretched-link">
                   Education Hub
