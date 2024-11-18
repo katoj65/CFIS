@@ -18,7 +18,7 @@ class NewsController extends Controller
 public function index()
 {
 //
-$data['title']='News';
+$data['title']='Press Release';
 $data['response']=[
 'news'=>News::orderby('created_at','DESC')->limit(12)->get(),
 

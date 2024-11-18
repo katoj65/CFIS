@@ -37,9 +37,11 @@
 <div class="p-4">
 <h4 class="fst-italic">Topics</h4>
 <ol class="list-unstyled mb-0">
-<li v-for="(a,key) in news" :key="key" style="line-height:17px;"><a href="#">
+<li v-for="(a,key) in news" :key="key" style="line-height:17px;">
+<a href="#" class="text-green">
     {{ a.title }}
-</a></li>
+</a>
+</li>
 </ol>
 </div>
 

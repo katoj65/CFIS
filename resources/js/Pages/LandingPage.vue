@@ -4,8 +4,8 @@
 
 
 
-    <div class="row mt-5 pt-3">
-    <div class="col-12 col-md-8 offset-lg-1 py-3 mt-3">
+    <div class="row mt-5 pt-5">
+    <div class="col-12 col-md-8 offset-lg-1 py-5 mt-5">
     <h1 class="display-3 text-center text-lg-start title-font" style="font-size:40px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
       <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white; text-shadow: 3px 5px 5px black;">CONTRIBUTE TO <br/>A SUSTAINABLE</span> <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:white;text-shadow: 3px 4px 4px black;"> FUTURE</span>
 
@@ -30,7 +30,7 @@
 <div class="row">
 <div class="col-12 col-md-8 offset-lg-2">
 <h2 class="text-green">Our Mission</h2>
-<p> We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. Through innovative carbon offset projects and sustainable practices, we aim to create lasting value for Ugandan communities, fostering green growth, resilience, and a thriving environment for future generations. </p>
+<p> At Uganda Carbon Registry (UCR), we’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. Through innovative carbon offset projects and sustainable practices, we aim to create lasting value for Ugandan communities, fostering green growth, resilience, and a thriving environment for future generations. </p>
 
 
 <div class="row mt-5">
@@ -48,7 +48,7 @@
 </div>
 </div>
 </div>
-
+<!--
 <div class="row mt-4">
 <div class="col-12 col-md-3">
 <img src="http://localhost/carbon/public/images/antonio_guterres.png" class="img-fluid rounded-start" alt="Antonio Guterres" style="width:150px;">
@@ -66,7 +66,7 @@
 </p>
 </div>
 </div>
-</div>
+</div> -->
 
 
 

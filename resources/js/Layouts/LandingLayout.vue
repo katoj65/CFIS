@@ -1,27 +1,26 @@
 <template>
 <div style="padding:0;margin:0;">
-<header class="py-2 bg-green-dark" style="border-bottom:none;border-radius:0;z-index:100000;">
-<div class="row pb-2">
-<div class="col-10 offset-lg-1">
-<div class="d-flex flex-column flex-md-row align-items-center">
-<Inertia-link :href="route('home')" class="p-2 d-flex align-items-center link-body-emphasis text-decoration-none">
-<img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3" style="position:absolute;margin-top:8px;">
-<span class="fs-4 ml-5 pl-5">
-<!-- <span class="ml-3 text-bold" style="font-size:18px;font-weight:bolder;color:white"> Uganda Carbon Registry</span> -->
-</span>
-</Inertia-link>
 
-<nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('about')">About</Inertia-link>
-<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('microfinance.introduction')">Carbon Fund</Inertia-link>
-<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('news.index')">Press</Inertia-link>
-<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('contact')">Contacts</Inertia-link>
-<Inertia-link class="me-3 py-2 link-body-emphasis text-decoration-none text-white" :href="route('login')">Login</Inertia-link>
-</nav>
-</div>
-</div>
-</div>
-</header>
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-green-dark navbar-dark fixed-top">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <Inertia-link :href="route('home')" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3">
+      </Inertia-link>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><Inertia-link :href="route('home')" class="nav-link px-2 text-white">Home</Inertia-link></li>
+        <li><Inertia-link :href="route('about')" class="nav-link px-2 text-white">About</Inertia-link></li>
+        <li><Inertia-link :href="route('microfinance.introduction')" class="nav-link px-2 text-white">Carbon Fund</Inertia-link></li>
+        <li><Inertia-link :href="route('news.index')" class="nav-link px-2 text-white">Press</Inertia-link></li>
+        <li><Inertia-link :href="route('contact')" class="nav-link px-2 text-white">Contact</Inertia-link></li>
+
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <Inertia-link :href="route('login')" class="btn btn-outline-light me-2">Login</Inertia-link>
+    </div>
+  </header>
 <div class="row">
 <div class="col-12">
 
@@ -146,7 +145,7 @@ return this.$page.props.system.url+'public/images/logos/logo-with-red.png';
 <style>
 .cover{
 background-image: url('http://localhost/carbon/public/images/deforestation.jpeg');
-min-height: 450px;
+min-height: 550px;
 background-size: cover;
 background-position: 100% 50%;
 margin:0;

@@ -1,5 +1,5 @@
 <template>
-<div class="bg-green-light">
+<div class="bg-green-light pt-5">
 <div class="row py-5 pl-5 pr-5 shadow-sm">
 <div class="col-12 col-md-8 offset-lg-2 pl-4 pr-4">
     <h1 class="text-dark2 pt-3 text-center" style="font-size:25px;">

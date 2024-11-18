@@ -4,7 +4,7 @@
 <!-- main @s -->
 <div class="nk-main">
 <!-- sidebar @s -->
-<div class="nk-sidebar nk-sidebar-fixed bg-dark2" data-content="sidebarMenu" style="border:none;">
+<div class="nk-sidebar nk-sidebar-fixed bg-green-dark" data-content="sidebarMenu" style="border:none;">
 <div class="nk-sidebar-element nk-sidebar-head" style="border:none;">
 <div class="nk-sidebar-brand" style="border-bottom:none;">
 <inertia-link class="logo-link nk-sidebar-logo"  style="border-bottom:none;margin-bottom:10px;" :href="route('home')">
@@ -22,6 +22,12 @@ Carbon Footprint Information System<br/>
 </div>
 </div><!-- .nk-sidebar-element -->
 <menu-switch style="margin-top:20px;"/>
+
+
+
+
+
+
 <div class="nk-sidebar-element" >
 <div class="nk-sidebar-content">
 <div class="nk-sidebar-menu" data-simplebar style="border-top:none;">

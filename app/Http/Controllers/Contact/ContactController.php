@@ -17,7 +17,7 @@ class ContactController extends Controller
     public function index()
     {
         //
-$data['title']='Contact';
+$data['title']='Get in Touch with Us';
 $data['content']='Some information';
 
 return Inertia::render('ContactPage',$data);
