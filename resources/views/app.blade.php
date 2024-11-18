@@ -233,6 +233,30 @@ color:black;
 color:white;
 }
 
+.bg-green-light{
+ background:#effef5;
+}
+.border-green-dark{
+border:solid 1px #117864 ;
+}
+.bg-green-dark{
+background:#117864 ;
+}
+
+.border-top-green{
+border-top:solid 3px #117864 ;
+}
+
+.border-bottom-green{
+border-bottom:solid 3px #117864 ;
+}
+.text-green{
+color:#117864;
+}
+
+
+
+
 .page-title{background:none;}
 .form-group .form-label{font-weight:normal;font-size:14px;}
 .form-group{margin-bottom:20px;}

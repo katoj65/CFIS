@@ -1,6 +1,6 @@
 <template>
 <div style="padding:0;margin:0;">
-<header class="py-2" style="border-bottom:none;border-radius:0;background:#1A374D;z-index:100000;">
+<header class="py-2 bg-green-dark" style="border-bottom:none;border-radius:0;z-index:100000;">
 <div class="row pb-2">
 <div class="col-10 offset-lg-1">
 <div class="d-flex flex-column flex-md-row align-items-center">
@@ -30,7 +30,7 @@
 <slot></slot>
 </main>
 
-<footer class="bg-light border-top">
+<footer class="bg-white">
 <div class="row pt-5">
 <div class="col-12 col-md-8 offset-lg-2">
 <div class="row">

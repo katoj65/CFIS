@@ -25,20 +25,21 @@
 
 
 
-<section id="contact" class="bg-light2" style="border-top:solid 20px white;">
+<section id="contact" class="bg-green-light" style="border-top:solid 20px white;">
 <div class="container section-title" data-aos="fade-up">
 <div class="row">
 <div class="col-12 col-md-8 offset-lg-2">
-<h2>Our Mission</h2>
+<h2 class="text-green">Our Mission</h2>
 <p> We’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. Through innovative carbon offset projects and sustainable practices, we aim to create lasting value for Ugandan communities, fostering green growth, resilience, and a thriving environment for future generations. </p>
 
 
 <div class="row mt-5">
-<div class="row">
+<div class="row mb-3">
 <div class="col-12 col-md-6" v-for="(s, key) in services" :key="key">
-<div class="card  bg-white mb-4 p-3 border-0">
+<div class="card mb-4 p-4 " style="border-radius:10px;border:none;border-bottom:solid 5px #117864;">
 <div class=" text-left">
-<Inertia-link class="text-left text-dark bold" :href="route(s.url)">{{ s.title }}  <b-icon icon="arrow-right"></b-icon> </Inertia-link>
+<Inertia-link class="text-left bold" :href="route(s.url)">
+  <h5>{{ s.title }}  <b-icon icon="arrow-right"></b-icon></h5> </Inertia-link>
 <p class="text-left h-100">
 {{ s.description }}
 </p>
@@ -54,7 +55,7 @@
 </div>
 <div class="col-12 col-md-9 text-left">
 <div class="pt-4">
-<h5 class="p-0 m-0">{{ update.title }} </h5>
+<h5 class="p-0 m-0 text-green">{{ update.title }} </h5>
 <p class="p-0 m-0">
 <small class="text-body-secondary" style="font-size:14px;">
 {{ update.subtitle }}
@@ -69,30 +70,43 @@
 
 
 
-<div class="row mt-4 bg-white py-3" style="margin-bottom:-60px;border-radius:10px;">
+<div class="row mt-5 py-5" style="margin-bottom:-60px;">
 <div class="col-lg-3 col-6">
 <div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase  ls-md fw-semibold bold">Subscribers</small>
-<h4 class="mb-0 mt-2">{{ response.clients }} </h4>
+<div style="margin-bottom:10px;">
+  <i class="bi bi-people text-green" style="font-size:50px;"></i>
 </div>
-</div>
-<div class="col-lg-3 col-6">
-<div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase  ls-md fw-semibold bold">Projects</small>
-<h4 class="mb-0 mt-2">{{ response.projects }} </h4>
+<small class="text-uppercase  ls-md fw-semibold bold text-green" style="font-size:20px;">Subscribers</small>
+<h4 class="mb-0 mt-2 text-green" style="font-size:35px;">{{ response.clients }} </h4>
 </div>
 </div>
 <div class="col-lg-3 col-6">
 <div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase ls-md fw-semibold bold">Project Developers
+<div style="margin-bottom:10px;">
+  <i class="bi bi-diagram-3 text-green" style="font-size:50px;"></i>
+</div>
+<small class="text-uppercase  ls-md fw-semibold bold text-green" style="font-size:20px;">Projects</small>
+<h4 class="mb-0 mt-2 text-green" style="font-size:35px;">{{ response.projects }} </h4>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="text-center mb-5 mb-lg-0">
+  <div style="margin-bottom:10px;">
+    <i class="bi bi-person-lines-fill text-green" style="font-size:50px;"></i>
+  </div>
+<small class="text-uppercase ls-md fw-semibold bold text-green" style="font-size:20px;">
+Developers
 </small>
-<h4 class="mb-0 mt-2">{{ response.developers }} </h4>
+<h4 class="mb-0 mt-2 text-green" style="font-size:35px;">{{ response.developers }} </h4>
 </div>
 </div>
 <div class="col-lg-3 col-6">
 <div class="text-center mb-5 mb-lg-0">
-<small class="text-uppercase ls-md fw-semibold bold">Impact Created</small>
-<h4 class="mb-0 mt-2 ">30%</h4>
+<div style="margin-bottom:10px;">
+  <i class="bi bi-tree text-green" style="font-size:50px;"></i>
+</div>
+<small class="text-uppercase ls-md fw-semibold bold text-green" style="font-size:20px;">Impact Created</small>
+<h4 class="mb-0 mt-2 text-green" style="font-size:35px;">30%</h4>
 </div>
 </div>
 </div>
@@ -112,12 +126,11 @@
 
 
 
-
-    <section id="services" class="services section bg-light2" style="margin-top:-65px;">
+    <section id="services" class="services section bg-green-light" style="margin-top:-65px;">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2 class="text-green">Services</h2>
         <p>Empowering Uganda's climate action with carbon tracking and credit services!</p>
       </div><!-- End Section Title -->
 
@@ -222,7 +235,7 @@
 
 
   <!--testmonial start-->
-  <section class="bg-dark2 py-5">
+  <section class="bg-green-dark py-5">
   <div class="container">
   <div class="col-xxl-8 offset-xxl-2 col-md-12">
   <div class="row align-items-center">
@@ -265,7 +278,7 @@
 
 
   <!--Call to action start-->
-  <section class="my-lg-7 py-2 bg-light2">
+  <section class="my-lg-7 py-2 bg-green-light">
   <div class="container">
   <div class="row bg-pattern rounded-3 py-lg-7 py-5 g-0">
   <div class="col-md-8 offset-md-2">
@@ -273,7 +286,7 @@
   >
   <div class="mb-5">
       <h3 class="h2 text-white-stable mb-3">
-      <span class="title-font2 text-uppercase"> Ready to Take Action?</span>
+      <span class="text-green"> Ready to Take Action?</span>
       </h3>
       <p class="mb-0 text-white-stable">
       Take action today: Measure your carbon footprint, set ambitious goals, and be part of Uganda's climate solution. Together, we can build a sustainable, climate-resilient future for all.
@@ -452,7 +465,7 @@
   //
   botton_section(){
   return[
-  {title:'Measure Carbon Footprint',
+  {title:'Measure Carbon',
   description:'Use carbon tracking tools to measure and reduce emissions, making your sustainability goals achievable and verifiable.',
   link:'Calculate Your Emissions',url:'carbon.footprint'},
 
@@ -483,7 +496,7 @@
   //services menu
   services(){
   return[
-  {title:'Carbon Footprint Management',
+  {title:'Carbon Footprint',
   description:'Track and reduce emissions with real-time carbon management tools and analytics.',
   url:'cfis.overview'
   },
@@ -500,13 +513,9 @@
   url:'projects.overview'
   }
 
-
-
-
-
-
   ];
   },
+
 
 
   news(){
@@ -519,16 +528,21 @@
   id:element.id,
   created_at:element.created_at,
   file:element.file
-
   });
   });
-
-
   return articles;
   },
 
+
+
   update(){
   return this.response.update;
+  },
+
+
+
+  icons(){
+  return this.$page.props.system.icon_directory;
   }
 
 
