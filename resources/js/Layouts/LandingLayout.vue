@@ -34,34 +34,60 @@
 <div class="row pt-5">
 <div class="col-12 col-md-8 offset-lg-2">
 <div class="row">
-<div class="col-6 col-md-4">
-<h5>Features</h5>
-<ul class="list-unstyled text-small">
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-</ul>
-</div>
-<div class="col-6 col-md-4">
-<h5>Resources</h5>
-<ul class="list-unstyled text-small">
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+<div class="col-6 col-md-1">
+<ul class="list-unstyled text-small mt-3">
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-facebook" style="font-size:40px;"></i></a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="#">
+  <i class="bi bi-whatsapp" style="font-size:40px;"></i>
+</a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="#">
+  <i class="bi bi-instagram" style="font-size:40px;"></i>
+</a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-twitter-x" style="font-size:40px;"></i></a></li>
 </ul>
 </div>
 
- <div class="col-6 col-md">
+
+
+
+
+
+<div class="col-6 col-md-3">
+<h5>Resources</h5>
+<ul class="list-unstyled text-small mt-3">
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Environment Hub</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Projects</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Footprint</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Markets</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Get Involved</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="col-6 col-md-4">
+  <h5>Useful Links</h5>
+  <ul class="list-unstyled text-small mt-3">
+  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">User Guide</a></li>
+  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Create Account</a></li>
+  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Project Developers</a></li>
+  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Partners</a></li>
+  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Funding Opportunities</a></li>
+  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Careers </a></li>
+  </ul>
+  </div>
+
+ <div class="col-6 col-md-4">
         <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        <ul class="list-unstyled text-small mt-3">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Overview</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">About Us</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Fund</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Offest Projects</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
+            Carbon Credit</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Investiments </a></li>
         </ul>
       </div>
 
@@ -150,5 +176,7 @@ opacity: 0.81;
 .social li{
 margin-bottom:15px;
 }
-
+.list-unstyled li {
+margin-bottom:20px;
+}
 </style>
