@@ -57,12 +57,9 @@
 </div>
 </template>
 <script>
-import AdminMenu from './AdminMenu.vue';
-import UserMenu from './UserMenu.vue';
 export default {
 components:{
-UserMenu,
-AdminMenu,
+
 },
 data(){return{
 

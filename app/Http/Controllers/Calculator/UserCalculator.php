@@ -33,21 +33,24 @@ public function energyCalculatorPage(){
 if(Gate::allows('is_user')){
 $data['title']='Calaculate Energy Consumption';
 $data['response']=[
-'appliance'=>ApplianceModel::where('category','home')->orwhere('category','all')->get(),
+//'appliance'=>ApplianceModel::where('category','home')->orwhere('category','all')->get(),
 'source'=>EnergySourceModel::all(),
-'consumption'=>UserCalculator::usageHours(),
-
-
-
+//'consumption'=>UserCalculator::usageHours(),
 
 ];
-
 
 return Inertia::render('User/EnergyPage',$data);
 }else{
 return redirect('/');
 }
 }
+
+//switch energy calculator
+public function energyCalculatorForm(Request $request){
+$item=strtolower($request->select_source);
+return redirect('/user/calculator/energy/'.$item);
+}
+
 
 
 
