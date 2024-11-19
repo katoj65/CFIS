@@ -2,30 +2,32 @@
 <div style="padding:0;margin:0;">
 
 <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-green-dark navbar-dark fixed-top">
-    <div class="col-md-3 mb-2 mb-md-0">
-      <Inertia-link :href="route('home')" class="d-inline-flex link-body-emphasis text-decoration-none">
-        <img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3">
-      </Inertia-link>
-    </div>
-
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><Inertia-link :href="route('home')" class="nav-link px-2 text-white">Home</Inertia-link></li>
-        <li><Inertia-link :href="route('about')" class="nav-link px-2 text-white">About</Inertia-link></li>
-        <li><Inertia-link :href="route('microfinance.introduction')" class="nav-link px-2 text-white">Carbon Fund</Inertia-link></li>
-        <li><Inertia-link :href="route('news.index')" class="nav-link px-2 text-white">Press</Inertia-link></li>
-        <li><Inertia-link :href="route('contact')" class="nav-link px-2 text-white">Contact</Inertia-link></li>
-
-    </ul>
-
-    <div class="col-md-3 text-end">
-      <Inertia-link :href="route('login')" class="btn btn-outline-light me-2">Login</Inertia-link>
-    </div>
-  </header>
-<div class="row">
-<div class="col-12">
-
+<div class="col-md-3 mb-2 mb-md-0">
+<Inertia-link :href="route('home')" class="d-inline-flex link-body-emphasis text-decoration-none">
+<img src="http://localhost/carbon/public/images/logos/logo-with-red.png" class="logo img-fluid ml-3">
+</Inertia-link>
 </div>
+
+<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+<li><Inertia-link :href="route('home')" class="nav-link px-2 text-white">Home</Inertia-link></li>
+<li><Inertia-link :href="route('about')" class="nav-link px-2 text-white">About</Inertia-link></li>
+<li><Inertia-link :href="route('microfinance.introduction')" class="nav-link px-2 text-white">Carbon Fund</Inertia-link></li>
+<li><Inertia-link :href="route('news.index')" class="nav-link px-2 text-white">Press</Inertia-link></li>
+<li><Inertia-link :href="route('contact')" class="nav-link px-2 text-white">Contact</Inertia-link></li>
+
+</ul>
+
+<div class="col-md-3 text-end">
+<Inertia-link :href="route('login')" class="btn btn-outline-light me-2">Login</Inertia-link>
 </div>
+</header> 
+
+
+
+
+
+
+
 <main>
 <slot></slot>
 </main>
@@ -103,13 +105,6 @@ Carbon Credit</a></li>
 </div>
 </div>
 </footer>
-
-
-
-
-
-
-
 </div>
 </template>
 <script>
