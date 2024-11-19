@@ -3,7 +3,7 @@
 <section class="p-0">
 <div class="px-4 pt-5 my-5 text-center">
 <h3 class="display-6 fw-bold text-body-emphasis">
-Carbon Education Hub
+Education Hub
 </h3>
 <div class="col-lg-6 mx-auto">
 <p class="lead mb-4" style="font-size:17px;">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
