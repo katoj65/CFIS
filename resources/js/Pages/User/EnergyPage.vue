@@ -55,13 +55,11 @@ Select source of emission to continue.
 
 import AppLayout from '../../Layouts/AppLayout.vue';
 import UserLayout from '../../calculator/UserLayout.vue';
-import HydropowerForm from '../../forms/energy/HydropowerForm.vue';
 
 export default {
 components:{
 AppLayout,
 UserLayout,
-HydropowerForm,
 
 
 },

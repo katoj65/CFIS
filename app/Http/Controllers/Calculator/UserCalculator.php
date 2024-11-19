@@ -45,6 +45,8 @@ return redirect('/');
 }
 }
 
+
+
 //switch energy calculator
 public function energyCalculatorForm(Request $request){
 $item=strtolower($request->select_source);
@@ -53,6 +55,23 @@ return redirect('/user/calculator/energy/'.$item);
 
 
 
+
+
+public function hydropowerForm(){
+if(Gate::allows('is_user')){
+$data['title']='Calaculate Energy Consumption';
+$data['response']=[
+'appliance'=>ApplianceModel::where('category','home')->orwhere('category','all')->get(),
+'source'=>EnergySourceModel::all(),
+'consumption'=>UserCalculator::usageHours(),
+
+];
+
+return Inertia::render('User/HydropowerForm',$data);
+}else{
+return redirect('/');
+}
+}
 
 
 
