@@ -10,8 +10,8 @@
 <div class="col-3">
 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
 <li v-for="(u,key) in user_menu.main" :key="key" :id="'tooltip-button-interactive'+key">
-<a href="#" class="nav-link py-3 rounded-0 text-white" style="background:#148f77;border-bottom:solid 1px #117864">
-<i :class="u.icon" text-white style="font-size:30px;"></i>
+<a href="#" class="nav-link py-3 rounded-0 text-white" style="background:#148f77;border-bottom:solid 1px #117864;">
+<i :class="u.icon" style="font-size:30px;"></i>
 <b-tooltip :target="'tooltip-button-interactive'+key" placement="right" variant="light">
 {{ u.name }}
 </b-tooltip>

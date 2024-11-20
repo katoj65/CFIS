@@ -35,6 +35,7 @@ Route::get('user/calculator/energy/hydropower/{id}', [UserCalculator::class, 'hy
 
 
 
+
 });
 
 

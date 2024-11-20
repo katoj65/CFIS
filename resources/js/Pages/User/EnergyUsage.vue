@@ -1,8 +1,25 @@
 <template>
 <app-layout :title="title" :subtitle="subtitle">
+<template #action>
+<el-dropdown :hide-on-click="false">
+<span class="el-dropdown-link btn bg-white">
+Options<i class="el-icon-arrow-down el-icon--right"></i>
+</span>
+<el-dropdown-menu slot="dropdown">
+<el-dropdown-item>
+<Inertia-link class="text-dark" href="">Edit</Inertia-link>
+</el-dropdown-item>
+<el-dropdown-item>
+<a class="text-dark" @click="destroy" href="#">
+Delete
+</a>
+</el-dropdown-item>
+</el-dropdown-menu>
+</el-dropdown>
+</template>
 <div class="container">
 <div class="row">
-<div class="col-12 col-md-10 offset-lg-1">
+<div class="col-12">
 <div class="card p-3">
 <div class="body">
 <div class="card-title">
@@ -32,7 +49,7 @@ Number
 Watts (each)
 </th>
 <th class="border-0">
-Usage Time (Hrs)
+Usage Time (Hours)
 </th>
 
 <th class="border-0">
@@ -65,10 +82,11 @@ Emission (CO2e)
 
 
 <tr>
-<th class="border-0 table-light" colspan="2">
+<th class="border-0">
 Weekly
 </th>
-<td class="border-0 table-light"></td>
+<th class="border-0"></th>
+<td class="border-0"></td>
 <td class="border-0">
 {{ weekly.consume}}
 </td>
@@ -81,10 +99,11 @@ Weekly
 </tr>
 
 <tr>
-<th class="border-0 table-light" colspan="2">
+<th class="border-0">
 Monthly
 </th>
-<td class="border-0 table-light"></td>
+<th class="border-0"></th>
+<td class="border-0"></td>
 <td class="border-0">
 {{ monthly.consume}}
 </td>
@@ -97,10 +116,11 @@ Monthly
 </tr>
 
 <tr>
-<th class="border-0 table-light" colspan="2">
+<th class="border-0">
 Annually
 </th>
-<td class="border-0 table-light"></td>
+<th class="border-0"></th>
+<td class="border-0"></td>
 <td class="border-0">
 {{ annually.consume}}
 </td>
@@ -162,8 +182,29 @@ weekly:this.response.weekly,
 monthly:this.response.monthly,
 annually:this.response.annually,
 
+//form
+form:this.$inertia.form({
+id:this.response.consumption.id,
+}),
+
+}},
+
+methods:{
+destroy(){
+this.form.delete(route('destroy.hydropower'));
+}
 
 
-}}
+
+
+}
+
+
+
+
 }
 </script>
+<style scoped>
+table tr td{text-align:center;font-size:15px;}
+table tr th{text-align:center;font-size:15px;}
+</style>

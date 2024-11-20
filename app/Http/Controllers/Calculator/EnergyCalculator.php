@@ -41,11 +41,15 @@ $input=[
 'carbon_emission'=>$total_emission
 ];
 $model=EnergyConsumptionModel::create($input);
-return redirect('/user/calculator/energy/hydropower/'.$model->id);
+return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success','Record saved');
 }
 
 
 
+public function destroyHydropower(Request $request){
+EnergyConsumptionModel::destroy($request->id);
+return redirect('/user/calculator/energy/hydropower/')->with('success','Record deleted');
+}
 
 
 
