@@ -45,7 +45,6 @@ return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success
 }
 
 
-
 public function destroyHydropower(Request $request){
 EnergyConsumptionModel::destroy($request->id);
 return redirect('/user/calculator/energy/hydropower/')->with('success','Record deleted');

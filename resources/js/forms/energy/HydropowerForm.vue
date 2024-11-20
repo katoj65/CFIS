@@ -98,7 +98,14 @@ onFinish:()=>{
 this.isLoading=false;
 },
 onSuccess:()=>{
+this.$notify({
+title:'Successful',
+message:this.$page.props.flash.success,
+status:'success',
+position:'bottom-right'
 
+
+});
 }
 });
 

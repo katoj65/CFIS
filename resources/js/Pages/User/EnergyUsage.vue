@@ -191,7 +191,16 @@ id:this.response.consumption.id,
 
 methods:{
 destroy(){
-this.form.delete(route('destroy.hydropower'));
+this.form.delete(route('destroy.hydropower'),{
+onSuccess:()=>{
+this.$notify({
+title:'Successful',
+message:this.$page.props.flash.success,
+position:'bottom-right',
+status:'success'
+});
+}
+});
 }
 
 
