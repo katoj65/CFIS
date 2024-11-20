@@ -9,10 +9,16 @@ class EnergyConsumptionModel extends Model
 {
     use HasFactory;
     protected $table='energy_consumption';
-    protected $fillables=[
+    protected $fillable=[
     'energy_source',
-    'equipment',
-    'quantity',
-    'hours'
+    'appliance',
+    'number_of_appliances',
+    'consumption',
+    'usage_time',
+    'user_id',
+    'emission_factor',
+    'carbon_emission',
+
+
     ];
 }

@@ -17,7 +17,7 @@ Select your energy sources
 
 <div class="col-12">
 <div class="form-group">
-<label class="form-label" for="default-01">Emission Source:</label>
+<label class="form-label" for="default-01">Source of Energy:</label>
 <div class="form-control-wrap">
 <el-select @change="loadform"    clearable placeholder="Select Source" class="form-control border-0" v-model="form.select_source">
 <el-option v-for="(e,key) in source" :key="key" :value="e.name">

@@ -1,9 +1,9 @@
 <template>
-<div class="pt-1 pb-1">
+<span>
 <span v-if="error!=null" class="text-danger">
 {{ error }}
 </span>
-</div>
+</span>
 </template>
 <script>
 export default {

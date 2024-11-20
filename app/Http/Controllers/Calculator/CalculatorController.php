@@ -138,4 +138,14 @@ return Inertia::render('EmissionCalculatorPage',$data);
 
 
 
+
+
+
+
+
+
+
+
+
+
 }

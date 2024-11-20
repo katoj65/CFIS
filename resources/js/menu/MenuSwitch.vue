@@ -37,23 +37,6 @@
 
 
 
-
-
-
-
-
-<!-- <div v-if="userProfile!=null">
-<user-menu v-if="userRole=='user'"/>
-<admin-menu v-if="userRole=='admin'"/>
-</div>
-<div v-else>
-</div> -->
-
-
-
-
-
-
 </div>
 </template>
 <script>
@@ -103,10 +86,10 @@ sub:[
 {name:'Emission Summary',url:''},
 {name:'Track Progress',url:''},
 {name:'Reduction Strategies',url:''},
+{name:'Carbon Credit',url:''},
 {name:'Offset Options',url:''},
 {name:'Resources & Tools',url:''},
 {name:'FAQs',url:''},
-{name:'Buy / Sell Carbon Credit',url:''},
 {name:'Support Local Projects',url:''},
 {name:'Share Your Progress',url:''},
 {name:'Community Engagement',url:''},

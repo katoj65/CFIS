@@ -2,10 +2,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Calculator\CalculatorController;
-
-
-
-
+use App\Http\Controllers\Calculator\EnergyCalculator;
 
 
 
@@ -14,12 +11,7 @@ use App\Http\Controllers\Calculator\CalculatorController;
 
 Route::get('calculator', [CalculatorController::class, 'index'])->name('calculator.index');
 
-// Route::get('hub/', function(){
-// return('some information');
-// });
-
-
-
+Route::post('/store/calculator/hydropower',[EnergyCalculator::class, 'storeHydropower'])->name('store.hydropower');
 
 
 

@@ -93,6 +93,10 @@ return $user->id==$user_id;
 });
 
 
+
+
+
+
 //check if account has organisation profile
 Gate::define('is_business_profile',function(User $user){
 $profile=BusinessProfileModel::where('user_id',$user->id)->first();
@@ -102,6 +106,13 @@ $user_id=$profile->id;
 }
 return $user->id==$user_id;
 });
+
+
+
+Gate::define('has_access', function (User $user, $id) {
+return $user->id ===$id;
+});
+
 
 
 

@@ -15,10 +15,14 @@ class CreateEnergyConsumptionTable extends Migration
     {
         Schema::create('energy_consumption', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('energy_source');
-            $table->string('equipment');
-            $table->float('quantity');
-            $table->float('hours');
+            $table->string('appliance');
+            $table->integer('number_of_appliances');
+            $table->integer('consumption');
+            $table->decimal('usage_time', 5, 2);
+            $table->decimal('emission_factor',5,2);
+            $table->decimal('carbon_emission',5,2);
             $table->timestamps();
         });
     }
@@ -31,5 +35,6 @@ class CreateEnergyConsumptionTable extends Migration
     public function down()
     {
         Schema::dropIfExists('energy_consumption');
+       
     }
 }

@@ -8,7 +8,7 @@
 <div class="card-body">
 <div class="card-title">
 <h6>
-Hydropower consumption
+Fill in your Hydropower Consumption
 </h6>
 </div>
 </div>
