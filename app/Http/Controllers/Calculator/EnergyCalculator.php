@@ -8,6 +8,7 @@ use App\Models\EmissionFactorModel;
 use Illuminate\Support\Facades\Auth;
 use App\models\EnergyConsumptionModel;
 use App\Http\Controllers\Tools\Portifolio;
+use App\Models\UserRecommendationModel;
 
 class EnergyCalculator extends Controller
 {
@@ -42,8 +43,16 @@ $input=[
 'carbon_emission'=>$total_emission
 ];
 $model=EnergyConsumptionModel::create($input);
+UserRecommendationModel::create();
+
+
+
 return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success','Record saved');
 }
+
+
+
+
 
 //delete hydropower
 public function destroyHydropower(Request $request){
