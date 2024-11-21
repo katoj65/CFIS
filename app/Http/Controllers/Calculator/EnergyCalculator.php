@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\EmissionFactorModel;
 use Illuminate\Support\Facades\Auth;
 use App\models\EnergyConsumptionModel;
+use App\Http\Controllers\Tools\Portifolio;
 
 class EnergyCalculator extends Controller
 {
@@ -44,16 +45,20 @@ $model=EnergyConsumptionModel::create($input);
 return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success','Record saved');
 }
 
-
+//delete hydropower
 public function destroyHydropower(Request $request){
 EnergyConsumptionModel::destroy($request->id);
 return redirect('/user/calculator/energy/hydropower/')->with('success','Record deleted');
 }
 
 
-
-
-
+public function createEnergyPortifolio(Request $request){
+$id=$request->id;
+$status=$request->segment(4);
+$model=new EnergyConsumptionModel;
+$res=Portifolio::createPortifolio($model,$id);
+return redirect('/user/calculator/energy/hydropower/'.$res->id)->with('success','Energy portifolio has been updated.');
+}
 
 
 

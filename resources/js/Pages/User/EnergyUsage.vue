@@ -20,15 +20,30 @@ Delete
 <div class="container">
 <div class="row">
 <div class="col-12">
-<div class="card p-3">
-<div class="body">
+
+
+
+<div class="card p-2">
+<div class="card-inner">
+<div class="card-title-group align-start mb-3">
 <div class="card-title">
-<h6>
-Energy Consumption Summary
-</h6>
+<h6 class="title">Energy Consumption Summary</h6>
+</div>
+<div class="card-tools mt-n1 mr-n1">
+
+<button class="btn btn-light text-muted" style="font-size:15px;" @click="createPortifolio">
+<i class="bi bi-plus-circle" v-if="response.consumption.portifolio=='false'"></i>
+<i class="bi bi-x-circle" style="color:red;" v-else></i>
+ Portifolio
+</button>
+
+
 </div>
 </div>
-<div class="card-body">
+
+
+
+<div class="" style="overflow: auto;">
 
 <el-tabs v-model="activeName">
 <el-tab-pane label="Consumption" name="first">
@@ -46,7 +61,7 @@ Appliance
 Number
 </th>
 <th class="border-0">
-Watts (each)
+Watts (Each)
 </th>
 <th class="border-0">
 Usage Time (Hours)
@@ -131,12 +146,22 @@ Annually
 {{ annually.emissions}} Kg
 </td>
 </tr>
-
-
 </tbody>
 </table>
 
 
+
+
+
+
+
+<div>
+
+
+
+
+
+</div>
 
 
 
@@ -157,7 +182,13 @@ Annually
 
 
 </div>
+
+
+
+
 </div>
+</div>
+
 </div>
 </div>
 </div>
@@ -165,9 +196,11 @@ Annually
 </template>
 <script>
 import AppLayout from '../../Layouts/AppLayout.vue';
+// import EmissionSummaryChart from '../../charts/EmissionSummaryChart.vue';
 export default {
 components:{
-AppLayout
+AppLayout,
+// EmissionSummaryChart
 },
 props:{
 title:{},
@@ -177,7 +210,6 @@ data(){return{
 activeName: 'first',
 subtitle:'Save energy, save money, and protect the planet by switching off what you don’t need!',
 //energy consumption
-consumption:this.response.consumption,
 weekly:this.response.weekly,
 monthly:this.response.monthly,
 annually:this.response.annually,
@@ -201,8 +233,29 @@ status:'success'
 });
 }
 });
+},
+
+createPortifolio(){
+this.form.put(route('portifolio.create'),{
+onSuccess:()=>{
+this.$notify({
+title:'Successful',
+message:this.$page.props.flash.success,
+status:'success',
+position:'bottom-right'
+
+});
 }
 
+});
+}
+},
+
+
+computed:{
+consumption(){
+return this.response.consumption;
+}
 
 
 

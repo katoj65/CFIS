@@ -10,12 +10,12 @@
 <div class="col-3">
 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
 <li v-for="(u,key) in user_menu.main" :key="key" :id="'tooltip-button-interactive'+key">
-<a href="#" class="nav-link py-3 rounded-0 text-white" style="background:#148f77;border-bottom:solid 1px #117864;">
+<Inertia-link href="#" class="nav-link py-3 rounded-0 text-white" style="background:#148f77;border-bottom:solid 1px #117864;">
 <i :class="u.icon" style="font-size:30px;"></i>
 <b-tooltip :target="'tooltip-button-interactive'+key" placement="right" variant="light">
 {{ u.name }}
 </b-tooltip>
-</a>
+</Inertia-link>
 
 </li>
 </ul>
@@ -26,9 +26,9 @@
 
 <ul class="nav nav-pills flex-column mb-auto">
 <li class="nav-item" v-for="(s,key) in user_menu.sub" :key="key">
-<a href="#" class="nav-link text-white">
+<Inertia-link :href="route(s.url)" class="nav-link text-white">
 {{ s.name }}
-</a>
+</Inertia-link>
 </li>
 
 </ul>
@@ -83,16 +83,16 @@ main:[
 
 ],
 sub:[
-{name:'Emission Summary',url:''},
-{name:'Track Progress',url:''},
-{name:'Reduction Strategies',url:''},
-{name:'Carbon Credit',url:''},
-{name:'Offset Options',url:''},
-{name:'Resources & Tools',url:''},
-{name:'FAQs',url:''},
-{name:'Support Local Projects',url:''},
-{name:'Share Your Progress',url:''},
-{name:'Community Engagement',url:''},
+{name:'Emission Summary',url:'user.emission_summary'},
+{name:'Track Progress',url:'home'},
+{name:'Reduction Strategies',url:'home'},
+{name:'Carbon Credit',url:'home'},
+{name:'Offset Options',url:'home'},
+{name:'Resources & Tools',url:'home'},
+{name:'FAQs',url:'home'},
+{name:'Support Local Projects',url:'home'},
+{name:'Share Your Progress',url:'home'},
+{name:'Community Engagement',url:'home'},
 
 
 

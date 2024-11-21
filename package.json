@@ -35,6 +35,7 @@
         "element-ui": "^2.15.14",
         "nprogress": "^0.2.0",
         "radium": "^0.26.2",
+        "vue-d3-charts": "^0.2.8",
         "vue-router": "^4.3.3",
         "vuex": "^3.4.0"
     }

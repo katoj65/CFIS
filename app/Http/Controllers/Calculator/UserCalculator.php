@@ -109,4 +109,12 @@ return Inertia::render('User/EnergyUsage',$data);
 
 
 
+
+
+
+
+
+
+
+
 }

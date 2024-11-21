@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\ReportGasEmission;
 use Illuminate\Support\Facades\Gate;
+use App\models\EnergyConsumptionModel;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -15,8 +17,8 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+public function index()
+{
 
 if(Gate::allows('is_user')){
 $data['title']='Welcome User';
@@ -71,4 +73,35 @@ return redirect('/');
     {
         //
     }
+
+
+
+
+
+    public function emissionSummary()
+    {
+    if(Gate::allows('is_user')){
+    $user_id=Auth::user()->id;
+    $data['title']='Emission Summary';
+    $data['response']=[
+    'energy'=>EnergyConsumptionModel::where('user_id',$user_id)->first(),
+
+
+
+    ];
+    return Inertia::render('User/EmissionSummaryPage',$data);
+    }else{
+    return redirect('/');
+    }
+    }
+
+
+
+
+
+
+
+
+
+
 }
