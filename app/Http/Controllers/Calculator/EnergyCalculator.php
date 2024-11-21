@@ -8,6 +8,7 @@ use App\Models\EmissionFactorModel;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Tools\Portifolio;
 use App\Models\UserEmissionModel;
+use App\Models\UserEmissionLog;
 
 
 class EnergyCalculator extends Controller
@@ -44,8 +45,16 @@ $input=[
 'emission_factor'=>$factor,
 'carbon_emission'=>$total_emission,
 ];
-
 $model=UserEmissionModel::create($input);
+$log=[
+'user_id'=>Auth::user()->id,
+'emission_id'=>$model->id,
+'type'=>$request->source,
+'emission_activity'=>$model->emission_activity,
+'emitter'=>$model->emitter,
+'annual_emission'=>$model->carbon_emission
+];
+UserEmissionLog::create($log);
 return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success','Record saved');
 }
 

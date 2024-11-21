@@ -34,7 +34,8 @@ Delete
 <button class="btn btn-light text-muted" style="font-size:15px;" @click="createPortifolio">
 <i class="bi bi-plus-circle" v-if="response.consumption.portifolio=='false'"></i>
 <i class="bi bi-x-circle" style="color:red;" v-else></i>
- Portifolio
+ <span v-if="response.consumption.portifolio=='false'">Portifolio</span>
+ <span v-else class="text-danger">Portifolio</span>
 </button>
 
 
@@ -153,8 +154,26 @@ Annually
 
 
 <div class="mt-5">
-<h6>Recommendations</h6>
+<table v-if="response.recommendation.length>0" style="width:100%;">
+<thead>
+<tr>
+<th colspan="2" class="text-left">
 
+<el-divider content-position="left"><h6> Recommendations</h6> </el-divider>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr v-for="(r,key) in response.recommendation" :key="key">
+<td style="width:50px;padding:5px;" class="text-muted">
+{{ key+1 }}
+</td>
+<td style="text-align: left;padding:5px;" class="text-muted">
+{{ r.action }}
+</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -166,7 +185,7 @@ Annually
 
 
 </el-tab-pane>
-<el-tab-pane label="Recommendations" name="second">
+<el-tab-pane label="Take Actions" name="second">
 
 
 
