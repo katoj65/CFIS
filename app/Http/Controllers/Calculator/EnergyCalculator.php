@@ -6,9 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\EmissionFactorModel;
 use Illuminate\Support\Facades\Auth;
-use App\models\EnergyConsumptionModel;
 use App\Http\Controllers\Tools\Portifolio;
-use App\Models\UserRecommendationModel;
+use App\Models\UserEmissionModel;
+
 
 class EnergyCalculator extends Controller
 {
@@ -32,21 +32,20 @@ $items=$request->number_of_items*$request->hours*$request->consumption;
 $all_items=$items/1000;
 //calculate the emission using emission factor.
 $total_emission=$all_items*$factor;
+//new input
 $input=[
-'energy_source'=>$request->source,
-'appliance'=>$request->appliance,
-'number_of_appliances'=>$request->number_of_items,
-'consumption'=>$request->consumption,
+'user_id'=>Auth::user()->id,
+'emission_activity'=>'energy consumption',
+'type'=>$request->source,
+'emitter'=>$request->appliance,
+'number_of_emitters'=>$request->number_of_items,
+'consumption_rate'=>$request->consumption,
 'usage_time'=>$request->hours,
 'emission_factor'=>$factor,
-'user_id'=>Auth::user()->id,
-'carbon_emission'=>$total_emission
+'carbon_emission'=>$total_emission,
 ];
-$model=EnergyConsumptionModel::create($input);
-UserRecommendationModel::create();
 
-
-
+$model=UserEmissionModel::create($input);
 return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success','Record saved');
 }
 
@@ -56,7 +55,7 @@ return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success
 
 //delete hydropower
 public function destroyHydropower(Request $request){
-EnergyConsumptionModel::destroy($request->id);
+UserEmissionModel::destroy($request->id);
 return redirect('/user/calculator/energy/hydropower/')->with('success','Record deleted');
 }
 
@@ -64,7 +63,7 @@ return redirect('/user/calculator/energy/hydropower/')->with('success','Record d
 public function createEnergyPortifolio(Request $request){
 $id=$request->id;
 $status=$request->segment(4);
-$model=new EnergyConsumptionModel;
+$model=new UserEmissionModel;
 $res=Portifolio::createPortifolio($model,$id);
 return redirect('/user/calculator/energy/hydropower/'.$res->id)->with('success','Energy portifolio has been updated.');
 }

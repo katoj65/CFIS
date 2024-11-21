@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Gate;
 use Inertia\Inertia;
 use App\Models\ApplianceModel;
 use App\Models\EnergySourceModel;
-use App\models\EnergyConsumptionModel;
+use App\Models\UserEmissionModel;
 
 class UserCalculator extends Controller
 {
@@ -34,7 +34,7 @@ public function energyCalculatorPage(){
 if(Gate::allows('is_user')){
 $data['title']='Calaculate Energy Consumption';
 $data['response']=[
-'source'=>EnergySourceModel::all(),
+'source'=>UserEmissionModel::all(),
 
 
 ];
@@ -77,10 +77,10 @@ return redirect('/');
 
 public function hydropowerUsage(Request $request){
 //create permissions
-$model=EnergyConsumptionModel::find($request->segment(5));
+$model=UserEmissionModel::find($request->segment(5));
 if($model!=null and Gate::allows('has_access',$model->user_id)){
 
-$units=$model->consumption;
+$units=$model->consumption_rate;
 $usage=$model->usage_time;
 $emission=$model->carbon_emission;
 

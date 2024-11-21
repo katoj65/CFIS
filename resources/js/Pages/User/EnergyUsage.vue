@@ -75,16 +75,16 @@ Emission (CO2e)
 <tbody class="border-0">
 <tr>
 <td class="border-0">
-{{ consumption.energy_source }}
+{{ consumption.type }}
 </td>
 <td class="border-0">
-{{ consumption.appliance }}
+{{ consumption.emitter }}
 </td>
 <td class="border-0">
-{{ consumption.number_of_appliances }}
+{{ consumption.number_of_emitters }}
 </td>
 <td class="border-0">
-{{ consumption.consumption }}
+{{ consumption.consumption_rate }}
 </td>
 <td class="border-0">
 {{ consumption.usage_time }}
