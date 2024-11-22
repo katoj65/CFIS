@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(GreenhouseGasReportSeeder::class);
         $this->call(ReportSectorEmissionSeeder::class);
         $this->call(EmissionSourceItemSeeder::class);
+        $this->call(FuelSeeder::class);
 
     }
 }
