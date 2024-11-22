@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 use App\Models\UserEmissionModel;
 use App\Models\UserEmissionLog;
+use App\Models\VehicleCategoryModel;
 
 class UserController extends Controller
 {
@@ -87,14 +88,62 @@ return redirect('/');
     $data['response']=[
     'log'=>UserEmissionModel::where('user_id',$user_id)
     ->orderby('portifolio','ASC')->orderBy('id','DESC')->get(),
-
-
     ];
     return Inertia::render('User/EmissionSummaryPage',$data);
     }else{
     return redirect('/');
     }
     }
+
+
+
+
+
+public function trasportPage(Request $request)
+{
+if(Gate::allows('is_user')){
+$data['title']='Transport';
+$data['response']=[
+'fuel'=>VehicleCategoryModel::select('fuel_type')->distinct()->get(),
+
+];
+return Inertia::render('User/TransportPage',$data);
+}else{
+return redirect('/');
+}
+}
+
+
+
+
+
+
+//transport form request
+public function transportFormRequest(Request $request){
+$fuel=strtolower($request->select_fuel);
+return redirect('/user/calculator/transport/'.$fuel);
+}
+
+
+
+
+
+public function transportForm(Request $request){
+if(Gate::allows('is_user')){
+$data['title']='Vehicles Powered by '.ucfirst($request->segment(4));
+$data['response']=[
+
+];
+
+return Inertia::render('User/VehicleFormPage',$data);
+    }else{
+    abort(404);
+    }
+}
+
+
+
+
 
 
 

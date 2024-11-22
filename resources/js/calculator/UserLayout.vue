@@ -16,7 +16,7 @@ data(){return{
 menu:[
 {name:'Overview',url:'calculator.index'},
 {name:'Energy',url:'user.energy_calculator'},
-{name:'Transportation',url:'user.energy_calculator'},
+{name:'Transportation',url:'user.transport_page'},
 {name:'Diet and Meals',url:'user.energy_calculator'},
 {name:'Waste Disposal',url:'user.energy_calculator'},
 

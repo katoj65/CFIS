@@ -11,7 +11,12 @@ Route::post('user/calculator/form',[UserCalculator::class,'energyCalculatorForm'
 Route::get('user/calculator/energy/hydropower', [UserCalculator::class, 'hydropowerForm'])->name('user.hydropower');
 Route::get('user/calculator/emission/{id}', [UserCalculator::class, 'hydropowerUsage'])->name('user.hydropower_usage');
 Route::get('user/emission/summary', [UserController::class, 'emissionSummary'])->name('user.emission_summary');
+Route::get('user/calculator/transport', [UserController::class, 'trasportPage'])->name('user.transport_page');
+Route::post('user/form/transport', [UserController::class, 'transportFormRequest'])->name('user.form_transport');
 
+Route::get('user/calculator/transport/petrol', [UserController::class, 'transportForm'])->name('calculator.transport_fuel');
+Route::get('user/calculator/transport/diesel', [UserController::class, 'transportForm'])->name('calculator.transport_fuel');
+Route::get('user/calculator/transport/electricity', [UserController::class, 'transportForm'])->name('calculator.transport_fuel');
 
 
 
