@@ -22,18 +22,16 @@ $validattion=$request->validate([
 'consumption'=>'required',
 'hours'=>'required'],['required'=>'*Required*']);
 $factor=EmissionFactorModel::where('name','electricity')->first()->value;
-//calculate the emission
-//consumption for a single item.
-//$item=$request->consumption*$request->hours;
-//convert in to item consumption kilowatts.
-//$kwt=$item/1000;
-//calculate the number of items input.
-$items=$request->number_of_items*$request->hours*$request->consumption;
-//convert consumption to kilowatts for all items
-$all_items=$items/1000;
-//calculate the emission using emission factor.
-$total_emission=$all_items*$factor;
-//new input
+//convert consumption from one item in to kilowatt
+$kW=1000;
+$device=$request->consumption;
+$time=$request->hours;
+$numberDevices=$request->number_of_items;
+//get consumption for a single device
+$convert=$device/$kW;
+$cons=$convert*$time;
+$devices=$cons*$numberDevices;
+
 $input=[
 'user_id'=>Auth::user()->id,
 'emission_activity'=>'energy consumption',
@@ -43,8 +41,9 @@ $input=[
 'consumption_rate'=>$request->consumption,
 'usage_time'=>$request->hours,
 'emission_factor'=>$factor,
-'carbon_emission'=>$total_emission,
+'carbon_emission'=>$devices,
 ];
+
 $model=UserEmissionModel::create($input);
 $log=[
 'user_id'=>Auth::user()->id,
@@ -55,7 +54,7 @@ $log=[
 'annual_emission'=>$model->carbon_emission
 ];
 UserEmissionLog::create($log);
-return redirect('/user/calculator/energy/hydropower/'.$model->id)->with('success','Record saved');
+return redirect('/user/calculator/emission/'.$model->id)->with('success','Record saved');
 }
 
 
@@ -74,7 +73,7 @@ $id=$request->id;
 $status=$request->segment(4);
 $model=new UserEmissionModel;
 $res=Portifolio::createPortifolio($model,$id);
-return redirect('/user/calculator/energy/hydropower/'.$res->id)->with('success','Energy portifolio has been updated.');
+return redirect('/user/calculator/emission/'.$res->id)->with('success','Energy portifolio has been updated.');
 }
 
 

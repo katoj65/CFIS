@@ -78,7 +78,7 @@ return redirect('/');
 
 public function hydropowerUsage(Request $request){
 //create permissions
-$model=UserEmissionModel::find($request->segment(5));
+$model=UserEmissionModel::find($request->segment(4));
 if($model!=null and Gate::allows('has_access',$model->user_id)){
 //log
 $log=UserEmissionLog::where('emission_id',$model->id)->first();
@@ -98,15 +98,18 @@ $data['response']=[
 'weekly'=>$weekly,
 'monthly'=>$monthly,
 'annually'=>$annually,
-'recommendation'=>EmissionRecommendationModel::where([['emission_activity','=',$log->emission_activity],
-['type','=',$log->type],['emitter','=',$log->emitter]
-])->get(),
+'recommendation'=>EmissionRecommendationModel::where('emitter',$model->emitter)
+->where('emission_activity',$model->emission_activity)
+->orwhere('emitter','all')
+->orwhere('emitter',$model->emitter)
+->get(),
 
 ];
 
 return Inertia::render('User/EnergyUsage',$data);
 }else{
     abort('404');
+
 }
 }
 

@@ -6,55 +6,103 @@
 <div class="col-12">
 
 
-    <div class="card card-bordered h-100">
-        <div class="card-inner">
-            <div class="card-title-group align-start mb-3">
-                <div class="card-title">
-                    <h6 class="title">Orders Overview</h6>
-                    <p>In last 15 days buy and sells overview. <a href="#" class="link link-sm">Detailed Stats</a></p>
-                </div>
-                <div class="card-tools mt-n1 mr-n1">
-                    <div class="drodown">
-                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                            <ul class="link-list-opt no-bdr">
-                                <li><a href="#" class="active"><span>15 Days</span></a></li>
-                                <li><a href="#"><span>30 Days</span></a></li>
-                                <li><a href="#"><span>3 Months</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- .card-title-group -->
-            <div class="nk-order-ovwg">
-                <div class="row g-4 align-end">
-                    <div class="col-xxl-8">
-                        <div class="nk-order-ovwg-ck"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                            <canvas class="order-overview-chart chartjs-render-monitor" id="orderOverview" width="1058" height="360" style="display: block; height: 180px; width: 529px;"></canvas>
-                        </div>
-                    </div><!-- .col -->
-                    <div class="col-xxl-4">
-                        <div class="row g-4">
-                            <div class="col-sm-6 col-xxl-12">
-                                <div class="nk-order-ovwg-data buy">
-                                    <div class="amount">12,954.63 <small class="currenct currency-usd">USD</small></div>
-                                    <div class="info">Last month <strong>39,485 <span class="currenct currency-usd">USD</span></strong></div>
-                                    <div class="title"><em class="icon ni ni-arrow-down-left"></em> Buy Orders</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-xxl-12">
-                                <div class="nk-order-ovwg-data sell">
-                                    <div class="amount">12,954.63 <small class="currenct currency-usd">USD</small></div>
-                                    <div class="info">Last month <strong>39,485 <span class="currenct currency-usd">USD</span></strong></div>
-                                    <div class="title"><em class="icon ni ni-arrow-up-left"></em> Sell Orders</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- .col -->
-                </div>
-            </div><!-- .nk-order-ovwg -->
-        </div><!-- .card-inner -->
-    </div>
+<div class="card card-bordered h-100">
+<div class="card-inner">
+<div class="card-title-group align-start mb-3">
+<div class="card-title">
+<h6 class="title">Emission Details</h6>
+
+</div>
+<div class="card-tools mt-n1 mr-n1">
+
+</div>
+</div><!-- .card-title-group -->
+<div class="nk-order-ovwg">
+
+
+
+
+<el-tabs v-model="activeName" @tab-click="handleClick">
+<el-tab-pane label="Summary" name="first">
+
+
+
+<table class="table" v-if="log.length>0">
+<thead class="thead-light border-0">
+<tr class="border-0">
+<th scope="col" class="border-0">Activity</th>
+<th scope="col" class="border-0">Source</th>
+<th scope="col" class="border-0">Appliances</th>
+<th scope="col" class="border-0">Consumption (Watts)</th>
+<th scope="col" class="border-0">Number</th>
+<th scope="col" class="border-0">Emission (CO2e)</th>
+<th scope="col" class="border-0">Date</th>
+<th scope="col" class="border-0" style="width:10px;"></th>
+</tr>
+</thead>
+<tbody class="border-0">
+<tr v-for="(l,key) in log" :key="key">
+
+<td class="border-0 text-muted" style="text-transform:capitalize;">
+<Inertia-link :href="route('user.hydropower_usage',{id:l.id})" class="text-muted"> <i class="bi bi-cloud-fog mr-2" style="font-size:17px;"></i>   {{ l.emission_activity  }} </Inertia-link>
+</td>
+<td class="border-0 text-muted" style="text-transform:capitalize;">{{ l.type}} </td>
+<td class="border-0 text-muted" style="text-transform:capitalize;">
+<Inertia-link :href="route('user.hydropower_usage',{id:l.id})" class="text-muted">
+{{ l.emitter }}
+</Inertia-link>
+ </td>
+<td class="border-0 text-muted">{{ l.consumption_rate }}
+</td>
+<td class="border-0 text-muted">{{ l.number_of_emitters }}</td>
+<td class="border-0 text-muted">{{ l.carbon_emission }} Kg </td>
+<td scope="row" class="border-0 text-muted">{{ l.created_at }}</td>
+<td class="border-0 text-muted">
+    <i class="bi bi-check-circle" v-if="l.portifolio=='true'"></i>
+</td>
+</tr>
+
+</tbody>
+</table>
+<div v-else class="p-3 table-light">
+No emission has been calculated
+</div>
+
+
+
+</el-tab-pane>
+<el-tab-pane label="Statistics" name="second">
+
+
+
+
+
+
+</el-tab-pane>
+<el-tab-pane label="Recommendations" name="third">
+
+
+
+
+
+
+</el-tab-pane>
+</el-tabs>
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- .nk-order-ovwg -->
+</div><!-- .card-inner -->
+</div>
 
 
 
@@ -77,8 +125,8 @@ response:[],
 },
 data(){return{
 subtitle:'From conserving electricity to reducing waste, your actions can make a big difference. Start now!',
-energy:this.response.energy,
-
+log:this.response.log,
+activeName: 'first'
 
 
 
@@ -86,3 +134,6 @@ energy:this.response.energy,
 }}
 }
 </script>
+<style scoped>
+td{padding:10px;}
+</style>

@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\ReportGasEmission;
 use Illuminate\Support\Facades\Gate;
-use App\models\EnergyConsumptionModel;
 use Illuminate\Support\Facades\Auth;
+use App\Models\UserEmissionModel;
+use App\Models\UserEmissionLog;
 
 class UserController extends Controller
 {
@@ -84,8 +85,8 @@ return redirect('/');
     $user_id=Auth::user()->id;
     $data['title']='Emission Summary';
     $data['response']=[
-    'energy'=>EnergyConsumptionModel::where('user_id',$user_id)->first(),
-
+    'log'=>UserEmissionModel::where('user_id',$user_id)
+    ->orderby('portifolio','ASC')->orderBy('id','DESC')->get(),
 
 
     ];

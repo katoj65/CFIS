@@ -158,8 +158,9 @@ Annually
 <thead>
 <tr>
 <th colspan="2" class="text-left">
-
-<el-divider content-position="left"><h6> Recommendations</h6> </el-divider>
+<div class="table-light mb-2 p-2">
+<h6> Recommendations</h6>
+</div>
 </th>
 </tr>
 </thead>
@@ -174,7 +175,9 @@ Annually
 </tr>
 </tbody>
 </table>
-
+<div v-else class="p-3 table-light">
+No recommendations yet
+</div>
 
 
 </div>
@@ -186,12 +189,8 @@ Annually
 
 </el-tab-pane>
 <el-tab-pane label="Take Actions" name="second">
-
-
-
-
-
-
+</el-tab-pane>
+<el-tab-pane label="Offset Emissions" name="third">
 
 </el-tab-pane>
 </el-tabs>

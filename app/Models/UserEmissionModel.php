@@ -21,4 +21,12 @@ class UserEmissionModel extends Model
         'carbon_emission',
         'portifolio'
     ];
+
+    protected $dateFormat = 'Y-m-d';
+    protected $casts = [
+        'created_at' => 'datetime:d-m-Y',
+    ];
+
+
+
 }

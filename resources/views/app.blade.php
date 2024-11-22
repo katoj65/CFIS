@@ -254,11 +254,15 @@ border-bottom:solid 3px #117864 ;
 color:#117864;
 }
 
-
-
 .page-title{background:none;}
 .form-group .form-label{font-weight:normal;font-size:14px;}
 .form-group{margin-bottom:20px;}
+
+table tr td{text-align:center;font-size:15px; text-transform:initial}
+table tr th{text-align:center;font-size:15px;text-transform:initial}
+
+
+
 </style>
 
 <!-- Scripts -->

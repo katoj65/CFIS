@@ -9,7 +9,7 @@ Route::get('home/', [UserController::class, 'index'])->name('user.index');
 Route::get('user/calculator/energy', [UserCalculator::class, 'energyCalculatorPage'])->name('user.energy_calculator');
 Route::post('user/calculator/form',[UserCalculator::class,'energyCalculatorForm'])->name('energy.form');
 Route::get('user/calculator/energy/hydropower', [UserCalculator::class, 'hydropowerForm'])->name('user.hydropower');
-Route::get('user/calculator/energy/hydropower/{id}', [UserCalculator::class, 'hydropowerUsage'])->name('user.hydropower_usage');
+Route::get('user/calculator/emission/{id}', [UserCalculator::class, 'hydropowerUsage'])->name('user.hydropower_usage');
 Route::get('user/emission/summary', [UserController::class, 'emissionSummary'])->name('user.emission_summary');
 
 
