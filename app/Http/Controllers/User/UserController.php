@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\UserEmissionModel;
 use App\Models\UserEmissionLog;
 use App\Models\VehicleCategoryModel;
+use App\Http\Controllers\Calculator\TransportCalculator;
+use App\Models\EmissionRecommendationModel;
 
 class UserController extends Controller
 {
@@ -80,20 +82,20 @@ return redirect('/');
 
 
 
-    public function emissionSummary()
-    {
-    if(Gate::allows('is_user')){
-    $user_id=Auth::user()->id;
-    $data['title']='Emission Summary';
-    $data['response']=[
-    'log'=>UserEmissionModel::where('user_id',$user_id)
-    ->orderby('portifolio','ASC')->orderBy('id','DESC')->get(),
-    ];
-    return Inertia::render('User/EmissionSummaryPage',$data);
-    }else{
-    return redirect('/');
-    }
-    }
+public function emissionSummary()
+{
+if(Gate::allows('is_user')){
+$user_id=Auth::user()->id;
+$data['title']='Emission Summary';
+$data['response']=[
+'log'=>UserEmissionModel::where('user_id',$user_id)
+->orderby('portifolio','ASC')->orderBy('id','DESC')->get(),
+];
+return Inertia::render('User/EmissionSummaryPage',$data);
+}else{
+return redirect('/');
+}
+}
 
 
 
@@ -116,8 +118,6 @@ return redirect('/');
 
 
 
-
-
 //transport form request
 public function transportFormRequest(Request $request){
 $fuel=strtolower($request->select_fuel);
@@ -127,19 +127,86 @@ return redirect('/user/calculator/transport/'.$fuel);
 
 
 
-
 public function transportForm(Request $request){
 if(Gate::allows('is_user')){
 $data['title']='Vehicles Powered by '.ucfirst($request->segment(4));
 $data['response']=[
-
+'distance'=>TransportCalculator::distanceEstimate(),
+'vehicle'=>VehicleCategoryModel::where('fuel_type',$request->segment(4))->get(),
+'fuel_type'=>$request->segment(4),
 ];
 
 return Inertia::render('User/VehicleFormPage',$data);
-    }else{
-    abort(404);
-    }
+}else{
+abort(404);
 }
+}
+
+
+
+
+
+
+
+public function transportationPage(Request $request){
+//create permissions
+$model=UserEmissionModel::find($request->segment(5));
+if($model!=null and Gate::allows('has_access',$model->user_id)){
+//log
+$log=UserEmissionLog::where('emission_id',$model->id)->first();
+$units=$model->consumption_rate;
+$usage=$model->usage_time;
+$emission=$model->carbon_emission;
+
+// weekly,monthly and annually
+$weekly=['consume'=>$units*7,'usage'=>$usage*7,'emissions'=>$emission*7];
+$monthly=['consume'=>$units*7*4,'usage'=>$usage*7*4,'emissions'=>$emission*7*4];
+$annually=['consume'=>$units*7*4*12,'usage'=>$usage*7*4*12,'emissions'=>$emission*7*4*12];
+
+$data['title']='Your Transportation';
+$data['response']=[
+'consumption'=>$model,
+'weekly'=>$weekly,
+'monthly'=>$monthly,
+'annually'=>$annually,
+'recommendation'=>EmissionRecommendationModel::where('emitter',$model->emitter)
+->where('emission_activity',$model->emission_activity)
+->orwhere('emitter','all')
+->orwhere('emitter',$model->emitter)
+->get(),
+
+];
+
+return Inertia::render('User/TransportationPage',$data);
+}else{
+abort('404');
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

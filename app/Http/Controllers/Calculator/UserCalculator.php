@@ -14,7 +14,7 @@ use App\Models\EmissionRecommendationModel;
 
 class UserCalculator extends Controller
 {
-    // Hours of usage
+// Hours of usage
 static function usageHours(){
 $result=[['name'=>'Less than an hour','value'=>0.5]];
 $max=24;
@@ -37,21 +37,21 @@ if(Gate::allows('is_user')){
 $data['title']='Calaculate Energy Consumption';
 $data['response']=[
 'source'=>EnergySourceModel::all(),
-
 ];
-
 return Inertia::render('User/EnergyPage',$data);
 }else{
 return redirect('/');
 }
 }
 
+
+
+
 //switch energy calculator
 public function energyCalculatorForm(Request $request){
 $item=strtolower($request->select_source);
 return redirect('/user/calculator/energy/'.$item);
 }
-
 
 
 
@@ -63,7 +63,6 @@ $data['response']=[
 'appliance'=>ApplianceModel::where('category','home')->orwhere('category','all')->get(),
 'consumption'=>UserCalculator::usageHours(),
 'source'=>EnergySourceModel::where('name',$request->segment(4))->first()->name,
-
 ];
 return Inertia::render('User/HydropowerForm',$data);
 }else{
@@ -75,11 +74,11 @@ return redirect('/');
 
 
 
-
 public function hydropowerUsage(Request $request){
 //create permissions
-$model=UserEmissionModel::find($request->segment(4));
+$model=UserEmissionModel::find($request->segment(5));
 if($model!=null and Gate::allows('has_access',$model->user_id)){
+
 //log
 $log=UserEmissionLog::where('emission_id',$model->id)->first();
 $units=$model->consumption_rate;
@@ -90,8 +89,6 @@ $emission=$model->carbon_emission;
 $weekly=['consume'=>$units*7,'usage'=>$usage*7,'emissions'=>$emission*7];
 $monthly=['consume'=>$units*7*4,'usage'=>$usage*7*4,'emissions'=>$emission*7*4];
 $annually=['consume'=>$units*7*4*12,'usage'=>$usage*7*4*12,'emissions'=>$emission*7*4*12];
-
-
 $data['title']='Your Energy Consumption';
 $data['response']=[
 'consumption'=>$model,
@@ -108,10 +105,37 @@ $data['response']=[
 
 return Inertia::render('User/EnergyUsage',$data);
 }else{
-    abort('404');
+abort('404');
+}
+}
 
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

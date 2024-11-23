@@ -53,19 +53,21 @@ $log=[
 'emitter'=>$model->emitter,
 'annual_emission'=>$model->carbon_emission
 ];
+
 UserEmissionLog::create($log);
-return redirect('/user/calculator/emission/'.$model->id)->with('success','Record saved');
+$segment=str_replace(' ','-',$model->emission_activity);
+return redirect('/user/calculator/emission/'.$segment.'/'.$model->id)->with('success','Record saved');
 }
-
-
 
 
 
 //delete hydropower
 public function destroyHydropower(Request $request){
 UserEmissionModel::destroy($request->id);
-return redirect('/user/calculator/energy/hydropower/')->with('success','Record deleted');
+return redirect('/user/emission/summary')->with('success','Record deleted');
 }
+
+
 
 
 public function createEnergyPortifolio(Request $request){
@@ -73,7 +75,9 @@ $id=$request->id;
 $status=$request->segment(4);
 $model=new UserEmissionModel;
 $res=Portifolio::createPortifolio($model,$id);
-return redirect('/user/calculator/emission/'.$res->id)->with('success','Energy portifolio has been updated.');
+$item=$model::find($request->id);
+$segment=str_replace(' ','-',$item->emission_activity);
+return redirect('/user/calculator/emission/'.$segment.'/'.$res->id)->with('success','Energy portifolio has been updated.');
 }
 
 

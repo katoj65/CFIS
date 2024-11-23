@@ -13,6 +13,7 @@ class VehicleCategoryModel extends Model
         'category',
         'fuel_type',
         'consumption',
+        'distance',
         'emission_factor'
     ];
 }

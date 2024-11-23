@@ -11,24 +11,12 @@ Fill in the vehicle details
 </h6>
 </div>
 </div>
-
-
 <div class="card-body" style="min-height:200px;">
 <div class="col-12">
-
-
-
-
-
-
-
-
-
-</div>
-
+<Transport></Transport>
 </div>
 </div>
-
+</div>
 </div>
 </div>
 </user-layout>
@@ -38,11 +26,14 @@ Fill in the vehicle details
 
 import AppLayout from '../../Layouts/AppLayout.vue';
 import UserLayout from '../../calculator/UserLayout.vue';
+import Transport from '../../calculator/Transport.vue';
 
 export default {
 components:{
 AppLayout,
 UserLayout,
+Transport
+
 
 
 },
