@@ -99,8 +99,7 @@ $data['response']=[
 ->where('emission_activity',$model->emission_activity)
 ->orwhere('emitter','all')
 ->orwhere('emitter',$model->emitter)
-->get(),
-
+->get()
 ];
 
 return Inertia::render('User/EnergyUsage',$data);

@@ -50,18 +50,17 @@ $vehicle=VehicleCategoryModel::where('category',$request->type)
 $ltr=$vehicle->consumption/$vehicle->distance;
 //Get emission factor.
 $emission_factor=EmissionfactorModel::where('name',$request->fuel_type)->first()->value;
+//total distance
+//total_distance = distance * number_of_times_traveled * number_of_vehicles
+$total_distance=$request->distance*$request->usage*$request->count;
 //Fuel consumption
 //Fuel Consumed (L)=(100 Kilometers Traveled (km))×Fuel Consumption (L/100 km)
-$fuel_consumed=$request->distance*$ltr;
+$fuel_consumed=$total_distance*$ltr;
 //Consumption for a number of vehicles
-//Consumption X a number of vehicles
-$vehicles_consumption=$fuel_consumed*$request->count;
-//single consumption
-$vehicles_consumption=$fuel_consumed*$request->count;
-//Number of times a vehicles used a month
-$usage=$request->usage*4;
-//Vehicle consumption based on monthly usage
-$consumption_usage=$vehicles_consumption*$usage;
+
+//emission = total_consumption * emission_factor
+$emission=$fuel_consumed*$emission_factor;
+
 //input
 $input=[
 'user_id'=>Auth::user()->id,
@@ -70,9 +69,9 @@ $input=[
 'type'=>$request->fuel_type,
 'emitter'=>$vehicle->category,
 'number_of_emitters'=>$request->count,
-'usage_time'=>$request->distance,
+'usage_time'=>$total_distance,
 'emission_factor'=>$emission_factor,
-'carbon_emission'=>$consumption_usage
+'carbon_emission'=>$emission
 ];
 
 $model=UserEmissionModel::create($input);
@@ -82,7 +81,7 @@ $log=[
 'type'=>$model->type,
 'emission_activity'=>$model->emission_activity,
 'emitter'=>$model->emitter,
-'annual_emission'=>$model->carbon_emission
+'annual_emission'=>$model->carbon_emission,
 ];
 
 UserEmissionLog::create($log);

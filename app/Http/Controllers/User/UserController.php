@@ -13,6 +13,11 @@ use App\Models\UserEmissionLog;
 use App\Models\VehicleCategoryModel;
 use App\Http\Controllers\Calculator\TransportCalculator;
 use App\Models\EmissionRecommendationModel;
+use App\Http\Resources\TransportResource;
+use App\Http\Resources\EmissionSummaryResource;
+use App\Http\Resources\DashboardResource;
+
+
 
 class UserController extends Controller
 {
@@ -26,7 +31,7 @@ public function index()
 
 if(Gate::allows('is_user')){
 $data['title']='Welcome User';
-$data['response']=[];
+$data['response']=new DashboardResource(Auth::user());
 return Inertia::render('User/DashboardPage',$data);
 }else{
 return redirect('/');
@@ -86,11 +91,12 @@ public function emissionSummary()
 {
 if(Gate::allows('is_user')){
 $user_id=Auth::user()->id;
+$model=UserEmissionModel::where('user_id',$user_id)
+->orderby('portifolio','ASC')->orderBy('id','DESC')->get();
 $data['title']='Emission Summary';
-$data['response']=[
-'log'=>UserEmissionModel::where('user_id',$user_id)
-->orderby('portifolio','ASC')->orderBy('id','DESC')->get(),
-];
+$data['response']=EmissionSummaryResource::collection($model);
+$data['statistics']='';
+
 return Inertia::render('User/EmissionSummaryPage',$data);
 }else{
 return redirect('/');
@@ -149,34 +155,9 @@ abort(404);
 
 
 public function transportationPage(Request $request){
-//create permissions
 $model=UserEmissionModel::find($request->segment(5));
 if($model!=null and Gate::allows('has_access',$model->user_id)){
-//log
-$log=UserEmissionLog::where('emission_id',$model->id)->first();
-$units=$model->consumption_rate;
-$usage=$model->usage_time;
-$emission=$model->carbon_emission;
-
-// weekly,monthly and annually
-$weekly=['consume'=>$units*7,'usage'=>$usage*7,'emissions'=>$emission*7];
-$monthly=['consume'=>$units*7*4,'usage'=>$usage*7*4,'emissions'=>$emission*7*4];
-$annually=['consume'=>$units*7*4*12,'usage'=>$usage*7*4*12,'emissions'=>$emission*7*4*12];
-
-$data['title']='Your Transportation';
-$data['response']=[
-'consumption'=>$model,
-'weekly'=>$weekly,
-'monthly'=>$monthly,
-'annually'=>$annually,
-'recommendation'=>EmissionRecommendationModel::where('emitter',$model->emitter)
-->where('emission_activity',$model->emission_activity)
-->orwhere('emitter','all')
-->orwhere('emitter',$model->emitter)
-->get(),
-
-];
-
+$data['response']=new TransportResource($model);
 return Inertia::render('User/TransportationPage',$data);
 }else{
 abort('404');

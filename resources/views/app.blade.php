@@ -258,8 +258,8 @@ color:#117864;
 .form-group .form-label{font-weight:normal;font-size:14px;}
 .form-group{margin-bottom:20px;}
 
-table tr td{text-align:center;font-size:15px; text-transform:initial}
-table tr th{text-align:center;font-size:15px;text-transform:initial}
+table tr td{font-size:15px; text-transform:initial}
+table tr th{font-size:15px;text-transform:initial}
 
 
 

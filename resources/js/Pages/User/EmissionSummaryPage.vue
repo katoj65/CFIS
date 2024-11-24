@@ -19,10 +19,7 @@
 </div><!-- .card-title-group -->
 <div class="nk-order-ovwg">
 
-
-
-
-<el-tabs v-model="activeName" @tab-click="handleClick">
+<el-tabs v-model="activeName">
 <el-tab-pane label="Summary" name="first">
 
 
@@ -31,9 +28,9 @@
 <thead class="thead-light border-0">
 <tr class="border-0">
 <th scope="col" class="border-0">Activity</th>
-<th scope="col" class="border-0">Source</th>
+<!-- <th scope="col" class="border-0">Source</th> -->
 <th scope="col" class="border-0">Appliances</th>
-<th scope="col" class="border-0">Consumption (Watts)</th>
+<th scope="col" class="border-0">Consumption</th>
 <th scope="col" class="border-0">Number</th>
 <th scope="col" class="border-0">Emission (CO2e)</th>
 <th scope="col" class="border-0">Date</th>
@@ -42,26 +39,24 @@
 </thead>
 <tbody class="border-0">
 <tr v-for="(l,key) in log" :key="key">
-
 <td class="border-0 text-muted" style="text-transform:capitalize;">
-<Inertia-link :href="route('user.hydropower_usage',{id:l.id})" class="text-muted"> <i class="bi bi-cloud-fog mr-2" style="font-size:17px;"></i>   {{ l.emission_activity  }} </Inertia-link>
+<Inertia-link :href="route(l.url,{id:l.id})" class="text-muted"> <i class="bi bi-cloud-fog mr-2" style="font-size:17px;"></i>   {{ l.emission_activity  }} </Inertia-link>
 </td>
-<td class="border-0 text-muted" style="text-transform:capitalize;">{{ l.type}} </td>
-<td class="border-0 text-muted" style="text-transform:capitalize;">
-<Inertia-link :href="route('user.hydropower_usage',{id:l.id})" class="text-muted">
+<!-- <td class="border-0 text-muted" style="text-transform:capitalize;">{{ l.type}} </td> -->
+<td class="border-0 text-muted text-left" style="text-transform:capitalize;">
+<Inertia-link class="text-muted" :href="route(l.url,{id:l.id})" >
 {{ l.emitter }}
 </Inertia-link>
  </td>
-<td class="border-0 text-muted">{{ l.consumption_rate }}
+<td class="border-0 text-muted text-left">{{ l.consumption_rate }}
 </td>
 <td class="border-0 text-muted">{{ l.number_of_emitters }}</td>
 <td class="border-0 text-muted">{{ l.carbon_emission }} Kg </td>
 <td scope="row" class="border-0 text-muted">{{ l.created_at }}</td>
 <td class="border-0 text-muted">
-    <i class="bi bi-check-circle" v-if="l.portifolio=='true'"></i>
+<i class="bi bi-check-circle" v-if="l.portifolio=='true'"></i>
 </td>
 </tr>
-
 </tbody>
 </table>
 <div v-else class="p-3 table-light">
@@ -125,7 +120,7 @@ response:[],
 },
 data(){return{
 subtitle:'From conserving electricity to reducing waste, your actions can make a big difference. Start now!',
-log:this.response.log,
+log:this.response.data,
 activeName: 'first'
 
 
