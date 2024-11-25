@@ -5,6 +5,10 @@
 </template>
 
 
+<!-- {{ response.data.total_emission}} -->
+
+
+
 <div class="container p-0">
 <div class="row mb-3">
 <div class="col-12 col-md-4">
@@ -23,8 +27,8 @@
 <div class="align-end gy-3 gx-5 flex-wrap flex-md-nowrap flex-lg-wrap flex-xxl-nowrap">
 <div class="nk-sale-data-group flex-md-nowrap g-4">
 <div class="nk-sale-data">
-<span class="amount">14,299.59 <span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>16.93%</span></span>
-<span class="sub-title">Since Year 2021</span>
+<span class="amount">{{ response.data.total_emission.amount }} <span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>Kg CO2e</span></span>
+<span class="sub-title">Since date:  {{ response.data.total_emission.date}} </span>
 </div>
 
 </div>
@@ -32,6 +36,10 @@
 </div>
 </div>
 </div>
+
+
+
+
 
 
 </div>
@@ -39,6 +47,9 @@
 
 
 <div class="col-12 col-md-8">
+
+
+
 
 <div class="card card-bordered h-100">
 <div class="card-inner">
@@ -64,8 +75,28 @@ Latest: 14, November 2024
 </div>
 
 
+
+
+
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -79,14 +110,14 @@ Latest: 14, November 2024
 
 
 
-    <div class="card card-bordered card-full">
+    <div class="card card-bordered card-full h-100">
         <div class="card-inner">
             <div class="card-title-group">
                 <div class="card-title">
                     <h6 class="title">Carbon Footprint Summary</h6>
                 </div>
                 <div class="card-tools">
-                    <a href="#" class="link">View All</a>
+                    <Inertia-link :href="route('user.emission_summary')" class="link text-muted">View All</Inertia-link>
                 </div>
             </div>
         </div>
@@ -96,23 +127,36 @@ Latest: 14, November 2024
 
 
 
-            <table class="table table-hover">
+            <table class="table">
             <thead class="border-0">
                 <tr>
                 <th scope="col" class="border-0">#</th>
-                <th scope="col" class="border-0">First</th>
-                <th scope="col" class="border-0">Last</th>
-                <th scope="col" class="border-0">Handle</th>
+                <th scope="col" class="border-0">Activity</th>
+                <th scope="col" class="border-0">Emitter</th>
+                <th scope="col" class="border-0">Emission(CO2e) </th>
                 </tr>
             </thead>
-            <tbody class="border-0">
-                <tr v-for="(k,key) in 10" :key="key">
+            <tbody class="border-0" v-if="summary.length>0">
+                <tr v-for="(s,key) in summary" :key="key">
                 <th scope="row" class="border-0 text-muted">{{ key+1}} </th>
-                <td class="border-0 text-muted">Mark</td>
-                <td class="border-0 text-muted">Otto</td>
-                <td class="border-0 text-muted">@mdo</td>
+                <td class="border-0 text-muted" style="text-transform: capitalize;">
+                {{ s.emission_activity }}
+                </td>
+                <td class="border-0 text-muted">
+               {{ s.number_of_emitters }} {{ s.emitter }}
+                </td>
+                <td class="border-0 text-muted">
+                {{ s.carbon_emission }} Kg
+                </td>
                 </tr>
 
+            </tbody>
+            <tbody v-else class="border-0">
+            <tr class="border-0">
+            <td class="border-0 py-5 text-center text-muted" colspan="4">
+          You have not submitted any emission data
+            </td>
+            </tr>
             </tbody>
             </table>
 
@@ -444,6 +488,23 @@ topics:[
 
 
 
-}}
+}},
+
+computed:{
+summary(){
+return this.response.data.emission_summary;
+},
+
+
+
+
+
+
+
+}
+
+
+
+
 }
 </script>

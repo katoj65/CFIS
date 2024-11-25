@@ -28,7 +28,6 @@ class UserController extends Controller
      */
 public function index()
 {
-
 if(Gate::allows('is_user')){
 $data['title']='Welcome User';
 $data['response']=new DashboardResource(Auth::user());

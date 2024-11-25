@@ -46,7 +46,7 @@ $validate=$request->validate([
 'tel'=>['required'],
 'profession'=>['required'],
 'job'=>['required']
-],['required'=>'This field is required.']);
+],['required'=>'*Required*']);
 
 Profile::create([
 'user_id'=>Auth::user()->id,
@@ -82,7 +82,7 @@ $validate=$request->validate([
 'email'=>'required',
 'founded_at'=>'required',
 'origin'=>'required'
-],['required'=>'This field is required']);
+],['required'=>'*Required*']);
 
 BusinessProfileModel::create([
 'user_id'=>Auth::user()->id,

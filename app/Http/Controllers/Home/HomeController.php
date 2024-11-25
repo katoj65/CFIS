@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 use App\Models\BusinessSector;
 use App\Models\UpdateModel;
+use App\Http\Resources\CreateProfileResource;
 
 
 
@@ -45,20 +46,11 @@ return redirect('/'.$role);
 
 
 }else{
-
 $data['title']='Create Profile';
-$data['response']=[
-'user'=>Auth::user(),
-'category'=>BusinessSector::orderby('name','ASC')->get(),
-
-
-];
+$data['response']=new CreateProfileResource(Auth::user());
 //create profile
 return Inertia::render('Profile/CreateProfile',$data);
-
 }
-
-
 }else{
 
 $data['title']='Welcome';
@@ -72,7 +64,6 @@ $data['response']=[
 ];
 
 return Inertia::render('LandingPage',$data);
-
 
 }
 

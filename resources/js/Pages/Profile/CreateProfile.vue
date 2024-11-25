@@ -1,76 +1,141 @@
-    <template>
-    <app-layout :title="title" :subtitle="subtitle">
-
-    <section>
-    <div class="row">
-
-    <div class="col-12 col-md-4 mb-4">
+<template>
 
 
-    <div class="card card-bordered h-100">
-    <div class="card-inner">
-    <div class="team">
-
-    <div class="user-card user-card-s2">
-    <div class="user-avatar lg bg-success">
-    <b-icon icon="person-fill" aria-hidden="true"></b-icon>
-    <div class="status dot dot-lg dot-success"></div>
-    </div>
-    <div class="user-info">
-    <h6 style="text-transform:capitalize;">{{ user.firstname }} {{ user.lastname }} </h6>
-    <span class="sub-text text-uppercase">
-    <b-icon icon="shield-fill" aria-hidden="true" class="mr-1"></b-icon> {{ user.role }}
-    </span>
-    </div>
-    </div>
-    <ul class="team-info">
-    <li><span>Join Date</span><span>
-    {{ user.created_at }}
-    </span></li>
-    <!-- <li><span>Contact</span><span>
-    {{ user.tel }}
-    </span></li> -->
-    <li><span>Email</span><span>
-    {{ user.email }}
-    </span></li>
-    </ul>
-    <div class="team-view">
-    <a href="html/user-details-regular.html" class="btn btn-block btn-dim btn-primary"><span>View Profile</span></a>
-    </div>
-    </div><!-- .team -->
-    </div><!-- .card-inner -->
-    </div>
+<div class="nk-app-root">
+<!-- main @s -->
+<div class="nk-main">
+<!-- wrap @s -->
+<div class="nk-wrap nk-wrap-nosidebar">
+<!-- content @s -->
+<div class="nk-content ">
+<div class="nk-split nk-split-page nk-split-md">
 
 
-    </div>
-    <div class="col-12 col-md-8 mb-4">
 
-
-    <div class="card card-bordered h-100" style="min-height:500px;">
-    <div class="card-inner">
-    <el-tabs type="">
-    <el-tab-pane>
-    <span slot="label">
-    <b-icon icon="person-fill" aria-hidden="true" style="position:absolute;"></b-icon>
-    <span class="ml-3">Create Personal Profile</span>
-    </span>
-
-    <div class="p-4">
-    <h6>Personal profile information</h6>
-    <create-user-profile/>
-    </div>
-
-    </el-tab-pane>
-    <el-tab-pane>
-    <span slot="label">
-    <b-icon icon="building" aria-hidden="true" style="position:absolute;"></b-icon>
-    <span class="ml-3">Create Business/Organisation Profile</span>
-    </span>
-
-<div class="p-4">
-<h6>Business profile information</h6>
-<create-business-profile :category="category"/>
+<div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white w-lg-45">
+<div class="absolute-top-right d-lg-none p-5">
+<a href="#" class="toggle btn btn-white btn-icon btn-light" data-target="athPromo"><em class="icon ni ni-info"></em></a>
 </div>
+<div class="nk-block nk-block-middle nk-auth-body">
+<div class="brand-logo pb-5">
+<a href="html/index.html" class="logo-link">
+<img :src="$page.props.system.image_directory+'logos/logo.png'" style="width:100px;"/>
+</a>
+</div>
+<div class="nk-block-head">
+<div class="nk-block-head-content">
+<h5 class="nk-block-title">Join the Carbon Footprint Information System Today!</h5>
+<div class="nk-block-des text-success">
+<p>Understanding and managing your carbon footprint has never been easier. By creating a profile on the Carbon Footprint Information System, you take a vital step toward contributing to a sustainable future.</p>
+
+
+<div class="py-3">
+<h6>
+    Why Create Your Profile?
+</h6>
+<ol>
+<li class="text-muted">
+    Easily measure your carbon emissions from daily activities like transportation, energy use, and more.
+</li>
+<li class="text-muted">
+    Establish personalized emission reduction targets to make a meaningful difference.
+</li>
+<li class="text-muted">
+    Gain access to expert insights, tools, and tips for reducing your footprint effectively.
+</li>
+<li class="text-muted">
+    Join a global community committed to combating climate change.
+</li>
+</ol>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<!-- .nk-block -->
+<div class="nk-block nk-auth-footer">
+<div class="nk-block-between">
+<ul class="nav nav-sm">
+<li class="nav-item">
+<a class="nav-link" href="#">Terms &amp; Condition</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Privacy Policy</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Help</a>
+</li>
+
+</ul><!-- .nav -->
+</div>
+<div class="mt-3">
+<p>© {{ year }} UCR. All Rights Reserved.</p>
+</div>
+</div><!-- .nk-block -->
+</div><!-- .nk-split-content -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nk-split-content nk-split-stretch bg-lighter d-flex toggle-break-lg toggle-slide toggle-slide-right toggle-screen-lg" data-content="athPromo" data-toggle-screen="lg" data-toggle-overlay="true">
+<div class="slider-wrap w-100 w-max-550px  p-3 p-sm-3 m-auto">
+<div class="nk-feature nk-feature-center">
+<div class="nk-feature-content  py-4 p-sm-2">
+
+
+<div class="user-card user-card-s2">
+<div class="user-avatar lg bg-secondary">
+<span>
+
+    <i class="bi bi-person-fill" style="font-size:50px;"></i>
+</span>
+<div class="status dot dot-lg dot-success"></div>
+</div>
+<div class="user-info">
+<h6 style="text-transform:capitalize;">{{ data.firstname }} {{ data.lastname }} </h6>
+<span class="sub-text">
+{{ data.email }}
+</span>
+</div>
+</div>
+
+
+
+
+<el-tabs v-model="activeName">
+<el-tab-pane label="Personal Profile" name="first">
+
+
+    <create-user-profile/>
+
+
+</el-tab-pane>
+<el-tab-pane label="Business/Organisation Profile" name="second">
+<create-business-profile :category="category"/>
 </el-tab-pane>
 </el-tabs>
 
@@ -85,27 +150,34 @@
 
 
 
-
-
 </div>
+</div><!-- .nk-feature -->
+</div><!-- .slider-wrap -->
+</div><!-- .nk-split-content -->
+</div><!-- .nk-split -->
+</div>
+<!-- wrap @e -->
+</div>
+<!-- content @e -->
+</div>
+<!-- main @e -->
 </div>
 
-</div>
-</div>
-</section>
 
 
 
 
-</app-layout>
+
+
+
+
 </template>
 <script>
-import AppLayout from '../../Layouts/AppLayout.vue';
+
 import CreateUserProfile from '../../forms/CreateUserProfile.vue';
 import CreateBusinessProfile from '../../forms/CreateBusinessProfile.vue';
 export default {
 components:{
-AppLayout,
 CreateUserProfile,
 CreateBusinessProfile
 
@@ -114,13 +186,14 @@ CreateBusinessProfile
 props:{
 title:{},
 response:[],
+
 },
 
 
 data(){return{
 subtitle:'Help us understand your needs and preferences.',
-
-
+data:this.response.data,
+activeName:'first',
 
 
 
@@ -128,11 +201,13 @@ subtitle:'Help us understand your needs and preferences.',
 
 
 computed:{
-user(){
-return this.response.user;
-},
 category(){
-return this.response.category;
+return this.response.data.category;
+},
+
+year(){
+var date=new Date();
+return date.getFullYear();
 }
 
 
@@ -142,3 +217,10 @@ return this.response.category;
 
 }
 </script>
+<style scoped>
+ol li{
+list-style:lower-roman;
+margin-bottom: 15px;
+font-size: 14px;
+}
+</style>
