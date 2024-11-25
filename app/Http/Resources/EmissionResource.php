@@ -20,10 +20,10 @@ return [
 'type'=>$this->type,
 'emitter'=>$this->emitter,
 'number_of_emitters'=>$this->number_of_emitters,
-'consumption_rate'=>$this->consumption_rate,
+'consumption_rate'=>round($this->consumption_rate,10),
 'usage_time'=>$this->usage_time,
 'emission_factor'=>$this->emission_factor,
-'carbon_emission'=>$this->carbon_emission,
+'carbon_emission'=>round($this->carbon_emission,10),
 'portifolio'=>$this->portifolio,
 'created_at'=>$this->created_at
 ];

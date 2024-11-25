@@ -11,6 +11,7 @@ use App\Models\EnergySourceModel;
 use App\Models\UserEmissionLog;
 use App\Models\UserEmissionModel;
 use App\Models\EmissionRecommendationModel;
+use App\Http\Resources\UserEmissionresource;
 
 class UserCalculator extends Controller
 {
@@ -56,6 +57,7 @@ return redirect('/user/calculator/energy/'.$item);
 
 
 
+
 public function hydropowerForm(Request $request){
 if(Gate::allows('is_user')){
 $data['title']='Calaculate Energy Consumption';
@@ -74,34 +76,12 @@ return redirect('/');
 
 
 
+
 public function hydropowerUsage(Request $request){
 //create permissions
 $model=UserEmissionModel::find($request->segment(5));
 if($model!=null and Gate::allows('has_access',$model->user_id)){
-
-//log
-$log=UserEmissionLog::where('emission_id',$model->id)->first();
-$units=$model->consumption_rate;
-$usage=$model->usage_time;
-$emission=$model->carbon_emission;
-
-// weekly,monthly and annually
-$weekly=['consume'=>$units*7,'usage'=>$usage*7,'emissions'=>$emission*7];
-$monthly=['consume'=>$units*7*4,'usage'=>$usage*7*4,'emissions'=>$emission*7*4];
-$annually=['consume'=>$units*7*4*12,'usage'=>$usage*7*4*12,'emissions'=>$emission*7*4*12];
-$data['title']='Your Energy Consumption';
-$data['response']=[
-'consumption'=>$model,
-'weekly'=>$weekly,
-'monthly'=>$monthly,
-'annually'=>$annually,
-'recommendation'=>EmissionRecommendationModel::where('emitter',$model->emitter)
-->where('emission_activity',$model->emission_activity)
-->orwhere('emitter','all')
-->orwhere('emitter',$model->emitter)
-->get()
-];
-
+$data['response']=new UserEmissionResource($model);
 return Inertia::render('User/EnergyUsage',$data);
 }else{
 abort('404');

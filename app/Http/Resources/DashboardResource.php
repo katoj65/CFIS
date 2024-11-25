@@ -35,7 +35,7 @@ return [
 'lastname'=>$this->lastname,
 'email'=>$this->email,
 'role'=>$this->role,
-'total_emission'=>['date'=>$since!=null?$since->created_at->format('d-M-Y'):$this->created_at->format('d-M-Y'),'amount'=>ceil($amount)],
+'total_emission'=>['date'=>$since!=null?$since->created_at->format('d-M-Y'):$this->created_at->format('d-M-Y'),'amount'=>round($amount,10)],
 'emission_summary'=>EmissionSummaryResource::collection(UserEmissionModel::where('user_id',$this->id)->limit(10)->orderby('created_at','Desc')->get()),
 
 

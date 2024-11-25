@@ -1,5 +1,5 @@
 <template>
-<app-layout :title="title" :subtitle="subtitle">
+<app-layout :title="consumption.title" :subtitle="subtitle">
 <template #action>
 <el-dropdown :hide-on-click="false">
 <span class="el-dropdown-link btn bg-white">
@@ -32,9 +32,9 @@ Delete
 <div class="card-tools mt-n1 mr-n1">
 
 <button class="btn btn-light text-muted" style="font-size:15px;" @click="createPortifolio">
-<i class="bi bi-plus-circle" v-if="response.consumption.portifolio=='false'"></i>
+<i class="bi bi-plus-circle" v-if="response.data.portifolio=='false'"></i>
 <i class="bi bi-x-circle" style="color:red;" v-else></i>
- <span v-if="response.consumption.portifolio=='false'">Portifolio</span>
+ <span v-if="response.data.portifolio=='false'">Portifolio</span>
  <span v-else class="text-danger">Portifolio</span>
 </button>
 
@@ -52,7 +52,7 @@ Delete
 <table class="table">
 <thead class="table-light border-0">
 <tr >
-<th class="border-0">
+<th class="border-0 text-left">
 Source
 </th>
 <th class="border-0">
@@ -75,7 +75,7 @@ Emission (CO2e)
 </thead>
 <tbody class="border-0">
 <tr>
-<td class="border-0">
+<td class="border-0 text-left">
 {{ consumption.type }}
 </td>
 <td class="border-0">
@@ -98,63 +98,27 @@ Emission (CO2e)
 
 
 <tr>
-<th class="border-0">
-Weekly
+<th colspan="6" class="table-light text-left border-0">
+Your {{ consumption.emitter }} Consumption Breakdown
 </th>
-<th class="border-0"></th>
-<td class="border-0"></td>
-<td class="border-0">
-{{ weekly.consume}}
-</td>
-<td class="border-0">
-{{ weekly.usage}}
-</td>
-<td class="border-0">
-{{ weekly.emissions}} Kg
-</td>
 </tr>
 
-<tr>
-<th class="border-0">
-Monthly
-</th>
-<th class="border-0"></th>
-<td class="border-0"></td>
-<td class="border-0">
-{{ monthly.consume}}
+<tr v-for="(s,key) in consumption.statistics" :key="key">
+<td class="border-0 text-left" style="text-transform: capitalize;" colspan="4">
+{{ s.period }}
 </td>
 <td class="border-0">
-{{ monthly.usage}}
+{{ s.usage }}
 </td>
 <td class="border-0">
-{{ monthly.emissions}} Kg
-</td>
-</tr>
-
-<tr>
-<th class="border-0">
-Annually
-</th>
-<th class="border-0"></th>
-<td class="border-0"></td>
-<td class="border-0">
-{{ annually.consume}}
-</td>
-<td class="border-0">
-{{ annually.usage}}
-</td>
-<td class="border-0">
-{{ annually.emissions}} Kg
+{{ s.carbon_emission }} Kg
 </td>
 </tr>
 </tbody>
 </table>
 
-
-
-
 <div class="mt-5">
-<table v-if="response.recommendation.length>0" style="width:100%;">
+<table v-if="consumption.recommendation.length>0" style="width:100%;">
 <thead>
 <tr>
 <th colspan="2" class="text-left">
@@ -165,7 +129,7 @@ Annually
 </tr>
 </thead>
 <tbody>
-<tr v-for="(r,key) in response.recommendation" :key="key">
+<tr v-for="(r,key) in consumption.recommendation" :key="key">
 <td style="width:50px;padding:5px;" class="text-muted">
 {{ key+1 }}
 </td>
@@ -181,10 +145,6 @@ No recommendations yet
 
 
 </div>
-
-
-
-
 
 
 </el-tab-pane>
@@ -231,7 +191,7 @@ annually:this.response.annually,
 
 //form
 form:this.$inertia.form({
-id:this.response.consumption.id,
+id:this.response.data.id,
 }),
 
 }},
@@ -269,7 +229,7 @@ position:'bottom-right'
 
 computed:{
 consumption(){
-return this.response.consumption;
+return this.response.data;
 }
 
 
