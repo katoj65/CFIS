@@ -3,6 +3,7 @@
 <form @submit.prevent="submit">
 <div class="row">
 <div class="col-12 col-md-6">
+
 <div class="form-group">
 <label class="form-label" for="default-01">Home Appliance: <error-inline :error="errors.appliance"></error-inline></label>
 <div class="form-control-wrap">
@@ -16,7 +17,7 @@
 </div>
 <div class="col-12 col-md-6">
 <div class="form-group">
-<label class="form-label" for="default-01">Number of Appliances: <error-inline :error="errors.num"></error-inline> </label>
+<label class="form-label" for="default-01">Number of Appliances: <error-inline :error="errors.number_of_items"></error-inline> </label>
 <div class="form-control-wrap">
 <el-input-number  @change="handleChange" :min="1" :max="10000" class="form-control" v-model="num"></el-input-number>
 </div>

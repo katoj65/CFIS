@@ -1,6 +1,6 @@
 <template>
 <app-layout :title="title" :subtitle="subtitle">
-<div class="container">
+<div class="container p-0">
 <div class="row">
 
 <div class="col-12">

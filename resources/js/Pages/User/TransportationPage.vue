@@ -17,7 +17,9 @@ Delete
 </el-dropdown-menu>
 </el-dropdown>
 </template>
-<div class="container">
+
+
+<div class="container p-0">
 <div class="row">
 <div class="col-12">
 

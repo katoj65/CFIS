@@ -2,7 +2,6 @@
 
 <form @submit.prevent="submit">
 <div class="row">
-
 <div class="col-12 col-md-7">
 <div class="form-group">
 <label class="form-label" for="default-01">Vehicle Type: <error-inline :error="errors.type"></error-inline></label>

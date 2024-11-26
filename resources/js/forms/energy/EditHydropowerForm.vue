@@ -2,6 +2,7 @@
 
 <form @submit.prevent="submit">
 <div class="row">
+   
 <div class="col-12 col-md-6">
 <div class="form-group">
 <label class="form-label" for="default-01">Home Appliance: <error-inline :error="errors.appliance"></error-inline></label>

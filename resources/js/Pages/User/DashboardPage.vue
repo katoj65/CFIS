@@ -27,20 +27,21 @@
 <div class="nk-sale-data-group flex-md-nowrap g-4">
 <div class="nk-sale-data">
 <span class="amount">{{ response.data.total_emission.amount }} <span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>Kg CO2e</span></span>
-<span class="sub-title">Since date:  {{ response.data.total_emission.date}} </span>
+<span class="sub-title">
+Since date:  {{ response.data.total_emission.date}}
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-</div>
-
-</div>
-</div>
-</div>
 
 
-</div>
+
 
 <div class="col-12 col-md-8">
-
 <div class="card card-bordered h-100">
 <div class="card-inner">
 <div class="card-title-group align-start gx-3 mb-3">
@@ -51,9 +52,16 @@
 </div>
 <div class="nk-sale-data-group align-center justify-between gy-3 gx-5">
 <div class="nk-sale-data">
-<span class="amount">$ {{ response.data.dollars }}<span class="pl-2 pr-2"> / </span> Shs. {{ response.data.shillings }} </span>
+<div>
+<span class="amount">
+Shs. {{ response.data.shillings }}
+<span class="text-white badge badge-pill badge-light border-0 ml-3" style="font-size:13px;">
+$ {{ response.data.dollars }}
+</span>
+</span>
+</div>
 <span class="sub-title">
-Latest: 14, November 2024
+The amount required to offset your carbon emissions
 </span>
 </div>
 <div class="nk-sale-data">
@@ -66,6 +74,12 @@ Latest: 14, November 2024
 
 </div>
 </div>
+
+
+
+
+
+
 
 
 
