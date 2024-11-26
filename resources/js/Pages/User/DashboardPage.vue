@@ -5,8 +5,7 @@
 </template>
 
 
-<!-- {{ response.data.total_emission}} -->
-
+<!-- {{ response.data}} -->
 
 
 <div class="container p-0">
@@ -38,30 +37,21 @@
 </div>
 
 
-
-
-
-
 </div>
 
-
-
 <div class="col-12 col-md-8">
-
-
-
 
 <div class="card card-bordered h-100">
 <div class="card-inner">
 <div class="card-title-group align-start gx-3 mb-3">
 <div class="card-title">
-<h6 class="title">Emission Trend</h6>
+<h6 class="title">Cost of Your Carbon Footprint</h6>
 <!-- <p>Track emissions over time and aim for steady reductions.</p> -->
 </div>
 </div>
 <div class="nk-sale-data-group align-center justify-between gy-3 gx-5">
 <div class="nk-sale-data">
-<span class="amount">$82,944.60</span>
+<span class="amount">$ {{ response.data.dollars }}<span class="pl-2 pr-2"> / </span> Shs. {{ response.data.shillings }} </span>
 <span class="sub-title">
 Latest: 14, November 2024
 </span>
@@ -74,41 +64,13 @@ Latest: 14, November 2024
 </div>
 </div>
 
-
-
-
-
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <div class="row">
 <div class="col-12 col-md-8">
-
-
-
 
 <div class="card card-bordered card-full h-100">
 <div class="card-inner">
@@ -124,8 +86,6 @@ Latest: 14, November 2024
 
 
 <div class="card-inner p-0">
-
-
 
 <table class="table">
 <thead class="border-0">
@@ -163,33 +123,9 @@ You have not submitted any emission data
 
 
 
-
-
-
-
-
 </div>
 
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 <div class="col-12 col-md-4">
@@ -228,9 +164,6 @@ You have not submitted any emission data
 
 </div>
 </div>
-
-
-
 
 
 

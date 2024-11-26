@@ -34,8 +34,6 @@ return $distance;
 
 
 
-
-
 //store vehicle emission
 public function storeVehicleEmission(Request $request){
 $validate=$request->validate([
