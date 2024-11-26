@@ -22,7 +22,7 @@ return [
 'user_id'=>$this->user_id,
 'emission_activity'=>Str::limit($this->emission_activity,14),
 'type'=>$this->type,
-'emitter'=>Str::limit($this->emitter,13),
+'emitter'=>Str::limit($this->emitter,25),
 'number_of_emitters'=>$this->number_of_emitters,
 'consumption_rate'=>round($this->consumption_rate,10),
 'usage_time'=>round($this->usage_time,10),

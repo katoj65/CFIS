@@ -67,7 +67,7 @@ Latest: 14, November 2024
 </span>
 </div>
 <div class="nk-sale-data">
-<Inertia-link class="btn btn-outline-danger"><small>Emission Targets</small></Inertia-link>
+<Inertia-link class="btn btn-outline-danger" :href="route('emission.targets')"><small>Emission Targets</small></Inertia-link>
 </div>
 </div>
 
@@ -110,70 +110,71 @@ Latest: 14, November 2024
 
 
 
-    <div class="card card-bordered card-full h-100">
-        <div class="card-inner">
-            <div class="card-title-group">
-                <div class="card-title">
-                    <h6 class="title">Carbon Footprint Summary</h6>
-                </div>
-                <div class="card-tools">
-                    <Inertia-link :href="route('user.emission_summary')" class="link text-muted">View All</Inertia-link>
-                </div>
-            </div>
-        </div>
+<div class="card card-bordered card-full h-100">
+<div class="card-inner">
+<div class="card-title-group">
+<div class="card-title">
+<h6 class="title">Carbon Footprint Summary</h6>
+</div>
+<div class="card-tools">
+<Inertia-link :href="route('user.emission_summary')" class="link text-muted">View All</Inertia-link>
+</div>
+</div>
+</div>
 
 
-        <div class="card-inner p-0">
-
-
-
-            <table class="table">
-            <thead class="border-0">
-                <tr>
-                <th scope="col" class="border-0">#</th>
-                <th scope="col" class="border-0">Activity</th>
-                <th scope="col" class="border-0">Emitter</th>
-                <th scope="col" class="border-0">Emission(CO2e) </th>
-                </tr>
-            </thead>
-            <tbody class="border-0" v-if="summary.length>0">
-                <tr v-for="(s,key) in summary" :key="key">
-                <th scope="row" class="border-0 text-muted">{{ key+1}} </th>
-                <td class="border-0 text-muted" style="text-transform: capitalize;">
-                {{ s.emission_activity }}
-                </td>
-                <td class="border-0 text-muted">
-               {{ s.number_of_emitters }} {{ s.emitter }}
-                </td>
-                <td class="border-0 text-muted">
-                {{ s.carbon_emission }} Kg
-                </td>
-                </tr>
-
-            </tbody>
-            <tbody v-else class="border-0">
-            <tr class="border-0">
-            <td class="border-0 py-5 text-center text-muted" colspan="4">
-          You have not submitted any emission data
-            </td>
-            </tr>
-            </tbody>
-            </table>
+<div class="card-inner p-0">
 
 
 
+<table class="table">
+<thead class="border-0">
+<tr>
+<th scope="col" class="border-0">#</th>
+<th scope="col" class="border-0">Emission Activity</th>
+<th scope="col" class="border-0">Source</th>
+<th scope="col" class="border-0" style="width:100px;">Emission(CO2e) </th>
+</tr>
+</thead>
+<tbody class="border-0" v-if="summary.length>0">
+<tr v-for="(s,key) in summary" :key="key">
+<th scope="row" class="border-0 text-muted">{{ key+1}} </th>
 
+<td class="border-0 text-muted" style="text-transform: capitalize;">
+<Inertia-link :href="route(s.url,{id:s.id})" class="text-muted"> {{ s.number_of_emitters }} {{ s.emitter }}</Inertia-link>
+</td>
+<td class="border-0 text-muted" style="text-transform: capitalize;">
+{{ s.type }}
+</td>
+<td class="border-0 text-muted">
+{{ s.carbon_emission }} Kg
+</td>
+</tr>
 
-
-
-
-            </div>
+</tbody>
+<tbody v-else class="border-0">
+<tr class="border-0">
+<td class="border-0 py-5 text-center text-muted" colspan="4">
+You have not submitted any emission data
+</td>
+</tr>
+</tbody>
+</table>
 
 
 
 
 
-    </div>
+
+
+
+</div>
+
+
+
+
+
+</div>
 
 
 
@@ -194,36 +195,36 @@ Latest: 14, November 2024
 <div class="col-12 col-md-4">
 
 
-    <div class="card card-bordered h-100">
-        <div class="card-inner ">
-            <div class="card-title-group">
-                <div class="card-title">
-                    <h6 class="title">Reduction Goals</h6>
-                </div>
-                <div class="card-tools">
-                    <a href="#" class="link">View All</a>
-                </div>
-            </div>
-        </div>
-        <div class="card-inner">
-            <div class="block p-0">
-                <el-timeline class="p-0 m-0">
-                  <el-timeline-item timestamp="2018/4/12" placement="top">
-                      <strong class="text-muted">Update Github template</strong>
-                      <p>Tom committed 2018/4/12 20:46</p>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="2018/4/3" placement="top">
-                    <strong class="text-muted">Update Github template</strong>
-                    <p>Tom committed 2018/4/12 20:46</p>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="2018/4/2" placement="top">
-                    <strong class="text-muted">Update Github template</strong>
-                    <p>Tom committed 2018/4/12 20:46</p>
-                  </el-timeline-item>
-                </el-timeline>
-              </div>
-        </div>
-    </div>
+<div class="card card-bordered h-100">
+<div class="card-inner ">
+<div class="card-title-group">
+<div class="card-title">
+<h6 class="title">Reduction Goals</h6>
+</div>
+<div class="card-tools">
+<a href="#" class="link">View All</a>
+</div>
+</div>
+</div>
+<div class="card-inner">
+<div class="block p-0">
+<el-timeline class="p-0 m-0">
+<el-timeline-item timestamp="2018/4/12" placement="top">
+<strong class="text-muted">Update Github template</strong>
+<p>Tom committed 2018/4/12 20:46</p>
+</el-timeline-item>
+<el-timeline-item timestamp="2018/4/3" placement="top">
+<strong class="text-muted">Update Github template</strong>
+<p>Tom committed 2018/4/12 20:46</p>
+</el-timeline-item>
+<el-timeline-item timestamp="2018/4/2" placement="top">
+<strong class="text-muted">Update Github template</strong>
+<p>Tom committed 2018/4/12 20:46</p>
+</el-timeline-item>
+</el-timeline>
+</div>
+</div>
+</div>
 
 </div>
 </div>
@@ -236,35 +237,35 @@ Latest: 14, November 2024
 <div class="row py-4">
 <div class="col-12 col-md-8">
 
-    <div class="card card-bordered h-100">
-        <div class="card-inner-group">
-            <div class="card-inner card-inner-md border-0">
-                <div class="card-title-group">
-                    <div class="card-title">
-                        <h6 class="title pt-2">
-                            Impactful Recommendations and Actions
-                        </h6>
-                    </div>
-                    <div class="card-tools mr-n1">
+<div class="card card-bordered h-100">
+<div class="card-inner-group">
+<div class="card-inner card-inner-md border-0">
+<div class="card-title-group">
+<div class="card-title">
+<h6 class="title pt-2">
+Impactful Recommendations and Actions
+</h6>
+</div>
+<div class="card-tools mr-n1">
 
-                    </div>
-                </div>
-            </div><!-- .card-inner -->
+</div>
+</div>
+</div><!-- .card-inner -->
 
 
-            <div class="card-inner border-0" v-for="(s,key) in 3" :key="key">
-                <div class="nk-wg-action border-0">
-                    <div class="nk-wg-action-content border-0">
-                        <em class="icon ni ni-cc-alt-fill"></em>
-                        <div class="title">Pending Buy/Sell Orders</div>
-                        <p>We have still <strong>40 buy orders</strong> and <strong>12 sell orders</strong>, thats need to review &amp; take necessary action.</p>
-                    </div>
+<div class="card-inner border-0" v-for="(s,key) in 3" :key="key">
+<div class="nk-wg-action border-0">
+<div class="nk-wg-action-content border-0">
+<em class="icon ni ni-cc-alt-fill"></em>
+<div class="title">Pending Buy/Sell Orders</div>
+<p>We have still <strong>40 buy orders</strong> and <strong>12 sell orders</strong>, thats need to review &amp; take necessary action.</p>
+</div>
 
-                </div>
-            </div><!-- .card-inner -->
+</div>
+</div><!-- .card-inner -->
 
-        </div><!-- .card-inner-group -->
-    </div>
+</div><!-- .card-inner-group -->
+</div>
 
 
 
@@ -276,47 +277,47 @@ Latest: 14, November 2024
 
 <div class="col-12 col-md-4">
 
-    <div class="card card-bordered h-100">
-        <div class="card-inner-group">
-            <div class="card-inner card-inner-md border-0">
-                <div class="card-title-group">
-                    <div class="card-title">
-                        <h6 class="title pt-2">
-                            Carbon Offset Options
-                        </h6>
-                    </div>
-                    <div class="card-tools mr-n1">
+<div class="card card-bordered h-100">
+<div class="card-inner-group">
+<div class="card-inner card-inner-md border-0">
+<div class="card-title-group">
+<div class="card-title">
+<h6 class="title pt-2">
+Carbon Offset Options
+</h6>
+</div>
+<div class="card-tools mr-n1">
 
-                    </div>
-                </div>
-            </div><!-- .card-inner -->
-
-
+</div>
+</div>
+</div><!-- .card-inner -->
 
 
 
 
 
 
-                <div class="card-inner card-inner-md border-0" v-for="(s,key) in offsetOptions" :key="key">
-                    <div class="user-card">
-                        <div class="user-avatar bg-primary-dim">
-                            <span>AB</span>
-                        </div>
-                        <div class="user-info">
-                            <span class="lead-text">{{ s.title }} </span>
-                            <span class="sub-text">300 Projects available</span>
-                        </div>
-
-                    </div>
-                </div>
 
 
+<div class="card-inner card-inner-md border-0" v-for="(s,key) in offsetOptions" :key="key">
+<div class="user-card">
+<div class="user-avatar bg-primary-dim">
+<span>AB</span>
+</div>
+<div class="user-info">
+<span class="lead-text">{{ s.title }} </span>
+<span class="sub-text">300 Projects available</span>
+</div>
+
+</div>
+</div>
 
 
 
-        </div><!-- .card-inner-group -->
-    </div>
+
+
+</div><!-- .card-inner-group -->
+</div>
 </div>
 
 </div>
@@ -327,35 +328,35 @@ Latest: 14, November 2024
 <div class="row">
 <div class="col-12">
 
-    <div class="card card-bordered h-100">
-        <div class="card-inner-group">
-            <div class="card-inner card-inner-md border-0">
-                <div class="card-title-group">
-                    <div class="card-title">
-                        <h6 class="title pt-2">
-                            Community and Social Impact
-                        </h6>
-                    </div>
-                    <div class="card-tools mr-n1">
+<div class="card card-bordered h-100">
+<div class="card-inner-group">
+<div class="card-inner card-inner-md border-0">
+<div class="card-title-group">
+<div class="card-title">
+<h6 class="title pt-2">
+Community and Social Impact
+</h6>
+</div>
+<div class="card-tools mr-n1">
 
-                    </div>
-                </div>
-            </div><!-- .card-inner -->
+</div>
+</div>
+</div><!-- .card-inner -->
 <div class="card-inner">
 <div class="row">
 
 <div class="col-12 col-md-4">
 
 <div class="card mb-3 p-3 h-100" style="max-width: 540px;">
-    <h6 class="text-muted">Subscription</h6>
+<h6 class="text-muted">Subscription</h6>
 
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item text-muted" style="border:none" v-for="(s,key) in subscription" :key="key">
-      <Inertia-link class="text-muted"> {{ s.title }}</Inertia-link>
-        </li>
+<ul class="list-group list-group-flush">
+<li class="list-group-item text-muted" style="border:none" v-for="(s,key) in subscription" :key="key">
+<Inertia-link class="text-muted"> {{ s.title }}</Inertia-link>
+</li>
 
-      </ul>
-  </div>
+</ul>
+</div>
 
 
 </div>
@@ -364,11 +365,11 @@ Latest: 14, November 2024
 <h6 class="text-muted">Learn with Us</h6>
 
 <ul class="list-group list-group-flush">
-    <li class="list-group-item text-muted" style="border:none" v-for="(s,key) in topics" :key="key">
-  <Inertia-link class="text-muted"> {{ s.title }}</Inertia-link>
-    </li>
+<li class="list-group-item text-muted" style="border:none" v-for="(s,key) in topics" :key="key">
+<Inertia-link class="text-muted"> {{ s.title }}</Inertia-link>
+</li>
 
-  </ul>
+</ul>
 
 
 </div>
@@ -380,27 +381,27 @@ Latest: 14, November 2024
 <h6 class="text-muted">Collective Impact</h6>
 <p>Collaboration fuels progress.</p>
 <div>
-    <b-avatar-group size="2rem">
-      <b-avatar></b-avatar>
-      <b-avatar></b-avatar>
-      <b-avatar></b-avatar>
-      <b-avatar></b-avatar>
-      <span class="ml-2" style="font-size:18px;">20+</span>
-    </b-avatar-group>
-  </div>
+<b-avatar-group size="2rem">
+<b-avatar></b-avatar>
+<b-avatar></b-avatar>
+<b-avatar></b-avatar>
+<b-avatar></b-avatar>
+<span class="ml-2" style="font-size:18px;">20+</span>
+</b-avatar-group>
+</div>
 
-  <ul class="list-group list-group-flush mt-2">
-    <li class="list-group-item  d-flex justify-content-between align-items-center" v-for="(a,key) in 4" :key="key" style="border:none;">
-    <a href="" class="text-muted">
-        <b-icon icon="caret-right-fill" class="mr-1"></b-icon>
-        Name of the project
+<ul class="list-group list-group-flush mt-2">
+<li class="list-group-item  d-flex justify-content-between align-items-center" v-for="(a,key) in 4" :key="key" style="border:none;">
+<a href="" class="text-muted">
+<b-icon icon="caret-right-fill" class="mr-1"></b-icon>
+Name of the project
 
-        <!-- <span class="badge text-bg-primary rounded-pill">14</span> -->
+<!-- <span class="badge text-bg-primary rounded-pill">14</span> -->
 
 
-    </a>
-    </li>
-  </ul>
+</a>
+</li>
+</ul>
 
 
 

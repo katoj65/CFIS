@@ -9,6 +9,7 @@ use App\Models\EmissionfactorModel;
 use App\Models\UserEmissionModel;
 use App\Models\UserEmissionLog;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Calculator\EmissionEquivalent;
 
 class TransportCalculator extends Controller
 {
@@ -73,7 +74,6 @@ $input=[
 'emission_factor'=>$emission_factor,
 'carbon_emission'=>$emission
 ];
-
 $model=UserEmissionModel::create($input);
 $log=[
 'user_id'=>Auth::user()->id,
@@ -83,8 +83,8 @@ $log=[
 'emitter'=>$model->emitter,
 'annual_emission'=>$model->carbon_emission,
 ];
-
 UserEmissionLog::create($log);
+EmissionEquivalent::create_user_emission_equivalent($model->carbon_emission);
 return redirect('/user/calculator/emission/transportation/'.$model->id)->with('success','Record saved');
 }
 

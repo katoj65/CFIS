@@ -23,6 +23,7 @@ use App\Http\Controllers\Emission\EmissionController;
 use App\Http\Controllers\News\NewsController;
 use App\Http\Controllers\Subscription\SubscriptionController;
 use App\Http\Controllers\Article\ArticleController;
+use App\Http\Controllers\Emission\EmissionTrargetsController;
 use App\Http\Controllers\Test\TestController;
 
 /*
@@ -111,11 +112,8 @@ Route::get('carbon-markets/overview',[ArticleController::class,'carbonMarkets'])
 Route::get('footprint',[AboutController::class,'carbonFootprint'])->name('carbon.footprint');
 Route::get('emissions/management',[EmissionController::class,'carbonEmissionStrategy'])->name('emission.manage');
 
-
 // testing purpose
 Route::get('user/test', [UserController::class, 'index'])->name('user.index');
-
-
 
 
 
@@ -146,9 +144,14 @@ Route::get('/calculate/land-use',[CalculatorController::class,'energyView'])->na
 Route::get('/calculate/building',[CalculatorController::class,'energyView'])->name('building.show');
 Route::get('/calculate/supply-chain',[CalculatorController::class,'energyView'])->name('supply-chain.show');
 
+Route::get('/emission/targets',[EmissionTrargetsController::class,'index'])->name('emission.targets');
+
+
+
 //create profile
 Route::post('profile/create-personal', [ProfileController::class, 'store'])->name('profile.personal_create');
 Route::post('profile/create-business', [ProfileController::class, 'storeBusinessProfile'])->name('profile.business_create');
+
 
 
 

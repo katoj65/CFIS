@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Tools\Portifolio;
 use App\Models\UserEmissionModel;
 use App\Models\UserEmissionLog;
+use App\Http\Controllers\Calculator\EmissionEquivalent;
 
 
 class EnergyCalculator extends Controller
@@ -53,9 +54,9 @@ $log=[
 'emitter'=>$model->emitter,
 'annual_emission'=>$model->carbon_emission
 ];
-
 UserEmissionLog::create($log);
 $segment=str_replace(' ','-',$model->emission_activity);
+EmissionEquivalent::create_user_emission_equivalent($model->carbon_emission);
 return redirect('/user/calculator/emission/'.$segment.'/'.$model->id)->with('success','Record saved');
 }
 
