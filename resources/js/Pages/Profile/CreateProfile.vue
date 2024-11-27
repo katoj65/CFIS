@@ -7,10 +7,8 @@
 <!-- wrap @s -->
 <div class="nk-wrap nk-wrap-nosidebar">
 <!-- content @s -->
-<div class="nk-content ">
+<div class="nk-content" style="border-top:solid 30px #117864 ">
 <div class="nk-split nk-split-page nk-split-md">
-
-
 
 <div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white w-lg-45">
 <div class="absolute-top-right d-lg-none p-5">

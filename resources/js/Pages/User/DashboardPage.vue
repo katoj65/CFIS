@@ -5,7 +5,7 @@
 </template>
 
 
-<!-- {{ response.data}} -->
+<!-- {{ response.data.reports }} -->
 
 
 <div class="container p-0">
@@ -181,98 +181,10 @@ You have not submitted any emission data
 
 
 
-<div class="row py-4">
-<div class="col-12 col-md-8">
-
-<div class="card card-bordered h-100">
-<div class="card-inner-group">
-<div class="card-inner card-inner-md border-0">
-<div class="card-title-group">
-<div class="card-title">
-<h6 class="title pt-2">
-Impactful Recommendations and Actions
-</h6>
-</div>
-<div class="card-tools mr-n1">
-
-</div>
-</div>
-</div><!-- .card-inner -->
-
-
-<div class="card-inner border-0" v-for="(s,key) in 3" :key="key">
-<div class="nk-wg-action border-0">
-<div class="nk-wg-action-content border-0">
-<em class="icon ni ni-cc-alt-fill"></em>
-<div class="title">Pending Buy/Sell Orders</div>
-<p>We have still <strong>40 buy orders</strong> and <strong>12 sell orders</strong>, thats need to review &amp; take necessary action.</p>
-</div>
-
-</div>
-</div><!-- .card-inner -->
-
-</div><!-- .card-inner-group -->
-</div>
 
 
 
-
-</div>
-
-
-
-
-<div class="col-12 col-md-4">
-
-<div class="card card-bordered h-100">
-<div class="card-inner-group">
-<div class="card-inner card-inner-md border-0">
-<div class="card-title-group">
-<div class="card-title">
-<h6 class="title pt-2">
-Carbon Offset Options
-</h6>
-</div>
-<div class="card-tools mr-n1">
-
-</div>
-</div>
-</div><!-- .card-inner -->
-
-
-
-
-
-
-
-
-<div class="card-inner card-inner-md border-0" v-for="(s,key) in offsetOptions" :key="key">
-<div class="user-card">
-<div class="user-avatar bg-primary-dim">
-<span>AB</span>
-</div>
-<div class="user-info">
-<span class="lead-text">{{ s.title }} </span>
-<span class="sub-text">300 Projects available</span>
-</div>
-
-</div>
-</div>
-
-
-
-
-
-</div><!-- .card-inner-group -->
-</div>
-</div>
-
-</div>
-
-
-
-
-<div class="row">
+<div class="row mt-4">
 <div class="col-12">
 
 <div class="card card-bordered h-100">
@@ -292,35 +204,34 @@ Community and Social Impact
 <div class="card-inner">
 <div class="row">
 
+
+
+
 <div class="col-12 col-md-4">
-
 <div class="card mb-3 p-3 h-100" style="max-width: 540px;">
-<h6 class="text-muted">Subscription</h6>
-
+<h6 class="text-muted">Reports</h6>
 <ul class="list-group list-group-flush">
-<li class="list-group-item text-muted" style="border:none" v-for="(s,key) in subscription" :key="key">
-<Inertia-link class="text-muted"> {{ s.title }}</Inertia-link>
+<li class="list-group-item text-muted" style="border:none" v-for="(r,key) in reports" :key="key">
+<Inertia-link class="text-muted text-capitalize">
+<i class="bi bi-file-spreadsheet-fill"></i> {{ r.report }}</Inertia-link>
 </li>
-
 </ul>
 </div>
-
-
 </div>
+
+
+
+
 <div class="col-12 col-md-4">
 <div class="card mb-3 p-3 h-100">
 <h6 class="text-muted">Learn with Us</h6>
-
 <ul class="list-group list-group-flush">
 <li class="list-group-item text-muted" style="border:none" v-for="(s,key) in topics" :key="key">
-<Inertia-link class="text-muted"> {{ s.title }}</Inertia-link>
+<Inertia-link class="text-muted">
+<i class="bi bi-file-spreadsheet-fill"></i> {{ s.title }}</Inertia-link>
 </li>
-
 </ul>
-
-
 </div>
-
 </div>
 
 <div class="col-12 col-md-4">
@@ -414,14 +325,7 @@ offsetOptions:[
 {title:'Carbon Offset Subscription',icon:'',url:''},
 ],
 
-subscription:[
-{title:'Monitoring and Reporting',icon:'',url:''},
-{title:'Partnerships',icon:'',url:''},
-{title:'Carbon Credit Verification and Issuance',icon:'',url:''},
-{title:'Compliance and Regulatory Support',icon:'',url:''},
-{title:'Educational Resources',icon:'',url:''},
-{title:'Seminars & Conferences',icon:'',url:''}
-],
+reports:this.response.data.reports,
 
 topics:[
 {title:'Carbon Credit',url:''},
@@ -456,3 +360,10 @@ return this.response.data.emission_summary;
 
 }
 </script>
+<style scoped>
+.list-group-item{
+margin:0px;
+padding:0;
+margin-bottom:5px;
+}
+</style>
