@@ -154,6 +154,9 @@ Route::post('profile/create-business', [ProfileController::class, 'storeBusiness
 
 
 
+Route::get('emission/target/create',[EmissionTrargetsController::class,'createEmissionTarget'])->name('emission.target_create');
+Route::post('emission/target/store',[EmissionTrargetsController::class,'store'])->name('emission.store_target');
+
 
 
 

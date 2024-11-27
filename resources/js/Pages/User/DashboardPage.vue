@@ -82,7 +82,6 @@ The amount required to offset your carbon emissions
 
 
 
-
 <div class="row">
 <div class="col-12 col-md-8">
 

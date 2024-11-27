@@ -11,7 +11,6 @@
 <img class="logo-light logo-img" src="http://localhost/carbon/public/images/logos/logo1.png"  alt="logo">
 <img class="logo-dark logo-img mt-1" src="http://localhost/carbon/public/images/logos/logo-with-red.png" alt="logo-dark"><br/>
 
-
 </inertia-link>
 </div>
 <div style="font-weight:normal;font-size:14px;padding-top:0px;line-height:16px;color:#aab7b8;text-align:right;" class="mt-2 ml-4">

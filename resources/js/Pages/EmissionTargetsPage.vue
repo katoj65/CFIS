@@ -1,9 +1,38 @@
 <template>
-<app-layout :title="response.data.title">
+<app-layout :title="response.data.title" :subtitle="subtitle">
+<template #action>
+<div>
+<Inertia-link class="btn btn-secondary" :href="route('emission.target_create')">
+Add Goal
+</Inertia-link>
+</div>
+</template>
+
+<div class="container p-0">
+<div class="row">
 
 
-Some information
+<div class="col-12">
+{{ response.data }}
 
+
+<div class="card">
+<div class="card-inner">
+<h5>
+Heading
+</h5>
+</div>
+<div class="card-inner">
+
+some information goes here
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 </app-layout>
@@ -18,8 +47,14 @@ AppLayout,
 props:{
 response:[],
 },
+
 data(){return{
-subtitle:'',
+subtitle:'Take bold steps to meet emission targets and protect our planet.',
+
+
+
+
+
 
 
 }}

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class EmissionTargetModel extends Model
 {
     use HasFactory;
-    protected $table='emission_trget';
+    protected $table='emission_target';
     protected $fillable=[
     'user_id',
     'emission_activity_id',
