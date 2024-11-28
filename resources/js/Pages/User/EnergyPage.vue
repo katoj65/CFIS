@@ -28,16 +28,16 @@ Select your energy sources
 </div>
 
 <div class="pl-3 pr-3">
-
-<!-- <hydropower-form v-if="select_source=='Hydropower'"/> -->
-
-
-
-
+<div class="row">
+<div class="text-center" v-if="isLoading==true">
+    <b-spinner variant="success" type="grow" label="Spinning"></b-spinner>
+</div>
+</div>
 <div v-if="form.select_source==''" class="text-center text-muted p-5">
 Select source of emission to continue.
 </div>
 </div>
+
 </div>
 
 
@@ -73,8 +73,7 @@ response:{},
 data(){return{
 subtitle:'Calculate emissions by converting activity data to CO₂ with standardised emission factors.',
 //
-
-
+isLoading:false,
 form:this.$inertia.form({
 select_source:'',
 }),
@@ -94,7 +93,12 @@ return this.response.source;
 
 methods:{
 loadform(){
-this.form.post(route('energy.form'));
+this.isLoading=true;
+this.form.post(route('energy.form'),{
+onSuccess:()=>{
+this.isLoading=false;
+}
+});
 }
 }
 

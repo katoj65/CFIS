@@ -12,19 +12,37 @@ Add Goal
 <div class="row">
 
 
-<div class="col-12">
-{{ response.data }}
-
+<div class="col-12 col-md-10 offset-lg-1">
 
 <div class="card">
 <div class="card-inner">
-<h5>
-Heading
-</h5>
+<h6>
+Emission Reduction Target
+</h6>
 </div>
 <div class="card-inner">
 
-some information goes here
+<div class="block">
+<el-timeline>
+
+<el-timeline-item :timestamp="t.from_date+' - '+t.to_date" placement="top" v-for="(t,key) in target" :key="key">
+<el-card shadow="never" class="shadow-sm">
+<h6>
+{{ t.emission_activity }} emission reduction {{ t.emission_percentage }}%
+</h6>
+<div>
+<el-progress :percentage="80"></el-progress>
+</div>
+<p>Carbon Emission: 300Kg CO2e <small style="float:right;"><a href="#" class="text-muted">View more</a></small> </p>
+</el-card>
+</el-timeline-item>
+
+</el-timeline>
+</div>
+
+
+
+
 
 
 
@@ -50,7 +68,7 @@ response:[],
 
 data(){return{
 subtitle:'Take bold steps to meet emission targets and protect our planet.',
-
+target:this.response.data.target,
 
 
 
