@@ -10,6 +10,9 @@ use App\Http\Resources\EmissionTargetResource;
 use App\Http\Resources\EmissionActivityResource;
 use App\Models\EmissionActivityModel;
 use App\Models\EmissionTargetModel;
+use App\Http\Resources\ShowEmissionTargetResource;
+use Illuminate\Support\Facades\Gate;
+use Carbon\Carbon;
 
 
 class EmissionTrargetsController extends Controller
@@ -49,8 +52,8 @@ $input=[
 'to_date'=>$request->to_date,
 'emission_percentage'=>$request->percentage
 ];
-EmissionTargetModel::create($input);
-return redirect('/emission/targets')->with('success','Your record has been saved.');
+$model=EmissionTargetModel::create($input);
+return redirect('/emission/target/'.$model->id)->with('success','Your record has been saved.');
 
 }
 
@@ -60,9 +63,36 @@ return redirect('/emission/targets')->with('success','Your record has been saved
  * @param  int  $id
  * @return \Illuminate\Http\Response
  */
-public function show($id)
+public function show(Request $request)
 {
 //
+$model=EmissionTargetModel::select('emission_target.id',
+'emission_target.user_id',
+'emission_activity.name',
+'emission_target.emission_percentage',
+'from_date',
+'to_date',
+'emission_activity.id',
+'emission_target.created_at')
+->join('emission_activity',
+'emission_activity.id','=',
+'emission_target.emission_activity_id')
+->where('emission_target.user_id',Auth::user()->id)
+->where('emission_target.id',$request->segment(3))
+->first();
+
+if($model){
+if(Gate::allows('has_access',$model->user_id)){
+$data['response']=new ShowEmissionTargetResource($model);
+return Inertia::render('ShowEmissionTargetPage',$data);
+}else{
+abort('404');
+}
+}else{
+abort('404');
+}
+
+
 }
 
 /**

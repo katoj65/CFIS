@@ -151,11 +151,9 @@ Route::get('/emission/targets',[EmissionTrargetsController::class,'index'])->nam
 //create profile
 Route::post('profile/create-personal', [ProfileController::class, 'store'])->name('profile.personal_create');
 Route::post('profile/create-business', [ProfileController::class, 'storeBusinessProfile'])->name('profile.business_create');
-
-
-
 Route::get('emission/target/create',[EmissionTrargetsController::class,'createEmissionTarget'])->name('emission.target_create');
 Route::post('emission/target/store',[EmissionTrargetsController::class,'store'])->name('emission.store_target');
+Route::get('emission/target/{id}',[EmissionTrargetsController::class,'show'])->name('emission.target_show');
 
 
 

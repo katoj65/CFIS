@@ -138,7 +138,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
               <div>
@@ -615,5 +615,9 @@
 
   ol li{
   list-style-type:lower-roman;
+  }
+  .service-item{
+  background:#effef5;
+
   }
   </style>
