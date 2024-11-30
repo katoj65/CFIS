@@ -68,6 +68,7 @@ public function show(Request $request)
 //
 $model=EmissionTargetModel::select('emission_target.id',
 'emission_target.user_id',
+'emission_activity.id as activity_id',
 'emission_activity.name',
 'emission_target.emission_percentage',
 'from_date',

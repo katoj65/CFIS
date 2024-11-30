@@ -6,6 +6,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use Carbon\Carbon;
 use App\Models\UserEmissionModel;
 use App\Http\Resources\EmissionResource;
+use App\Models\EmissionBAselineModel;
 
 class ShowEmissionTargetResource extends JsonResource
 {
@@ -19,6 +20,7 @@ public function toArray($request)
 {
 return[
 'id'=>$this->id,
+'activity_id'=>$this->activity_id,
 'name'=>$this->name,
 'user_id'=>$this->user_id,
 'from_date'=>$this->from_date,
@@ -29,6 +31,7 @@ return[
 ->where('user_id',$this->user_id)
 ->orderby('created_at','DESC')
 ->get()),
+'baseline'=>EmissionBaselineModel::get(),
 
 
 

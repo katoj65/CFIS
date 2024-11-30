@@ -15,8 +15,9 @@ class CreateTableEmissionBaseline extends Migration
     {
         Schema::create('emission_baseline', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('emisison_activity_id');
-            $table->unsignedDecimal('total_emission');
+            $table->unsignedBigInteger('emission_activity_id');
+            $table->unsignedDecimal('amount');
+            $table->string('user_role');
             $table->timestamps();
         });
     }
@@ -29,5 +30,6 @@ class CreateTableEmissionBaseline extends Migration
     public function down()
     {
         Schema::dropIfExists('emission_baseline');
+        
     }
 }
