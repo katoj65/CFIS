@@ -24,7 +24,6 @@ class EmissionTrargetsController extends Controller
  */
 public function index()
 {
-//
 $data['response']=new EmissionTargetResource(Auth::user());
 return Inertia::render('EmissionTargetsPage',$data);
 }
@@ -66,14 +65,14 @@ return redirect('/emission/target/'.$model->id)->with('success','Your record has
 public function show(Request $request)
 {
 //
-$model=EmissionTargetModel::select('emission_target.id',
+$model=EmissionTargetModel::select(
+'emission_target.id',
 'emission_target.user_id',
 'emission_activity.id as activity_id',
 'emission_activity.name',
 'emission_target.emission_percentage',
 'from_date',
 'to_date',
-'emission_activity.id',
 'emission_target.created_at')
 ->join('emission_activity',
 'emission_activity.id','=',

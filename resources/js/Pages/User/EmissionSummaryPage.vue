@@ -5,7 +5,6 @@
 
 <div class="col-12">
 
-
 <div class="card card-bordered h-100">
 <div class="card-inner">
 <div class="card-title-group align-start mb-3">

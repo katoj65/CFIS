@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\EmissionEquivalentModel;
 use App\Models\ExchangeRateModel;
+use App\Models\EmissionBaselineModel;
 
 class Conversions extends Controller
 {
@@ -42,9 +43,18 @@ return round($amount,0);
 }
 
 
+//baseline conversion
+static function emission_baseline($user_role){
+$model=EmissionBaselineModel::where('user_role',$user_role)->first();
+return $model->amount;
+}
 
 
-
+//calculate the percentage of a number
+static function percentage_of_a_number($number,$precentage){
+$ans=$precentage/100*$number;
+return $ans;
+}
 
 
 

@@ -20,19 +20,18 @@ public function toArray($request)
 return[
 'title'=>'Emission Targets',
 'target'=>UserEmissionTargetResource::collection(EmissionTargetModel::select('emission_target.id',
+'emission_target.emission_activity_id as activity_id',
 'user_id',
 'emission_activity.name',
 'emission_target.emission_percentage',
 'from_date',
 'to_date',
-'emission_activity.id',
 'emission_target.created_at')
 ->join('emission_activity',
 'emission_activity.id','=',
 'emission_target.emission_activity_id')
-->where('user_id',$this->id)
+->where('emission_target.user_id',$this->id)
 ->orderby('created_at','DESC')->get()),
-
 ];
 }
 }
