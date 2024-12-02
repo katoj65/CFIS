@@ -33,12 +33,18 @@ $amount=UserEmissionEquivalentModel::select('total_emission')
 ->sum('total_emission');
 //conversion. Convert total emisson fron KG to TN
 $co2e=Conversions::convert_kg_tn(round($amount,0));
-$dollars=Conversions::convert_co2e_dollars($co2e);
-$shs=Conversions::convert_dollars_shillings($dollars);
 $reports=UserEmissionModel::select('emission_activity')
 ->where('user_id',$this->id)
 ->groupBy('emission_activity')
 ->get();
+
+
+
+
+
+
+
+
 
 
 
@@ -51,9 +57,10 @@ return [
 'total_emission'=>['date'=>$since!=null?$since->created_at->format('d-M-Y'):$this->created_at->format('d-M-Y'),'amount'=>round($amount,10)],
 'emission_summary'=>EmissionSummaryResource::collection(UserEmissionModel::where('user_id',$this->id)->limit(10)->orderby('created_at','Desc')->get()),
 'co2e_tonne'=>$co2e,
-'dollars'=>round($dollars,5),
-'shillings'=>round($shs,0),
+'dollars'=>Conversions::emission_to_money($amount)['dollars'],
+'shillings'=>Conversions::emission_to_money($amount)['shillings'],
 'reports'=>DashboardReportResource::collection($reports),
+
 
 
 

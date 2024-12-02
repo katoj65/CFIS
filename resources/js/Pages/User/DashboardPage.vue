@@ -5,7 +5,7 @@
 </template>
 
 
-<!-- {{ response.data.reports }} -->
+{{ response.data.money }}
 
 
 <div class="container p-0">

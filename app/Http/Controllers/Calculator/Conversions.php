@@ -58,6 +58,50 @@ return $ans;
 
 
 
+//convert emission to money
+static function emission_to_money($emission){
+$model=EmissionEquivalentModel::where('name','CO2e')->first();
+//unit cost =total cost/weight (uc=28/1000)
+$cost=$model->equivalent;
+$weight=$model->value;
+//total weight
+$unit=$weight*1000;
+$unit_cost=$cost/$unit;
+$money=$unit_cost*$emission;
+return['dollars'=>$money,'shillings'=>Conversions::convert_dollars_shillings($money)];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
