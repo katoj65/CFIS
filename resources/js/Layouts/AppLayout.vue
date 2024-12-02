@@ -238,7 +238,7 @@ Carbon Footprint Information System<br/>
 <div class="nk-footer" style="border:none;">
 <div class="container-fluid">
 <div class="nk-footer-wrap">
-<div class="nk-footer-copyright"> &copy; 2020 DashLite. Template by <a href="https://softnio.com" target="_blank">Softnio</a>
+<div class="nk-footer-copyright"> &copy; {{ footnote }} UCR
 </div>
 <div class="nk-footer-links">
 <ul class="nav nav-sm">
@@ -263,6 +263,7 @@ Carbon Footprint Information System<br/>
 
 </template>
 <script>
+
 import MenuSwitch from '../menu/MenuSwitch.vue';
 import ModalComponent from '../modals/ModalComponent.vue';
 export default {
@@ -309,10 +310,18 @@ const auth=this.$page.props.auth;
 const user=auth.user;
 const profile=auth.profile;
 return {'user':user,'profile':profile};
+},
+
+footnote(){
+let now = new Date();
+return now.getFullYear();
 }
 
+},
 
-}
+
+
+
 
 
 

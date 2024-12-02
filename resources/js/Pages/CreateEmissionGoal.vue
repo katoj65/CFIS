@@ -8,6 +8,7 @@ Add Goal
 </div>
 </template>
 
+
 <div class="container p-0">
 <div class="row">
 <div class="col-12 col-md-8 offset-lg-2">
@@ -18,6 +19,12 @@ Add Goal
 Set your emission target
 </h6>
 <form class="mt-3" @submit.prevent="submit">
+
+
+
+<div v-if="$page.props.flash.error!=null" class="text-danger py-3">
+{{ $page.props.flash.error }}
+</div>
 
 
 <div class="row">
@@ -100,6 +107,7 @@ ErrorInline
 props:{
 response:[],
 },
+
 data(){return{
 isLoading:false,
 title:'Emission Targets',

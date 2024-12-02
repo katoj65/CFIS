@@ -80,10 +80,6 @@ return[
 'to_date'=>$this->to_date,
 'emission_percentage'=>$this->emission_percentage,
 'created_at'=>$this->created_at->format('d-m-Y'),
-// 'user_emissions'=>EmissionResource::collection(UserEmissionModel::where('emission_activity',$this->name)
-// ->where('user_id',$this->user_id)
-// ->orderby('created_at','DESC')
-// ->get()),
 'baseline'=>Conversions::convert_tn_kg($baseline),
 'previous_target'=>$pt,
 'current_target'=>[

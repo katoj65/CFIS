@@ -5,8 +5,6 @@
 </template>
 
 
-{{ response.data.money }}
-
 
 <div class="container p-0">
 <div class="row mb-3">
@@ -112,7 +110,6 @@ The amount required to offset your carbon emissions
 <tbody class="border-0" v-if="summary.length>0">
 <tr v-for="(s,key) in summary" :key="key">
 <th scope="row" class="border-0 text-muted">{{ key+1}} </th>
-
 <td class="border-0 text-muted" style="text-transform: capitalize;">
 <Inertia-link :href="route(s.url,{id:s.id})" class="text-muted"> {{ s.number_of_emitters }} {{ s.emitter }}</Inertia-link>
 </td>
@@ -151,27 +148,24 @@ You have not submitted any emission data
 <h6 class="title">Reduction Goals</h6>
 </div>
 <div class="card-tools">
-<a href="#" class="link">View All</a>
+<a href="#" class="link text-muted">View All</a>
 </div>
 </div>
 </div>
 <div class="card-inner">
-<div class="block p-0">
-<el-timeline class="p-0 m-0">
-<el-timeline-item timestamp="2018/4/12" placement="top">
-<strong class="text-muted">Update Github template</strong>
-<p>Tom committed 2018/4/12 20:46</p>
-</el-timeline-item>
-<el-timeline-item timestamp="2018/4/3" placement="top">
-<strong class="text-muted">Update Github template</strong>
-<p>Tom committed 2018/4/12 20:46</p>
-</el-timeline-item>
-<el-timeline-item timestamp="2018/4/2" placement="top">
-<strong class="text-muted">Update Github template</strong>
-<p>Tom committed 2018/4/12 20:46</p>
-</el-timeline-item>
-</el-timeline>
+<ul class="p-0 m-0">
+<li v-for="(g,key) in response.data.target" :key="key" class="p-0 m-0">
+<div class="mb-2">
+<Inertia-link :href="route('emission.target_show',{id:g.id})" class="text-muted">
+<small>{{ g.emission_activity }} ({{ g.emission_percentage }}%) </small>
+<progress-bar :percentage="g.current_percentage"/>
+</Inertia-link>
 </div>
+</li>
+
+</ul>
+
+
 </div>
 </div>
 
@@ -305,10 +299,11 @@ Name of the project
 </template>
 <script>
 import AppLayout from '../../Layouts/AppLayout.vue';
+import ProgressBar from '../../components/ProgressBar.vue';
 export default {
 components:{
 AppLayout,
-
+ProgressBar,
 },
 props:{
 response:[],
@@ -343,16 +338,15 @@ topics:[
 
 computed:{
 summary(){
+console.log(this.response);
 return this.response.data.emission_summary;
+},
 },
 
 
 
 
 
-
-
-}
 
 
 

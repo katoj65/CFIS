@@ -13,7 +13,7 @@ Add Goal
 
 <!-- {{ response }} -->
 
-<div class="col-12 col-md-10 offset-lg-1">
+<div class="col-12">
 <div class="card">
 <div class="card-inner">
 <h6>
@@ -21,22 +21,51 @@ Emission Reduction Target
 </h6>
 </div>
 <div class="card-inner">
-<div class="block">
-<el-timeline>
-<el-timeline-item :timestamp="t.from_date+' - '+t.to_date" placement="top" v-for="(t,key) in target" :key="key">
-<el-card shadow="never" class="">
-<h6>
-{{ t.emission_activity }} emission reduction {{ t.emission_percentage }}%
-</h6>
-<div>
-<el-progress :percentage="t.current_percentage"></el-progress>
-</div>
-<p class="py-3">Carbon Emission: {{ t.current_emission }} Kg CO2e <small style="float:right;">
-<Inertia-link :href="route('emission.target_show',{id:t.id})" class="text-muted">View more</Inertia-link></small> </p>
-</el-card>
-</el-timeline-item>
-</el-timeline>
-</div>
+
+<table class="table">
+<thead class="border-0">
+<tr class="border-0">
+<th scope="col" class="border-0">Timeline</th>
+<th scope="col" class="border-0">Target (CO2e) </th>
+<th scope="col" class="border-0">Emission (CO2e) </th>
+<th scope="col" class="border-0">Progress</th>
+</tr>
+</thead>
+<tbody class="border-0">
+<tr v-for="(t,key) in target" :key="key">
+<td class="border-0" style="width:250px;">
+<Inertia-link :href="route('emission.target_show',{id:t.id})">
+<el-tag type="success" effect="dark">{{ t.from_date}}</el-tag>
+<el-tag effect="dark"> {{ t.to_date  }}</el-tag>
+</Inertia-link>
+</td>
+<td class="border-0">
+{{ t.benchmark_percentage }} Kg
+</td>
+<td class="border-0">
+{{ t.current_emission }} Kg
+</td>
+<td class="border-0">
+<small style="text-transform: capitalize;">
+{{ t.emission_activity }}
+</small>
+<progress-bar :percentage="t.current_percentage"></progress-bar>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 </div>
@@ -48,9 +77,11 @@ Emission Reduction Target
 </template>
 <script>
 import AppLayout from '../Layouts/AppLayout.vue';
+import ProgressBar from '../components/ProgressBar.vue';
 export default {
 components:{
 AppLayout,
+ProgressBar
 
 },
 props:{

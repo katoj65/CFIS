@@ -38,11 +38,20 @@ public function store(Request $request)
 {
 //
 $validation = $request->validate([
-'emission_activity'=>'required',
-'from_date'=>'required',
-'to_date'=>'required',
+'emission_activity'=>'required|string',
+'from_date'=>'required|date',
+'to_date'=>'required|date',
 'percentage'=>'required|integer'
 ],['required'=>'*Required*']);
+
+//date validattion
+$today=date('Ymd');
+$from_date=str_replace('-','',$request->from_date);
+$to_date=str_replace('-','',$request->to_date);
+
+if($from_date>=$today){
+if($from_date<$to_date){
+
 $input=[
 'user_id'=>Auth::user()->id,
 'emission_activity_id'=>EmissionActivityModel::where('name',$request->emission_activity)->first()->id,
@@ -51,10 +60,20 @@ $input=[
 'to_date'=>$request->to_date,
 'emission_percentage'=>$request->percentage
 ];
+
 $model=EmissionTargetModel::create($input);
 return redirect('/emission/target/'.$model->id)->with('success','Your record has been saved.');
-
+}else{
+return redirect('/emission/target/create')->with('error','Invalid date selection.');
 }
+}else{
+return redirect('/emission/target/create')->with('error','Invalid date selection.');
+}
+}
+
+
+
+
 
 /**
  * Display the specified resource.

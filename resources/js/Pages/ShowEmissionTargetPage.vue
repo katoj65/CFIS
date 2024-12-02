@@ -17,7 +17,7 @@ Created at: {{ row.created_at }}
 Reducing emission  from {{ row.name }} by {{ row.emission_percentage }}%
 </h6>
 <div class="py-3">
-<el-progress :percentage="row.benchmarks.current_percentage"></el-progress>
+<ProgressBar :percentage="row.benchmarks.current_percentage" :width="15"/>
 </div>
 
 <div>
@@ -111,9 +111,10 @@ Emission Target CO2e:
 </app-layout>
 </template>
 <script>
-import AppLayout from '../Layouts/AppLayout.vue'
+import AppLayout from '../Layouts/AppLayout.vue';
+import ProgressBar from '../components/ProgressBar.vue';
 export default {
-components:{AppLayout},
+components:{AppLayout, ProgressBar },
 props:{response:[]},
 data(){return{
 subtitle:'Adopt emission reducing strategies.',
