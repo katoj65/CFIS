@@ -7,24 +7,19 @@ export default {
 components:{
         GChart
 },
+props:{
+data:[],
+title:{}
+},
 data(){
 return{
 type:'PieChart',
-data:[
-['Task', 'Hours per Day'],
-['Work', 11],
-['Eat', 2],
-['Commute', 2],
-['Watch TV', 2],
-['Sleep', 7],
-]
- ,
 options: {
-title: 'My Daily Activities',
-pieHole: 0.4,
+title:this.title,
+pieHole: 0.1,
 
-width: 800,
-height: 600,
+width:400,
+height: 400,
 }
 
 

@@ -45,6 +45,7 @@ return EmissionTargetModel::where('id','<',$id)
 public function previous_emission_sum($from_date,$to_date,$activity){
 return UserEmissionModel::where('created_at','<',$from_date)
 ->where('emission_activity',$activity)
+->where('user_id',Auth::user()->id)
 ->sum('carbon_emission');
 }
 
@@ -53,10 +54,19 @@ public function current_emission_sum($from_date,$to_date,$activity){
 return UserEmissionModel::where('created_at','>=',$from_date)
 ->where('created_at','<=',$to_date)
 ->where('emission_activity',$activity)
+->where('user_id',Auth::user()->id)
 ->sum('carbon_emission');
 }
 
 
+public function current_emission_list($from_date,$to_date,$activity){
+return UserEmissionModel::where('created_at','>=',$from_date)
+->where('created_at','<=',$to_date)
+->where('emission_activity',$activity)
+->where('user_id',Auth::user()->id)
+->orderby('created_at','DESC')
+->get();
+}
 
 
 

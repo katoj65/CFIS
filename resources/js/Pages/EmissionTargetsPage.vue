@@ -2,17 +2,18 @@
 <app-layout :title="response.data.title" :subtitle="subtitle">
 <template #action>
 <div>
-<Inertia-link class="btn btn-secondary" :href="route('emission.target_create')">
+<Inertia-link class="btn btn-secondary" :href="route('emission.target_create')" style="font-size:14px;">
 Add Goal
 </Inertia-link>
 </div>
 </template>
-
 <div class="container p-0">
+
+
+
+
+
 <div class="row">
-
-<!-- {{ response }} -->
-
 <div class="col-12">
 <div class="card">
 <div class="card-inner">
@@ -70,6 +71,13 @@ Emission Reduction Target
 </div>
 </div>
 </div>
+
+
+
+
+
+
+
 </div>
 
 

@@ -36,6 +36,7 @@
         "nprogress": "^0.2.0",
         "radium": "^0.26.2",
         "vue-d3-charts": "^0.2.8",
+        "vue-google-charts": "^1.1.0",
         "vue-router": "^4.3.3",
         "vuex": "^3.4.0"
     }

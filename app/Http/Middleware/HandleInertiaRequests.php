@@ -61,7 +61,10 @@ return [
 
 //system details
 'system'=>function() use($request){
+$token = $request->user()->createToken('API Token')->plainTextToken;
+
 return[
+'token'=>$token,
 'url'=>'http://localhost/carbon/',
 'carbon_footprint_parameters'=>CarbonFootprintParameter::all(),
 'icon_directory'=>'http://localhost/carbon/public/icons/',

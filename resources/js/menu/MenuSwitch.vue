@@ -84,7 +84,7 @@ main:[
 ],
 sub:[
 {name:'Emission Summary',url:'user.emission_summary'},
-{name:'Track Progress',url:'home'},
+{name:'Track Progress',url:'emission.targets'},
 {name:'Reduction Strategies',url:'home'},
 {name:'Carbon Credit',url:'home'},
 {name:'Offset Options',url:'home'},
