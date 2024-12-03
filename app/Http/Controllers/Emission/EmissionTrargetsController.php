@@ -84,6 +84,7 @@ return redirect('/emission/target/create')->with('error','Invalid date selection
 public function show(Request $request)
 {
 //
+
 $model=EmissionTargetModel::select(
 'emission_target.id',
 'emission_target.user_id',
@@ -99,6 +100,7 @@ $model=EmissionTargetModel::select(
 ->where('emission_target.user_id',Auth::user()->id)
 ->where('emission_target.id',$request->segment(3))
 ->first();
+
 
 if($model){
 if(Gate::allows('has_access',$model->user_id)){

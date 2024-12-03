@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\EmissionBaselineModel;
 use App\http\Controllers\Calculator\Conversions;
 use App\models\EmissionTargetModel;
+use App\Models\EmissionActivityModel;
 
 class ShowEmissionTargetResource extends JsonResource
 {
@@ -19,57 +20,79 @@ class ShowEmissionTargetResource extends JsonResource
  * @param  \Illuminate\Http\Request  $request
  * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
  */
-public function toArray($request)
-{
-//how emission target works
-//get current emission  target and compare with emission baseline.
-//get current target and compare with previous target
 
-$baseline=EmissionBaselineModel::where('user_role',Auth::user()->role)->where('emission_activity_id',$this->activity_id)->first()->amount;
 
-//previous emission target
-$previous_target=EmissionTargetModel::where('id','<',$this->id)
-->where('emission_activity_id',$this->activity_id)
-->where('user_id',$this->user_id)
-->orderby('created_at','DESC')
-->first();
 
-$user_emission=[];
-$p_carbon=Conversions::convert_tn_kg($baseline);
-
-//
-$pt=[
-'from_date'=>Auth::user()->created_at->format('d-m-Y'),
-'to_date'=>date('d-m-Y'),
-'amount'=>$p_carbon
-];
-
-//
-if($previous_target){
-$p_carbon=UserEmissionModel::where('created_at','>=',$previous_target->from_date)
-->where('created_at','<=',$previous_target->to_date)
-->where('emission_activity',$this->name)
-->sum('carbon_emission');
-
-$pt=['from_date'=>$previous_target->from_date,
-'to_date'=>$previous_target->to_date,
-'amount'=>$p_carbon];
+//minimum emission target if target not set
+public function baseline($activity_id){
+return EmissionBaselineModel::where('user_role',Auth::user()->role)
+->where('emission_activity_id',$activity_id)
+->first()
+->amount;
 }
 
-//current target amount
-$current_target_amount=UserEmissionModel::where('created_at','>=',$this->from_date)
-->where('created_at','<=',$this->to_date)
-->where('emission_activity',$this->name)
-->sum('carbon_emission');
-//compute the curent percentage reduced
-//carbon_reduced = benchmark_percentage - current_carbon
-$benchmark_percentage=Conversions::percentage_of_a_number($p_carbon,$this->emission_percentage);
-$emission_reduced=$benchmark_percentage - $current_target_amount;
-//percentage reduced
-$percentage_reduced = $emission_reduced/$benchmark_percentage*100;
-//get the current emission
-$ce=$current_target_amount/$benchmark_percentage*100;
 
+//total emission before current target
+public function emisison_target_previous($id,$activity_id){
+return EmissionTargetModel::where('id','<',$id)
+->where('emission_activity_id',$activity_id)
+->where('user_id',Auth::user()->id)
+->orderby('created_at','DESC')
+->first();
+}
+
+
+public function previous_emission_sum($from_date,$to_date,$activity){
+return UserEmissionModel::where('created_at','<',$from_date)
+->where('emission_activity',$activity)
+->sum('carbon_emission');
+}
+
+
+public function current_emission_sum($from_date,$to_date,$activity){
+return UserEmissionModel::where('created_at','>=',$from_date)
+->where('created_at','<=',$to_date)
+->where('emission_activity',$activity)
+->sum('carbon_emission');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function toArray($request)
+{
+
+$minimum_emission=$this->baseline($this->activity_id);
+$previous_emission_target=$this->emisison_target_previous($this->id,$this->activity_id);
+$previous_sum=$this->previous_emission_sum($this->from_date,$this->to_date,$this->name);
+$current_sum=$this->current_emission_sum($this->from_date,$this->to_date,$this->name);
+
+
+$f_date=Auth::user()->created_at->format('d-m-Y');
+$t_date=date('d-m-y');
+if($previous_emission_target){
+$f_date=$previous_emission_target->from_date;
+$t_date=$previous_emission_target->to_date;
+}
+if($previous_sum==0){
+$previous_sum=Conversions::convert_tn_kg($minimum_emission);
+}
+
+//target sum
+// percentage/100 x previous_sum
+$target_sum=$this->emission_percentage/100*$previous_sum;
+// calculate current percentage
+// part/whole x 100
+$current_percentage=$current_sum/$target_sum*100;
 
 return[
 'id'=>$this->id,
@@ -80,23 +103,21 @@ return[
 'to_date'=>$this->to_date,
 'emission_percentage'=>$this->emission_percentage,
 'created_at'=>$this->created_at->format('d-m-Y'),
-'baseline'=>Conversions::convert_tn_kg($baseline),
-'previous_target'=>$pt,
+//
 'current_target'=>[
 'from_date'=>$this->from_date,
 'to_date'=>$this->to_date,
-'amount'=>$current_target_amount,
+'emission_sum'=>$current_sum,
+'percentage'=>$current_percentage,
 ],
+//
 'benchmarks'=>[
-'benchmark_percentage'=>Conversions::percentage_of_a_number($p_carbon,$this->emission_percentage),
-'carbon_reducced'=>$emission_reduced,
-'percentage_reduced'=>$percentage_reduced,
-'current_percentage'=>round($ce,10)
-
+'from_date'=>$f_date,
+'to_date'=>$t_date,
+'target_sum'=>$target_sum,
+'previous_sum'=>$previous_sum,
 
 ]
-
-
 
 ];
 }

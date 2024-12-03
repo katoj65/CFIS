@@ -8,6 +8,11 @@ Created at: {{ row.created_at }}
 
 
 
+
+
+
+
+
 <div class="container">
 <div class="row">
 <div class="col-12 col-md-10 offset-lg-1">
@@ -17,12 +22,15 @@ Created at: {{ row.created_at }}
 Reducing emission  from {{ row.name }} by {{ row.emission_percentage }}%
 </h6>
 <div class="py-3">
-<ProgressBar :percentage="row.benchmarks.current_percentage" :width="15"/>
+<ProgressBar :percentage="row.current_target.percentage" :width="15"/>
 </div>
 
 <div>
 
 
+
+<div class="row">
+<div class="col-12 col-md-6">
 <table class="table mt-2">
 <thead class="border-0">
 <tr>
@@ -44,7 +52,7 @@ From:
 CO2e:
 </th>
 <td class="border-0" style="width:100px;" colspan="3">
-{{ row.current_target.amount }} Kg
+{{ row.current_target.emission_sum }} Kg
 </td>
 <th class="border-0" style="width:20px;">
 </th>
@@ -63,13 +71,13 @@ Benchmark
 From:
 </th>
 <td class="border-0">
-{{ row.previous_target.from_date }}
+{{ row.benchmarks.from_date }}
 </td>
 <th class="border-0">
 -
 </th>
 <td class="border-0">
-{{ row.previous_target.to_date}}
+{{ row.benchmarks.to_date}}
 </td>
 </tr>
 
@@ -78,7 +86,7 @@ From:
 CO2e:
 </th>
 <td class="border-0" colspan="3">
-{{ row.previous_target.amount }} Kg
+{{ row.benchmarks.previous_sum}} Kg
 </td>
 </tr>
 <tr>
@@ -86,12 +94,30 @@ CO2e:
 Emission Target CO2e:
 </th>
 <td class="border-0" colspan="3">
-{{ row.benchmarks.benchmark_percentage }} Kg
+{{ row.benchmarks.target_sum }} Kg
 </td>
 </tr>
 
 </thead>
 </table>
+</div>
+<div class="col-12 col-md-6">
+
+
+
+
+<DonutChart/>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
 
 
 
@@ -113,8 +139,9 @@ Emission Target CO2e:
 <script>
 import AppLayout from '../Layouts/AppLayout.vue';
 import ProgressBar from '../components/ProgressBar.vue';
+import DonutChart from '../charts/DonutChart.vue';
 export default {
-components:{AppLayout, ProgressBar },
+components:{AppLayout, ProgressBar,DonutChart },
 props:{response:[]},
 data(){return{
 subtitle:'Adopt emission reducing strategies.',

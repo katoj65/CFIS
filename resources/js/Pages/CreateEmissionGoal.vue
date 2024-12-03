@@ -2,7 +2,7 @@
 <app-layout :title="title" :subtitle="subtitle">
 <template #action>
 <div>
-<Inertia-link class="btn btn-secondary" :href="route('emission.target_create')">
+<Inertia-link class="btn btn-secondary" :href="route('emission.target_create')" style="font-size:14px;">
 Add Goal
 </Inertia-link>
 </div>
