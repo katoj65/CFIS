@@ -98,15 +98,42 @@ return Inertia::render('CapacityBuildingTrainingPage',$data);
 
 
 public function carbonFootprint(){
-$data['title']='Carbon Footprint';
+$data['title']='Empowering Sustainable Choices';
 $data['response']=[];
 return Inertia::render('CarbonFootprintPage',$data);
 }
 
+public function climateAction(){
+$data['title']='Climate Action';
+$data['response']='';
+return Inertia::render('ClimateActionPage',$data);
+}
 
 
+public function policySupport(){
+$data['title']='Policy Support';
+$data['response']='';
+return Inertia::render('PolicySupportPage',$data);
+}
 
 
+public function publicOutreach(){
+$data['title']='Public Outreach';
+$data['response']='';
+return Inertia::render('PublicOutreachPage',$data);
+}
 
+
+public function complianceSupport(){
+$data['title']='Compliance Support';
+$data['response']='';
+return Inertia::render('ComplianceSupportPage',$data);
+}
+
+public function collaborationTools(){
+$data['title']='Collaboration Tools';
+$data['response']='';
+return Inertia::render('CollaborationToolsPage',$data);
+}
 
 }

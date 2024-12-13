@@ -61,8 +61,11 @@ return [
 
 //system details
 'system'=>function() use($request){
+if(Auth::user()!=null){
 $token = $request->user()->createToken('API Token')->plainTextToken;
-
+}else{
+$token=false;
+}
 return[
 'token'=>$token,
 'url'=>'http://localhost/carbon/',

@@ -126,5 +126,4 @@ return Inertia::render('OffsetEmissionsPage',$data);
 
 
 
-
 }

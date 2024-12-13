@@ -1,7 +1,7 @@
 <template>
 <app-layout :title="title" :subtitle="subtitle">
 <template #action>
-<Inertia-link class="btn btn-secondary">Carbon Market</Inertia-link>
+<Inertia-link class="btn btn-secondary" :href="route('market.carbon')" style="font-size:14px;">Carbon Market</Inertia-link>
 </template>
 
 

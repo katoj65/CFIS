@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\BusinessSector;
 use App\Models\UpdateModel;
 use App\Http\Resources\CreateProfileResource;
+use App\Http\Resources\NewsResource;
 
 
 
@@ -59,7 +60,7 @@ $data['response']=[
 'developers'=>ProjectModel::select('developer_id')->distinct()->count(),
 'clients'=>User::select('id')->where(['user_status'=>'active'])->where(['role'=>'organisation'])->orWhere(['role'=>'user'])
 ->orWhere(['role'=>'business'])->orWhere(['role'=>'government'])->count(),
-'news'=>News::orderby('created_at','DESC')->limit(4)->get(),
+'news'=>NewsResource::collection(News::orderby('created_at','DESC')->limit(3)->get()),
 'update'=>UpdateModel::where('id',1)->first(),
 ];
 

@@ -25,6 +25,7 @@ use App\Http\Controllers\Subscription\SubscriptionController;
 use App\Http\Controllers\Article\ArticleController;
 use App\Http\Controllers\Emission\EmissionTrargetsController;
 use App\Http\Controllers\Test\TestController;
+use App\Http\Controllers\CarbonCredit\ClimateFinancingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -111,6 +112,15 @@ Route::get('climate-change/overview',[ArticleController::class,'climateChange'])
 Route::get('carbon-markets/overview',[ArticleController::class,'carbonMarkets'])->name('carbon-markets');
 Route::get('footprint',[AboutController::class,'carbonFootprint'])->name('carbon.footprint');
 Route::get('emissions/management',[EmissionController::class,'carbonEmissionStrategy'])->name('emission.manage');
+Route::get('climate/finance',[ClimateFinancingController::class, 'index'])->name('climate_finance');
+Route::get('climate/action',[AboutController::class, 'climateAction'])->name('climate_action');
+Route::get('climate/policy',[AboutController::class, 'policySupport'])->name('climate_policy');
+Route::get('climate/outreach',[AboutController::class, 'publicOutreach'])->name('climate_outreach');
+Route::get('climate/compliance',[AboutController::class, 'complianceSupport'])->name('climate_compliance');
+Route::get('climate/collaboration',[AboutController::class, 'collaborationTools'])->name('climate_collaboration');
+
+
+
 
 // testing purpose
 Route::get('user/test', [UserController::class, 'index'])->name('user.index');
@@ -147,13 +157,14 @@ Route::get('/calculate/supply-chain',[CalculatorController::class,'energyView'])
 Route::get('/emission/targets',[EmissionTrargetsController::class,'index'])->name('emission.targets');
 
 
-
 //create profile
 Route::post('profile/create-personal', [ProfileController::class, 'store'])->name('profile.personal_create');
 Route::post('profile/create-business', [ProfileController::class, 'storeBusinessProfile'])->name('profile.business_create');
 Route::get('emission/target/create',[EmissionTrargetsController::class,'createEmissionTarget'])->name('emission.target_create');
 Route::post('emission/target/store',[EmissionTrargetsController::class,'store'])->name('emission.store_target');
 Route::get('emission/target/{id}',[EmissionTrargetsController::class,'show'])->name('emission.target_show');
+
+
 
 
 
