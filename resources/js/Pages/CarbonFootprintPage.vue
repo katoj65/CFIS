@@ -117,7 +117,9 @@ Partnerships with national and international stakeholders to amplify your impact
 </div>
 
 
-
+<Inertia-link :href="route('join')" class="text-danger">
+    Join the movement now
+    </Inertia-link>
 
 
 

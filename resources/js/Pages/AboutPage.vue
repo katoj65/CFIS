@@ -88,6 +88,8 @@ Beyond facilitating carbon markets, the UCR is committed to influencing policy t
 Key policy focus areas include establishing clear guidelines for carbon credit verification, ensuring equitable revenue sharing mechanisms, and integrating carbon markets into Uganda’s broader climate strategy.
 
 </p>
+<div>
+</div>
 </div>
 
 

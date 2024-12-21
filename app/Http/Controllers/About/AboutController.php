@@ -136,4 +136,20 @@ $data['response']='';
 return Inertia::render('CollaborationToolsPage',$data);
 }
 
+
+public function research(){
+$data['title']='Research and Innovation';
+$data['response']='';
+return Inertia::render('ResearchPage',$data);
+}
+
+
+public function measureCarbonFootprint(){
+$data['title']='Measure Carbon Footprint';
+$data['response']='';
+return Inertia::render('MeasureCarbonFootprintPage',$data);
+}
+
+
+
 }

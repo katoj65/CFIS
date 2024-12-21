@@ -33,13 +33,16 @@ Sunday: Closed
 <ul style="padding:0;" class="mt-5">
 <li>
 <p>
-<b-icon icon="telephone-fill" aria-hidden="true" class="mr-3" scale="1.5"></b-icon> 0752567534
+<b-icon icon="telephone-fill" aria-hidden="true" class="mr-3" scale="1.5"></b-icon> +256 752567534 / +256 702856721
 </p>
 </li>
 <li>
 <p>
-<b-icon icon="envelope-fill" aria-hidden="true" class="mr-3" scale="1.5"></b-icon> ugandacarbonregistry@gmail.com
+<b-icon icon="envelope-fill" aria-hidden="true" class="mr-3" scale="1.5"></b-icon> info@ugandacarbonregistry.org
 </p>
+<p>
+    <b-icon icon="envelope-fill" aria-hidden="true" class="mr-3" scale="1.5"></b-icon> partnerships@ugandacarbonregistry.org
+    </p>
 </li>
 </ul>
 </div>

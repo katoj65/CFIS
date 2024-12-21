@@ -24,10 +24,118 @@ Uganda can benefit significantly from aligning its carbon market efforts with UN
 <br/>
 With proper regulations and a transparent carbon registry system, Uganda could become a key player in the global carbon credit market, attracting vital financing and addressing climate change.
 </p>
+<h5 class="py-2">
+How UCR is Helping
+</h5>
+<h6>Project Registration</h6>
+<p>
+UCR provides a streamlined process for registering carbon credit projects. Project developers in sectors such as renewable energy, reforestation, waste management, and sustainable agriculture can submit their proposals through our platform.
+</p>
+<ul>
+<li>
+Submission of detailed project documentation, including baseline emissions data and intended outcomes.
+</li>
+<li>
+Assessment of the project’s eligibility based on internationally recognized standards (e.g., Verra, Gold Standard).
+</li>
+<li>
+Approval and inclusion in the UCR database upon meeting all criteria.
+</li>
+</ul>
+
+
+<h6>
+Monitoring and Verification
+</h6>
+<p>
+Ensuring the credibility of carbon credits is a top priority. UCR collaborates with certified third-party verifiers to monitor and validate emission reductions.
+</p>
+<p><b>Verification Process:</b></p>
+
+<ul>
+<li>
+Periodic audits to measure actual emissions reductions against the project’s baseline.
+</li>
+<li>
+Transparent reporting and documentation to ensure accountability.
+</li>
+<li>
+Independent certification of the achieved reductions.
+</li>
+</ul>
+
+
+<h6>
+Issuance of Carbon Credits
+</h6>
+<p>
+Once a project’s emissions reductions are verified, carbon credits are issued. Each credit represents one metric ton of CO2 equivalent (CO2e) reduced or removed from the atmosphere.
+</p>
+
+<h6>
+Carbon Credit Trading Platform
+</h6>
+<p>
+UCR hosts a marketplace where verified carbon credits can be bought and sold. This platform connects:
+</p>
+<ul>
+<li>
+Project Developers: Seeking to monetize their emissions reductions.
+</li>
+<li>
+Buyers: Individuals, businesses, and governments aiming to offset their carbon footprints.
+</li>
+</ul>
+
+<h6>
+Trading Benefits
+</h6>
+<ul>
+<li>Real-time pricing and market insights. </li>
+<li>Secure transactions with complete traceability. </li>
+<li>Opportunities for both voluntary and compliance-based offsetting. </li>
+</ul>
+
+<h6>Capacity Building and Support</h6>
+<p>UCR recognises the need for knowledge and skills to foster a thriving carbon credit market. We offer:</p>
+<ul>
+<li>Training Programs: For project developers on how to design, implement, and maintain eligible projects.</li>
+<li>Advisory Services: On regulatory compliance, market dynamics, and sustainability practices.</li>
+<li>Workshops and Webinars: To raise awareness about carbon credit opportunities and processes.</li>
+</ul>
+
+
+<h6>Advancing Sustainable Development</h6>
+<p>By facilitating carbon credit projects, UCR contributes to Uganda’s sustainable development goals (SDGs). These projects generate co-benefits such as:</p>
+<ul>
+<li>Job creation and improved livelihoods.</li>
+<li>Biodiversity conservation and enhanced ecosystem services.</li>
+<li>Transition to renewable energy and sustainable practices.</li>
+</ul>
+
+<h5>
+Why Choose UCR?
+</h5>
+<ul>
+<li>
+Localised Expertise: Deep understanding of Uganda’s environmental, social, and regulatory landscape.
+</li>
+<li>
+Transparency: Open and verifiable processes for project registration, credit issuance, and trading.
+</li>
+<li>
+Global Standards: Adherence to international frameworks to ensure credibility and market acceptance.
+
+
+</li>
+</ul>
+
+
+
 </div>
 
 
-<div class="mt-3">
+<!-- <div class="mt-3">
 <h5>
 How UCR is Helping
 </h5>
@@ -70,7 +178,7 @@ International Recognition: Align with global carbon trading frameworks, ensuring
 </li>
 </ol>
 
-</div>
+</div> -->
 
 
 

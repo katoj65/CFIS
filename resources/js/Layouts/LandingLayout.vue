@@ -12,13 +12,14 @@
 <li><Inertia-link :href="route('home')" class="nav-link px-2 text-white">Home</Inertia-link></li>
 <li><Inertia-link :href="route('about')" class="nav-link px-2 text-white">About</Inertia-link></li>
 <li><Inertia-link :href="route('carbon-credit')" class="nav-link px-2 text-white">Carbon Credit</Inertia-link></li>
-<li><Inertia-link :href="route('news.index')" class="nav-link px-2 text-white">Press</Inertia-link></li>
+<!-- <li><Inertia-link :href="route('carbon-credit')" class="nav-link px-2 text-white">Carbon Market</Inertia-link></li> -->
+<!-- <li><Inertia-link :href="route('news.index')" class="nav-link px-2 text-white">Press</Inertia-link></li> -->
 <li><Inertia-link :href="route('contact')" class="nav-link px-2 text-white">Contact</Inertia-link></li>
 
 </ul>
 
 <div class="col-md-3 text-end">
-<Inertia-link :href="route('login')" class="btn btn-outline-light me-2">Login</Inertia-link>
+<!-- <Inertia-link :href="route('login')" class="btn btn-outline-light me-2">Login</Inertia-link> -->
 </div>
 </header>
 
@@ -45,8 +46,8 @@
 <li class="mb-3"><a class="link-secondary text-decoration-none" href="#">
 <i class="bi bi-instagram" style="font-size:30px;"></i>
 </a></li>
-<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-twitter-x" style="font-size:30px;"></i></a></li>
-<li class="mb-3"><a class="link-secondary text-decoration-none" href="#"><i class="bi bi-linkedin" style="font-size:30px;"></i></a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="https://x.com/uganda55992"><i class="bi bi-twitter-x" style="font-size:30px;"></i></a></li>
+<li class="mb-3"><a class="link-secondary text-decoration-none" href="www.linkedin.com/in/uganda-carbon-registry-340447342"><i class="bi bi-linkedin" style="font-size:30px;"></i></a></li>
 </ul>
 </div>
 
@@ -60,10 +61,10 @@
 <ul class="list-unstyled text-small mt-3">
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Environment Hub</a></li>
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Projects</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Footprint</a></li>
+<li class="mb-1"><Inertia-link class="link-secondary text-decoration-none" :href="route('carbon.footprint')">Carbon Footprint</Inertia-link></li>
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Markets</a></li>
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Get Involved</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Policies and Regulations</a></li>
+<li class="mb-1"><Inertia-link class="link-secondary text-decoration-none" :href="route('climate_policy')">Policies and Regulations</Inertia-link></li>
 </ul>
 </div>
 
@@ -86,13 +87,17 @@
 <h5>About</h5>
 <ul class="list-unstyled text-small mt-3">
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Overview</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">About Us</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Fund</a></li>
-<li class="mb-1">
-<Inertia-link class="link-secondary text-decoration-none" :href="route('news.index')">Press</Inertia-link></li>
+<li class="mb-1"><Inertia-link class="link-secondary text-decoration-none" :href="route('about')">About Us</Inertia-link></li>
+<!-- <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Fund</a></li> -->
+<!-- <li class="mb-1">
+<Inertia-link class="link-secondary text-decoration-none" :href="route('news.index')">Press</Inertia-link></li> -->
+
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Carbon Offest Projects</a></li>
-<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">
-Carbon Credit</a></li>
+<li class="mb-1">
+<Inertia-link class="link-secondary text-decoration-none" :href="route('carbon-credit')">
+Carbon Credit</Inertia-link>
+</li>
+
 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Investiment Opportunities</a></li>
 </ul>
 </div>

@@ -9,9 +9,10 @@
 <div style="margin-top:10px;">
 <span style="background:red;text-shadow:none;padding-left:25px;padding-right:25px;color:white;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;border:solid 6px black;border-left:0;border-top:0;">NOW!</span>
 </div>
-
-
 </h1>
+<div class="mt-5">
+<Inertia-link class="btn btn-danger p-2" :href="route('measure-carbon-footprint')">Calculate Your Carbon Footprint Now!</Inertia-link>
+</div>
 </div>
 </div>
 </section>
@@ -28,9 +29,14 @@
 <div class="col-12 col-md-8 offset-lg-2">
 <h2 class="text-dark">Our Mission</h2>
 <p> At Uganda Carbon Registry (UCR), we’re on an ambitious mission to turn carbon emissions into economic opportunities that benefit both the environment and the people of Uganda. Through innovative carbon offset projects and sustainable practices, we aim to create lasting value for Ugandan communities, fostering green growth, resilience, and a thriving environment for future generations. </p>
+
+
+
+
+
 <div class="row mt-3 py-5" style="margin-bottom:-60px;">
 <div class="col-lg-3 col-6">
-<div class="text-center mb-5 mb-lg-0" style="border-radius:20px;background:#15583b;">
+<div class="text-center mb-5 mb-lg-0 h-100" style="border-radius:20px;background:#15583b;">
 <div style="margin-bottom:10px;">
 <i class="bi bi-people-fill text-white" style="font-size:50px;"></i>
 </div>
@@ -40,34 +46,41 @@
 </div>
 
 <div class="col-lg-3 col-6">
-<div class="text-center mb-5 mb-lg-0" style="border-radius:20px;background:#15583b;">
+<div class="text-center mb-5 mb-lg-0 h-100" style="border-radius:20px;background:#15583b;">
 <div style="margin-bottom:10px;">
 <i class="bi bi-diagram-3-fill text-white" style="font-size:50px;"></i>
 </div>
-<small class="text-uppercase  ls-md fw-semibold bold text-white" style="font-size:20px;">Projects</small>
-<h4 class="mb-0 mt-2 text-white" style="font-size:35px;padding-bottom:15px;">{{ response.projects }} </h4>
+<small class="text-uppercase  ls-md fw-semibold bold text-white" style="font-size:20px;">
+Projects
+Registered
+</small>
+<h4 class="mb-0 mt-2 text-white" style="font-size:35px;padding-bottom:15px;">21</h4>
 </div>
 </div>
 
 <div class="col-lg-3 col-6">
-<div class="text-center mb-5 mb-lg-0" style="border-radius:20px;background:#15583b;">
+<div class="text-center mb-5 mb-lg-0 h-100" style="border-radius:20px;background:#15583b;">
 <div style="margin-bottom:10px;">
 <i class="bi bi-person-lines-fill text-white" style="font-size:50px;"></i>
 </div>
 <small class="text-uppercase ls-md fw-semibold bold text-white" style="font-size:20px;">
+Project
 Developers
 </small>
-<h4 class="mb-0 mt-2 text-white" style="font-size:35px;padding-bottom:15px;">{{ response.developers }} </h4>
+<h4 class="mb-0 mt-2 text-white" style="font-size:35px;padding-bottom:15px;">18 </h4>
 </div>
 </div>
 
 <div class="col-lg-3 col-6">
-<div class="text-center mb-5 mb-lg-0" style="border-radius:20px;background:#15583b;">
+<div class="text-center mb-5 mb-lg-0 h-100" style="border-radius:20px;background:#15583b;">
 <div style="margin-bottom:10px;">
 <i class="bi bi-tree-fill text-white" style="font-size:50px;"></i>
 </div>
-<small class="text-uppercase ls-md fw-semibold bold text-white" style="font-size:20px;">Impact Created</small>
-<h4 class="mb-0 mt-2 text-white" style="font-size:35px;padding-bottom:15px;">30%</h4>
+<small class="text-uppercase ls-md fw-semibold bold text-white" style="font-size:20px;">
+Emission
+Reduced
+</small>
+<h4 class="mb-0 mt-2 text-white" style="font-size:35px;padding-bottom:15px;">11Mt</h4>
 </div>
 </div>
 </div>
@@ -137,6 +150,8 @@ Read More
 <div class="row">
 <div class="col-12 col-md-10 offset-lg-1">
 <div class="row g-0">
+
+
 <div class="col-lg-3 col-md-6" v-for="(s,key) in services" :key="key" style="border:none;">
 <div class="service p-3 text-center" style="border:none;">
 <div class="service-item-icon" style="border:none;">
@@ -150,6 +165,38 @@ Read More
 </div>
 </div>
 </div>
+
+
+
+
+<div class="py-5">
+<div class="pt-3 text-center rounded-3">
+<div class="mb-3">
+<!-- <el-divider></el-divider> -->
+</div>
+<div class="py-3">
+<h3 class="text-body-emphasis text-dark">Unlocking Opportunities in Uganda’s Carbon Market</h3>
+<p class="pt-2">
+At the Uganda Carbon Registry (UCR), we are driving the development of Uganda’s carbon market by providing a reliable platform for high-quality carbon credits. As the nation’s first homegrown registry, UCR empowers local projects to access global carbon markets while maintaining the integrity and transparency needed for impactful climate action.
+</p>
+<div>
+<Inertia-link class="btn btn-outline-success" :href="route('carbon.market')"> Continue Reading </Inertia-link>
+</div>
+</div>
+
+
+<div>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
 
 </div>
 </div>
@@ -196,7 +243,7 @@ Read More
 
 <section class="bg-green-light">
 <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-<h2 class="text-dark">Press Release</h2>
+<h3>Press Release</h3>
 <p>Stay Informed, Stay Empowered: Climate News Matters.</p>
 </div>
 <div class="container">
@@ -462,7 +509,7 @@ icon:'collaboration.png'
 },
 {title:'Research & Innovation',
 description:'The Uganda Carbon Registry drives research and innovation, enhancing climate action through efficient carbon tracking and credits.',
-url:'projects.overview',
+url:'research',
 icon:'innovation_research.png'
 }
 

@@ -26,7 +26,7 @@ use App\Http\Controllers\Article\ArticleController;
 use App\Http\Controllers\Emission\EmissionTrargetsController;
 use App\Http\Controllers\Test\TestController;
 use App\Http\Controllers\CarbonCredit\ClimateFinancingController;
-
+use App\Http\Controllers\Join\JoinController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -118,7 +118,10 @@ Route::get('climate/policy',[AboutController::class, 'policySupport'])->name('cl
 Route::get('climate/outreach',[AboutController::class, 'publicOutreach'])->name('climate_outreach');
 Route::get('climate/compliance',[AboutController::class, 'complianceSupport'])->name('climate_compliance');
 Route::get('climate/collaboration',[AboutController::class, 'collaborationTools'])->name('climate_collaboration');
-
+Route::get('join', [JoinController::class, 'index'])->name('join');
+Route::get('membership', [JoinController::class, 'membershipForm'])->name('membershipForm');
+Route::get('research', [AboutController::class, 'research'])->name('research');
+Route::get('measure-carbon-footprint', [AboutController::class, 'measureCarbonFootprint'])->name('measure-carbon-footprint');
 
 
 
